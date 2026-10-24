@@ -43,32 +43,32 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   }
 
   return (
-    <main className="min-h-screen bg-charcoal-950 text-warmWhite">
+    <main className="min-h-screen bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
       {/* Breadcrumb Navigation */}
-      <div className="pt-24 pb-6 border-b border-graphite/40 bg-charcoal-900/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-xs font-mono text-slate-muted">
-          <Link href="/" className="hover:text-white transition-colors">Home</Link>
+      <div className="pt-24 pb-6 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-slate-muted">
+          <Link href="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+          <Link href="/services" className="hover:text-black dark:hover:text-white transition-colors">Services</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-white font-medium">{service.title}</span>
+          <span className="text-gray-950 dark:text-white font-bold">{service.title}</span>
         </div>
       </div>
 
       {/* Hero Header */}
-      <section className="py-16 sm:py-24 border-b border-graphite/40 bg-charcoal-900/60">
+      <section className="py-16 sm:py-24 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-charcoal-800 text-slate-muted border border-graphite/40 mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-gray-100 dark:bg-charcoal-800 text-gray-700 dark:text-slate-muted border border-gray-200 dark:border-graphite/40 mb-6 font-semibold">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
               <span className="uppercase">{service.category} Practice</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-gray-950 dark:text-white mb-6">
               {service.title}
             </h1>
 
-            <p className="text-xl sm:text-2xl text-slate-300 font-light leading-relaxed mb-8">
+            <p className="text-xl sm:text-2xl text-gray-700 dark:text-slate-300 font-light leading-relaxed mb-8">
               {service.tagline}
             </p>
 
@@ -79,7 +79,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               </MagneticButton>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 text-sm font-mono text-slate-muted hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-mono text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors font-bold"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span>All Capabilities</span>
@@ -90,33 +90,33 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       </section>
 
       {/* Overview & Problem / Solution Grid */}
-      <section className="py-20 border-b border-graphite/40">
+      <section className="py-20 border-b border-gray-200 dark:border-graphite/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-7 flex flex-col gap-6">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-950 dark:text-white">
                 Detailed Practice Scope
               </h2>
-              <p className="text-base text-slate-300 leading-relaxed">
+              <p className="text-base text-gray-700 dark:text-slate-300 leading-relaxed">
                 {service.fullDescription}
               </p>
 
               {/* Problem vs Solution */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
-                <div className="p-6 rounded-2xl bg-rose-950/20 border border-rose-900/40">
-                  <span className="font-mono text-xs text-rose-400 uppercase tracking-wider font-semibold">
+                <div className="p-6 rounded-2xl bg-rose-50 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/40">
+                  <span className="font-mono text-xs text-rose-600 dark:text-rose-400 uppercase tracking-wider font-bold">
                     The Industry Problem
                   </span>
-                  <p className="text-sm text-rose-200/90 mt-2 leading-relaxed">
+                  <p className="text-sm text-gray-700 dark:text-rose-200/90 mt-2 leading-relaxed">
                     {service.problem}
                   </p>
                 </div>
 
-                <div className="p-6 rounded-2xl bg-emerald-950/20 border border-emerald-900/40">
-                  <span className="font-mono text-xs text-emerald-400 uppercase tracking-wider font-semibold">
+                <div className="p-6 rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/40">
+                  <span className="font-mono text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider font-bold">
                     The Arevex Solution
                   </span>
-                  <p className="text-sm text-emerald-200/90 mt-2 leading-relaxed">
+                  <p className="text-sm text-gray-700 dark:text-emerald-200/90 mt-2 leading-relaxed">
                     {service.solution}
                   </p>
                 </div>
@@ -126,11 +126,11 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             {/* Sidebar: Deliverables & Tech Stack */}
             <div className="lg:col-span-5 flex flex-col gap-8">
               <Card>
-                <h3 className="text-lg font-bold text-white mb-4">Concrete Deliverables</h3>
+                <h3 className="text-lg font-bold text-gray-950 dark:text-white mb-4">Concrete Deliverables</h3>
                 <ul className="flex flex-col gap-3">
                   {service.deliverables.map((item) => (
-                    <li key={item} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <li key={item} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-700 dark:text-slate-300">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -138,12 +138,12 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               </Card>
 
               <Card>
-                <h3 className="text-lg font-bold text-white mb-4">Core Technology Stack</h3>
+                <h3 className="text-lg font-bold text-gray-950 dark:text-white mb-4">Core Technology Stack</h3>
                 <div className="flex flex-wrap gap-2">
                   {service.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1.5 rounded-lg text-xs font-mono bg-charcoal-800 text-slate-200 border border-graphite/40"
+                      className="px-3 py-1.5 rounded-lg text-xs font-mono bg-gray-100 dark:bg-charcoal-800 text-gray-800 dark:text-slate-200 border border-gray-200 dark:border-graphite/40 font-medium"
                     >
                       {tech}
                     </span>
@@ -156,25 +156,25 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       </section>
 
       {/* Engineering Process Steps */}
-      <section className="py-20 border-b border-graphite/40 bg-charcoal-900/40">
+      <section className="py-20 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <span className="font-mono text-xs uppercase tracking-widest text-slate-muted">Lifecycle</span>
-            <h2 className="text-3xl font-bold text-white mt-1">Our Engineering Process</h2>
+            <span className="font-mono text-xs uppercase tracking-widest text-slate-500 dark:text-slate-muted font-bold">Lifecycle</span>
+            <h2 className="text-3xl font-bold text-gray-950 dark:text-white mt-1">Our Engineering Process</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {service.process.map((step) => (
               <div
                 key={step.step}
-                className="p-6 rounded-2xl bg-charcoal-950 border border-graphite/40 flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-[#F7F7F5] dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/40 flex flex-col justify-between shadow-sm"
               >
-                <span className="font-mono text-2xl font-bold text-slate-muted mb-4">
+                <span className="font-mono text-2xl font-black text-gray-400 dark:text-slate-muted mb-4">
                   {step.step}
                 </span>
                 <div>
-                  <h3 className="font-bold text-base text-white mb-2">{step.title}</h3>
-                  <p className="text-xs text-slate-400 leading-relaxed">{step.description}</p>
+                  <h3 className="font-bold text-base text-gray-950 dark:text-white mb-2">{step.title}</h3>
+                  <p className="text-xs text-gray-600 dark:text-slate-400 leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -184,24 +184,24 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
 
       {/* Frequently Asked Questions */}
       {service.faqs && service.faqs.length > 0 && (
-        <section className="py-20 border-b border-graphite/40">
+        <section className="py-20 border-b border-gray-200 dark:border-graphite/40">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <span className="font-mono text-xs uppercase tracking-widest text-slate-muted">Frequently Asked</span>
-              <h2 className="text-3xl font-bold text-white mt-1">Questions & Answers</h2>
+              <span className="font-mono text-xs uppercase tracking-widest text-slate-500 dark:text-slate-muted font-bold">Frequently Asked</span>
+              <h2 className="text-3xl font-bold text-gray-950 dark:text-white mt-1">Questions & Answers</h2>
             </div>
 
             <div className="flex flex-col gap-4">
               {service.faqs.map((faq) => (
                 <div
                   key={faq.question}
-                  className="p-6 rounded-2xl bg-charcoal-900/60 border border-graphite/40"
+                  className="p-6 rounded-2xl bg-white dark:bg-charcoal-900/60 border border-gray-200 dark:border-graphite/40 shadow-sm"
                 >
                   <div className="flex items-start gap-3">
-                    <HelpCircle className="w-5 h-5 text-slate-muted shrink-0 mt-0.5" />
+                    <HelpCircle className="w-5 h-5 text-emerald-600 dark:text-slate-muted shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="font-semibold text-base text-white mb-2">{faq.question}</h4>
-                      <p className="text-sm text-slate-300 leading-relaxed">{faq.answer}</p>
+                      <h4 className="font-bold text-base text-gray-950 dark:text-white mb-2">{faq.question}</h4>
+                      <p className="text-sm text-gray-600 dark:text-slate-300 leading-relaxed">{faq.answer}</p>
                     </div>
                   </div>
                 </div>

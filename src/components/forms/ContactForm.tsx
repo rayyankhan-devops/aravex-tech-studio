@@ -63,16 +63,16 @@ export function ContactForm() {
   };
 
   return (
-    <div className="w-full rounded-2xl bg-charcoal-900/90 dark:bg-charcoal-900/90 light:bg-white border border-graphite/40 dark:border-graphite/40 light:border-gray-200 p-6 sm:p-10 shadow-xl">
+    <div className="w-full rounded-2xl bg-white dark:bg-charcoal-900/90 border border-gray-200 dark:border-graphite/40 p-6 sm:p-10 shadow-xl transition-colors duration-300">
       {status === 'success' ? (
         <div className="flex flex-col items-center text-center py-12 gap-4">
-          <div className="w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+          <div className="w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
             <CheckCircle2 className="w-8 h-8" />
           </div>
-          <h3 className="text-2xl font-bold text-warmWhite dark:text-warmWhite light:text-charcoal-900">
+          <h3 className="text-2xl font-bold text-gray-950 dark:text-warmWhite">
             Inquiry Received
           </h3>
-          <p className="text-slate-light dark:text-slate-light light:text-charcoal-700 max-w-md leading-relaxed text-sm">
+          <p className="text-gray-600 dark:text-slate-light max-w-md leading-relaxed text-sm">
             {successMessage}
           </p>
           <MagneticButton
@@ -87,7 +87,7 @@ export function ContactForm() {
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
           {status === 'error' && (
-            <div className="flex items-center gap-3 p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-400 text-sm">
+            <div className="flex items-center gap-3 p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-400 text-sm">
               <AlertCircle className="w-5 h-5 shrink-0" />
               <span>{errorMessage}</span>
             </div>
@@ -96,7 +96,7 @@ export function ContactForm() {
           {/* Row 1: Name & Business Email */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className="flex flex-col gap-2">
-              <label className="text-xs font-mono uppercase tracking-wider text-slate-muted dark:text-slate-muted light:text-charcoal-700">
+              <label className="text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 font-bold">
                 Your Full Name *
               </label>
               <input
@@ -105,12 +105,12 @@ export function ContactForm() {
                 placeholder="Muhammad Ali"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl bg-charcoal-850 dark:bg-charcoal-850 light:bg-gray-50 border border-graphite/40 dark:border-graphite/40 light:border-gray-200 text-warmWhite dark:text-warmWhite light:text-charcoal-900 placeholder:text-slate-600 focus:outline-none focus:border-slate-muted transition-colors text-sm"
+                className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-gray-900 dark:text-warmWhite placeholder:text-gray-400 dark:placeholder:text-slate-600 focus:outline-none focus:border-slate-muted transition-colors text-sm"
               />
             </div>
 
             <div className="flex flex-col gap-2">
-              <label className="text-xs font-mono uppercase tracking-wider text-slate-muted dark:text-slate-muted light:text-charcoal-700">
+              <label className="text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 font-bold">
                 Business Email *
               </label>
               <input
@@ -119,7 +119,7 @@ export function ContactForm() {
                 placeholder="name@company.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl bg-charcoal-850 dark:bg-charcoal-850 light:bg-gray-50 border border-graphite/40 dark:border-graphite/40 light:border-gray-200 text-warmWhite dark:text-warmWhite light:text-charcoal-900 placeholder:text-slate-600 focus:outline-none focus:border-slate-muted transition-colors text-sm"
+                className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-gray-900 dark:text-warmWhite placeholder:text-gray-400 dark:placeholder:text-slate-600 focus:outline-none focus:border-slate-muted transition-colors text-sm"
               />
             </div>
           </div>
@@ -127,7 +127,7 @@ export function ContactForm() {
           {/* Row 2: Company & Service */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className="flex flex-col gap-2">
-              <label className="text-xs font-mono uppercase tracking-wider text-slate-muted dark:text-slate-muted light:text-charcoal-700">
+              <label className="text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 font-bold">
                 Company / Organization
               </label>
               <input
@@ -135,21 +135,21 @@ export function ContactForm() {
                 placeholder="Enterprise or Startup Name"
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl bg-charcoal-850 dark:bg-charcoal-850 light:bg-gray-50 border border-graphite/40 dark:border-graphite/40 light:border-gray-200 text-warmWhite dark:text-warmWhite light:text-charcoal-900 placeholder:text-slate-600 focus:outline-none focus:border-slate-muted transition-colors text-sm"
+                className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-gray-900 dark:text-warmWhite placeholder:text-gray-400 dark:placeholder:text-slate-600 focus:outline-none focus:border-slate-muted transition-colors text-sm"
               />
             </div>
 
             <div className="flex flex-col gap-2">
-              <label className="text-xs font-mono uppercase tracking-wider text-slate-muted dark:text-slate-muted light:text-charcoal-700">
+              <label className="text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 font-bold">
                 Service Required *
               </label>
               <select
                 value={formData.service}
                 onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl bg-charcoal-850 dark:bg-charcoal-850 light:bg-gray-50 border border-graphite/40 dark:border-graphite/40 light:border-gray-200 text-warmWhite dark:text-warmWhite light:text-charcoal-900 focus:outline-none focus:border-slate-muted transition-colors text-sm"
+                className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-gray-900 dark:text-warmWhite focus:outline-none focus:border-slate-muted transition-colors text-sm"
               >
                 {SERVICES_DATA.map((s) => (
-                  <option key={s.id} value={s.title} className="bg-charcoal-900 text-warmWhite">
+                  <option key={s.id} value={s.title} className="bg-white dark:bg-charcoal-900 text-gray-900 dark:text-warmWhite">
                     {s.title}
                   </option>
                 ))}
@@ -159,7 +159,7 @@ export function ContactForm() {
 
           {/* Row 3: Budget Range */}
           <div className="flex flex-col gap-2.5">
-            <label className="text-xs font-mono uppercase tracking-wider text-slate-muted dark:text-slate-muted light:text-charcoal-700">
+            <label className="text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 font-bold">
               Estimated Project Budget
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -170,8 +170,8 @@ export function ContactForm() {
                   onClick={() => setFormData({ ...formData, budget: opt })}
                   className={`px-3.5 py-2.5 rounded-xl text-xs font-mono border text-left transition-all ${
                     formData.budget === opt
-                      ? 'bg-slate-muted/20 border-slate-muted text-warmWhite dark:text-warmWhite light:text-charcoal-900 font-semibold'
-                      : 'bg-charcoal-850/50 dark:bg-charcoal-850/50 light:bg-gray-50 border-graphite/30 text-slate-light dark:text-slate-light light:text-charcoal-700 hover:border-slate-muted/40'
+                      ? 'bg-slate-800 text-white dark:bg-slate-muted/30 dark:border-slate-muted dark:text-warmWhite font-bold shadow-sm'
+                      : 'bg-gray-50 dark:bg-charcoal-850/50 border-gray-300 dark:border-graphite/30 text-gray-700 dark:text-slate-light hover:border-slate-500'
                   }`}
                 >
                   {opt}
@@ -182,7 +182,7 @@ export function ContactForm() {
 
           {/* Row 4: Project Scope */}
           <div className="flex flex-col gap-2">
-            <label className="text-xs font-mono uppercase tracking-wider text-slate-muted dark:text-slate-muted light:text-charcoal-700">
+            <label className="text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 font-bold">
               Project Scope & Technical Goals *
             </label>
             <textarea
@@ -191,23 +191,23 @@ export function ContactForm() {
               placeholder="Tell us about what you want to engineer, key architectural requirements, target launch deadline, and team constraints..."
               value={formData.description}
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl bg-charcoal-850 dark:bg-charcoal-850 light:bg-gray-50 border border-graphite/40 dark:border-graphite/40 light:border-gray-200 text-warmWhite dark:text-warmWhite light:text-charcoal-900 placeholder:text-slate-600 focus:outline-none focus:border-slate-muted transition-colors text-sm resize-none"
+              className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-gray-900 dark:text-warmWhite placeholder:text-gray-400 dark:placeholder:text-slate-600 focus:outline-none focus:border-slate-muted transition-colors text-sm resize-none"
             />
           </div>
 
           {/* Row 5: Preferred Contact Method */}
           <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
             <div className="flex items-center gap-3">
-              <span className="text-xs font-mono text-slate-muted">Preferred Contact:</span>
+              <span className="text-xs font-mono text-gray-600 dark:text-slate-muted font-bold">Preferred Contact:</span>
               {['Email', 'WhatsApp', 'Video Call'].map((m) => (
-                <label key={m} className="flex items-center gap-1.5 text-xs text-slate-light cursor-pointer">
+                <label key={m} className="flex items-center gap-1.5 text-xs text-gray-700 dark:text-slate-light cursor-pointer font-medium">
                   <input
                     type="radio"
                     name="preferredContact"
                     value={m}
                     checked={formData.preferredContact === m}
                     onChange={(e) => setFormData({ ...formData, preferredContact: e.target.value })}
-                    className="accent-slate-muted"
+                    className="accent-slate-700 dark:accent-slate-muted"
                   />
                   <span>{m}</span>
                 </label>

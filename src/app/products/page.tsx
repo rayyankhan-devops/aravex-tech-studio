@@ -19,7 +19,6 @@ import { Card } from '@/components/common/Card';
 import { ProductDemoModal } from '@/components/forms/ProductDemoModal';
 import { PRODUCTS_DATA } from '@/data/products';
 import { ProductItem } from '@/types';
-import { BRAND_ASSETS } from '@/lib/brand';
 import { FinalCTA } from '@/components/home/FinalCTA';
 
 const PLATFORMS = ['All', 'Desktop', 'Web', 'Mobile', 'Cross-Platform'];
@@ -57,9 +56,9 @@ export default function ProductsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-charcoal-950 text-warmWhite">
+    <main className="min-h-screen bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
       {/* Header */}
-      <section className="pt-24 pb-16 border-b border-graphite/40 bg-charcoal-900/60">
+      <section className="pt-24 pb-16 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="SOFTWARE PRODUCTS"
@@ -71,27 +70,27 @@ export default function ProductsPage() {
           <div className="flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between pt-4">
             {/* Search Input */}
             <div className="relative w-full md:w-80">
-              <Search className="w-4 h-4 text-slate-muted absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <Search className="w-4 h-4 text-gray-400 dark:text-slate-muted absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 placeholder="Search products or features..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 rounded-full bg-charcoal-850 border border-graphite/40 text-xs font-mono text-warmWhite placeholder:text-slate-500 focus:outline-none focus:border-slate-muted"
+                className="w-full pl-10 pr-4 py-2 rounded-full bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-xs font-mono text-gray-900 dark:text-warmWhite placeholder:text-gray-400 dark:placeholder:text-slate-500 focus:outline-none focus:border-slate-500"
               />
             </div>
 
             {/* Platform Filters */}
             <div className="flex flex-wrap items-center gap-1.5">
-              <span className="text-xs font-mono text-slate-muted mr-1">Platform:</span>
+              <span className="text-xs font-mono text-gray-500 dark:text-slate-muted mr-1 font-bold">Platform:</span>
               {PLATFORMS.map((p) => (
                 <button
                   key={p}
                   onClick={() => setSelectedPlatform(p)}
-                  className={`px-3 py-1 rounded-full text-xs font-mono border transition-colors ${
+                  className={`px-3 py-1 rounded-full text-xs font-mono border transition-colors cursor-pointer ${
                     selectedPlatform === p
-                      ? 'bg-warmWhite text-charcoal-900 border-transparent font-bold'
-                      : 'bg-charcoal-850/80 text-slate-300 border-graphite/40 hover:border-slate-muted'
+                      ? 'bg-charcoal-950 text-white dark:bg-warmWhite dark:text-charcoal-900 border-transparent font-bold shadow-sm'
+                      : 'bg-white dark:bg-charcoal-850/80 text-gray-700 dark:text-slate-300 border-gray-300 dark:border-graphite/40 hover:border-slate-500'
                   }`}
                 >
                   {p}
@@ -102,15 +101,15 @@ export default function ProductsPage() {
 
           {/* Category Filter Pills */}
           <div className="flex flex-wrap items-center gap-1.5 pt-4">
-            <span className="text-xs font-mono text-slate-muted mr-1">Category:</span>
+            <span className="text-xs font-mono text-gray-500 dark:text-slate-muted mr-1 font-bold">Category:</span>
             {CATEGORIES.map((c) => (
               <button
                 key={c}
                 onClick={() => setSelectedCategory(c)}
-                className={`px-3 py-1 rounded-full text-xs font-mono border transition-colors ${
+                className={`px-3 py-1 rounded-full text-xs font-mono border transition-colors cursor-pointer ${
                   selectedCategory === c
-                    ? 'bg-slate-muted text-white border-transparent font-semibold'
-                    : 'bg-charcoal-850/50 text-slate-400 border-graphite/30 hover:border-slate-muted/50'
+                    ? 'bg-slate-800 text-white dark:bg-slate-muted dark:text-white border-transparent font-bold shadow-sm'
+                    : 'bg-gray-100 dark:bg-charcoal-850/50 text-gray-600 dark:text-slate-400 border-gray-200 dark:border-graphite/30 hover:border-slate-400'
                 }`}
               >
                 {c}
@@ -124,7 +123,7 @@ export default function ProductsPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {filteredProducts.length === 0 ? (
-            <div className="text-center py-20 text-slate-muted font-mono text-sm">
+            <div className="text-center py-20 text-gray-500 dark:text-slate-muted font-mono text-sm">
               No products found matching your active filter criteria.
             </div>
           ) : (
@@ -132,50 +131,50 @@ export default function ProductsPage() {
               {filteredProducts.map((product) => (
                 <Card
                   key={product.id}
-                  className="flex flex-col justify-between hover:border-slate-muted/60"
+                  className="flex flex-col justify-between bg-white dark:bg-charcoal-850/80 border-gray-200 dark:border-graphite/40 hover:border-slate-500 dark:hover:border-slate-muted/60 shadow-sm hover:shadow-xl"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <Badge status={product.status} />
-                      <span className="inline-flex items-center gap-1 text-xs font-mono text-slate-muted">
+                      <span className="inline-flex items-center gap-1 text-xs font-mono text-gray-500 dark:text-slate-muted font-semibold">
                         {getPlatformIcon(product.platform)}
                         <span>{product.platform}</span>
                       </span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-white mb-2 leading-snug">
+                    <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-2 leading-snug">
                       {product.title}
                     </h3>
 
-                    <p className="text-xs font-mono text-slate-muted uppercase mb-4">
+                    <p className="text-xs font-mono text-slate-600 dark:text-slate-muted uppercase mb-4 font-semibold">
                       Target: {product.category}
                     </p>
 
-                    <p className="text-xs text-slate-300 leading-relaxed mb-6">
+                    <p className="text-xs text-gray-600 dark:text-slate-300 leading-relaxed mb-6">
                       {product.description}
                     </p>
 
                     {/* Features preview */}
-                    <div className="flex flex-col gap-2 pt-2 border-t border-graphite/30 mb-6">
+                    <div className="flex flex-col gap-2 pt-2 border-t border-gray-100 dark:border-graphite/30 mb-6">
                       {product.features.slice(0, 3).map((f) => (
-                        <div key={f} className="flex items-start gap-2 text-xs text-slate-400">
-                          <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                        <div key={f} className="flex items-start gap-2 text-xs text-gray-600 dark:text-slate-400">
+                          <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                           <span className="line-clamp-1">{f}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between pt-4 border-t border-graphite/40">
+                  <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-graphite/40">
                     <button
                       onClick={() => setDemoProduct(product)}
-                      className="text-xs font-mono text-warmWhite hover:underline focus:outline-none"
+                      className="text-xs font-mono text-gray-900 dark:text-warmWhite font-bold hover:underline focus:outline-none cursor-pointer"
                     >
                       Request Demo
                     </button>
                     <Link
                       href={`/products/${product.slug}`}
-                      className="inline-flex items-center gap-1 text-xs font-mono text-slate-muted hover:text-white"
+                      className="inline-flex items-center gap-1 text-xs font-mono text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white font-semibold"
                     >
                       <span>Specifications</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />

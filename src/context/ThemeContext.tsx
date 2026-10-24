@@ -17,12 +17,16 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Default to dark mode first, check stored preference if user toggled
     const saved = localStorage.getItem('arevex_theme') as Theme | null;
     if (saved === 'light' || saved === 'dark') {
       setThemeState(saved);
-      document.documentElement.classList.toggle('dark', saved === 'dark');
-      document.documentElement.classList.toggle('light', saved === 'light');
+      if (saved === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+      }
     } else {
       setThemeState('dark');
       document.documentElement.classList.add('dark');
@@ -34,12 +38,18 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
     localStorage.setItem('arevex_theme', newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-    document.documentElement.classList.toggle('light', newTheme === 'light');
+    if (newTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('light');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+    }
   };
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    const next = theme === 'dark' ? 'light' : 'dark';
+    setTheme(next);
   };
 
   return (

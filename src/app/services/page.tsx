@@ -56,9 +56,9 @@ export default function ServicesPage() {
       : SERVICES_DATA.filter((s) => s.category === selectedCategory);
 
   return (
-    <main className="min-h-screen bg-charcoal-950 text-warmWhite">
+    <main className="min-h-screen bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
       {/* Services Header */}
-      <section className="pt-24 pb-16 border-b border-graphite/40 bg-charcoal-900/60">
+      <section className="pt-24 pb-16 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="CAPABILITIES & SERVICES"
@@ -72,10 +72,10 @@ export default function ServicesPage() {
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`px-4 py-2 rounded-full text-xs font-mono transition-all duration-200 border ${
+                className={`px-4 py-2 rounded-full text-xs font-mono transition-all duration-200 border cursor-pointer ${
                   selectedCategory === cat.id
-                    ? 'bg-warmWhite text-charcoal-900 border-transparent font-bold shadow-md'
-                    : 'bg-charcoal-850/80 text-slate-300 border-graphite/40 hover:border-slate-muted'
+                    ? 'bg-charcoal-950 text-white dark:bg-warmWhite dark:text-charcoal-900 border-transparent font-bold shadow-md'
+                    : 'bg-white dark:bg-charcoal-850/80 text-gray-700 dark:text-slate-300 border-gray-300 dark:border-graphite/40 hover:border-slate-500'
                 }`}
               >
                 {cat.label}
@@ -99,22 +99,22 @@ export default function ServicesPage() {
                   transition={{ duration: 0.3, delay: (index % 3) * 0.05 }}
                 >
                   <Link href={`/services/${service.slug}`} className="block h-full group">
-                    <Card className="h-full flex flex-col justify-between group-hover:border-slate-muted/60 transition-all duration-300">
+                    <Card className="h-full flex flex-col justify-between bg-white dark:bg-charcoal-850/80 border-gray-200 dark:border-graphite/40 group-hover:border-slate-500 dark:group-hover:border-slate-muted/60 transition-all duration-300 shadow-sm hover:shadow-xl">
                       <div>
                         <div className="flex items-center justify-between mb-6">
-                          <div className="w-12 h-12 rounded-xl bg-charcoal-800 border border-graphite/50 flex items-center justify-center text-slate-light group-hover:text-white group-hover:bg-slate-muted/20 transition-colors">
+                          <div className="w-12 h-12 rounded-xl bg-gray-100 dark:bg-charcoal-800 border border-gray-200 dark:border-graphite/50 flex items-center justify-center text-charcoal-800 dark:text-slate-light group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-slate-muted/20 transition-colors">
                             <IconComponent className="w-6 h-6" />
                           </div>
-                          <span className="font-mono text-xs text-slate-muted">
+                          <span className="font-mono text-xs text-gray-500 dark:text-slate-muted font-bold">
                             0{SERVICES_DATA.findIndex((s) => s.id === service.id) + 1}
                           </span>
                         </div>
 
-                        <h3 className="text-xl font-bold text-white group-hover:text-slate-200 transition-colors mb-2.5">
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-black dark:group-hover:text-slate-200 transition-colors mb-2.5">
                           {service.title}
                         </h3>
 
-                        <p className="text-sm text-slate-400 leading-relaxed mb-6">
+                        <p className="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
                           {service.shortDescription}
                         </p>
 
@@ -122,7 +122,7 @@ export default function ServicesPage() {
                           {service.technologies.slice(0, 3).map((tech) => (
                             <span
                               key={tech}
-                              className="px-2 py-0.5 rounded text-[10px] font-mono bg-charcoal-800 text-slate-muted"
+                              className="px-2 py-0.5 rounded text-[10px] font-mono bg-gray-100 dark:bg-charcoal-800 text-gray-600 dark:text-slate-muted border border-gray-200 dark:border-transparent font-medium"
                             >
                               {tech}
                             </span>
@@ -130,9 +130,9 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <div className="pt-4 border-t border-graphite/40 flex items-center justify-between text-xs font-mono text-slate-muted group-hover:text-white transition-colors">
-                        <span className="uppercase tracking-wider">{service.category}</span>
-                        <span className="flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                      <div className="pt-4 border-t border-gray-200 dark:border-graphite/40 flex items-center justify-between text-xs font-mono text-gray-500 dark:text-slate-muted group-hover:text-black dark:group-hover:text-white transition-colors">
+                        <span className="uppercase tracking-wider font-semibold">{service.category}</span>
+                        <span className="flex items-center gap-1 group-hover:translate-x-1 transition-transform font-bold">
                           Explore Scope <ArrowUpRight className="w-3.5 h-3.5" />
                         </span>
                       </div>

@@ -18,21 +18,34 @@ export const BRAND_COLORS = {
 } as const;
 
 export const BRAND_ASSETS = {
-  // Official Logos
+  // Official Logos - configured for optimal contrast across themes
   horizontal: {
-    dark: '/assets/branding/logo-horizontal-dark.png',
-    light: '/assets/branding/logo-horizontal-light.png',
-    transparentDark: '/assets/branding/logo-horizontal-transparent.png',
+    // For Dark Theme (dark background): Use warm-white transparent logo
+    forDarkTheme: '/assets/branding/logo-horizontal-transparent-light.png',
+    // For Light Theme (light background): Use charcoal/black transparent logo
+    forLightTheme: '/assets/branding/logo-horizontal-transparent.png',
+    
+    // Backwards-compatible aliases
+    dark: '/assets/branding/logo-horizontal-transparent-light.png',
+    light: '/assets/branding/logo-horizontal-transparent.png',
+    transparentDark: '/assets/branding/logo-horizontal-transparent-light.png',
+    transparentLight: '/assets/branding/logo-horizontal-transparent.png',
   },
   vertical: {
-    dark: '/assets/branding/logo-vertical-dark.png',
-    light: '/assets/branding/logo-vertical-light.png',
+    dark: '/assets/branding/logo-vertical-light.png',
+    light: '/assets/branding/logo-vertical-dark.png',
     transparent: '/assets/branding/logo-vertical-transparent.png',
   },
   monogram: {
-    dark: '/assets/branding/monogram-dark.png',
-    light: '/assets/branding/monogram-light.png',
-    transparent: '/assets/branding/monogram-transparent.png',
+    // For Dark Theme: Use warm-white monogram
+    forDarkTheme: '/assets/branding/monogram-transparent-light.png',
+    // For Light Theme: Use charcoal/black monogram
+    forLightTheme: '/assets/branding/monogram-transparent.png',
+
+    // Backwards-compatible aliases
+    dark: '/assets/branding/monogram-transparent-light.png',
+    light: '/assets/branding/monogram-transparent.png',
+    transparent: '/assets/branding/monogram-transparent-light.png',
   },
   mark: {
     darkBg: '/assets/branding/logo-dark-bg.png',
@@ -62,9 +75,30 @@ export const COMPANY_INFO = {
     'Intelligent software, meaningful digital experiences, and reliable cloud infrastructure — designed, engineered and delivered by Arevex Tech Studio.',
   introStatement: 'Technology built around real possibilities.',
   founders: [
-    { name: 'Muhammad Rayyan' },
-    { name: 'Muhammad Uzair' },
-    { name: 'Aqsa Wadood' },
+    {
+      name: 'Muhammad Rayyan',
+      role: 'Co-Founder & Principal Systems Architect',
+      focus: 'Distributed Systems, POS Hardware Engineering & Cloud Architecture',
+      bio: 'Leading technical strategy and low-level hardware-synchronized architectures across retail POS, multi-branch attendance, and cloud infrastructure.',
+      github: 'https://github.com/arevex',
+      linkedin: 'https://linkedin.com',
+    },
+    {
+      name: 'Muhammad Uzair',
+      role: 'Co-Founder & Head of Product Engineering',
+      focus: 'Full-Stack Next.js Systems, Desktop Electron & Enterprise MIS',
+      bio: 'Directing full-stack web and desktop product lifecycles, ensuring modular frontend state machines, zero-latency rendering, and enterprise grade API integrations.',
+      github: 'https://github.com/arevex',
+      linkedin: 'https://linkedin.com',
+    },
+    {
+      name: 'Aqsa Wadood',
+      role: 'Co-Founder & Lead AI Research Architect',
+      focus: 'Autonomous AI Agents, Multi-Agent Graphs & RAG Vector Systems',
+      bio: 'Spearheading intelligent workflow automation, generative search engines (GEO), and production-grade LLM tool orchestration with deterministic safeguards.',
+      github: 'https://github.com/arevex',
+      linkedin: 'https://linkedin.com',
+    },
   ],
   locations: {
     primary: 'Pakistan',
@@ -73,13 +107,21 @@ export const COMPANY_INFO = {
   contact: {
     email: 'contact@arevex.tech',
     supportEmail: 'support@arevex.tech',
-    phone: '+92 (300) 000-0000', // Configurable in production
+    phone: '+92 (300) 000-0000',
   },
   socials: {
     github: 'https://github.com/arevex',
     linkedin: 'https://linkedin.com/company/arevex',
     twitter: 'https://x.com/arevextech',
   },
+  metrics: [
+    { label: 'System Uptime Guarantee', value: '99.98%' },
+    { label: 'Edge Query Latency', value: '<45ms' },
+    { label: 'Active Commercial Products', value: '10+' },
+    { label: 'Core Technical Capabilities', value: '12' },
+    { label: 'Academy Cohorts', value: '9' },
+    { label: 'Zero-Downtime Deployments', value: '100%' },
+  ],
   workingPractices: [
     {
       title: 'Practical Engineering',

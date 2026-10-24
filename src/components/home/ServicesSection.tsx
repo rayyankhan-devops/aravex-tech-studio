@@ -39,7 +39,7 @@ const ICON_MAP: Record<string, React.ElementType> = {
 
 export function ServicesSection() {
   return (
-    <section id="services" className="relative py-24 sm:py-32 bg-charcoal-950 text-warmWhite overflow-hidden">
+    <section id="services" className="relative py-24 sm:py-32 bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <SectionHeading
@@ -50,7 +50,7 @@ export function ServicesSection() {
           />
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 text-sm font-mono text-slate-muted hover:text-white transition-colors duration-200 shrink-0 pb-2"
+            className="inline-flex items-center gap-2 text-sm font-mono text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors duration-200 shrink-0 pb-2 font-bold"
           >
             <span>Explore All 12 Capabilities</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -70,29 +70,29 @@ export function ServicesSection() {
                 transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
               >
                 <Link href={`/services/${service.slug}`} className="block h-full group">
-                  <Card className="h-full flex flex-col justify-between group-hover:border-slate-muted/60 transition-all duration-300">
+                  <Card className="h-full flex flex-col justify-between group-hover:border-slate-500 dark:group-hover:border-slate-muted/60 transition-all duration-300">
                     <div>
                       <div className="flex items-center justify-between mb-6">
-                        <div className="w-12 h-12 rounded-xl bg-charcoal-800 border border-graphite/50 flex items-center justify-center text-slate-light group-hover:text-white group-hover:bg-slate-muted/20 transition-colors">
+                        <div className="w-12 h-12 rounded-xl bg-gray-100 dark:bg-charcoal-800 border border-gray-200 dark:border-graphite/50 flex items-center justify-center text-charcoal-800 dark:text-slate-light group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-slate-muted/20 transition-colors">
                           <IconComponent className="w-6 h-6" />
                         </div>
-                        <span className="font-mono text-xs text-slate-muted">
+                        <span className="font-mono text-xs text-gray-500 dark:text-slate-muted font-bold">
                           0{index + 1}
                         </span>
                       </div>
 
-                      <h3 className="text-xl font-bold text-white group-hover:text-slate-200 transition-colors mb-2.5">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-black dark:group-hover:text-slate-200 transition-colors mb-2.5">
                         {service.title}
                       </h3>
 
-                      <p className="text-sm text-slate-400 leading-relaxed mb-6">
+                      <p className="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
                         {service.shortDescription}
                       </p>
                     </div>
 
-                    <div className="pt-4 border-t border-graphite/40 flex items-center justify-between text-xs font-mono text-slate-muted group-hover:text-white transition-colors">
-                      <span className="uppercase tracking-wider">{service.category}</span>
-                      <span className="flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    <div className="pt-4 border-t border-gray-200 dark:border-graphite/40 flex items-center justify-between text-xs font-mono text-gray-500 dark:text-slate-muted group-hover:text-black dark:group-hover:text-white transition-colors">
+                      <span className="uppercase tracking-wider font-semibold">{service.category}</span>
+                      <span className="flex items-center gap-1 group-hover:translate-x-1 transition-transform font-bold">
                         Details <ArrowUpRight className="w-3.5 h-3.5" />
                       </span>
                     </div>

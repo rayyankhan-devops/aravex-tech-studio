@@ -30,23 +30,17 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 15);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu upon navigation
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
 
-  // Determine which logo variant to use
-  // Light mode -> dark logo; Dark mode -> light/transparent logo
-  const currentLogo =
-    mounted && theme === 'light'
-      ? BRAND_ASSETS.mark.transparentForLight
-      : BRAND_ASSETS.horizontal.transparentDark;
+  const isLight = mounted && theme === 'light';
 
   return (
     <>
@@ -54,26 +48,41 @@ export function Header() {
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           scrolled
-            ? 'py-3.5 bg-charcoal-950/80 dark:bg-charcoal-950/85 light:bg-warmWhite/90 backdrop-blur-md border-b border-graphite/40 dark:border-graphite/40 light:border-gray-200 shadow-sm'
+            ? 'py-3 bg-white/90 dark:bg-charcoal-950/90 backdrop-blur-md border-b border-gray-200/80 dark:border-graphite/40 shadow-sm'
             : 'py-5 bg-transparent'
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo with high visibility in both Dark and Light modes */}
           <Link href="/" className="relative flex items-center gap-3 group focus:outline-none">
-            <div className="relative h-9 md:h-10 w-32 md:w-40 transition-transform duration-300 group-hover:scale-[1.02]">
+            <div className="relative h-11 w-44 sm:w-52 transition-transform duration-300 group-hover:scale-[1.02]">
+              {/* Dark mode logo (rendered when theme is dark) */}
               <Image
-                src={currentLogo}
+                src={BRAND_ASSETS.horizontal.forDarkTheme}
                 alt="AREVEX TECH STUDIO"
                 fill
                 priority
-                className="object-contain object-left"
+                className={cn(
+                  'object-contain object-left transition-opacity duration-300',
+                  isLight ? 'opacity-0 pointer-events-none' : 'opacity-100'
+                )}
+              />
+              {/* Light mode logo (rendered when theme is light) */}
+              <Image
+                src={BRAND_ASSETS.horizontal.forLightTheme}
+                alt="AREVEX TECH STUDIO"
+                fill
+                priority
+                className={cn(
+                  'object-contain object-left transition-opacity duration-300',
+                  isLight ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                )}
               />
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2 px-4 py-1.5 rounded-full bg-charcoal-900/60 dark:bg-charcoal-900/60 light:bg-white/80 backdrop-blur-md border border-graphite/40 dark:border-graphite/40 light:border-gray-200">
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2 px-4 py-1.5 rounded-full bg-black/5 dark:bg-charcoal-900/60 backdrop-blur-md border border-gray-200 dark:border-graphite/40">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
               return (
@@ -83,8 +92,8 @@ export function Header() {
                   className={cn(
                     'relative px-3.5 py-1.5 text-xs xl:text-sm font-medium transition-colors duration-200 rounded-full',
                     isActive
-                      ? 'text-warmWhite dark:text-warmWhite light:text-charcoal-900 bg-graphite/50 dark:bg-graphite/50 light:bg-gray-100 font-semibold'
-                      : 'text-slate-light dark:text-slate-light light:text-charcoal-700 hover:text-white dark:hover:text-white light:hover:text-black'
+                      ? 'text-charcoal-900 dark:text-warmWhite bg-white dark:bg-graphite/70 shadow-sm font-semibold'
+                      : 'text-gray-600 dark:text-slate-light hover:text-black dark:hover:text-white'
                   )}
                 >
                   {link.name}
@@ -108,7 +117,7 @@ export function Header() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle Navigation Menu"
-              className="p-2 rounded-lg bg-charcoal-800/80 dark:bg-charcoal-800/80 light:bg-gray-100 border border-graphite/40 text-slate-light"
+              className="p-2 rounded-lg bg-gray-100 dark:bg-charcoal-800/80 border border-gray-300 dark:border-graphite/40 text-charcoal-800 dark:text-slate-light"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -116,7 +125,7 @@ export function Header() {
         </div>
       </header>
 
-      {/* Fullscreen Animated Mobile Navigation Drawer */}
+      {/* Fullscreen Mobile Menu Drawer */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -124,10 +133,10 @@ export function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] as const }}
-            className="fixed inset-0 z-40 bg-charcoal-950/98 dark:bg-charcoal-950/98 light:bg-warmWhite flex flex-col justify-between pt-24 pb-8 px-6 sm:hidden"
+            className="fixed inset-0 z-40 bg-white dark:bg-charcoal-950 flex flex-col justify-between pt-24 pb-8 px-6 sm:hidden"
           >
             <div className="flex flex-col gap-4">
-              <p className="font-mono text-xs tracking-widest uppercase text-slate-muted">Navigation</p>
+              <p className="font-mono text-xs tracking-widest uppercase text-gray-400 dark:text-slate-muted">Navigation</p>
               <div className="flex flex-col gap-2">
                 {NAV_LINKS.map((link) => {
                   const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
@@ -136,10 +145,10 @@ export function Header() {
                       key={link.name}
                       href={link.href}
                       className={cn(
-                        'text-2xl font-semibold py-2 transition-colors border-b border-graphite/30',
+                        'text-2xl font-semibold py-2 transition-colors border-b border-gray-100 dark:border-graphite/30',
                         isActive
-                          ? 'text-white dark:text-white light:text-black font-bold pl-2 border-slate-muted'
-                          : 'text-slate-light dark:text-slate-light light:text-charcoal-700'
+                          ? 'text-black dark:text-white font-bold pl-2 border-slate-muted'
+                          : 'text-gray-600 dark:text-slate-light'
                       )}
                     >
                       {link.name}
@@ -149,12 +158,12 @@ export function Header() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 pt-6 border-t border-graphite/40">
+            <div className="flex flex-col gap-4 pt-6 border-t border-gray-200 dark:border-graphite/40">
               <MagneticButton href="/contact" size="md" variant="primary" className="w-full text-center">
                 <span>Start a Project</span>
                 <ArrowUpRight className="w-4 h-4 ml-1" />
               </MagneticButton>
-              <div className="flex justify-between items-center text-xs font-mono text-slate-muted">
+              <div className="flex justify-between items-center text-xs font-mono text-gray-500 dark:text-slate-muted">
                 <span>AREVEX TECH STUDIO</span>
                 <span>PKR / USD</span>
               </div>

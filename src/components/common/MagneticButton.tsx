@@ -43,7 +43,7 @@ export function MagneticButton({
   };
 
   const baseStyles =
-    'relative inline-flex items-center justify-center font-medium tracking-wide transition-all duration-300 rounded-full select-none overflow-hidden group focus:outline-none focus:ring-2 focus:ring-slate-muted/50';
+    'relative inline-flex items-center justify-center font-medium tracking-wide transition-all duration-300 rounded-full select-none overflow-hidden group focus:outline-none focus:ring-2 focus:ring-slate-muted/50 cursor-pointer';
 
   const sizeStyles = {
     sm: 'text-xs px-4 py-2 gap-1.5',
@@ -53,13 +53,13 @@ export function MagneticButton({
 
   const variantStyles = {
     primary:
-      'bg-warmWhite text-charcoal-900 hover:bg-white shadow-[0_0_20px_rgba(255,255,255,0.08)] border border-transparent dark:bg-warmWhite dark:text-charcoal-900 dark:hover:bg-white',
+      'bg-charcoal-950 text-white hover:bg-black dark:bg-warmWhite dark:text-charcoal-900 dark:hover:bg-white shadow-md border border-transparent',
     secondary:
-      'bg-graphite text-warmWhite hover:bg-graphite-light border border-slate-muted/20 dark:bg-graphite dark:text-warmWhite dark:hover:bg-graphite-light',
+      'bg-gray-100 text-charcoal-900 hover:bg-gray-200 dark:bg-graphite dark:text-warmWhite dark:hover:bg-graphite-light border border-gray-300 dark:border-slate-muted/20',
     outline:
-      'bg-transparent text-foreground border border-slate-muted/30 hover:border-slate-muted hover:bg-slate-muted/10',
+      'bg-transparent text-charcoal-900 dark:text-warmWhite border border-gray-300 dark:border-slate-muted/30 hover:border-slate-500 hover:bg-black/5 dark:hover:bg-slate-muted/10',
     ghost:
-      'bg-transparent text-foreground hover:bg-slate-muted/10 border border-transparent',
+      'bg-transparent text-charcoal-900 dark:text-warmWhite hover:bg-black/5 dark:hover:bg-slate-muted/10 border border-transparent',
   };
 
   const content = (
@@ -71,7 +71,7 @@ export function MagneticButton({
       transition={{ type: 'spring', stiffness: 250, damping: 20 }}
       className={cn(baseStyles, sizeStyles[size], variantStyles[variant], className)}
     >
-      <span className="relative z-10 flex items-center gap-2">{children}</span>
+      <span className="relative z-10 flex items-center gap-2 font-semibold">{children}</span>
     </motion.div>
   );
 

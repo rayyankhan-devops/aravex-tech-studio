@@ -66,7 +66,7 @@ export function ProductDemoModal({ product, isOpen, onClose }: ProductDemoModalP
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={handleClose}
-          className="fixed inset-0 bg-charcoal-950/80 backdrop-blur-sm"
+          className="fixed inset-0 bg-black/60 dark:bg-charcoal-950/80 backdrop-blur-sm"
         />
 
         {/* Modal Window */}
@@ -75,23 +75,23 @@ export function ProductDemoModal({ product, isOpen, onClose }: ProductDemoModalP
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.95, opacity: 0, y: 15 }}
           transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] as const }}
-          className="relative w-full max-w-lg rounded-2xl bg-charcoal-900 dark:bg-charcoal-900 light:bg-white border border-graphite/50 p-6 sm:p-8 shadow-2xl z-10 text-warmWhite dark:text-warmWhite light:text-charcoal-900"
+          className="relative w-full max-w-lg rounded-2xl bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/50 p-6 sm:p-8 shadow-2xl z-10 text-gray-900 dark:text-warmWhite"
         >
           <button
             onClick={handleClose}
             aria-label="Close modal"
-            className="absolute top-5 right-5 p-2 rounded-full text-slate-muted hover:text-white dark:hover:text-white light:hover:text-black transition-colors"
+            className="absolute top-5 right-5 p-2 rounded-full text-gray-500 hover:text-black dark:text-slate-muted dark:hover:text-white transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
 
           {success ? (
             <div className="flex flex-col items-center text-center py-8 gap-4">
-              <div className="w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+              <div className="w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold">Demo Scheduled</h3>
-              <p className="text-sm text-slate-light dark:text-slate-light light:text-charcoal-700 leading-relaxed max-w-sm">
+              <p className="text-sm text-gray-600 dark:text-slate-300 leading-relaxed max-w-sm">
                 Thank you for your interest in <strong>{product.title}</strong>. Our product solutions engineer will prepare your demo environment and reach out within 24 hours.
               </p>
               <MagneticButton onClick={handleClose} variant="primary" size="sm" className="mt-4">
@@ -101,59 +101,59 @@ export function ProductDemoModal({ product, isOpen, onClose }: ProductDemoModalP
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-xl bg-slate-muted/20 text-slate-light">
+                <div className="p-2.5 rounded-xl bg-gray-100 dark:bg-slate-muted/20 text-gray-800 dark:text-slate-light border border-gray-200 dark:border-transparent">
                   <Monitor className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="font-mono text-xs uppercase tracking-wider text-slate-muted">Software Demo Request</p>
+                  <p className="font-mono text-xs uppercase tracking-wider text-gray-500 dark:text-slate-muted font-bold">Software Demo Request</p>
                   <h3 className="text-lg font-bold leading-tight">{product.title}</h3>
                 </div>
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-mono text-slate-muted uppercase">Full Name *</label>
+                <label className="text-xs font-mono text-gray-700 dark:text-slate-300 uppercase font-bold">Full Name *</label>
                 <input
                   type="text"
                   required
                   placeholder="Your Name"
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-charcoal-850 dark:bg-charcoal-850 light:bg-gray-50 border border-graphite/40 text-sm focus:outline-none focus:border-slate-muted"
+                  className="w-full px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-sm text-gray-900 dark:text-white focus:outline-none focus:border-slate-muted"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-mono text-slate-muted uppercase">Business Email *</label>
+                  <label className="text-xs font-mono text-gray-700 dark:text-slate-300 uppercase font-bold">Business Email *</label>
                   <input
                     type="email"
                     required
                     placeholder="name@business.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-charcoal-850 dark:bg-charcoal-850 light:bg-gray-50 border border-graphite/40 text-sm focus:outline-none focus:border-slate-muted"
+                    className="w-full px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-sm text-gray-900 dark:text-white focus:outline-none focus:border-slate-muted"
                   />
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-mono text-slate-muted uppercase">Company Name *</label>
+                  <label className="text-xs font-mono text-gray-700 dark:text-slate-300 uppercase font-bold">Company Name *</label>
                   <input
                     type="text"
                     required
                     placeholder="Your Company"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-charcoal-850 dark:bg-charcoal-850 light:bg-gray-50 border border-graphite/40 text-sm focus:outline-none focus:border-slate-muted"
+                    className="w-full px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-sm text-gray-900 dark:text-white focus:outline-none focus:border-slate-muted"
                   />
                 </div>
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-mono text-slate-muted uppercase">Operation Scale</label>
+                <label className="text-xs font-mono text-gray-700 dark:text-slate-300 uppercase font-bold">Operation Scale</label>
                 <select
                   value={formData.branchesCount}
                   onChange={(e) => setFormData({ ...formData, branchesCount: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-charcoal-850 dark:bg-charcoal-850 light:bg-gray-50 border border-graphite/40 text-sm focus:outline-none focus:border-slate-muted"
+                  className="w-full px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-sm text-gray-900 dark:text-white focus:outline-none focus:border-slate-muted"
                 >
                   <option value="Single Location">Single Location / Pilot</option>
                   <option value="2-5 Branches">2 to 5 Branches</option>
@@ -163,13 +163,13 @@ export function ProductDemoModal({ product, isOpen, onClose }: ProductDemoModalP
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-mono text-slate-muted uppercase">Specific Questions or Hardware Requirements</label>
+                <label className="text-xs font-mono text-gray-700 dark:text-slate-300 uppercase font-bold">Specific Questions or Hardware Requirements</label>
                 <textarea
                   rows={2}
                   placeholder="e.g. Need thermal receipt printer integration, existing inventory data migration, etc."
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-charcoal-850 dark:bg-charcoal-850 light:bg-gray-50 border border-graphite/40 text-sm focus:outline-none focus:border-slate-muted resize-none"
+                  className="w-full px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-sm text-gray-900 dark:text-white focus:outline-none focus:border-slate-muted resize-none"
                 />
               </div>
 
@@ -177,7 +177,7 @@ export function ProductDemoModal({ product, isOpen, onClose }: ProductDemoModalP
                 <button
                   type="button"
                   onClick={handleClose}
-                  className="px-4 py-2.5 rounded-full text-xs font-mono text-slate-muted hover:text-white transition-colors"
+                  className="px-4 py-2.5 rounded-full text-xs font-mono text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors"
                 >
                   Cancel
                 </button>

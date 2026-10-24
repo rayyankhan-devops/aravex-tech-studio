@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-charcoal-950 text-warmWhite">
+    <main className="min-h-screen bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
       {/* Header */}
-      <section className="pt-24 pb-16 border-b border-graphite/40 bg-charcoal-900/60">
+      <section className="pt-24 pb-16 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="STUDIO IDENTITY & ROOTS"
@@ -30,11 +30,11 @@ export default function AboutPage() {
       </section>
 
       {/* Narrative & Visual */}
-      <section className="py-20 border-b border-graphite/40">
+      <section className="py-20 border-b border-gray-200 dark:border-graphite/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6 flex flex-col gap-6 text-base text-slate-300 leading-relaxed">
-              <h2 className="text-3xl font-bold text-white leading-tight">
+            <div className="lg:col-span-6 flex flex-col gap-6 text-base text-gray-700 dark:text-slate-300 leading-relaxed">
+              <h2 className="text-3xl font-black text-gray-950 dark:text-white leading-tight">
                 Engineering Grounded in Practical Reality.
               </h2>
               <p>
@@ -48,44 +48,57 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="lg:col-span-6 relative h-96 sm:h-[460px] rounded-3xl overflow-hidden border border-graphite/50 shadow-2xl">
+            <div className="lg:col-span-6 relative h-96 sm:h-[460px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/50 shadow-xl">
               <Image
                 src={BRAND_ASSETS.generated.aboutStudio}
                 alt="Arevex Creative Studio Atmosphere"
                 fill
                 className="object-cover object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Authentic Founders Section */}
-      <section className="py-20 border-b border-graphite/40 bg-charcoal-900/40">
+      <section className="py-20 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-mono text-xs uppercase tracking-widest text-slate-muted">Leadership</span>
-            <h2 className="text-3xl font-bold text-white mt-1">Studio Founders</h2>
-            <p className="text-sm text-slate-400 mt-3">
+            <span className="font-mono text-xs uppercase tracking-widest text-slate-500 dark:text-slate-muted font-bold">Leadership</span>
+            <h2 className="text-3xl font-black text-gray-950 dark:text-white mt-1">Studio Founders</h2>
+            <p className="text-sm text-gray-600 dark:text-slate-400 mt-3">
               Founded on principles of engineering craftsmanship, design discipline, and technical transparency.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {COMPANY_INFO.founders.map((founder) => (
-              <Card key={founder.name} className="flex flex-col justify-between text-center items-center py-10">
-                <div className="w-16 h-16 rounded-2xl bg-charcoal-800 border border-graphite/40 flex items-center justify-center text-slate-muted mb-4">
-                  <Users className="w-8 h-8" />
-                </div>
+              <Card key={founder.name} className="flex flex-col justify-between p-8 bg-[#F7F7F5] dark:bg-charcoal-850 border-gray-200 dark:border-graphite/40 shadow-sm hover:shadow-xl transition-all">
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-1">{founder.name}</h3>
-                  <span className="font-mono text-xs text-slate-muted uppercase tracking-wider">
-                    Co-Founder • Arevex Tech Studio
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-graphite/40 flex items-center justify-center text-charcoal-800 dark:text-slate-muted shadow-sm">
+                      <Users className="w-6 h-6" />
+                    </div>
+                    <span className="font-mono text-[10px] uppercase px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20">
+                      Co-Founder
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-1">{founder.name}</h3>
+                  <span className="font-mono text-xs text-slate-600 dark:text-slate-400 font-bold block mb-3">
+                    {founder.role}
                   </span>
+                  <div className="p-2.5 rounded-lg bg-white/60 dark:bg-charcoal-900 border border-gray-200/60 dark:border-graphite/30 text-xs font-mono text-gray-600 dark:text-slate-300 mb-4">
+                    <span className="text-[10px] uppercase text-gray-400 dark:text-slate-muted block font-semibold">Specialization</span>
+                    {founder.focus}
+                  </div>
+                  <p className="text-xs text-gray-600 dark:text-slate-300 leading-relaxed mb-4">
+                    {founder.bio}
+                  </p>
                 </div>
-                <div className="pt-6 mt-6 border-t border-graphite/30 w-full text-xs font-mono text-slate-muted">
-                  Pakistan & International Clients
+                <div className="pt-4 border-t border-gray-200 dark:border-graphite/30 w-full flex items-center justify-between text-xs font-mono text-gray-500 dark:text-slate-muted">
+                  <span>AREVEX LEADERSHIP</span>
+                  <span>Karachi & Global</span>
                 </div>
               </Card>
             ))}
@@ -94,7 +107,7 @@ export default function AboutPage() {
       </section>
 
       {/* Working Practices */}
-      <section className="py-20 border-b border-graphite/40">
+      <section className="py-20 border-b border-gray-200 dark:border-graphite/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="OPERATIONAL VALUES"
@@ -106,12 +119,12 @@ export default function AboutPage() {
             {COMPANY_INFO.workingPractices.map((practice, idx) => (
               <div
                 key={practice.title}
-                className="p-6 rounded-2xl bg-charcoal-900/60 border border-graphite/40 flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-white dark:bg-charcoal-900/60 border border-gray-200 dark:border-graphite/40 flex flex-col justify-between shadow-sm"
               >
                 <div>
-                  <span className="font-mono text-xs text-slate-muted">0{idx + 1}</span>
-                  <h3 className="text-lg font-bold text-white mt-2 mb-2">{practice.title}</h3>
-                  <p className="text-xs text-slate-400 leading-relaxed">{practice.desc}</p>
+                  <span className="font-mono text-xs text-slate-500 dark:text-slate-muted font-bold">0{idx + 1}</span>
+                  <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-2 mb-2">{practice.title}</h3>
+                  <p className="text-xs text-gray-600 dark:text-slate-400 leading-relaxed">{practice.desc}</p>
                 </div>
               </div>
             ))}

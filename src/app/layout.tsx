@@ -126,7 +126,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-charcoal-950 text-warmWhite antialiased selection:bg-slate-muted selection:text-white">
+      <body className="min-h-screen bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite antialiased selection:bg-slate-muted selection:text-white transition-colors duration-300">
         <ThemeProvider>
           <PageLoader />
           <CustomCursor />

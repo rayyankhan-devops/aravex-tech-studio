@@ -15,21 +15,21 @@ export function IntroStatement() {
   ];
 
   return (
-    <section id="intro-statement" className="relative py-24 sm:py-32 bg-charcoal-900 text-warmWhite overflow-hidden border-b border-graphite/40">
+    <section id="intro-statement" className="relative py-24 sm:py-32 bg-white dark:bg-charcoal-900 text-charcoal-900 dark:text-warmWhite overflow-hidden border-b border-gray-200 dark:border-graphite/40 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-12 lg:gap-16">
           {/* Eyebrow */}
           <div className="flex items-center gap-3">
-            <span className="w-2.5 h-2.5 rounded-full bg-slate-muted" />
-            <span className="font-mono text-xs uppercase tracking-[0.25em] text-slate-muted font-bold">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
+            <span className="font-mono text-xs uppercase tracking-[0.25em] text-slate-600 dark:text-slate-muted font-bold">
               02 / CORE PHILOSOPHY
             </span>
           </div>
 
           {/* Oversized Editorial Typography */}
           <div className="max-w-5xl">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-[1.2] text-slate-300">
-              <span className="font-semibold text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-[1.2] text-gray-700 dark:text-slate-300">
+              <span className="font-bold text-gray-950 dark:text-white">
                 {COMPANY_INFO.introStatement}
               </span>{' '}
               At Arevex Tech Studio, we bridge high-velocity software engineering, autonomous artificial intelligence, bulletproof cloud infrastructure, and practical technical education into one cohesive studio.
@@ -47,17 +47,17 @@ export function IntroStatement() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1, duration: 0.5 }}
-                  className="p-5 rounded-xl bg-charcoal-850/60 border border-graphite/40 hover:border-slate-muted/40 transition-colors flex flex-col justify-between"
+                  className="p-5 rounded-2xl bg-[#F7F7F5] dark:bg-charcoal-850/60 border border-gray-200 dark:border-graphite/40 hover:border-slate-400 dark:hover:border-slate-muted/40 transition-colors flex flex-col justify-between shadow-sm"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <div className="p-2 rounded-lg bg-charcoal-800 text-slate-light">
+                    <div className="p-2 rounded-xl bg-white dark:bg-charcoal-800 text-charcoal-800 dark:text-slate-light border border-gray-200 dark:border-graphite/40">
                       <Icon className="w-4 h-4" />
                     </div>
-                    <span className="font-mono text-xs text-slate-muted">0{idx + 1}</span>
+                    <span className="font-mono text-xs text-slate-500 dark:text-slate-muted font-bold">0{idx + 1}</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-sm text-white mb-1.5">{p.title}</h3>
-                    <p className="text-xs text-slate-400 leading-relaxed">{p.desc}</p>
+                    <h3 className="font-bold text-sm text-gray-900 dark:text-white mb-1.5">{p.title}</h3>
+                    <p className="text-xs text-gray-600 dark:text-slate-400 leading-relaxed">{p.desc}</p>
                   </div>
                 </motion.div>
               );
