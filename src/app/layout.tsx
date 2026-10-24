@@ -6,6 +6,7 @@ import { Header } from '@/components/common/Header';
 import { Footer } from '@/components/common/Footer';
 import { CustomCursor } from '@/components/common/CustomCursor';
 import { PageLoader } from '@/components/common/PageLoader';
+import { FloatingWhatsApp } from '@/components/common/FloatingWhatsApp';
 import { COMPANY_INFO } from '@/lib/brand';
 
 const inter = Inter({
@@ -133,6 +134,7 @@ export default function RootLayout({
           <Header />
           <div className="pt-20">{children}</div>
           <Footer />
+          <FloatingWhatsApp />
         </ThemeProvider>
       </body>
     </html>

@@ -6,7 +6,14 @@ import Image from 'next/image';
 import { ArrowUpRight, Mail, MapPin } from 'lucide-react';
 import { useTheme } from '@/context/ThemeContext';
 import { BRAND_ASSETS, COMPANY_INFO } from '@/lib/brand';
-import { GithubIcon, LinkedinIcon, TwitterXIcon } from '@/components/common/SocialIcons';
+import {
+  GithubIcon,
+  LinkedinIcon,
+  TwitterXIcon,
+  FacebookIcon,
+  InstagramIcon,
+  TikTokIcon,
+} from '@/components/common/SocialIcons';
 import { cn } from '@/lib/utils';
 
 export function Footer() {
@@ -42,13 +49,49 @@ export function Footer() {
             <p className="text-sm text-gray-600 dark:text-slate-300 max-w-sm leading-relaxed">
               {COMPANY_INFO.subheadline}
             </p>
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex flex-wrap items-center gap-2.5 pt-2">
+              <a
+                href={COMPANY_INFO.socials.x}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (formerly Twitter)"
+                className="p-2.5 rounded-full bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors shadow-sm hover:scale-105"
+              >
+                <TwitterXIcon className="w-4 h-4" />
+              </a>
+              <a
+                href={COMPANY_INFO.socials.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="p-2.5 rounded-full bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors shadow-sm hover:scale-105"
+              >
+                <FacebookIcon className="w-4 h-4" />
+              </a>
+              <a
+                href={COMPANY_INFO.socials.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="p-2.5 rounded-full bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors shadow-sm hover:scale-105"
+              >
+                <InstagramIcon className="w-4 h-4" />
+              </a>
+              <a
+                href={COMPANY_INFO.socials.tiktok}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+                className="p-2.5 rounded-full bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors shadow-sm hover:scale-105"
+              >
+                <TikTokIcon className="w-4 h-4" />
+              </a>
               <a
                 href={COMPANY_INFO.socials.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="p-2.5 rounded-full bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors shadow-sm"
+                className="p-2.5 rounded-full bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors shadow-sm hover:scale-105"
               >
                 <GithubIcon className="w-4 h-4" />
               </a>
@@ -57,18 +100,9 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="p-2.5 rounded-full bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors shadow-sm"
+                className="p-2.5 rounded-full bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors shadow-sm hover:scale-105"
               >
                 <LinkedinIcon className="w-4 h-4" />
-              </a>
-              <a
-                href={COMPANY_INFO.socials.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter / X"
-                className="p-2.5 rounded-full bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors shadow-sm"
-              >
-                <TwitterXIcon className="w-4 h-4" />
               </a>
             </div>
           </div>

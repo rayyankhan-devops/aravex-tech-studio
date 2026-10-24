@@ -19,6 +19,7 @@ import { Card } from '@/components/common/Card';
 import { ProductDemoModal } from '@/components/forms/ProductDemoModal';
 import { PRODUCTS_DATA } from '@/data/products';
 import { ProductItem } from '@/types';
+import { BRAND_ASSETS } from '@/lib/brand';
 import { FinalCTA } from '@/components/home/FinalCTA';
 
 const PLATFORMS = ['All', 'Desktop', 'Web', 'Mobile', 'Cross-Platform'];
@@ -28,7 +29,23 @@ export default function ProductsPage() {
   const [selectedPlatform, setSelectedPlatform] = useState('All');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [demoProduct, setDemoProduct] = useState<ProductItem | null>(null);
+  const [modalState, setModalState] = useState<{ product: ProductItem; mode: 'buy' | 'demo' } | null>(null);
+
+  const getProductImage = (slug: string) => {
+    switch (slug) {
+      case 'point-of-sale':
+        return BRAND_ASSETS.generated.posTerminal;
+      case 'inventory-mis':
+        return BRAND_ASSETS.generated.inventoryWarehouse;
+      case 'clinic-appointment':
+      case 'clinic-management':
+        return BRAND_ASSETS.generated.clinicEmr;
+      case 'mobile-apps':
+        return BRAND_ASSETS.generated.productsMobile;
+      default:
+        return BRAND_ASSETS.generated.productsBusiness;
+    }
+  };
 
   const filteredProducts = PRODUCTS_DATA.filter((product) => {
     const matchesPlatform = selectedPlatform === 'All' || product.platform === selectedPlatform;
@@ -131,15 +148,30 @@ export default function ProductsPage() {
               {filteredProducts.map((product) => (
                 <Card
                   key={product.id}
-                  className="flex flex-col justify-between bg-white dark:bg-charcoal-850/80 border-gray-200 dark:border-graphite/40 hover:border-slate-500 dark:hover:border-slate-muted/60 shadow-sm hover:shadow-xl"
+                  className="flex flex-col justify-between bg-white dark:bg-charcoal-850/80 border-gray-200 dark:border-graphite/40 hover:border-slate-500 dark:hover:border-slate-muted/60 shadow-sm hover:shadow-xl overflow-hidden p-6"
                 >
                   <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <Badge status={product.status} />
-                      <span className="inline-flex items-center gap-1 text-xs font-mono text-gray-500 dark:text-slate-muted font-semibold">
-                        {getPlatformIcon(product.platform)}
-                        <span>{product.platform}</span>
-                      </span>
+                    {/* Visual Preview */}
+                    <div className="relative h-44 -mx-6 -mt-6 mb-5 overflow-hidden border-b border-gray-200 dark:border-graphite/40 group">
+                      <Image
+                        src={getProductImage(product.slug)}
+                        alt={product.title}
+                        fill
+                        className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                      <div className="absolute top-3 left-3">
+                        <Badge status={product.status} />
+                      </div>
+                      <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono text-white/90">
+                        <span className="flex items-center gap-1 font-semibold">
+                          {getPlatformIcon(product.platform)}
+                          <span>{product.platform}</span>
+                        </span>
+                        <span className="px-2 py-0.5 rounded bg-emerald-500/80 font-bold text-white text-[10px]">
+                          Production Build
+                        </span>
+                      </div>
                     </div>
 
                     <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-2 leading-snug">
@@ -166,12 +198,21 @@ export default function ProductsPage() {
                   </div>
 
                   <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-graphite/40">
-                    <button
-                      onClick={() => setDemoProduct(product)}
-                      className="text-xs font-mono text-gray-900 dark:text-warmWhite font-bold hover:underline focus:outline-none cursor-pointer"
-                    >
-                      Request Demo
-                    </button>
+                    <div className="flex items-center gap-3">
+                      <button
+                        onClick={() => setModalState({ product, mode: 'buy' })}
+                        className="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold hover:underline focus:outline-none cursor-pointer"
+                      >
+                        Buy License
+                      </button>
+                      <span className="text-gray-300 dark:text-graphite">|</span>
+                      <button
+                        onClick={() => setModalState({ product, mode: 'demo' })}
+                        className="text-xs font-mono text-gray-700 dark:text-slate-300 font-medium hover:underline focus:outline-none cursor-pointer"
+                      >
+                        Demo
+                      </button>
+                    </div>
                     <Link
                       href={`/products/${product.slug}`}
                       className="inline-flex items-center gap-1 text-xs font-mono text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white font-semibold"
@@ -187,11 +228,12 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Demo Modal */}
+      {/* Product Purchase & Demo Modal */}
       <ProductDemoModal
-        product={demoProduct}
-        isOpen={!!demoProduct}
-        onClose={() => setDemoProduct(null)}
+        product={modalState?.product || null}
+        defaultMode={modalState?.mode || 'buy'}
+        isOpen={Boolean(modalState)}
+        onClose={() => setModalState(null)}
       />
 
       <FinalCTA />

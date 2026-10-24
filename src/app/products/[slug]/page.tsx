@@ -1,12 +1,14 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { ArrowLeft, ArrowUpRight, Check, ChevronRight, Server, Database, Cpu, Layers } from 'lucide-react';
 import { PRODUCTS_DATA } from '@/data/products';
 import { Badge } from '@/components/common/Badge';
 import { Card } from '@/components/common/Card';
 import { MagneticButton } from '@/components/common/MagneticButton';
+import { BRAND_ASSETS } from '@/lib/brand';
 import { FinalCTA } from '@/components/home/FinalCTA';
 
 interface ProductPageProps {
@@ -90,6 +92,36 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 <ArrowLeft className="w-4 h-4" />
                 <span>All Products</span>
               </Link>
+            </div>
+          </div>
+
+          {/* Architectural Hardware & Interface Showcase */}
+          <div className="mt-12 relative h-72 sm:h-96 md:h-[480px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/50 shadow-2xl">
+            <Image
+              src={
+                product.slug === 'point-of-sale'
+                  ? BRAND_ASSETS.generated.posTerminal
+                  : product.slug === 'inventory-mis'
+                  ? BRAND_ASSETS.generated.inventoryWarehouse
+                  : product.slug.includes('clinic')
+                  ? BRAND_ASSETS.generated.clinicEmr
+                  : product.platform === 'Mobile'
+                  ? BRAND_ASSETS.generated.productsMobile
+                  : BRAND_ASSETS.generated.productsBusiness
+              }
+              alt={product.title}
+              fill
+              priority
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white text-xs font-mono">
+              <span className="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20">
+                {product.title} • Production Interface
+              </span>
+              <span className="px-3 py-1.5 rounded-full bg-emerald-500/80 font-bold text-white">
+                Hardware &amp; Database Verified
+              </span>
             </div>
           </div>
         </div>

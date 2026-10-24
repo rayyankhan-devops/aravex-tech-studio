@@ -64,6 +64,12 @@ export const BRAND_ASSETS = {
     academyHero: '/assets/generated/academy-hero.png',
     aboutStudio: '/assets/generated/about-studio.png',
     ogBanner: '/assets/generated/og-banner.png',
+    posTerminal: '/assets/generated/pos-terminal.png',
+    cicdPipeline: '/assets/generated/cicd-pipeline.png',
+    inventoryWarehouse: '/assets/generated/inventory-warehouse.png',
+    clinicEmr: '/assets/generated/clinic-emr.png',
+    internshipStudio: '/assets/generated/internship-studio.png',
+    projectGoCart: '/assets/generated/project-gocart.png',
   },
 } as const;
 
@@ -110,9 +116,14 @@ export const COMPANY_INFO = {
     phone: '+92 (300) 000-0000',
   },
   socials: {
+    x: 'https://x.com/arevextech',
+    twitter: 'https://x.com/arevextech',
+    facebook: 'https://facebook.com/arevextech',
+    instagram: 'https://instagram.com/arevextech',
+    tiktok: 'https://tiktok.com/@arevextech',
     github: 'https://github.com/arevex',
     linkedin: 'https://linkedin.com/company/arevex',
-    twitter: 'https://x.com/arevextech',
+    whatsapp: 'https://wa.me/923000000000?text=Hello%20Arevex%20Tech%20Studio%2C%20I%20would%20like%20to%20discuss%20a%20project',
   },
   metrics: [
     { label: 'System Uptime Guarantee', value: '99.98%' },

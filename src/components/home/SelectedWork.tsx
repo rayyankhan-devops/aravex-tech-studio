@@ -2,8 +2,9 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, ShieldCheck, Zap } from 'lucide-react';
 import { SectionHeading } from '@/components/common/SectionHeading';
 import { Card } from '@/components/common/Card';
 import { WORK_DATA } from '@/data/work';
@@ -12,13 +13,13 @@ export function SelectedWork() {
   const featuredWork = WORK_DATA.filter((w) => w.featured).slice(0, 4);
 
   return (
-    <section id="work" className="relative py-24 sm:py-32 bg-white dark:bg-charcoal-900 text-charcoal-900 dark:text-warmWhite overflow-hidden border-t border-gray-200 dark:border-graphite/40 transition-colors duration-300">
+    <section id="work" className="relative py-24 sm:py-32 bg-white dark:bg-charcoal-900 text-charcoal-900 dark:text-warmWhite overflow-hidden border-t border-b border-gray-200 dark:border-graphite/40 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <SectionHeading
-            eyebrow="06 / PORTFOLIO & LABS"
-            title="Selected Engineering Work."
-            description="Production software, verified cloud pipelines, and internal research initiatives engineered by Arevex Tech Studio."
+            eyebrow="06 / CLIENT WORK & ARCHITECTURES"
+            title="Selected Engineering Partnerships."
+            description="Verified production software, high-speed retail checkout clusters, and automated DevSecOps pipelines engineered by Arevex Tech Studio."
             className="mb-0"
           />
           <Link
@@ -41,44 +42,60 @@ export function SelectedWork() {
               transition={{ delay: idx * 0.1, duration: 0.5 }}
             >
               <Link href={`/work/${project.slug}`} className="block h-full group">
-                <Card className="h-full flex flex-col justify-between bg-[#F7F7F5] dark:bg-charcoal-950/60 border-gray-200 dark:border-graphite/40 group-hover:border-slate-500 dark:group-hover:border-slate-muted/60 transition-all duration-300 shadow-sm hover:shadow-xl">
+                <Card className="h-full flex flex-col justify-between bg-[#F7F7F5] dark:bg-charcoal-950/60 border-gray-200 dark:border-graphite/40 group-hover:border-slate-500 dark:group-hover:border-slate-muted/60 transition-all duration-300 shadow-sm hover:shadow-2xl overflow-hidden p-6 sm:p-7">
                   <div>
-                    <div className="flex items-center justify-between gap-3 mb-6">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-white dark:bg-charcoal-800 text-gray-800 dark:text-slate-300 border border-gray-200 dark:border-graphite/40 shadow-sm font-semibold">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                        {project.clientType}
-                      </span>
-                      <span className="font-mono text-xs text-gray-500 dark:text-slate-muted font-bold">{project.year}</span>
+                    {/* Visual Project Screenshot Preview */}
+                    <div className="relative h-52 sm:h-64 -mx-6 sm:-mx-7 -mt-6 sm:-mt-7 mb-6 overflow-hidden border-b border-gray-200 dark:border-graphite/40">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                      <div className="absolute top-4 left-4">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-black/60 backdrop-blur-md text-emerald-400 border border-emerald-500/30 font-semibold shadow-md">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                          <span>{project.clientType.split('//')[0]}</span>
+                        </span>
+                      </div>
+                      <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-[11px] font-mono text-white/95">
+                        <span className="px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md border border-white/10 font-bold">
+                          {project.category}
+                        </span>
+                        <span className="px-2.5 py-1 rounded-md bg-emerald-500/80 font-bold text-white shadow-sm">
+                          {project.metrics}
+                        </span>
+                      </div>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-gray-950 dark:text-white group-hover:text-black dark:group-hover:text-slate-200 transition-colors mb-3 leading-tight">
+                    <h3 className="text-xl sm:text-2xl font-black text-gray-950 dark:text-white group-hover:text-black dark:group-hover:text-slate-200 transition-colors mb-3 leading-snug">
                       {project.title}
                     </h3>
 
-                    <p className="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
+                    <p className="text-xs sm:text-sm text-gray-600 dark:text-slate-300 leading-relaxed mb-6">
                       {project.summary}
                     </p>
 
-                    <div className="flex flex-col gap-2 pt-2 border-t border-gray-200 dark:border-graphite/30 mb-6">
-                      {project.keyHighlights.slice(0, 3).map((highlight) => (
-                        <div key={highlight} className="flex items-center gap-2 text-xs text-gray-600 dark:text-slate-400">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-slate-muted shrink-0" />
-                          <span>{highlight}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="pt-4 border-t border-gray-200 dark:border-graphite/40 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
-                    <div className="flex flex-wrap gap-1.5">
-                      {project.technologies.slice(0, 4).map((tech) => (
-                        <span key={tech} className="px-2 py-0.5 rounded bg-white dark:bg-charcoal-800/80 text-gray-600 dark:text-slate-muted border border-gray-200 dark:border-transparent font-medium">
+                    <div className="flex flex-wrap gap-1.5 mb-6">
+                      {project.technologies.slice(0, 5).map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white dark:bg-charcoal-850 text-gray-700 dark:text-slate-300 border border-gray-200 dark:border-graphite/40"
+                        >
                           {tech}
                         </span>
                       ))}
                     </div>
-                    <span className="inline-flex items-center gap-1 text-gray-700 dark:text-slate-muted group-hover:text-black dark:group-hover:text-white transition-colors font-bold">
-                      Case Study <ArrowUpRight className="w-3.5 h-3.5" />
+                  </div>
+
+                  <div className="pt-4 border-t border-gray-200 dark:border-graphite/30 flex items-center justify-between">
+                    <span className="text-xs font-mono text-gray-500 dark:text-slate-muted">
+                      {project.clientType.split('//')[1] || project.year}
+                    </span>
+                    <span className="inline-flex items-center gap-1 text-xs font-mono font-bold text-gray-900 dark:text-warmWhite group-hover:translate-x-1 transition-transform duration-200">
+                      <span>Explore Architecture</span>
+                      <ArrowUpRight className="w-4 h-4 text-emerald-500" />
                     </span>
                   </div>
                 </Card>

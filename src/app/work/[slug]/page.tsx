@@ -1,6 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { ArrowLeft, ArrowUpRight, CheckCircle2, ChevronRight, Layers } from 'lucide-react';
 import { WORK_DATA } from '@/data/work';
@@ -88,6 +89,26 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
                 <ArrowLeft className="w-4 h-4" />
                 <span>All Projects</span>
               </Link>
+            </div>
+          </div>
+
+          {/* Architectural System Screenshot / Pipeline Diagram */}
+          <div className="mt-12 relative h-72 sm:h-96 md:h-[480px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/50 shadow-2xl">
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              priority
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white text-xs font-mono">
+              <span className="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20">
+                {project.clientType}
+              </span>
+              <span className="px-3 py-1.5 rounded-full bg-emerald-500/80 font-bold text-white">
+                {project.metrics}
+              </span>
             </div>
           </div>
         </div>

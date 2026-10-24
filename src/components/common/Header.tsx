@@ -15,6 +15,7 @@ import { cn } from '@/lib/utils';
 const NAV_LINKS = [
   { name: 'Services', href: '/services' },
   { name: 'Products', href: '/products' },
+  { name: 'Internships', href: '/internships', badge: 'Hiring' },
   { name: 'Academy', href: '/academy' },
   { name: 'Work', href: '/work' },
   { name: 'About', href: '/about' },
@@ -90,13 +91,18 @@ export function Header() {
                   key={link.name}
                   href={link.href}
                   className={cn(
-                    'relative px-3.5 py-1.5 text-xs xl:text-sm font-medium transition-colors duration-200 rounded-full',
+                    'relative inline-flex items-center gap-1.5 px-3 py-1.5 text-xs xl:text-sm font-medium transition-colors duration-200 rounded-full',
                     isActive
                       ? 'text-charcoal-900 dark:text-warmWhite bg-white dark:bg-graphite/70 shadow-sm font-semibold'
                       : 'text-gray-600 dark:text-slate-light hover:text-black dark:hover:text-white'
                   )}
                 >
-                  {link.name}
+                  <span>{link.name}</span>
+                  {link.badge && (
+                    <span className="text-[9px] font-mono px-1.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20">
+                      {link.badge}
+                    </span>
+                  )}
                 </Link>
               );
             })}
@@ -145,13 +151,18 @@ export function Header() {
                       key={link.name}
                       href={link.href}
                       className={cn(
-                        'text-2xl font-semibold py-2 transition-colors border-b border-gray-100 dark:border-graphite/30',
+                        'text-2xl font-semibold py-2 transition-colors border-b border-gray-100 dark:border-graphite/30 flex items-center justify-between',
                         isActive
                           ? 'text-black dark:text-white font-bold pl-2 border-slate-muted'
                           : 'text-gray-600 dark:text-slate-light'
                       )}
                     >
-                      {link.name}
+                      <span>{link.name}</span>
+                      {link.badge && (
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20">
+                          {link.badge}
+                        </span>
+                      )}
                     </Link>
                   );
                 })}
