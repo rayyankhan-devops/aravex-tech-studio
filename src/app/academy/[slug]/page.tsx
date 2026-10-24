@@ -1,0 +1,191 @@
+'use client';
+
+import React, { useState, use } from 'react';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { ArrowLeft, ArrowUpRight, CheckCircle2, ChevronRight, Clock, Tag, BookOpen } from 'lucide-react';
+import { COURSES_DATA } from '@/data/academy';
+import { Card } from '@/components/common/Card';
+import { MagneticButton } from '@/components/common/MagneticButton';
+import { EnrollmentModal } from '@/components/forms/EnrollmentModal';
+import { FinalCTA } from '@/components/home/FinalCTA';
+import { CourseItem } from '@/types';
+
+interface AcademyDetailPageProps {
+  params: Promise<{ slug: string }>;
+}
+
+export default function AcademyCourseDetailPage({ params }: AcademyDetailPageProps) {
+  const { slug } = use(params);
+  const course = COURSES_DATA.find((c) => c.slug === slug);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  if (!course) {
+    notFound();
+  }
+
+  return (
+    <main className="min-h-screen bg-charcoal-950 text-warmWhite">
+      {/* Breadcrumb Navigation */}
+      <div className="pt-24 pb-6 border-b border-graphite/40 bg-charcoal-900/40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-xs font-mono text-slate-muted">
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <ChevronRight className="w-3.5 h-3.5" />
+          <Link href="/academy" className="hover:text-white transition-colors">Academy</Link>
+          <ChevronRight className="w-3.5 h-3.5" />
+          <span className="text-white font-medium">{course.title}</span>
+        </div>
+      </div>
+
+      {/* Hero Header */}
+      <section className="py-16 sm:py-24 border-b border-graphite/40 bg-charcoal-900/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <span className="px-3 py-1 rounded-full text-xs font-mono bg-charcoal-800 text-slate-300 border border-graphite/40">
+                {course.category}
+              </span>
+              <span className="px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                {course.feePKR}
+              </span>
+              <span className="font-mono text-xs text-slate-muted">
+                {course.duration}
+              </span>
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
+              {course.title}
+            </h1>
+
+            <p className="text-xl sm:text-2xl text-slate-300 font-light leading-relaxed mb-8">
+              {course.shortDescription}
+            </p>
+
+            <div className="flex flex-wrap items-center gap-4">
+              <MagneticButton onClick={() => setModalOpen(true)} size="md" variant="primary">
+                <span>Enroll in Upcoming Cohort</span>
+                <ArrowUpRight className="w-4 h-4 ml-1" />
+              </MagneticButton>
+              <Link
+                href="/academy"
+                className="inline-flex items-center gap-2 text-sm font-mono text-slate-muted hover:text-white transition-colors"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                <span>All Courses</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Course Overview & Curriculum */}
+      <section className="py-20 border-b border-graphite/40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            {/* Left Column: Overview, Outcomes, Curriculum */}
+            <div className="lg:col-span-7 flex flex-col gap-10">
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-4">Course Overview</h2>
+                <p className="text-base text-slate-300 leading-relaxed">
+                  {course.overview}
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-white mb-4">What You Will Master</h3>
+                <div className="flex flex-col gap-3">
+                  {course.learningOutcomes.map((outcome) => (
+                    <div key={outcome} className="flex items-start gap-3 text-sm text-slate-300">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <span>{outcome}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* 4-Week Curriculum Breakdown */}
+              <div>
+                <h3 className="text-xl font-bold text-white mb-6">Week-by-Week Syllabus</h3>
+                <div className="flex flex-col gap-4">
+                  {course.curriculum.map((module) => (
+                    <div
+                      key={module.week}
+                      className="p-6 rounded-2xl bg-charcoal-900/60 border border-graphite/40"
+                    >
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="font-mono text-xs font-bold text-emerald-400 uppercase">
+                          {module.week}
+                        </span>
+                        <BookOpen className="w-4 h-4 text-slate-muted" />
+                      </div>
+                      <h4 className="text-base font-bold text-white mb-3">
+                        {module.title}
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {module.topics.map((t) => (
+                          <span
+                            key={t}
+                            className="px-2.5 py-1 rounded text-xs font-mono bg-charcoal-800 text-slate-300"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Prerequisites & Cohort Details */}
+            <div className="lg:col-span-5 flex flex-col gap-6">
+              <Card>
+                <h3 className="text-lg font-bold text-white mb-6 pb-3 border-b border-graphite/40">
+                  Cohort Enrollment Details
+                </h3>
+
+                <div className="flex flex-col gap-4 text-xs font-mono">
+                  <div>
+                    <span className="text-slate-muted block mb-1">Target Audience</span>
+                    <p className="text-slate-300 font-sans text-sm">{course.targetAudience}</p>
+                  </div>
+
+                  <div className="pt-3 border-t border-graphite/30">
+                    <span className="text-slate-muted block mb-1">Prerequisites</span>
+                    <p className="text-slate-300 font-sans text-sm">{course.prerequisites}</p>
+                  </div>
+
+                  <div className="pt-3 border-t border-graphite/30 flex justify-between items-center">
+                    <span className="text-slate-muted">Course Fee</span>
+                    <span className="text-base font-bold text-emerald-400">{course.feePKR}</span>
+                  </div>
+
+                  <div className="flex justify-between items-center">
+                    <span className="text-slate-muted">Batch Status</span>
+                    <span className="text-slate-200">{course.enrollmentStatus}</span>
+                  </div>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-graphite/40">
+                  <MagneticButton onClick={() => setModalOpen(true)} size="sm" variant="primary" className="w-full text-center">
+                    <span>Apply for Enrollment</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 ml-1" />
+                  </MagneticButton>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enrollment Modal */}
+      <EnrollmentModal
+        course={course}
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+      />
+
+      <FinalCTA />
+    </main>
+  );
+}
