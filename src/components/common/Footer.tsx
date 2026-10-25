@@ -33,7 +33,7 @@ export function Footer() {
                 fill
                 className={cn(
                   'object-contain object-left transition-opacity duration-300',
-                  isLight ? 'opacity-0' : 'opacity-100'
+                  isLight ? 'opacity-0 pointer-events-none' : 'opacity-100'
                 )}
               />
               <Image
@@ -42,7 +42,7 @@ export function Footer() {
                 fill
                 className={cn(
                   'object-contain object-left transition-opacity duration-300',
-                  isLight ? 'opacity-100' : 'opacity-0'
+                  isLight ? 'opacity-100' : 'opacity-0 pointer-events-none'
                 )}
               />
             </Link>
