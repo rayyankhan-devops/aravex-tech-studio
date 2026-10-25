@@ -153,6 +153,92 @@ export default function ProductsPage() {
       {/* Product Catalog Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Flagship Hardware & Enterprise Software Showcase Banner */}
+          <div className="relative rounded-3xl bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/50 overflow-hidden mb-16 shadow-2xl">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 sm:p-12">
+              <div className="lg:col-span-7 flex flex-col gap-6">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30 font-bold">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    FLAGSHIP COMMERCIAL ENGINE
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-gray-100 dark:bg-charcoal-850 text-gray-800 dark:text-slate-200 border border-gray-200 dark:border-graphite/40 font-semibold">
+                    <Monitor className="w-3.5 h-3.5" />
+                    <span>Desktop + Cloud Edge</span>
+                  </span>
+                </div>
+
+                <h2 className="text-3xl sm:text-4xl font-black text-gray-950 dark:text-white tracking-tight leading-tight">
+                  Arevex Retail POS &amp; Enterprise Operations Hub.
+                </h2>
+
+                <p className="text-base text-gray-700 dark:text-slate-200 leading-relaxed max-w-xl font-normal">
+                  Engineered for extreme transactional velocity, dual-screen cashier displays, ESC/POS thermal printing, and 100% offline-ready operations with automated cloud ledger synchronization.
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                  <div className="flex items-start gap-2 text-sm text-gray-700 dark:text-slate-300">
+                    <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                    <span>Sub-second barcode scan &amp; billing</span>
+                  </div>
+                  <div className="flex items-start gap-2 text-sm text-gray-700 dark:text-slate-300">
+                    <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                    <span>100% Offline SQLite database failover</span>
+                  </div>
+                  <div className="flex items-start gap-2 text-sm text-gray-700 dark:text-slate-300">
+                    <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                    <span>Integrated thermal ESC/POS printing</span>
+                  </div>
+                  <div className="flex items-start gap-2 text-sm text-gray-700 dark:text-slate-300">
+                    <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                    <span>Multi-branch inventory ledger sync</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-3 pt-4">
+                  <button
+                    onClick={() => setModalState({ product: PRODUCTS_DATA[0], mode: 'buy' })}
+                    className="px-6 py-3 rounded-full bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-950 font-bold text-sm shadow-md hover:bg-black dark:hover:bg-warmWhite transition-all hover:scale-[1.02] cursor-pointer"
+                  >
+                    Buy Commercial License
+                  </button>
+                  <button
+                    onClick={() => setModalState({ product: PRODUCTS_DATA[0], mode: 'demo' })}
+                    className="px-6 py-3 rounded-full border border-gray-300 dark:border-graphite/60 text-sm font-semibold text-gray-800 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-charcoal-850 transition-colors cursor-pointer"
+                  >
+                    Schedule Live Demo
+                  </button>
+                  <Link
+                    href="/products/point-of-sale"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-700 dark:text-slate-200 hover:text-black dark:hover:text-white transition-colors ml-1"
+                  >
+                    <span>Architecture Specs</span>
+                    <ArrowUpRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+
+              <div className="lg:col-span-5 relative h-72 sm:h-96 rounded-2xl overflow-hidden border border-gray-200 dark:border-graphite/40 shadow-xl group">
+                <Image
+                  src={BRAND_ASSETS.generated.posTerminal}
+                  alt="Arevex Commercial POS & Enterprise Workstation"
+                  fill
+                  priority
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono text-white/95">
+                  <span className="px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md border border-white/10 font-medium">
+                    AREVEX Enterprise Station
+                  </span>
+                  <span className="px-2.5 py-1 rounded-md bg-emerald-500/80 font-bold text-white shadow-sm">
+                    100% Production Ready
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {filteredProducts.length === 0 ? (
             <div className="text-center py-20 text-gray-500 dark:text-slate-muted font-mono text-sm">
               No products found matching your active filter criteria.
