@@ -18,6 +18,7 @@ import {
   ShieldCheck,
   Clock,
   Compass,
+  Award,
 } from 'lucide-react';
 import { SectionHeading } from '@/components/common/SectionHeading';
 import { Card } from '@/components/common/Card';
@@ -69,15 +70,15 @@ export default function InternshipsPage() {
             <div className="flex flex-wrap lg:flex-col gap-4 p-5 rounded-2xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/50 text-xs font-mono">
               <div>
                 <span className="text-gray-400 dark:text-slate-muted block text-[10px] uppercase">Active Tracks</span>
-                <span className="text-xl font-bold text-gray-900 dark:text-white">12 Disciplines</span>
+                <span className="text-xl font-bold text-gray-900 dark:text-white">13 Disciplines</span>
               </div>
               <div>
                 <span className="text-gray-400 dark:text-slate-muted block text-[10px] uppercase">Format</span>
-                <span className="text-base font-bold text-emerald-600 dark:text-emerald-400">100% Remote / Hybrid</span>
+                <span className="text-base font-bold text-emerald-600 dark:text-emerald-400">100% Remote Only</span>
               </div>
               <div>
-                <span className="text-gray-400 dark:text-slate-muted block text-[10px] uppercase">Mentorship</span>
-                <span className="text-base font-bold text-gray-900 dark:text-white">Direct Co-Founder 1-on-1</span>
+                <span className="text-gray-400 dark:text-slate-muted block text-[10px] uppercase">Endorsement</span>
+                <span className="text-base font-bold text-gray-900 dark:text-white">Lifetime Support &amp; Referral</span>
               </div>
             </div>
           </div>
@@ -94,10 +95,10 @@ export default function InternshipsPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white text-xs font-mono">
               <span className="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20">
-                Arevex Lab • Karachi &amp; Global Remote
+                Arevex 100% Remote Engineering Lab • Global Access
               </span>
               <span className="hidden sm:inline-block px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-emerald-400">
-                Stipend + Certificate of Engineering Excellence
+                Stipend + Lifetime Support + Recommendation Letter for Top Candidates
               </span>
             </div>
           </div>
@@ -110,8 +111,8 @@ export default function InternshipsPage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <SectionHeading
               eyebrow="SELECT YOUR DISCIPLINE"
-              title="12 Specialized Internship Tracks."
-              description="Each track is engineered around an authentic studio capability. Select your focus area and submit your portfolio to enter our review pipeline."
+              title="13 Specialized Internship Tracks."
+              description="Every single track is 100% remote. Work on authentic production codebases with guaranteed lifetime alumni support and formal recommendation letters for top performers."
               className="mb-0"
             />
 
@@ -130,6 +131,35 @@ export default function InternshipsPage() {
                   {cat}
                 </button>
               ))}
+            </div>
+          </div>
+
+          {/* Lifetime Support & Letter of Recommendation Guarantee Banner */}
+          <div className="relative rounded-3xl bg-gradient-to-r from-emerald-950/90 via-charcoal-900 to-charcoal-950 border border-emerald-500/30 p-8 sm:p-10 mb-12 shadow-2xl text-white overflow-hidden">
+            <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-8 flex flex-col gap-3">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-mono font-bold uppercase tracking-wider w-fit">
+                  <Award className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>AREVEX LIFETIME SUPPORT &amp; ENDORSEMENT GUARANTEE</span>
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-black tracking-tight">
+                  Lifetime Support in Every Domain + Founder Recommendation.
+                </h3>
+                <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
+                  In every single internship domain at Arevex, our commitment to you does not expire with the cohort. All interns gain guaranteed lifetime engineering mentorship, direct code reviews, and architectural guidance. In addition, the best-performing candidates receive a prestigious, verified letter of recommendation signed by Arevex founders and direct job referrals to international clients.
+                </p>
+              </div>
+              <div className="lg:col-span-4 grid grid-cols-1 gap-3">
+                <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
+                  <span className="text-xs uppercase font-mono text-emerald-400 font-bold block mb-1">Guaranteed Lifetime Mentorship</span>
+                  <span className="text-sm font-medium text-slate-200">Continuous technical guidance, code consultations, and career advice.</span>
+                </div>
+                <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
+                  <span className="text-xs uppercase font-mono text-emerald-400 font-bold block mb-1">Founder Recommendation Letters</span>
+                  <span className="text-sm font-medium text-slate-200">Formal endorsement and priority introductions to global tech clients.</span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -174,6 +204,15 @@ export default function InternshipsPage() {
                           <span>{item}</span>
                         </div>
                       ))}
+                    </div>
+
+                    {/* Lifetime Support Guarantee Card Callout */}
+                    <div className="p-3 rounded-xl bg-emerald-500/10 dark:bg-emerald-950/30 border border-emerald-500/20 text-xs font-medium text-emerald-800 dark:text-emerald-300 mb-6 flex items-start gap-2.5">
+                      <Award className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                      <span>
+                        <strong className="font-semibold block text-emerald-900 dark:text-emerald-200">Lifetime Support &amp; Recommendation</strong>
+                        Every intern receives lifetime code guidance. Top performers earn signed recommendation letters and client referrals.
+                      </span>
                     </div>
                   </div>
 
@@ -248,14 +287,14 @@ export default function InternshipsPage() {
                   <Briefcase className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-2">
-                  Fast-Track to Full-Time
+                  Lifetime Support &amp; Recommendations
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-slate-300 leading-relaxed">
-                  Top performing interns who demonstrate relentless problem-solving, architectural purity, and on-time execution are directly offered junior engineering roles at Arevex.
+                <p className="text-sm text-gray-700 dark:text-slate-200 leading-relaxed font-normal">
+                  In every domain, our relationship continues for life with permanent code guidance. The best-performing candidates receive signed founder recommendation letters and direct job referrals to international clients.
                 </p>
               </div>
               <div className="pt-6 mt-6 border-t border-gray-200 dark:border-graphite/30 text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold">
-                Merit Stipend + Permanent Placement
+                Lifetime Alumni Support + Founder Endorsement
               </div>
             </div>
           </div>

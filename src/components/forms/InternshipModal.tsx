@@ -155,8 +155,16 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                   </div>
                   <div>
                     <span className="text-gray-500 dark:text-slate-400 block uppercase text-xs font-semibold">Perks</span>
-                    <span className="font-bold text-gray-950 dark:text-white">Stipend + Cert</span>
+                    <span className="font-bold text-gray-950 dark:text-white">Stipend + Lifetime Support</span>
                   </div>
+                </div>
+
+                {/* Lifetime Support & Letter of Recommendation Callout in Modal */}
+                <div className="p-3.5 rounded-xl bg-emerald-500/10 dark:bg-emerald-950/40 border border-emerald-500/30 text-xs sm:text-sm font-medium text-emerald-800 dark:text-emerald-300 flex items-center gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
+                  <span>
+                    <strong>Arevex Career Endorsement:</strong> You will receive lifetime mentorship support in this domain. Top-performing candidates receive signed recommendation letters and direct client referrals.
+                  </span>
                 </div>
 
                 {error && (
@@ -366,7 +374,11 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                   </div>
                   <div className="flex justify-between border-b border-gray-200 dark:border-graphite/20 pb-2">
                     <span className="text-gray-400 dark:text-slate-muted">Track Format:</span>
-                    <span className="font-bold text-emerald-600 dark:text-emerald-400">{track.mode}</span>
+                    <span className="font-bold text-emerald-600 dark:text-emerald-400">100% Remote Only</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-200 dark:border-graphite/20 pb-2">
+                    <span className="text-gray-400 dark:text-slate-muted">Endorsement:</span>
+                    <span className="font-bold text-emerald-600 dark:text-emerald-400">Lifetime Support &amp; Recommendation</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-400 dark:text-slate-muted">Review Window:</span>
