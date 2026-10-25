@@ -109,11 +109,11 @@ export function Header() {
           </nav>
 
           {/* Action CTAs & Controls */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden sm:flex items-center gap-3 shrink-0">
             <ThemeToggle />
             <MagneticButton href="/contact" size="sm" variant="primary">
-              <span>Start a Project</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              <span className="whitespace-nowrap">Start a Project</span>
+              <ArrowUpRight className="w-3.5 h-3.5 shrink-0" />
             </MagneticButton>
           </div>
 

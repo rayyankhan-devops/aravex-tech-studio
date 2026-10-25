@@ -43,12 +43,12 @@ export function MagneticButton({
   };
 
   const baseStyles =
-    'relative inline-flex items-center justify-center font-medium tracking-wide transition-all duration-300 rounded-full select-none overflow-hidden group focus:outline-none focus:ring-2 focus:ring-slate-muted/50 cursor-pointer';
+    'relative inline-flex items-center justify-center font-medium tracking-wide transition-all duration-300 rounded-full select-none overflow-hidden group focus:outline-none focus:ring-2 focus:ring-slate-muted/50 cursor-pointer whitespace-nowrap shrink-0';
 
   const sizeStyles = {
-    sm: 'text-xs px-4 py-2 gap-1.5',
-    md: 'text-sm px-6 py-3 gap-2',
-    lg: 'text-base px-8 py-4 gap-2.5',
+    sm: 'text-xs sm:text-sm px-4 sm:px-5 py-2 sm:py-2.5 gap-1.5 sm:gap-2 whitespace-nowrap',
+    md: 'text-sm px-6 py-3 gap-2 whitespace-nowrap',
+    lg: 'text-base px-8 py-4 gap-2.5 whitespace-nowrap',
   };
 
   const variantStyles = {
@@ -71,13 +71,13 @@ export function MagneticButton({
       transition={{ type: 'spring', stiffness: 250, damping: 20 }}
       className={cn(baseStyles, sizeStyles[size], variantStyles[variant], className)}
     >
-      <span className="relative z-10 flex items-center gap-2 font-semibold">{children}</span>
+      <span className="relative z-10 flex items-center gap-2 font-semibold whitespace-nowrap shrink-0">{children}</span>
     </motion.div>
   );
 
   if (href) {
     return (
-      <Link href={href} className="inline-block">
+      <Link href={href} className="inline-block shrink-0">
         {content}
       </Link>
     );

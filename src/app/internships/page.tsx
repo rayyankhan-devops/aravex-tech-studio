@@ -334,23 +334,23 @@ export default function InternshipsPage() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
+            <div className="flex flex-col sm:flex-row items-center gap-3.5 w-full lg:w-auto shrink-0">
               <a
                 href={COMPANY_INFO.socials.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold font-mono text-xs flex items-center justify-center gap-2 shadow-lg transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl bg-[#25D366] hover:bg-[#20ba59] text-white font-semibold text-sm shadow-xl transition-all whitespace-nowrap shrink-0 hover:scale-[1.02] active:scale-[0.98]"
               >
-                <WhatsAppIcon className="w-4 h-4" />
-                <span>WhatsApp Talent Desk</span>
+                <WhatsAppIcon className="w-5 h-5 shrink-0" />
+                <span className="whitespace-nowrap">WhatsApp Talent Desk</span>
               </a>
 
               <Link
                 href="/academy"
-                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white text-charcoal-950 hover:bg-warmWhite font-bold font-mono text-xs flex items-center justify-center gap-2 transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl bg-white text-charcoal-950 hover:bg-warmWhite font-semibold text-sm shadow-xl transition-all whitespace-nowrap shrink-0 hover:scale-[1.02] active:scale-[0.98]"
               >
-                <span>View Tech Academy</span>
-                <ArrowUpRight className="w-4 h-4" />
+                <span className="whitespace-nowrap">View Tech Academy</span>
+                <ArrowUpRight className="w-4 h-4 shrink-0" />
               </Link>
             </div>
           </div>
