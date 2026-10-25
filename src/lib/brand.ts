@@ -20,16 +20,17 @@ export const BRAND_COLORS = {
 export const BRAND_ASSETS = {
   // Official Logos - configured for optimal contrast across themes
   horizontal: {
-    // For Dark Theme (dark background): Use warm-white transparent logo
-    forDarkTheme: '/assets/branding/logo-horizontal-transparent-light.png',
+    // For Dark Theme (dark background): Use official uploaded logo
+    forDarkTheme: '/assets/branding/arevex-tech-studio-logo-dark.png',
     // For Light Theme (light background): Use charcoal/black transparent logo
     forLightTheme: '/assets/branding/logo-horizontal-transparent.png',
     
     // Backwards-compatible aliases
-    dark: '/assets/branding/logo-horizontal-transparent-light.png',
+    dark: '/assets/branding/arevex-tech-studio-logo-dark.png',
     light: '/assets/branding/logo-horizontal-transparent.png',
-    transparentDark: '/assets/branding/logo-horizontal-transparent-light.png',
+    transparentDark: '/assets/branding/arevex-tech-studio-logo-dark.png',
     transparentLight: '/assets/branding/logo-horizontal-transparent.png',
+    officialUpload: '/assets/branding/AREVEX Tech Studio Logo.png',
   },
   vertical: {
     dark: '/assets/branding/logo-vertical-light.png',
@@ -70,6 +71,39 @@ export const BRAND_ASSETS = {
     clinicEmr: '/assets/generated/clinic-emr.png',
     internshipStudio: '/assets/generated/internship-studio.png',
     projectGoCart: '/assets/generated/project-gocart.png',
+
+    // Commercial Products
+    productSchool: '/assets/generated/product-school.png',
+    productLms: '/assets/generated/product-lms.png',
+    productAttendance: '/assets/generated/product-attendance.png',
+    productRestaurant: '/assets/generated/product-restaurant.png',
+    productLibrary: '/assets/generated/product-library.png',
+    productOffice: '/assets/generated/product-office.png',
+    productBilling: '/assets/generated/product-billing.png',
+
+    // Studio Services & Capabilities
+    serviceWhatsapp: '/assets/generated/service-whatsapp.png',
+    serviceWebDev: '/assets/generated/service-web-dev.png',
+    serviceMobileApp: '/assets/generated/service-mobile-app.png',
+    serviceDesktop: '/assets/generated/service-desktop.png',
+    serviceAiAgents: '/assets/generated/service-ai-agents.png',
+    serviceAiChatbots: '/assets/generated/service-ai-chatbots.png',
+    serviceCloudAws: '/assets/generated/service-cloud-aws.png',
+    serviceUiux: '/assets/generated/service-uiux.png',
+    serviceSocial: '/assets/generated/service-social.png',
+    serviceSeoGeo: '/assets/generated/service-seo-geo.png',
+    serviceAutomation: '/assets/generated/service-automation.png',
+
+    // Academy Courses
+    courseAi: '/assets/generated/course-ai.png',
+    courseWeb: '/assets/generated/course-web.png',
+    courseMobile: '/assets/generated/course-mobile.png',
+    courseDevops: '/assets/generated/course-devops.png',
+    courseCloud: '/assets/generated/course-cloud.png',
+    courseLinux: '/assets/generated/course-linux.png',
+    courseNetworking: '/assets/generated/course-networking.png',
+    courseGit: '/assets/generated/course-git.png',
+    courseManagement: '/assets/generated/course-management.png',
   },
 } as const;
 

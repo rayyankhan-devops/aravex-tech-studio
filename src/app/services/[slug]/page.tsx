@@ -1,11 +1,13 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { ArrowLeft, ArrowUpRight, CheckCircle2, ChevronRight, HelpCircle } from 'lucide-react';
 import { SERVICES_DATA } from '@/data/services';
 import { MagneticButton } from '@/components/common/MagneticButton';
 import { Card } from '@/components/common/Card';
+import { BRAND_ASSETS } from '@/lib/brand';
 import { FinalCTA } from '@/components/home/FinalCTA';
 
 interface ServicePageProps {
@@ -41,6 +43,37 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   if (!service) {
     notFound();
   }
+
+  const getServiceImage = (serviceSlug: string) => {
+    switch (serviceSlug) {
+      case 'web-development':
+        return BRAND_ASSETS.generated.serviceWebDev;
+      case 'mobile-app-development':
+        return BRAND_ASSETS.generated.serviceMobileApp;
+      case 'custom-desktop-software':
+        return BRAND_ASSETS.generated.serviceDesktop;
+      case 'ai-agents':
+        return BRAND_ASSETS.generated.serviceAiAgents;
+      case 'ai-chatbots':
+        return BRAND_ASSETS.generated.serviceAiChatbots;
+      case 'whatsapp-automation':
+        return BRAND_ASSETS.generated.serviceWhatsapp;
+      case 'cloud-engineering':
+        return BRAND_ASSETS.generated.serviceCloudAws;
+      case 'devops-devsecops':
+        return BRAND_ASSETS.generated.cicdPipeline;
+      case 'ui-ux-design':
+        return BRAND_ASSETS.generated.serviceUiux;
+      case 'social-media-management':
+        return BRAND_ASSETS.generated.serviceSocial;
+      case 'seo-geo':
+        return BRAND_ASSETS.generated.serviceSeoGeo;
+      case 'business-process-automation':
+        return BRAND_ASSETS.generated.serviceAutomation;
+      default:
+        return BRAND_ASSETS.generated.serviceSoftware;
+    }
+  };
 
   return (
     <main className="min-h-screen bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
@@ -84,6 +117,26 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 <ArrowLeft className="w-4 h-4" />
                 <span>All Capabilities</span>
               </Link>
+            </div>
+          </div>
+
+          {/* Architectural Service Showcase */}
+          <div className="mt-12 relative h-72 sm:h-96 md:h-[480px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/50 shadow-2xl bg-charcoal-900">
+            <Image
+              src={getServiceImage(service.slug)}
+              alt={service.title}
+              fill
+              priority
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white text-xs font-mono">
+              <span className="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20">
+                {service.title} • Production Practice
+              </span>
+              <span className="px-3 py-1.5 rounded-full bg-emerald-500/80 font-bold text-white">
+                SLA Guaranteed • Enterprise Caliber
+              </span>
             </div>
           </div>
         </div>

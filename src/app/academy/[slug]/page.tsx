@@ -2,12 +2,14 @@
 
 import React, { useState, use } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, ArrowUpRight, CheckCircle2, ChevronRight, Clock, Tag, BookOpen } from 'lucide-react';
 import { COURSES_DATA } from '@/data/academy';
 import { Card } from '@/components/common/Card';
 import { MagneticButton } from '@/components/common/MagneticButton';
 import { EnrollmentModal } from '@/components/forms/EnrollmentModal';
+import { BRAND_ASSETS } from '@/lib/brand';
 import { FinalCTA } from '@/components/home/FinalCTA';
 
 interface AcademyDetailPageProps {
@@ -22,6 +24,31 @@ export default function AcademyCourseDetailPage({ params }: AcademyDetailPagePro
   if (!course) {
     notFound();
   }
+
+  const getCourseImage = (courseSlug: string) => {
+    switch (courseSlug) {
+      case 'artificial-intelligence':
+        return BRAND_ASSETS.generated.courseAi;
+      case 'web-development':
+        return BRAND_ASSETS.generated.courseWeb;
+      case 'mobile-development':
+        return BRAND_ASSETS.generated.courseMobile;
+      case 'devops-engineering':
+        return BRAND_ASSETS.generated.courseDevops;
+      case 'cloud-engineering':
+        return BRAND_ASSETS.generated.courseCloud;
+      case 'linux-system-administration':
+        return BRAND_ASSETS.generated.courseLinux;
+      case 'computer-networking':
+        return BRAND_ASSETS.generated.courseNetworking;
+      case 'git-and-github':
+        return BRAND_ASSETS.generated.courseGit;
+      case 'project-management':
+        return BRAND_ASSETS.generated.courseManagement;
+      default:
+        return BRAND_ASSETS.generated.academyHero;
+    }
+  };
 
   return (
     <main className="min-h-screen bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
@@ -72,6 +99,26 @@ export default function AcademyCourseDetailPage({ params }: AcademyDetailPagePro
                 <ArrowLeft className="w-4 h-4" />
                 <span>All Courses</span>
               </Link>
+            </div>
+          </div>
+
+          {/* Practical Syllabus & Code Lab Showcase */}
+          <div className="mt-12 relative h-72 sm:h-96 md:h-[480px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/50 shadow-2xl bg-charcoal-900">
+            <Image
+              src={getCourseImage(course.slug)}
+              alt={course.title}
+              fill
+              priority
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white text-xs font-mono">
+              <span className="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20">
+                {course.title} • Syllabus &amp; Lab Architecture
+              </span>
+              <span className="px-3 py-1.5 rounded-full bg-emerald-500/80 font-bold text-white">
+                Live Production Capstone Included
+              </span>
             </div>
           </div>
         </div>

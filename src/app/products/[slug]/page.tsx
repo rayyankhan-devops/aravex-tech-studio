@@ -45,6 +45,36 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     notFound();
   }
 
+  const getProductImage = (slug: string) => {
+    switch (slug) {
+      case 'point-of-sale':
+        return BRAND_ASSETS.generated.posTerminal;
+      case 'inventory-mis':
+        return BRAND_ASSETS.generated.inventoryWarehouse;
+      case 'clinic-appointment':
+      case 'clinic-management':
+        return BRAND_ASSETS.generated.clinicEmr;
+      case 'school-management':
+        return BRAND_ASSETS.generated.productSchool;
+      case 'learning-management':
+        return BRAND_ASSETS.generated.productLms;
+      case 'attendance-management':
+        return BRAND_ASSETS.generated.productAttendance;
+      case 'restaurant-management':
+        return BRAND_ASSETS.generated.productRestaurant;
+      case 'library-management':
+        return BRAND_ASSETS.generated.productLibrary;
+      case 'office-management':
+        return BRAND_ASSETS.generated.productOffice;
+      case 'billing-invoicing':
+        return BRAND_ASSETS.generated.productBilling;
+      case 'mobile-apps':
+        return BRAND_ASSETS.generated.productsMobile;
+      default:
+        return BRAND_ASSETS.generated.productsBusiness;
+    }
+  };
+
   return (
     <main className="min-h-screen bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
       {/* Breadcrumb Navigation */}
@@ -98,17 +128,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           {/* Architectural Hardware & Interface Showcase */}
           <div className="mt-12 relative h-72 sm:h-96 md:h-[480px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/50 shadow-2xl">
             <Image
-              src={
-                product.slug === 'point-of-sale'
-                  ? BRAND_ASSETS.generated.posTerminal
-                  : product.slug === 'inventory-mis'
-                  ? BRAND_ASSETS.generated.inventoryWarehouse
-                  : product.slug.includes('clinic')
-                  ? BRAND_ASSETS.generated.clinicEmr
-                  : product.platform === 'Mobile'
-                  ? BRAND_ASSETS.generated.productsMobile
-                  : BRAND_ASSETS.generated.productsBusiness
-              }
+              src={getProductImage(product.slug)}
               alt={product.title}
               fill
               priority

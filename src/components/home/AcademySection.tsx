@@ -16,6 +16,31 @@ export function AcademySection() {
 
   const displayedCourses = COURSES_DATA.slice(0, 6);
 
+  const getCourseImage = (slug: string) => {
+    switch (slug) {
+      case 'artificial-intelligence':
+        return BRAND_ASSETS.generated.courseAi;
+      case 'web-development':
+        return BRAND_ASSETS.generated.courseWeb;
+      case 'mobile-development':
+        return BRAND_ASSETS.generated.courseMobile;
+      case 'devops-engineering':
+        return BRAND_ASSETS.generated.courseDevops;
+      case 'cloud-engineering':
+        return BRAND_ASSETS.generated.courseCloud;
+      case 'linux-system-administration':
+        return BRAND_ASSETS.generated.courseLinux;
+      case 'computer-networking':
+        return BRAND_ASSETS.generated.courseNetworking;
+      case 'git-and-github':
+        return BRAND_ASSETS.generated.courseGit;
+      case 'project-management':
+        return BRAND_ASSETS.generated.courseManagement;
+      default:
+        return BRAND_ASSETS.generated.academyHero;
+    }
+  };
+
   return (
     <section id="academy" className="relative py-24 sm:py-32 bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite overflow-hidden border-t border-gray-200 dark:border-graphite/40 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,19 +105,28 @@ export function AcademySection() {
           {displayedCourses.map((course) => (
             <div
               key={course.id}
-              className="p-6 rounded-2xl bg-white dark:bg-charcoal-900/60 border border-gray-200 dark:border-graphite/40 hover:border-slate-500 dark:hover:border-slate-muted/50 transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-xl"
+              className="group p-6 rounded-2xl bg-white dark:bg-charcoal-900/60 border border-gray-200 dark:border-graphite/40 hover:border-slate-500 dark:hover:border-slate-muted/50 transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-xl overflow-hidden"
             >
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="px-2.5 py-1 rounded-full text-[11px] font-mono bg-gray-100 dark:bg-charcoal-800 text-gray-700 dark:text-slate-300 border border-gray-200 dark:border-graphite/40 font-semibold">
+                {/* Course Visual Thumbnail */}
+                <div className="relative h-44 w-full rounded-xl overflow-hidden mb-5 border border-gray-200 dark:border-graphite/40 bg-charcoal-900">
+                  <Image
+                    src={getCourseImage(course.slug)}
+                    alt={course.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-black/60 backdrop-blur-md text-white border border-white/20 font-bold uppercase">
                     {course.category}
-                  </span>
-                  <span className="font-mono text-xs font-bold text-emerald-600 dark:text-emerald-400">
+                  </div>
+                  <div className="absolute bottom-2.5 right-3 font-mono text-xs text-emerald-400 bg-black/60 backdrop-blur-sm px-2.5 py-0.5 rounded border border-emerald-500/30 font-bold">
                     {course.feePKR}
-                  </span>
+                  </div>
                 </div>
 
-                <h4 className="text-lg font-bold text-gray-950 dark:text-white mb-2 leading-snug">
+                <h4 className="text-lg font-bold text-gray-950 dark:text-white mb-2 leading-snug group-hover:text-black dark:group-hover:text-slate-200 transition-colors">
                   {course.title}
                 </h4>
 

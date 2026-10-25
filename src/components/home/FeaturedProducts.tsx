@@ -30,6 +30,20 @@ export function FeaturedProducts() {
       case 'clinic-appointment':
       case 'clinic-management':
         return BRAND_ASSETS.generated.clinicEmr;
+      case 'school-management':
+        return BRAND_ASSETS.generated.productSchool;
+      case 'learning-management':
+        return BRAND_ASSETS.generated.productLms;
+      case 'attendance-management':
+        return BRAND_ASSETS.generated.productAttendance;
+      case 'restaurant-management':
+        return BRAND_ASSETS.generated.productRestaurant;
+      case 'library-management':
+        return BRAND_ASSETS.generated.productLibrary;
+      case 'office-management':
+        return BRAND_ASSETS.generated.productOffice;
+      case 'billing-invoicing':
+        return BRAND_ASSETS.generated.productBilling;
       case 'mobile-apps':
         return BRAND_ASSETS.generated.productsMobile;
       default:

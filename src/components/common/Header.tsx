@@ -56,7 +56,7 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo with high visibility in both Dark and Light modes */}
           <Link href="/" className="relative flex items-center gap-3 group focus:outline-none">
-            <div className="relative h-11 w-44 sm:w-52 transition-transform duration-300 group-hover:scale-[1.02]">
+            <div className="relative h-11 sm:h-12 w-48 sm:w-56 transition-transform duration-300 group-hover:scale-[1.02]">
               {/* Dark mode logo (rendered when theme is dark) */}
               <Image
                 src={BRAND_ASSETS.horizontal.forDarkTheme}

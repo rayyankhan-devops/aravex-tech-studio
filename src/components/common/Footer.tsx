@@ -26,7 +26,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-gray-200 dark:border-graphite/40">
           {/* Brand Column */}
           <div className="lg:col-span-2 flex flex-col gap-5">
-            <Link href="/" className="inline-block relative h-11 w-48 sm:w-56">
+            <Link href="/" className="inline-block relative h-11 sm:h-12 w-52 sm:w-60">
               <Image
                 src={BRAND_ASSETS.horizontal.forDarkTheme}
                 alt="AREVEX TECH STUDIO"
