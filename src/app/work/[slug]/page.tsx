@@ -79,7 +79,7 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
 
             <div className="flex flex-wrap items-center gap-4">
               <MagneticButton href="/contact" size="md" variant="primary">
-                <span>Inquire About Similar Architecture</span>
+                <span>Start a Similar Project</span>
                 <ArrowUpRight className="w-4 h-4 ml-1" />
               </MagneticButton>
               <Link

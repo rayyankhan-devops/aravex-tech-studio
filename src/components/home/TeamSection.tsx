@@ -37,9 +37,9 @@ export function TeamSection() {
         
         {/* Section 1: Studio Founders & Architects */}
         <SectionHeading
-          eyebrow="STUDIO LEADERSHIP & PRINCIPALS"
+          eyebrow="LEADERSHIP"
           title="Meet the Engineering Founders."
-          description="Arevex is led by hands-on systems engineers and product architects. We architect distributed topologies, write production code, and directly oversee every client engineering milestone."
+          description="Arevex is led by hands-on systems engineers and product architects. We architect distributed topologies, write production code, and directly oversee every client milestone."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">

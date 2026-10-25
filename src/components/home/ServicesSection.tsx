@@ -76,7 +76,7 @@ export function ServicesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <SectionHeading
-            eyebrow="03 / CORE CAPABILITIES"
+            eyebrow="CORE CAPABILITIES"
             title="Engineered for Precision and Scale."
             description="Our multidisciplinary practice spans software engineering, distributed systems, autonomous AI agents, and product design."
             className="mb-0"

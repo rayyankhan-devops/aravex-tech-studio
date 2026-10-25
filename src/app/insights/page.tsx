@@ -67,7 +67,7 @@ export default function InsightsPage() {
                   <div className="pt-4 border-t border-gray-200 dark:border-graphite/40 flex items-center justify-between text-xs font-mono text-gray-500 dark:text-slate-muted group-hover:text-black dark:group-hover:text-white transition-colors">
                     <span>{article.publishDate} • {article.author}</span>
                     <span className="flex items-center gap-1 font-bold">
-                      Read Paper <ArrowUpRight className="w-3.5 h-3.5" />
+                      Read Article <ArrowUpRight className="w-3.5 h-3.5" />
                     </span>
                   </div>
                 </Card>

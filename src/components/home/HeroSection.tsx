@@ -84,7 +84,7 @@ export function HeroSection() {
           >
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             <span className="font-mono text-xs uppercase tracking-widest text-gray-800 dark:text-slate-300 font-bold">
-              AREVEX TECH STUDIO • GLOBAL ENGINEERING
+              AREVEX TECH STUDIO
             </span>
           </motion.div>
 
@@ -131,15 +131,15 @@ export function HeroSection() {
           >
             <div className="flex items-center gap-2">
               <Cpu className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-              <span>Full-Stack & POS</span>
+              <span>Custom Software</span>
             </div>
             <div className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-              <span>AI Agents & RAG</span>
+              <span>AI & Automation</span>
             </div>
             <div className="flex items-center gap-2">
               <Shield className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-              <span>AWS & DevSecOps</span>
+              <span>Cloud & Security</span>
             </div>
           </motion.div>
         </motion.div>
@@ -149,7 +149,7 @@ export function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex justify-between items-center text-xs sm:text-sm font-sans text-gray-600 dark:text-slate-300">
         <div className="flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-          <span>EST. 2024 / ARCHITECTURAL ENGINEERING</span>
+          <span>100% REMOTE • EST. 2024</span>
         </div>
 
         <a

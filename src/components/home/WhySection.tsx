@@ -13,9 +13,9 @@ export function WhySection() {
     <section className="relative py-24 sm:py-32 bg-white dark:bg-charcoal-900 text-charcoal-900 dark:text-warmWhite overflow-hidden border-t border-gray-200 dark:border-graphite/40 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="08 / OPERATIONAL PRINCIPLES"
+          eyebrow="WHY AREVEX"
           title="Why Leading Teams Choose Arevex."
-          description="We do not rely on marketing buzzwords or boilerplate templates. Our reputation is built on concrete engineering rigor, transparent collaboration, and operational resilience."
+          description="Our reputation is built on engineering rigor, transparent collaboration, and systems that work under pressure."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

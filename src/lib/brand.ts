@@ -142,13 +142,13 @@ export const COMPANY_INFO = {
     },
   ],
   locations: {
-    primary: 'Pakistan',
+    primary: '100% Remote, Global',
     serviceReach: 'International Clients & Regional Enterprises',
   },
   contact: {
     email: 'contact@arevex.tech',
     supportEmail: 'support@arevex.tech',
-    phone: '+92 (300) 000-0000',
+
   },
   socials: {
     x: 'https://x.com/arevextech',

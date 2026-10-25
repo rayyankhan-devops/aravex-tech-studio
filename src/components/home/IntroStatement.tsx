@@ -7,11 +7,11 @@ import { COMPANY_INFO } from '@/lib/brand';
 
 export function IntroStatement() {
   const pillars = [
-    { title: 'Software Engineering', icon: Code2, desc: 'Web apps, cross-platform mobile, and desktop POS software.' },
-    { title: 'Artificial Intelligence', icon: Cpu, desc: 'Autonomous LLM agents, tool-calling pipelines, and RAG systems.' },
-    { title: 'Cloud Infrastructure', icon: Cloud, desc: 'Terraform IaC, AWS/GCP architecture, and DevSecOps pipelines.' },
-    { title: 'Commercial Products', icon: Layers, desc: 'Point of sale, multi-warehouse inventory, and school MIS systems.' },
-    { title: 'Practical Education', icon: GraduationCap, desc: 'Accessible technology courses empowering future engineers.' },
+    { title: 'Software Engineering', icon: Code2, desc: 'Web, mobile, and desktop applications' },
+    { title: 'Artificial Intelligence', icon: Cpu, desc: 'Smart automation and AI-powered solutions' },
+    { title: 'Cloud Infrastructure', icon: Cloud, desc: 'Scalable, secure cloud architecture' },
+    { title: 'Commercial Products', icon: Layers, desc: 'Ready-to-deploy business software' },
+    { title: 'Practical Education', icon: GraduationCap, desc: 'Hands-on courses for aspiring engineers' },
   ];
 
   return (
@@ -22,7 +22,7 @@ export function IntroStatement() {
           <div className="flex items-center gap-3">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
             <span className="font-mono text-xs uppercase tracking-[0.2em] text-slate-700 dark:text-slate-300 font-bold">
-              02 / CORE PHILOSOPHY
+              OUR APPROACH
             </span>
           </div>
 
@@ -32,7 +32,7 @@ export function IntroStatement() {
               <span className="font-bold text-gray-950 dark:text-white">
                 {COMPANY_INFO.introStatement}
               </span>{' '}
-              At Arevex Tech Studio, we bridge high-velocity software engineering, autonomous artificial intelligence, bulletproof cloud infrastructure, and practical technical education into one cohesive studio.
+              We combine software engineering, artificial intelligence, cloud infrastructure, and practical education into one cohesive studio.
             </h2>
           </div>
 

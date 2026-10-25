@@ -53,7 +53,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
   },
   {
     id: 'test-4',
-    name: 'Kenji Takahashi',
+    name: 'Daniel Wong',
     role: 'Head of Digital Products',
     company: 'OmniVentures Global',
     location: 'Singapore',
@@ -66,7 +66,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
   },
   {
     id: 'test-5',
-    name: 'Hamza Farooq',
+    name: 'Asad Rehman',
     role: 'Group Operations Controller',
     company: 'Vendus Distribution Network',
     location: 'Karachi, Pakistan',

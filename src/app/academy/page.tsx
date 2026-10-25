@@ -50,7 +50,7 @@ export default function AcademyPage() {
           <SectionHeading
             eyebrow="AREVEX TECHNOLOGY ACADEMY"
             title="Practical, Industry-Grade Engineering Courses."
-            description="High-velocity 1-month technical cohorts designed for developers, students, and engineers. Rigorous code repositories, real production deployments, and direct mentorship."
+            description="Intensive 1-month technical cohorts for developers, students, and engineers. Hands-on projects, real deployments, and direct mentorship from industry practitioners."
           />
 
           <div className="p-4 rounded-2xl bg-gray-50 dark:bg-charcoal-850/80 border border-gray-200 dark:border-graphite/40 flex flex-wrap items-center justify-between gap-4 mt-6 shadow-sm">

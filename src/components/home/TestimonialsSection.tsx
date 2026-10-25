@@ -12,9 +12,9 @@ export function TestimonialsSection() {
     <section className="relative py-24 sm:py-32 bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite border-t border-b border-gray-200 dark:border-graphite/40 transition-colors duration-300 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="CLIENT VOICES & PROOF"
+          eyebrow="CLIENT TESTIMONIALS"
           title="Engineered for High-Stakes Operations."
-          description="Hear from retail directors, enterprise CTOs, and healthcare administrators running their mission-critical operations on Arevex software and cloud infrastructure."
+          description="Direct feedback from retail directors, enterprise CTOs, and healthcare leaders whose operations rely on Arevex software and infrastructure."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

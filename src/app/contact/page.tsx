@@ -30,7 +30,7 @@ export default function ContactPage() {
           <SectionHeading
             eyebrow="PROJECT INQUIRIES"
             title="Start a Project."
-            description="Tell us about your technical requirements, operational bottlenecks, or software vision. Our principal engineers will review your brief and schedule an initial discovery consultation."
+            description="Share your project vision. Our engineers will review your brief and schedule an initial consultation."
           />
         </div>
       </section>
@@ -48,14 +48,14 @@ export default function ContactPage() {
             <div className="lg:col-span-5 flex flex-col gap-6">
               <Card className="bg-white dark:bg-charcoal-850/80 border-gray-200 dark:border-graphite/40 shadow-sm">
                 <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-6 pb-3 border-b border-gray-200 dark:border-graphite/40">
-                  Direct Communications
+                  Get in Touch
                 </h3>
 
                 <div className="flex flex-col gap-5 text-sm">
                   <div className="flex items-start gap-3">
                     <Mail className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                     <div>
-                      <span className="text-xs uppercase font-semibold text-gray-700 dark:text-slate-300 tracking-wider block">Client Inquiries</span>
+                      <span className="text-xs uppercase font-semibold text-gray-700 dark:text-slate-300 tracking-wider block">Email</span>
                       <a href={`mailto:${COMPANY_INFO.contact.email}`} className="text-base text-gray-900 dark:text-white hover:underline font-semibold">
                         {COMPANY_INFO.contact.email}
                       </a>
@@ -65,9 +65,9 @@ export default function ContactPage() {
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                     <div>
-                      <span className="text-xs uppercase font-semibold text-gray-700 dark:text-slate-300 tracking-wider block">Studio Base</span>
+                      <span className="text-xs uppercase font-semibold text-gray-700 dark:text-slate-300 tracking-wider block">Location</span>
                       <span className="text-base text-gray-800 dark:text-slate-200">
-                        {COMPANY_INFO.locations.primary} (Global Remote Engineering)
+                        100% Remote • Global
                       </span>
                     </div>
                   </div>
@@ -75,8 +75,8 @@ export default function ContactPage() {
                   <div className="flex items-start gap-3">
                     <Clock className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                     <div>
-                      <span className="text-xs uppercase font-semibold text-gray-700 dark:text-slate-300 tracking-wider block">Response Commitment</span>
-                      <span className="text-base text-gray-800 dark:text-slate-200">Within 24 business hours</span>
+                      <span className="text-xs uppercase font-semibold text-gray-700 dark:text-slate-300 tracking-wider block">Response Time</span>
+                      <span className="text-base text-gray-800 dark:text-slate-200">Within 24 hours</span>
                     </div>
                   </div>
                 </div>
@@ -154,9 +154,9 @@ export default function ContactPage() {
                     <WhatsAppIcon className="w-7 h-7" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm">Need Instant Scoping?</h4>
+                    <h4 className="font-bold text-sm">Need a Quick Response?</h4>
                     <p className="text-xs text-emerald-100 font-mono mt-0.5">
-                      Chat directly with our co-founders on WhatsApp
+                      Message us directly on WhatsApp
                     </p>
                   </div>
                 </div>
@@ -167,9 +167,9 @@ export default function ContactPage() {
                 <div className="flex items-start gap-3">
                   <MessageSquare className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-bold text-gray-950 dark:text-white text-base">Direct Technical Interview</h4>
+                    <h4 className="font-bold text-gray-950 dark:text-white text-base">No Salespeople — Ever</h4>
                     <p className="text-xs text-gray-600 dark:text-slate-300 mt-1 leading-relaxed">
-                      You will speak directly with a technical founder or lead architect, never an aggressive sales commission representative.
+                      You'll always speak directly with a technical founder or lead architect. No middlemen, no pushy sales reps.
                     </p>
                   </div>
                 </div>

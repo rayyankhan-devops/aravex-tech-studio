@@ -17,9 +17,9 @@ export function SelectedWork() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <SectionHeading
-            eyebrow="06 / CLIENT WORK & ARCHITECTURES"
+            eyebrow="CASE STUDIES"
             title="Selected Engineering Partnerships."
-            description="Verified production software, high-speed retail checkout clusters, and automated DevSecOps pipelines engineered by Arevex Tech Studio."
+            description="Production software, high-performance retail systems, and automated cloud pipelines built by Arevex Tech Studio for clients worldwide."
             className="mb-0"
           />
           <Link
@@ -94,7 +94,7 @@ export function SelectedWork() {
                       {project.clientType.split('//')[1] || project.year}
                     </span>
                     <span className="inline-flex items-center gap-1 text-sm font-semibold text-gray-950 dark:text-white group-hover:translate-x-1 transition-transform duration-200">
-                      <span>Explore Architecture</span>
+                      <span>View Case Study</span>
                       <ArrowUpRight className="w-4 h-4 text-emerald-500" />
                     </span>
                   </div>

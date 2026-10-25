@@ -180,7 +180,7 @@ export const COURSES_DATA: CourseItem[] = [
     targetAudience: 'Software engineers, web developers, and IT students wanting to demystify network protocols.',
     prerequisites: 'Basic general computer literacy.',
     learningOutcomes: [
-      'Understand TCP handshakes, UDP streaming, and packet packet fragmentation',
+      'Understand TCP handshakes, UDP streaming, and packet fragmentation',
       'Troubleshoot DNS resolution issues, propagation delays, and record types',
       'Deconstruct HTTP/1.1, HTTP/2, HTTP/3, and SSL/TLS cryptographic handshakes',
       'Inspect live network traffic using Wireshark and tcpdump',

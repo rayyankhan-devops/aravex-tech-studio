@@ -10,9 +10,9 @@ export function PhilosophySection() {
     <section className="relative py-24 sm:py-32 bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="05 — METHODOLOGY"
+          eyebrow="ENGINEERING LIFECYCLE"
           title="Architected for Certainty."
-          description="We do not guess, cut corners, or leave codebases in disrepair. Our six-stage engineering lifecycle guarantees predictable milestones and flawless software delivery."
+          description="Our six-stage engineering lifecycle guarantees predictable milestones, clear communication, and dependable software delivery."
         />
 
         {/* 6-Stage Polished Timeline Grid */}

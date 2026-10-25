@@ -17,7 +17,7 @@ export function FinalCTA() {
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gray-100 dark:bg-charcoal-900 border border-gray-300 dark:border-graphite/50 mb-8 shadow-sm">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           <span className="font-mono text-xs uppercase tracking-widest text-gray-800 dark:text-slate-300 font-bold">
-            ACCEPTING NEW CLIENT COMMISSIONS & PARTNERSHIPS
+            NOW ACCEPTING NEW PROJECTS
           </span>
         </div>
 

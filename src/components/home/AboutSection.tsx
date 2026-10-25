@@ -32,7 +32,7 @@ export function AboutSection() {
           {/* Right Column: Studio Profile & Authentic Founders */}
           <div className="lg:col-span-7 flex flex-col gap-6">
             <SectionHeading
-              eyebrow="07 / STUDIO IDENTITY"
+              eyebrow="ABOUT US"
               title="A Modern Technology Studio."
               description="AREVEX TECH STUDIO connects custom software engineering, intelligent automation, cloud architecture, and practical technology training into a unified operational house."
               className="mb-2"
@@ -77,14 +77,14 @@ export function AboutSection() {
 
             <div className="flex flex-wrap items-center gap-4 pt-4">
               <MagneticButton href="/about" variant="primary" size="md">
-                <span>Read Full Studio Story</span>
+                <span>Learn More About Us</span>
                 <ArrowUpRight className="w-4 h-4 ml-1" />
               </MagneticButton>
               <Link
                 href="/contact"
                 className="text-sm font-mono text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors font-bold"
               >
-                Inquire With Leadership
+                Get in Touch
               </Link>
             </div>
           </div>

@@ -112,7 +112,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
             <div className="flex flex-wrap items-center gap-4">
               <MagneticButton href="/contact" size="md" variant="primary">
-                <span>Request Commercial License / Demo</span>
+                <span>Request Product Demo</span>
                 <ArrowUpRight className="w-4 h-4 ml-1" />
               </MagneticButton>
               <Link

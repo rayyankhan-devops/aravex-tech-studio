@@ -34,9 +34,9 @@ export default function WorkPage() {
       <section className="pt-24 pb-16 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="CLIENT ARCHITECTURES & DELIVERABLES"
+            eyebrow="CASE STUDIES"
             title="Selected Engineering Partnerships."
-            description="Production software, verified cloud DevSecOps pipelines, offline-first POS systems, and autonomous AI architectures engineered by Arevex Tech Studio."
+            description="Production software, automated cloud pipelines, offline-first POS systems, and AI architectures engineered by Arevex Tech Studio."
           />
 
           {/* Filter Pills - Premium Standalone Pill Strip */}

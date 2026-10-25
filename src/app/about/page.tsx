@@ -24,9 +24,9 @@ export default function AboutPage() {
       <section className="pt-24 pb-16 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="STUDIO IDENTITY & ROOTS"
+            eyebrow="ABOUT AREVEX"
             title="We Build What's Next."
-            description="AREVEX TECH STUDIO operates at the intersection of high-order software engineering, artificial intelligence, cloud infrastructure, and technical education."
+            description="We build intelligent software, reliable infrastructure, and practical education programs."
           />
         </div>
       </section>
@@ -40,7 +40,7 @@ export default function AboutPage() {
                 Engineering Grounded in Practical Reality.
               </h2>
               <p>
-                Too much of the modern software industry is distracted by superficial decoration, fragile abstractions, and generic marketing promises. At Arevex Tech Studio, we believe software must be structurally sound, extraordinarily fast, and dependable under real transactional pressure.
+                We believe software should be structurally sound, fast, and dependable under real-world pressure. At Arevex Tech Studio, that principle drives every decision we make.
               </p>
               <p>
                 Whether developing offline-first point of sale systems that continue processing sales during local power disruptions, or orchestrating multi-agent LLM systems with deterministic tool validation, we build tools that solve genuine business bottlenecks.
@@ -145,13 +145,13 @@ export default function AboutPage() {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-charcoal-800 text-slate-700 dark:text-slate-300 font-mono text-xs font-semibold mb-3 border border-gray-200 dark:border-graphite/40">
                 <Globe2 className="w-3.5 h-3.5 text-emerald-500" />
-                <span>DISTRIBUTED ENGINEERING ROSTER</span>
+                <span>OUR TEAM</span>
               </div>
               <h2 className="text-3xl font-black text-gray-950 dark:text-white">
-                Practice Leads &amp; Domain Specialists
+                Meet the Team
               </h2>
               <p className="text-base text-gray-700 dark:text-slate-300 max-w-2xl mt-2 font-normal">
-                Our distributed core engineering team brings together technical leaders across the United Kingdom, United Arab Emirates, Germany, Japan, Spain, Egypt, and Pakistan.
+                A distributed team of specialists across 7 countries, united by engineering excellence.
               </p>
             </div>
           </div>
@@ -223,9 +223,9 @@ export default function AboutPage() {
       <section className="py-20 border-b border-gray-200 dark:border-graphite/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="OPERATIONAL VALUES"
-            title="How We Execute."
-            description="Our working standards ensure that every codebase, cloud deployment, and educational module meets international standards."
+            eyebrow="OUR PRINCIPLES"
+            title="How We Work"
+            description="The principles that guide every project we deliver."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -107,7 +107,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
 
             <div className="flex flex-wrap items-center gap-4">
               <MagneticButton href="/contact" size="md" variant="primary">
-                <span>Commission This Service</span>
+                <span>Start a Project</span>
                 <ArrowUpRight className="w-4 h-4 ml-1" />
               </MagneticButton>
               <Link

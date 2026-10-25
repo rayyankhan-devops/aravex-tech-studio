@@ -62,7 +62,7 @@ export default function InternshipsPage() {
                 Forge Real Engineering &amp; Creative Muscle.
               </h1>
               <p className="text-lg sm:text-xl text-gray-700 dark:text-slate-300 font-normal leading-relaxed mt-4">
-                No coffee-fetching. No dummy to-do apps. Work directly alongside our co-founders on production Next.js apps, offline-first POS systems, autonomous AI agents, and high-ticket international client deliverables.
+                No busy work. No dummy projects. Work directly alongside our co-founders on production applications, offline-first POS systems, AI agents, and international client deliverables.
               </p>
             </div>
 
@@ -113,7 +113,7 @@ export default function InternshipsPage() {
             <SectionHeading
               eyebrow="SELECT YOUR DISCIPLINE"
               title="13 Specialized Internship Tracks."
-              description="Every single track is 100% remote. Work on authentic production codebases with guaranteed lifetime alumni support and formal recommendation letters for top performers."
+              description="Every track is 100% remote. Work on real production codebases with lifetime alumni support and recommendation letters for top performers."
               className="mb-8 max-w-3xl"
             />
 
@@ -260,7 +260,7 @@ export default function InternshipsPage() {
           <SectionHeading
             eyebrow="THE AREVEX DIFFERENCE"
             title="Why This Is Unlike Any Other Tech Internship."
-            description="We built the Talent Accelerator to cultivate elite developers and designers capable of standing on the international engineering stage."
+            description="We built the Talent Accelerator to develop skilled developers and designers ready to contribute on a global stage."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

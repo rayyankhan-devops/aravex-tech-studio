@@ -5,17 +5,17 @@ export const SERVICES_DATA: ServiceItem[] = [
     id: 'web-development',
     slug: 'web-development',
     title: 'Web Development',
-    tagline: 'High-performance, scalable web applications built with architectural rigor.',
+    tagline: 'High-performance, scalable web applications built for speed and reliability.',
     shortDescription:
-      'Full-stack web applications, modern portals, and SaaS platforms engineered for extreme speed, responsiveness, and conversion.',
+      'Full-stack web applications, modern portals, and SaaS platforms built for speed, responsiveness, and conversion.',
     fullDescription:
-      'We build high-performance web systems utilizing Next.js, React, Node.js, and TypeScript. From enterprise portals to multi-tenant SaaS architectures, our engineering prioritizes semantic markup, server-side performance, instant page transitions, and rock-solid state management.',
+      'We build high-performance web systems using Next.js, React, Node.js, and TypeScript. From enterprise portals to multi-tenant SaaS platforms, our engineering prioritizes semantic markup, server-side performance, instant page transitions, and reliable state management.',
     iconName: 'Globe',
     category: 'engineering',
     problem:
-      'Traditional agencies build bloated, slow websites burdened with brittle templates, poor security hygiene, and sluggish load times that cripple user retention and Google rankings.',
+      'Most agencies deliver slow, template-based websites that hurt user experience and search rankings.',
     solution:
-      'Arevex architects modern headless web applications with sub-second page loads, modular React architecture, bulletproof type safety, and optimized SEO performance out of the box.',
+      'We build modern web applications with fast load times, clean architecture, and optimized SEO from day one.',
     process: [
       { step: '01', title: 'System Architecture', description: 'Defining data models, caching layers, API boundaries, and component hierarchies.' },
       { step: '02', title: 'Interactive Prototype', description: 'Designing pixel-perfect responsive layouts in Figma with motion specs.' },
@@ -37,7 +37,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       },
       {
         question: 'How do you ensure search engine indexing and speed?',
-        answer: 'By leveraging Next.js server-side rendering (SSR), automated metadata generation, structured JSON-LD schemas, and asset minification, we guarantee elite core web vitals.',
+        answer: 'Through Next.js server-side rendering (SSR), automated metadata generation, structured JSON-LD schemas, and asset optimization, we consistently achieve strong core web vitals scores.',
       },
     ],
     featured: true,
@@ -46,17 +46,17 @@ export const SERVICES_DATA: ServiceItem[] = [
     id: 'mobile-app-development',
     slug: 'mobile-app-development',
     title: 'Mobile App Development',
-    tagline: 'Native-feel iOS and Android applications with fluid 60fps animations.',
+    tagline: 'Native-feel iOS and Android applications with smooth, fluid animations.',
     shortDescription:
-      'Cross-platform and native mobile apps engineered with Flutter and React Native for seamless performance, offline sync, and real-time push notifications.',
+      'Cross-platform and native mobile apps built with Flutter and React Native for consistent performance, offline sync, and real-time push notifications.',
     fullDescription:
       'We engineer polished mobile experiences that delight users across iOS and Android. Our mobile architecture features offline-first local persistence, reactive state management, hardware integration (camera, biometrics, Bluetooth), and frictionless app store deployments.',
     iconName: 'Smartphone',
     category: 'engineering',
     problem:
-      'Fragmented codebases, erratic frame drops, and battery-draining background sync leave users frustrated and uninstalling mobile apps.',
+      'Fragmented codebases, inconsistent frame rates, and battery-draining background processes leave users frustrated and uninstalling mobile apps.',
     solution:
-      'We leverage Flutter and React Native with native bridge optimizations, local SQLite/Isar caches, and predictive state hydrations to achieve buttery 60fps responsiveness.',
+      'We use Flutter and React Native with native bridge optimizations, local caching, and predictive state management to deliver smooth, responsive experiences.',
     process: [
       { step: '01', title: 'User Journey Mapping', description: 'Defining mobile-first touch ergonomics, gesture interactions, and offline fallbacks.' },
       { step: '02', title: 'Component Library', description: 'Custom UI design tokens conforming to iOS Human Interface & Android Material guidelines.' },
@@ -86,17 +86,17 @@ export const SERVICES_DATA: ServiceItem[] = [
     id: 'custom-desktop-software',
     slug: 'custom-desktop-software',
     title: 'Custom Desktop Software',
-    tagline: 'High-throughput offline-capable desktop systems for mission-critical operations.',
+    tagline: 'Offline-capable desktop systems for mission-critical operations.',
     shortDescription:
       'Reliable desktop applications for Windows, macOS, and Linux that integrate with POS hardware, thermal printers, barcode scanners, and local databases.',
     fullDescription:
-      'When your business demands zero-latency execution, direct hardware control, or air-gapped offline stability, our desktop engineering delivers. We build custom Electron and native desktop solutions for retail POS, manufacturing, logistics, and medical management.',
+      'When your business needs zero-latency execution, direct hardware control, or offline stability, our desktop engineering delivers. We build Electron and native desktop solutions for retail POS, manufacturing, logistics, and medical management.',
     iconName: 'Monitor',
     category: 'engineering',
     problem:
-      'Web-only apps fail when internet connections falter, and cannot easily interface with specialized serial ports, thermal receipt printers, cash drawers, or local weighing scales.',
+      'Web-only apps fail when internet connections drop, and cannot easily interface with thermal receipt printers, cash drawers, or barcode scanners.',
     solution:
-      'Our desktop systems operate seamlessly offline with local embedded databases, auto-reconnecting synchronization engines, and low-level driver integrations for retail hardware.',
+      'Our desktop systems operate offline with local embedded databases, auto-reconnecting sync engines, and driver integrations for retail hardware.',
     process: [
       { step: '01', title: 'Hardware Protocol Audit', description: 'Testing ESC/POS receipt printers, COM/USB barcode scanners, and weighing peripherals.' },
       { step: '02', title: 'Local Architecture', description: 'Designing high-speed SQLite/IndexedDB offline data storage and transaction queues.' },

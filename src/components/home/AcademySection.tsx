@@ -46,9 +46,9 @@ export function AcademySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <SectionHeading
-            eyebrow="09 / TECHNOLOGY ACADEMY"
+            eyebrow="TECHNOLOGY ACADEMY"
             title="Practical Engineering Training."
-            description="Accessible, industry-focused short courses engineered to bridge academic theory and real-world production software. Fast-paced 1-month cohorts."
+            description="Affordable, industry-focused short courses designed to bridge academic theory and production software. Intensive 1-month cohorts with hands-on projects."
             className="mb-0"
           />
           <Link

@@ -69,9 +69,9 @@ export function FeaturedProducts() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <SectionHeading
-            eyebrow="04 / SOFTWARE ECOSYSTEM"
+            eyebrow="PROPRIETARY SOFTWARE"
             title="Commercial Software Products."
-            description="Purpose-built operational platforms designed for extreme transaction throughput, local hardware synchronization, and multi-branch intelligence."
+            description="Purpose-built operational platforms designed for transaction speed, hardware synchronization, and multi-branch management."
             className="mb-0"
           />
           <Link

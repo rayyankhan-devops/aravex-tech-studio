@@ -193,7 +193,7 @@ export function Footer() {
             <div className="flex flex-col gap-2.5 text-sm text-gray-700 dark:text-slate-200">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
-                <span>{COMPANY_INFO.locations.primary} & International Remote Delivery</span>
+                <span>100% Remote • Global Delivery</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
@@ -223,9 +223,7 @@ export function Footer() {
             <Link href="/terms" className="hover:text-black dark:hover:text-white transition-colors font-medium">
               Terms of Service
             </Link>
-            <Link href="/contact" className="hover:text-black dark:hover:text-white transition-colors font-medium">
-              Security & Compliance
-            </Link>
+
           </div>
         </div>
       </div>
