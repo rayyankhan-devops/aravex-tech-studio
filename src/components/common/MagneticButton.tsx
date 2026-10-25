@@ -46,7 +46,7 @@ export function MagneticButton({
     'relative inline-flex items-center justify-center font-medium tracking-wide transition-all duration-300 rounded-full select-none overflow-hidden group focus:outline-none focus:ring-2 focus:ring-slate-muted/50 cursor-pointer whitespace-nowrap shrink-0';
 
   const sizeStyles = {
-    sm: 'text-xs sm:text-sm px-4 sm:px-5 py-2 sm:py-2.5 gap-1.5 sm:gap-2 whitespace-nowrap',
+    sm: 'text-xs sm:text-sm h-10 px-4 sm:px-5 gap-1.5 sm:gap-2 whitespace-nowrap shrink-0',
     md: 'text-sm px-6 py-3 gap-2 whitespace-nowrap',
     lg: 'text-base px-8 py-4 gap-2.5 whitespace-nowrap',
   };

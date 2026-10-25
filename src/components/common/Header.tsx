@@ -49,14 +49,14 @@ export function Header() {
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           scrolled
-            ? 'py-3 bg-white/90 dark:bg-charcoal-950/90 backdrop-blur-md border-b border-gray-200/80 dark:border-graphite/40 shadow-sm'
-            : 'py-5 bg-transparent'
+            ? 'py-2.5 sm:py-3 bg-white/90 dark:bg-charcoal-950/90 backdrop-blur-md border-b border-gray-200/80 dark:border-graphite/40 shadow-sm'
+            : 'py-4 sm:py-5 bg-transparent'
         )}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-11 sm:h-12">
           {/* Logo with high visibility in both Dark and Light modes */}
-          <Link href="/" className="relative flex items-center gap-3 group focus:outline-none">
-            <div className="relative h-11 sm:h-12 w-48 sm:w-56 transition-transform duration-300 group-hover:scale-[1.02]">
+          <Link href="/" className="relative flex items-center shrink-0 z-10 focus:outline-none group">
+            <div className="relative h-10 sm:h-11 w-40 sm:w-44 xl:w-52 transition-transform duration-300 group-hover:scale-[1.02]">
               {/* Dark mode logo (rendered when theme is dark) */}
               <Image
                 src={BRAND_ASSETS.horizontal.forDarkTheme}
@@ -82,48 +82,50 @@ export function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2 px-4 py-1.5 rounded-full bg-black/5 dark:bg-charcoal-900/60 backdrop-blur-md border border-gray-200 dark:border-graphite/40">
-            {NAV_LINKS.map((link) => {
-              const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={cn(
-                    'relative inline-flex items-center gap-1.5 px-3.5 py-1.5 text-sm font-medium transition-colors duration-200 rounded-full',
-                    isActive
-                      ? 'text-charcoal-950 dark:text-warmWhite bg-white dark:bg-graphite/70 shadow-sm font-semibold'
-                      : 'text-gray-700 dark:text-slate-200 hover:text-black dark:hover:text-white'
-                  )}
-                >
-                  <span>{link.name}</span>
-                  {link.badge && (
-                    <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
-                      {link.badge}
-                    </span>
-                  )}
-                </Link>
-              );
-            })}
-          </nav>
+          {/* Desktop Navigation Links — Mathematically Centered */}
+          <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center justify-center z-10 pointer-events-none">
+            <nav className="pointer-events-auto inline-flex items-center gap-0.5 xl:gap-1 p-1 rounded-full bg-black/5 dark:bg-charcoal-900/70 backdrop-blur-md border border-gray-200/90 dark:border-graphite/50 shadow-sm">
+              {NAV_LINKS.map((link) => {
+                const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={cn(
+                      'relative inline-flex items-center gap-1.5 px-3 xl:px-3.5 py-1.5 text-xs xl:text-sm font-medium transition-all duration-200 rounded-full whitespace-nowrap',
+                      isActive
+                        ? 'text-charcoal-950 dark:text-warmWhite bg-white dark:bg-charcoal-800 shadow-sm font-semibold'
+                        : 'text-gray-700 dark:text-slate-200 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5'
+                    )}
+                  >
+                    <span>{link.name}</span>
+                    {link.badge && (
+                      <span className="text-[9px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                        {link.badge}
+                      </span>
+                    )}
+                  </Link>
+                );
+              })}
+            </nav>
+          </div>
 
-          {/* Action CTAs & Controls */}
-          <div className="hidden sm:flex items-center gap-3 shrink-0">
+          {/* Action CTAs & Controls (Aligned 40px Heights) */}
+          <div className="hidden sm:flex items-center gap-2.5 xl:gap-3 shrink-0 z-10">
             <ThemeToggle />
             <MagneticButton href="/contact" size="sm" variant="primary">
-              <span className="whitespace-nowrap">Start a Project</span>
+              <span className="whitespace-nowrap font-semibold">Start a Project</span>
               <ArrowUpRight className="w-3.5 h-3.5 shrink-0" />
             </MagneticButton>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 sm:hidden">
+          <div className="flex items-center gap-2 sm:hidden z-10">
             <ThemeToggle />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle Navigation Menu"
-              className="p-2 rounded-lg bg-gray-100 dark:bg-charcoal-800/80 border border-gray-300 dark:border-graphite/40 text-charcoal-800 dark:text-slate-light"
+              className="w-10 h-10 rounded-full inline-flex items-center justify-center bg-gray-100 dark:bg-charcoal-800/80 border border-gray-300 dark:border-graphite/40 text-charcoal-800 dark:text-slate-light"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
