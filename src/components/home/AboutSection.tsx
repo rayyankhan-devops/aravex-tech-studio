@@ -62,7 +62,14 @@ export function AboutSection() {
                     className="p-3.5 rounded-xl bg-[#F7F7F5] dark:bg-charcoal-850 border border-gray-200 dark:border-graphite/30 flex flex-col justify-between"
                   >
                     <span className="font-bold text-sm text-gray-950 dark:text-white">{founder.name}</span>
-                    <span className="font-mono text-[11px] text-gray-500 dark:text-slate-muted mt-1 font-semibold">Co-Founder</span>
+                    <span className="font-mono text-[11px] text-gray-500 dark:text-slate-muted mt-1 font-semibold flex items-center justify-between">
+                      <span>Co-Founder</span>
+                      {'formerCompany' in founder && founder.formerCompany && (
+                        <span className="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-bold border border-amber-500/20">
+                          {founder.formerCompany}
+                        </span>
+                      )}
+                    </span>
                   </div>
                 ))}
               </div>

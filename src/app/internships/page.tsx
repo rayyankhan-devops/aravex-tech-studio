@@ -273,7 +273,7 @@ export default function InternshipsPage() {
                   Direct Founder Mentorship
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-slate-300 leading-relaxed">
-                  No layers of middle managers. You receive line-by-line PR reviews and architecture guidance directly from Muhammad Rayyan, Muhammad Uzair, and Aqsa Wadood.
+                  No layers of middle managers. You receive line-by-line PR reviews and architecture guidance directly from Muhammad Rayyan, Muhammad Uzair (Ex-Amazon), and Aqsa Wadood.
                 </p>
               </div>
               <div className="pt-6 mt-6 border-t border-gray-200 dark:border-graphite/30 text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold">
