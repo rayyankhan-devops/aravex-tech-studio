@@ -159,27 +159,16 @@ export default function InternshipsPage() {
                       {track.title}
                     </h3>
 
-                    <p className="text-sm text-gray-700 dark:text-slate-200 leading-relaxed mb-4 font-normal">
+                    <p className="text-sm text-gray-700 dark:text-slate-200 leading-relaxed mb-6 font-normal">
                       {track.overview}
                     </p>
 
-                    {/* Mentor Badge */}
-                    <div className="p-3 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200/80 dark:border-graphite/40 text-xs sm:text-sm font-sans mb-4">
-                      <span className="text-[11px] uppercase text-gray-500 dark:text-slate-400 block font-semibold mb-0.5">
-                        Track Lead &amp; Mentor
-                      </span>
-                      <span className="font-bold text-gray-900 dark:text-white">{track.mentor}</span>
-                      <span className="text-gray-600 dark:text-slate-400 block text-xs mt-0.5">
-                        {track.mentorRole}
-                      </span>
-                    </div>
-
                     {/* Key Learning Highlights */}
-                    <div className="space-y-1.5 mb-6">
+                    <div className="space-y-2 mb-6">
                       <span className="text-xs uppercase tracking-wider text-gray-600 dark:text-slate-400 block font-bold">
                         Core Competencies
                       </span>
-                      {track.learningOutcomes.slice(0, 2).map((item, i) => (
+                      {track.learningOutcomes.slice(0, 3).map((item, i) => (
                         <div key={i} className="flex items-start gap-2 text-sm text-gray-800 dark:text-slate-200">
                           <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
                           <span>{item}</span>

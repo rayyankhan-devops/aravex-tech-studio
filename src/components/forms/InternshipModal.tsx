@@ -150,8 +150,8 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                     <span className="font-bold text-emerald-600 dark:text-emerald-400">{track.openings} Seats Available</span>
                   </div>
                   <div>
-                    <span className="text-gray-500 dark:text-slate-400 block uppercase text-xs font-semibold">Lead Mentor</span>
-                    <span className="font-bold text-gray-950 dark:text-white">{track.mentor}</span>
+                    <span className="text-gray-500 dark:text-slate-400 block uppercase text-xs font-semibold">Format</span>
+                    <span className="font-bold text-gray-950 dark:text-white">{track.mode}</span>
                   </div>
                   <div>
                     <span className="text-gray-500 dark:text-slate-400 block uppercase text-xs font-semibold">Perks</span>
@@ -365,8 +365,8 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                     <span className="font-bold text-gray-900 dark:text-white">{refId}</span>
                   </div>
                   <div className="flex justify-between border-b border-gray-200 dark:border-graphite/20 pb-2">
-                    <span className="text-gray-400 dark:text-slate-muted">Assigned Mentor:</span>
-                    <span className="font-bold text-emerald-600 dark:text-emerald-400">{track.mentor}</span>
+                    <span className="text-gray-400 dark:text-slate-muted">Track Format:</span>
+                    <span className="font-bold text-emerald-600 dark:text-emerald-400">{track.mode}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-400 dark:text-slate-muted">Review Window:</span>
