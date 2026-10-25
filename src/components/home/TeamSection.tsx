@@ -54,13 +54,7 @@ export function TeamSection() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.15, duration: 0.5 }}
               >
-                <Card className="h-full flex flex-col justify-between bg-[#F7F7F5] dark:bg-charcoal-950 border-gray-200 dark:border-graphite/50 p-8 shadow-sm hover:shadow-xl transition-all relative overflow-hidden group">
-                  {hasFormer && (
-                    <div className="absolute top-0 right-0 transform translate-x-8 -translate-y-2 rotate-12 bg-gradient-to-r from-amber-500 to-orange-600 text-white text-[10px] font-mono font-bold px-8 py-1 shadow-md">
-                      {founder.formerCompany}
-                    </div>
-                  )}
-
+                <Card className="h-full flex flex-col justify-between bg-[#F7F7F5] dark:bg-charcoal-950 border-gray-200 dark:border-graphite/50 p-8 shadow-sm hover:shadow-xl transition-all">
                   <div>
                     {/* Founder Icon & Badge */}
                     <div className="flex items-center justify-between mb-6">
@@ -69,8 +63,9 @@ export function TeamSection() {
                       </div>
                       <div className="flex items-center gap-2">
                         {hasFormer && (
-                          <span className="font-mono text-xs uppercase px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-700 dark:text-amber-400 font-bold border border-amber-500/30">
-                            {founder.formerCompany}
+                          <span className="font-mono text-xs uppercase px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-800 dark:text-amber-300 font-bold border border-amber-500/30 flex items-center gap-1.5 shadow-sm">
+                            <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                            <span>{founder.formerCompany}</span>
                           </span>
                         )}
                         <span className="font-mono text-xs uppercase px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20">

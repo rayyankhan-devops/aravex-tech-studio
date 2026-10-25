@@ -78,34 +78,30 @@ export default function AboutPage() {
             {COMPANY_INFO.founders.map((founder) => {
               const hasFormer = 'formerCompany' in founder && founder.formerCompany;
               return (
-                <Card key={founder.name} className="flex flex-col justify-between p-8 bg-[#F7F7F5] dark:bg-charcoal-850 border-gray-200 dark:border-graphite/40 shadow-sm hover:shadow-xl transition-all relative overflow-hidden">
-                  {hasFormer && (
-                    <div className="absolute top-0 right-0 transform translate-x-8 -translate-y-2 rotate-12 bg-gradient-to-r from-amber-500 to-orange-600 text-white text-[10px] font-mono font-bold px-8 py-1 shadow-md">
-                      {founder.formerCompany}
-                    </div>
-                  )}
+                <Card key={founder.name} className="flex flex-col justify-between p-8 bg-[#F7F7F5] dark:bg-charcoal-850 border-gray-200 dark:border-graphite/40 shadow-sm hover:shadow-xl transition-all">
                   <div>
-                    <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center justify-between mb-5">
                       <div className="w-12 h-12 rounded-xl bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-graphite/40 flex items-center justify-center text-charcoal-800 dark:text-slate-muted shadow-sm">
                         <Users className="w-6 h-6" />
                       </div>
                       <div className="flex items-center gap-2">
                         {hasFormer && (
-                          <span className="font-mono text-[10px] uppercase px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-700 dark:text-amber-400 font-bold border border-amber-500/30">
-                            {founder.formerCompany}
+                          <span className="font-mono text-xs uppercase px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-800 dark:text-amber-300 font-bold border border-amber-500/30 flex items-center gap-1.5 shadow-sm">
+                            <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                            <span>{founder.formerCompany}</span>
                           </span>
                         )}
-                        <span className="font-mono text-[10px] uppercase px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20">
+                        <span className="font-mono text-xs uppercase px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20">
                           Co-Founder
                         </span>
                       </div>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-1">{founder.name}</h3>
+                    <h3 className="text-2xl font-bold text-gray-950 dark:text-white mb-1">{founder.name}</h3>
                     <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-400 block mb-3">
                       {founder.role}
                     </span>
-                    <div className="p-2.5 rounded-lg bg-white/60 dark:bg-charcoal-900 border border-gray-200/60 dark:border-graphite/30 text-xs sm:text-sm font-sans text-gray-800 dark:text-slate-200 mb-4">
-                      <span className="text-[11px] uppercase text-gray-500 dark:text-slate-400 block font-semibold">Specialization</span>
+                    <div className="p-3 rounded-xl bg-white/70 dark:bg-charcoal-900 border border-gray-200/80 dark:border-graphite/30 text-xs sm:text-sm font-sans text-gray-800 dark:text-slate-200 mb-4">
+                      <span className="text-[11px] uppercase text-gray-500 dark:text-slate-400 block font-semibold mb-0.5">Specialization</span>
                       {founder.focus}
                     </div>
                     <p className="text-sm text-gray-700 dark:text-slate-200 leading-relaxed mb-4 font-normal">
@@ -114,7 +110,26 @@ export default function AboutPage() {
                   </div>
                   <div className="pt-4 border-t border-gray-200 dark:border-graphite/30 w-full flex items-center justify-between text-xs font-mono text-gray-600 dark:text-slate-300">
                     <span>AREVEX LEADERSHIP</span>
-                    <span>100% Remote &amp; Global</span>
+                    <div className="flex items-center gap-2">
+                      <a
+                        href={founder.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-1.5 rounded-lg bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors"
+                        aria-label={`${founder.name} GitHub`}
+                      >
+                        <GithubIcon className="w-3.5 h-3.5" />
+                      </a>
+                      <a
+                        href={founder.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-1.5 rounded-lg bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors"
+                        aria-label={`${founder.name} LinkedIn`}
+                      >
+                        <LinkedinIcon className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
                   </div>
                 </Card>
               );

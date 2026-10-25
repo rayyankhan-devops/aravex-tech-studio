@@ -127,7 +127,7 @@ export const COMPANY_INFO = {
       name: 'Muhammad Uzair',
       role: 'Co-Founder & Head of Product Engineering',
       formerCompany: 'Ex-Amazon',
-      focus: 'Full-Stack Next.js Systems, Desktop Electron & Enterprise MIS • Ex-Amazon SDE',
+      focus: 'Full-Stack Next.js Systems, Desktop Electron & Enterprise MIS',
       bio: 'Directing full-stack web and desktop product lifecycles. Formerly a Software Development Engineer at Amazon, bringing high-scale distributed architectural discipline, zero-latency state machines, and enterprise reliability to Arevex client codebases.',
       github: 'https://github.com/arevex',
       linkedin: 'https://linkedin.com',
