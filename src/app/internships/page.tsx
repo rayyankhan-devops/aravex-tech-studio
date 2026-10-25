@@ -94,8 +94,8 @@ export default function InternshipsPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white text-xs font-mono">
-              <span className="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20">
-                Arevex 100% Remote Engineering Lab • Global Access
+              <span className="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 font-semibold text-emerald-300">
+                Arevex Lab • 100% Remote Only
               </span>
               <span className="hidden sm:inline-block px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-emerald-400">
                 Stipend + Lifetime Support + Recommendation Letter for Top Candidates

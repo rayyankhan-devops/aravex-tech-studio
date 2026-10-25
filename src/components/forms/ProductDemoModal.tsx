@@ -50,7 +50,7 @@ export function ProductDemoModal({
     email: '',
     phone: '',
     company: '',
-    city: 'Karachi, Pakistan',
+    city: '',
     taxId: '',
     notes: '',
   });
@@ -451,7 +451,7 @@ export function ProductDemoModal({
                       <input
                         type="text"
                         required
-                        placeholder="Lahore, Pakistan"
+                        placeholder="e.g. Dubai, London, New York, Singapore"
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                         className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"

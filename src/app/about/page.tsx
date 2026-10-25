@@ -98,7 +98,7 @@ export default function AboutPage() {
                 </div>
                 <div className="pt-4 border-t border-gray-200 dark:border-graphite/30 w-full flex items-center justify-between text-xs font-mono text-gray-600 dark:text-slate-300">
                   <span>AREVEX LEADERSHIP</span>
-                  <span>Karachi & Global</span>
+                  <span>100% Remote &amp; Global</span>
                 </div>
               </Card>
             ))}
