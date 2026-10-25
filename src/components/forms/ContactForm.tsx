@@ -5,20 +5,13 @@ import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { MagneticButton } from '@/components/common/MagneticButton';
 import { SERVICES_DATA } from '@/data/services';
 
-const BUDGET_OPTIONS = [
-  'PKR 250k – 500k ($1k – $2k)',
-  'PKR 500k – 1.5M ($2k – $5k)',
-  'PKR 1.5M – 4M ($5k – $15k)',
-  'PKR 4M+ ($15k+ Enterprise)',
-];
-
 export function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     service: SERVICES_DATA[0].title,
-    budget: BUDGET_OPTIONS[1],
+    budget: 'Standard Quote / Flexible',
     description: '',
     preferredContact: 'Email',
   });
@@ -52,7 +45,7 @@ export function ContactForm() {
         email: '',
         company: '',
         service: SERVICES_DATA[0].title,
-        budget: BUDGET_OPTIONS[1],
+        budget: 'Standard Quote / Flexible',
         description: '',
         preferredContact: 'Email',
       });
@@ -157,30 +150,7 @@ export function ContactForm() {
             </div>
           </div>
 
-          {/* Row 3: Budget Range */}
-          <div className="flex flex-col gap-2">
-            <label className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-              Estimated Project Budget
-            </label>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-              {BUDGET_OPTIONS.map((opt) => (
-                <button
-                  type="button"
-                  key={opt}
-                  onClick={() => setFormData({ ...formData, budget: opt })}
-                  className={`px-4 py-3 rounded-xl text-sm font-medium border text-left transition-all ${
-                    formData.budget === opt
-                      ? 'bg-slate-900 text-white dark:bg-slate-700/60 dark:border-slate-400 dark:text-white font-semibold shadow-sm ring-1 ring-slate-400'
-                      : 'bg-gray-50 dark:bg-charcoal-850/70 border-gray-300 dark:border-graphite/40 text-gray-800 dark:text-slate-200 hover:border-slate-400 dark:hover:border-slate-500'
-                  }`}
-                >
-                  {opt}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Row 4: Project Scope */}
+          {/* Project Scope & Technical Goals */}
           <div className="flex flex-col gap-1.5">
             <label className="text-sm font-semibold text-gray-900 dark:text-gray-100 flex items-center justify-between">
               <span>Project Scope &amp; Technical Goals <span className="text-rose-500 font-bold">*</span></span>
