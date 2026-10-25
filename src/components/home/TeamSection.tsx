@@ -49,24 +49,24 @@ export function TeamSection() {
                       {founder.name}
                     </h3>
 
-                    <p className="font-mono text-xs text-slate-600 dark:text-slate-400 font-bold mb-4">
+                    <p className="text-sm font-semibold text-emerald-700 dark:text-emerald-400 mb-4">
                       {founder.role}
                     </p>
 
-                    <div className="p-3 rounded-xl bg-white/70 dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/30 text-xs font-mono text-gray-600 dark:text-slate-300 mb-6">
-                      <span className="text-[10px] uppercase text-gray-400 dark:text-slate-muted block font-semibold mb-0.5">
+                    <div className="p-3 rounded-xl bg-white/70 dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/30 text-xs sm:text-sm font-sans text-gray-800 dark:text-slate-200 mb-6">
+                      <span className="text-[11px] uppercase text-gray-500 dark:text-slate-400 block font-semibold mb-0.5">
                         Specialized Focus
                       </span>
                       <span>{founder.focus}</span>
                     </div>
 
-                    <p className="text-sm text-gray-600 dark:text-slate-300 leading-relaxed mb-6">
+                    <p className="text-sm sm:text-base text-gray-700 dark:text-slate-200 leading-relaxed mb-6 font-normal">
                       {founder.bio}
                     </p>
                   </div>
 
                   <div className="pt-6 border-t border-gray-200 dark:border-graphite/30 flex items-center justify-between">
-                    <span className="font-mono text-xs text-gray-500 dark:text-slate-muted">
+                    <span className="font-mono text-xs font-semibold text-gray-600 dark:text-slate-400">
                       AREVEX STUDIO LEAD
                     </span>
                     <div className="flex items-center gap-3">

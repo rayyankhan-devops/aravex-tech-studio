@@ -105,10 +105,10 @@ export default function ServicesPage() {
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`px-4 py-2 rounded-full text-xs font-mono transition-all duration-200 border cursor-pointer ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border cursor-pointer ${
                   selectedCategory === cat.id
-                    ? 'bg-charcoal-950 text-white dark:bg-warmWhite dark:text-charcoal-900 border-transparent font-bold shadow-md'
-                    : 'bg-white dark:bg-charcoal-850/80 text-gray-700 dark:text-slate-300 border-gray-300 dark:border-graphite/40 hover:border-slate-500'
+                    ? 'bg-charcoal-950 text-white dark:bg-warmWhite dark:text-charcoal-900 border-transparent font-semibold shadow-md'
+                    : 'bg-white dark:bg-charcoal-850/80 text-gray-700 dark:text-slate-200 border-gray-300 dark:border-graphite/40 hover:border-slate-500'
                 }`}
               >
                 {cat.label}
@@ -156,7 +156,7 @@ export default function ServicesPage() {
                           {service.title}
                         </h3>
 
-                        <p className="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
+                        <p className="text-sm text-gray-700 dark:text-slate-200 leading-relaxed mb-6 font-normal">
                           {service.shortDescription}
                         </p>
 
@@ -164,7 +164,7 @@ export default function ServicesPage() {
                           {service.technologies.slice(0, 3).map((tech) => (
                             <span
                               key={tech}
-                              className="px-2 py-0.5 rounded text-[10px] font-mono bg-gray-100 dark:bg-charcoal-800 text-gray-600 dark:text-slate-muted border border-gray-200 dark:border-transparent font-medium"
+                              className="px-2.5 py-1 rounded text-xs font-mono bg-gray-100 dark:bg-charcoal-800 text-gray-800 dark:text-slate-300 border border-gray-200 dark:border-transparent font-medium"
                             >
                               {tech}
                             </span>
@@ -172,9 +172,9 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <div className="pt-4 border-t border-gray-200 dark:border-graphite/40 flex items-center justify-between text-xs font-mono text-gray-500 dark:text-slate-muted group-hover:text-black dark:group-hover:text-white transition-colors">
-                        <span className="uppercase tracking-wider font-semibold">{service.category}</span>
-                        <span className="flex items-center gap-1 group-hover:translate-x-1 transition-transform font-bold">
+                      <div className="pt-4 border-t border-gray-200 dark:border-graphite/40 flex items-center justify-between text-xs sm:text-sm font-sans text-gray-700 dark:text-slate-300 group-hover:text-black dark:group-hover:text-white transition-colors">
+                        <span className="uppercase tracking-wider font-semibold text-xs">{service.category}</span>
+                        <span className="flex items-center gap-1 group-hover:translate-x-1 transition-transform font-semibold text-xs sm:text-sm">
                           Explore Scope <ArrowUpRight className="w-3.5 h-3.5" />
                         </span>
                       </div>

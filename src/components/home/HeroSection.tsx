@@ -127,18 +127,18 @@ export function HeroSection() {
           {/* Trust Matrix Badges */}
           <motion.div
             variants={lineVariants}
-            className="pt-8 grid grid-cols-2 sm:grid-cols-3 gap-6 border-t border-gray-200 dark:border-graphite/40 w-full max-w-xl text-xs font-mono text-gray-600 dark:text-slate-400 font-semibold"
+            className="pt-8 grid grid-cols-2 sm:grid-cols-3 gap-6 border-t border-gray-200 dark:border-graphite/40 w-full max-w-xl text-sm font-sans text-gray-700 dark:text-slate-200 font-medium"
           >
             <div className="flex items-center gap-2">
-              <Cpu className="w-4 h-4 text-emerald-600 dark:text-slate-muted shrink-0" />
+              <Cpu className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
               <span>Full-Stack & POS</span>
             </div>
             <div className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-emerald-600 dark:text-slate-muted shrink-0" />
+              <Sparkles className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
               <span>AI Agents & RAG</span>
             </div>
             <div className="flex items-center gap-2">
-              <Shield className="w-4 h-4 text-emerald-600 dark:text-slate-muted shrink-0" />
+              <Shield className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
               <span>AWS & DevSecOps</span>
             </div>
           </motion.div>
@@ -146,16 +146,16 @@ export function HeroSection() {
       </div>
 
       {/* Restrained Scroll Indicator */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex justify-between items-center text-xs font-mono text-gray-500 dark:text-slate-muted">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex justify-between items-center text-xs sm:text-sm font-sans text-gray-600 dark:text-slate-300">
         <div className="flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-muted" />
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
           <span>EST. 2024 / ARCHITECTURAL ENGINEERING</span>
         </div>
 
         <a
           href="#intro-statement"
           aria-label="Scroll to content"
-          className="flex items-center gap-2 text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors duration-200 font-bold"
+          className="flex items-center gap-2 text-gray-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition-colors duration-200 font-bold"
         >
           <span>SCROLL DOWN</span>
           <motion.div

@@ -139,42 +139,42 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
           <div className="p-6 sm:p-8 max-h-[75vh] overflow-y-auto">
             {!submitted ? (
               <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                {/* Track Quick Facts */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-2xl bg-gray-50 dark:bg-charcoal-950/60 border border-gray-200 dark:border-graphite/40 text-xs font-mono">
+                {/* Track Highlights Ribbon */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-2xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/40 text-sm">
                   <div>
-                    <span className="text-gray-400 dark:text-slate-muted block uppercase text-[10px]">Duration</span>
-                    <span className="font-bold text-gray-900 dark:text-white">{track.duration}</span>
+                    <span className="text-gray-500 dark:text-slate-400 block uppercase text-xs font-semibold">Duration</span>
+                    <span className="font-bold text-gray-950 dark:text-white">{track.duration}</span>
                   </div>
                   <div>
-                    <span className="text-gray-400 dark:text-slate-muted block uppercase text-[10px]">Openings</span>
+                    <span className="text-gray-500 dark:text-slate-400 block uppercase text-xs font-semibold">Openings</span>
                     <span className="font-bold text-emerald-600 dark:text-emerald-400">{track.openings} Seats Available</span>
                   </div>
                   <div>
-                    <span className="text-gray-400 dark:text-slate-muted block uppercase text-[10px]">Lead Mentor</span>
-                    <span className="font-bold text-gray-900 dark:text-white">{track.mentor}</span>
+                    <span className="text-gray-500 dark:text-slate-400 block uppercase text-xs font-semibold">Lead Mentor</span>
+                    <span className="font-bold text-gray-950 dark:text-white">{track.mentor}</span>
                   </div>
                   <div>
-                    <span className="text-gray-400 dark:text-slate-muted block uppercase text-[10px]">Perks</span>
-                    <span className="font-bold text-gray-900 dark:text-white">Stipend + Cert</span>
+                    <span className="text-gray-500 dark:text-slate-400 block uppercase text-xs font-semibold">Perks</span>
+                    <span className="font-bold text-gray-950 dark:text-white">Stipend + Cert</span>
                   </div>
                 </div>
 
                 {error && (
-                  <div className="p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-400 text-xs font-mono">
+                  <div className="p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-400 text-sm font-medium">
                     {error}
                   </div>
                 )}
 
                 {/* Section 1: Candidate Contact Info */}
                 <div>
-                  <h3 className="font-mono text-xs uppercase tracking-wider text-gray-400 dark:text-slate-muted font-bold mb-3 flex items-center gap-1.5">
+                  <h3 className="text-base font-bold text-gray-950 dark:text-white mb-3 flex items-center gap-2">
                     <User className="w-4 h-4 text-emerald-500" />
-                    <span>01 / Personal & Contact Information</span>
+                    <span>01 / Personal &amp; Contact Information</span>
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
-                        Full Name *
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
+                        Full Name <span className="text-rose-500 font-bold">*</span>
                       </label>
                       <input
                         type="text"
@@ -183,12 +183,12 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                         placeholder="e.g. Bilal Ahmed"
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 text-sm focus:outline-none focus:border-slate-muted transition-colors"
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
-                        Email Address *
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
+                        Email Address <span className="text-rose-500 font-bold">*</span>
                       </label>
                       <input
                         type="email"
@@ -197,12 +197,12 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                         placeholder="bilal@example.com"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 text-sm focus:outline-none focus:border-slate-muted transition-colors"
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
-                        WhatsApp / Contact Phone *
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
+                        WhatsApp / Contact Phone <span className="text-rose-500 font-bold">*</span>
                       </label>
                       <input
                         type="tel"
@@ -211,12 +211,12 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                         placeholder="+92 300 1234567"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 text-sm focus:outline-none focus:border-slate-muted transition-colors"
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
-                        Current City & Country *
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
+                        Current City &amp; Country <span className="text-rose-500 font-bold">*</span>
                       </label>
                       <input
                         type="text"
@@ -225,7 +225,7 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                         placeholder="Karachi, Pakistan"
                         value={formData.city}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 text-sm focus:outline-none focus:border-slate-muted transition-colors"
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"
                       />
                     </div>
                   </div>
@@ -233,14 +233,14 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
 
                 {/* Section 2: Portfolio, University & Experience */}
                 <div>
-                  <h3 className="font-mono text-xs uppercase tracking-wider text-gray-400 dark:text-slate-muted font-bold mb-3 flex items-center gap-1.5">
+                  <h3 className="text-base font-bold text-gray-950 dark:text-white mb-3 flex items-center gap-2">
                     <Link2 className="w-4 h-4 text-emerald-500" />
-                    <span>02 / Proof of Work & Availability</span>
+                    <span>02 / Proof of Work &amp; Availability</span>
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
-                        University / Degree / Self-Taught Status *
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
+                        University / Degree / Self-Taught Status <span className="text-rose-500 font-bold">*</span>
                       </label>
                       <input
                         type="text"
@@ -249,12 +249,12 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                         placeholder="e.g. FAST NUCES / Self-Taught Developer"
                         value={formData.education}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 text-sm focus:outline-none focus:border-slate-muted transition-colors"
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
-                        GitHub / Portfolio / Behance / LinkedIn URL *
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
+                        GitHub / Portfolio / Behance / LinkedIn URL <span className="text-rose-500 font-bold">*</span>
                       </label>
                       <input
                         type="url"
@@ -263,11 +263,11 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                         placeholder="https://github.com/yourhandle"
                         value={formData.portfolioUrl}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 text-sm focus:outline-none focus:border-slate-muted transition-colors"
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
                         Resume / CV Link (Google Drive / Dropbox)
                       </label>
                       <input
@@ -276,18 +276,18 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                         placeholder="https://drive.google.com/..."
                         value={formData.resumeUrl}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 text-sm focus:outline-none focus:border-slate-muted transition-colors"
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
-                        Earliest Availability *
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
+                        Earliest Availability <span className="text-rose-500 font-bold">*</span>
                       </label>
                       <select
                         name="availability"
                         value={formData.availability}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 text-sm focus:outline-none focus:border-slate-muted transition-colors"
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all cursor-pointer"
                       >
                         <option>Immediate (Within 7 Days)</option>
                         <option>Next 2 Weeks</option>
@@ -299,8 +299,8 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
 
                 {/* Section 3: Motivation */}
                 <div>
-                  <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
-                    Why Arevex Tech Studio? Tell us what you want to build and learn *
+                  <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
+                    Why Arevex Tech Studio? Tell us what you want to build and learn <span className="text-rose-500 font-bold">*</span>
                   </label>
                   <textarea
                     name="motivation"
@@ -309,21 +309,21 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                     placeholder="Briefly describe your passions, what projects you've created, and how you want to grow during this track..."
                     value={formData.motivation}
                     onChange={handleChange}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 text-sm focus:outline-none focus:border-slate-muted transition-colors resize-none"
+                    className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all resize-none leading-relaxed"
                   />
                 </div>
 
                 {/* Submit Button */}
                 <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-gray-200 dark:border-graphite/40">
-                  <div className="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-slate-muted">
-                    <ShieldCheck className="w-4 h-4 text-emerald-500" />
-                    <span>Mentorship overseen by Rayyan, Uzair & Aqsa</span>
+                  <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-slate-300 font-medium">
+                    <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
+                    <span>Mentorship overseen by Rayyan, Uzair &amp; Aqsa</span>
                   </div>
 
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full sm:w-auto px-8 py-3 rounded-xl bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-950 font-bold text-sm flex items-center justify-center gap-2 hover:bg-black dark:hover:bg-warmWhite transition-all disabled:opacity-50 shadow-md"
+                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-950 font-bold text-sm sm:text-base flex items-center justify-center gap-2 hover:bg-black dark:hover:bg-warmWhite transition-all disabled:opacity-50 shadow-md cursor-pointer hover:scale-[1.02]"
                   >
                     {loading ? (
                       <span>Transmitting Application...</span>

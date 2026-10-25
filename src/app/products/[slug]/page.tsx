@@ -162,7 +162,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
               <div>
                 <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-4">Target Audience</h3>
-                <p className="text-sm text-gray-700 dark:text-slate-300 bg-white dark:bg-charcoal-900/60 p-4 rounded-xl border border-gray-200 dark:border-graphite/40 shadow-sm">
+                <p className="text-base text-gray-800 dark:text-slate-200 bg-white dark:bg-charcoal-900/60 p-4 rounded-xl border border-gray-200 dark:border-graphite/40 shadow-sm leading-relaxed">
                   {product.targetAudience}
                 </p>
               </div>
@@ -173,7 +173,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                   {product.features.map((feat) => (
                     <div
                       key={feat}
-                      className="p-3.5 rounded-xl bg-white dark:bg-charcoal-900/40 border border-gray-200 dark:border-graphite/30 flex items-start gap-2.5 text-xs sm:text-sm text-gray-700 dark:text-slate-300 shadow-sm"
+                      className="p-3.5 rounded-xl bg-white dark:bg-charcoal-900/40 border border-gray-200 dark:border-graphite/30 flex items-start gap-2.5 text-sm text-gray-800 dark:text-slate-200 shadow-sm font-normal"
                     >
                       <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                       <span>{feat}</span>
@@ -190,32 +190,32 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                   Technical Specifications
                 </h3>
 
-                <div className="flex flex-col gap-5 text-xs font-mono">
+                <div className="flex flex-col gap-5 text-sm font-sans">
                   {product.specs.database && (
                     <div className="flex items-start gap-3">
-                      <Database className="w-4 h-4 text-gray-500 dark:text-slate-muted shrink-0 mt-0.5" />
+                      <Database className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                       <div>
-                        <span className="text-gray-500 dark:text-slate-muted block font-bold">Database Layer</span>
-                        <span className="text-gray-900 dark:text-slate-200 font-semibold">{product.specs.database}</span>
+                        <span className="text-xs uppercase tracking-wider text-gray-600 dark:text-slate-400 block font-semibold">Database Layer</span>
+                        <span className="text-sm font-semibold text-gray-950 dark:text-white">{product.specs.database}</span>
                       </div>
                     </div>
                   )}
 
                   {product.specs.stack && (
                     <div className="flex items-start gap-3">
-                      <Cpu className="w-4 h-4 text-gray-500 dark:text-slate-muted shrink-0 mt-0.5" />
+                      <Cpu className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                       <div>
-                        <span className="text-gray-500 dark:text-slate-muted block font-bold">Core Stack</span>
-                        <span className="text-gray-900 dark:text-slate-200 font-semibold">{product.specs.stack}</span>
+                        <span className="text-xs uppercase tracking-wider text-gray-600 dark:text-slate-400 block font-semibold">Core Stack</span>
+                        <span className="text-sm font-semibold text-gray-950 dark:text-white">{product.specs.stack}</span>
                       </div>
                     </div>
                   )}
 
                   <div className="flex items-start gap-3">
-                    <Layers className="w-4 h-4 text-gray-500 dark:text-slate-muted shrink-0 mt-0.5" />
+                    <Layers className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                     <div>
-                      <span className="text-gray-500 dark:text-slate-muted block font-bold">Offline Functionality</span>
-                      <span className="text-gray-900 dark:text-slate-200 font-semibold">
+                      <span className="text-xs uppercase tracking-wider text-gray-600 dark:text-slate-400 block font-semibold">Offline Functionality</span>
+                      <span className="text-sm font-semibold text-gray-950 dark:text-white">
                         {product.specs.offlineSupport ? '100% Offline Capable' : 'Cloud Synchronized'}
                       </span>
                     </div>
@@ -223,10 +223,10 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
                   {product.specs.deployment && (
                     <div className="flex items-start gap-3">
-                      <Server className="w-4 h-4 text-gray-500 dark:text-slate-muted shrink-0 mt-0.5" />
+                      <Server className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                       <div>
-                        <span className="text-gray-500 dark:text-slate-muted block font-bold">Deployment Environment</span>
-                        <span className="text-gray-900 dark:text-slate-200 font-semibold">{product.specs.deployment}</span>
+                        <span className="text-xs uppercase tracking-wider text-gray-600 dark:text-slate-400 block font-semibold">Deployment Environment</span>
+                        <span className="text-sm font-semibold text-gray-950 dark:text-white">{product.specs.deployment}</span>
                       </div>
                     </div>
                   )}

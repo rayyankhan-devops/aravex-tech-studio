@@ -121,10 +121,10 @@ export default function InternshipsPage() {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3.5 py-1.5 rounded-xl text-xs font-mono transition-all ${
+                  className={`px-3.5 py-1.5 rounded-xl text-sm font-medium transition-all cursor-pointer ${
                     selectedCategory === cat
-                      ? 'bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-950 font-bold shadow-sm'
-                      : 'text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white'
+                      ? 'bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-950 font-semibold shadow-sm'
+                      : 'text-gray-700 dark:text-slate-300 hover:text-black dark:hover:text-white'
                   }`}
                 >
                   {cat}
@@ -159,28 +159,28 @@ export default function InternshipsPage() {
                       {track.title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-gray-600 dark:text-slate-300 leading-relaxed mb-4">
+                    <p className="text-sm text-gray-700 dark:text-slate-200 leading-relaxed mb-4 font-normal">
                       {track.overview}
                     </p>
 
                     {/* Mentor Badge */}
-                    <div className="p-3 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200/80 dark:border-graphite/40 text-xs font-mono mb-4">
-                      <span className="text-[10px] uppercase text-gray-400 dark:text-slate-muted block font-semibold mb-0.5">
+                    <div className="p-3 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200/80 dark:border-graphite/40 text-xs sm:text-sm font-sans mb-4">
+                      <span className="text-[11px] uppercase text-gray-500 dark:text-slate-400 block font-semibold mb-0.5">
                         Track Lead &amp; Mentor
                       </span>
                       <span className="font-bold text-gray-900 dark:text-white">{track.mentor}</span>
-                      <span className="text-gray-500 dark:text-slate-muted block text-[11px] mt-0.5">
+                      <span className="text-gray-600 dark:text-slate-400 block text-xs mt-0.5">
                         {track.mentorRole}
                       </span>
                     </div>
 
                     {/* Key Learning Highlights */}
                     <div className="space-y-1.5 mb-6">
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-gray-400 dark:text-slate-muted block font-bold">
+                      <span className="text-xs uppercase tracking-wider text-gray-600 dark:text-slate-400 block font-bold">
                         Core Competencies
                       </span>
                       {track.learningOutcomes.slice(0, 2).map((item, i) => (
-                        <div key={i} className="flex items-start gap-2 text-xs text-gray-700 dark:text-slate-300">
+                        <div key={i} className="flex items-start gap-2 text-sm text-gray-800 dark:text-slate-200">
                           <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </div>
@@ -190,13 +190,13 @@ export default function InternshipsPage() {
 
                   {/* Action Button */}
                   <div className="pt-4 border-t border-gray-100 dark:border-graphite/30 flex items-center justify-between">
-                    <div className="font-mono text-[11px] text-gray-500 dark:text-slate-muted">
+                    <div className="text-xs font-semibold text-gray-600 dark:text-slate-400">
                       {track.duration}
                     </div>
 
                     <button
                       onClick={() => setActiveModalTrack(track)}
-                      className="px-4 py-2 rounded-xl bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-950 font-mono text-xs font-bold flex items-center gap-1.5 hover:bg-black dark:hover:bg-warmWhite transition-all hover:scale-[1.02] shadow-sm"
+                      className="px-4 py-2.5 rounded-xl bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-950 text-sm font-semibold flex items-center gap-1.5 hover:bg-black dark:hover:bg-warmWhite transition-all hover:scale-[1.02] shadow-sm cursor-pointer"
                     >
                       <span>Apply for Track</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />

@@ -132,7 +132,7 @@ export default function AcademyCourseDetailPage({ params }: AcademyDetailPagePro
             <div className="lg:col-span-7 flex flex-col gap-10">
               <div>
                 <h2 className="text-2xl font-bold text-gray-950 dark:text-white mb-4">Course Overview</h2>
-                <p className="text-base text-gray-700 dark:text-slate-300 leading-relaxed">
+                <p className="text-base sm:text-lg text-gray-800 dark:text-slate-200 leading-relaxed font-normal">
                   {course.overview}
                 </p>
               </div>
@@ -141,8 +141,8 @@ export default function AcademyCourseDetailPage({ params }: AcademyDetailPagePro
                 <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-4">What You Will Master</h3>
                 <div className="flex flex-col gap-3">
                   {course.learningOutcomes.map((outcome) => (
-                    <div key={outcome} className="flex items-start gap-3 text-sm text-gray-700 dark:text-slate-300">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                    <div key={outcome} className="flex items-start gap-3 text-sm sm:text-base text-gray-800 dark:text-slate-200">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-1" />
                       <span>{outcome}</span>
                     </div>
                   ))}

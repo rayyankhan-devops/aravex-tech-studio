@@ -150,7 +150,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-950 dark:text-white">
                 Detailed Practice Scope
               </h2>
-              <p className="text-base text-gray-700 dark:text-slate-300 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-800 dark:text-slate-200 leading-relaxed font-normal">
                 {service.fullDescription}
               </p>
 
@@ -160,7 +160,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                   <span className="font-mono text-xs text-rose-600 dark:text-rose-400 uppercase tracking-wider font-bold">
                     The Industry Problem
                   </span>
-                  <p className="text-sm text-gray-700 dark:text-rose-200/90 mt-2 leading-relaxed">
+                  <p className="text-sm text-gray-800 dark:text-rose-200 mt-2 leading-relaxed">
                     {service.problem}
                   </p>
                 </div>
@@ -169,7 +169,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                   <span className="font-mono text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider font-bold">
                     The Arevex Solution
                   </span>
-                  <p className="text-sm text-gray-700 dark:text-emerald-200/90 mt-2 leading-relaxed">
+                  <p className="text-sm text-gray-800 dark:text-emerald-200 mt-2 leading-relaxed">
                     {service.solution}
                   </p>
                 </div>
@@ -182,7 +182,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 <h3 className="text-lg font-bold text-gray-950 dark:text-white mb-4">Concrete Deliverables</h3>
                 <ul className="flex flex-col gap-3">
                   {service.deliverables.map((item) => (
-                    <li key={item} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-700 dark:text-slate-300">
+                    <li key={item} className="flex items-start gap-2.5 text-sm text-gray-800 dark:text-slate-200">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -227,7 +227,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 </span>
                 <div>
                   <h3 className="font-bold text-base text-gray-950 dark:text-white mb-2">{step.title}</h3>
-                  <p className="text-xs text-gray-600 dark:text-slate-400 leading-relaxed">{step.description}</p>
+                  <p className="text-sm text-gray-700 dark:text-slate-300 leading-relaxed font-normal">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -240,7 +240,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         <section className="py-20 border-b border-gray-200 dark:border-graphite/40">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <span className="font-mono text-xs uppercase tracking-widest text-slate-500 dark:text-slate-muted font-bold">Frequently Asked</span>
+              <span className="font-mono text-xs uppercase tracking-widest text-slate-700 dark:text-slate-300 font-bold">Frequently Asked</span>
               <h2 className="text-3xl font-bold text-gray-950 dark:text-white mt-1">Questions & Answers</h2>
             </div>
 
@@ -251,10 +251,10 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                   className="p-6 rounded-2xl bg-white dark:bg-charcoal-900/60 border border-gray-200 dark:border-graphite/40 shadow-sm"
                 >
                   <div className="flex items-start gap-3">
-                    <HelpCircle className="w-5 h-5 text-emerald-600 dark:text-slate-muted shrink-0 mt-0.5" />
+                    <HelpCircle className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                     <div>
                       <h4 className="font-bold text-base text-gray-950 dark:text-white mb-2">{faq.question}</h4>
-                      <p className="text-sm text-gray-600 dark:text-slate-300 leading-relaxed">{faq.answer}</p>
+                      <p className="text-sm sm:text-base text-gray-700 dark:text-slate-200 leading-relaxed font-normal">{faq.answer}</p>
                     </div>
                   </div>
                 </div>

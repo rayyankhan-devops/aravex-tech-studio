@@ -65,9 +65,9 @@ export default function AboutPage() {
       <section className="py-20 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-mono text-xs uppercase tracking-widest text-slate-500 dark:text-slate-muted font-bold">Leadership</span>
+            <span className="font-mono text-xs uppercase tracking-widest text-slate-700 dark:text-slate-300 font-bold">Leadership</span>
             <h2 className="text-3xl font-black text-gray-950 dark:text-white mt-1">Studio Founders</h2>
-            <p className="text-sm text-gray-600 dark:text-slate-400 mt-3">
+            <p className="text-base text-gray-700 dark:text-slate-300 mt-3 font-normal">
               Founded on principles of engineering craftsmanship, design discipline, and technical transparency.
             </p>
           </div>
@@ -85,18 +85,18 @@ export default function AboutPage() {
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-1">{founder.name}</h3>
-                  <span className="font-mono text-xs text-slate-600 dark:text-slate-400 font-bold block mb-3">
+                  <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-400 block mb-3">
                     {founder.role}
                   </span>
-                  <div className="p-2.5 rounded-lg bg-white/60 dark:bg-charcoal-900 border border-gray-200/60 dark:border-graphite/30 text-xs font-mono text-gray-600 dark:text-slate-300 mb-4">
-                    <span className="text-[10px] uppercase text-gray-400 dark:text-slate-muted block font-semibold">Specialization</span>
+                  <div className="p-2.5 rounded-lg bg-white/60 dark:bg-charcoal-900 border border-gray-200/60 dark:border-graphite/30 text-xs sm:text-sm font-sans text-gray-800 dark:text-slate-200 mb-4">
+                    <span className="text-[11px] uppercase text-gray-500 dark:text-slate-400 block font-semibold">Specialization</span>
                     {founder.focus}
                   </div>
-                  <p className="text-xs text-gray-600 dark:text-slate-300 leading-relaxed mb-4">
+                  <p className="text-sm text-gray-700 dark:text-slate-200 leading-relaxed mb-4 font-normal">
                     {founder.bio}
                   </p>
                 </div>
-                <div className="pt-4 border-t border-gray-200 dark:border-graphite/30 w-full flex items-center justify-between text-xs font-mono text-gray-500 dark:text-slate-muted">
+                <div className="pt-4 border-t border-gray-200 dark:border-graphite/30 w-full flex items-center justify-between text-xs font-mono text-gray-600 dark:text-slate-300">
                   <span>AREVEX LEADERSHIP</span>
                   <span>Karachi & Global</span>
                 </div>
@@ -122,9 +122,9 @@ export default function AboutPage() {
                 className="p-6 rounded-2xl bg-white dark:bg-charcoal-900/60 border border-gray-200 dark:border-graphite/40 flex flex-col justify-between shadow-sm"
               >
                 <div>
-                  <span className="font-mono text-xs text-slate-500 dark:text-slate-muted font-bold">0{idx + 1}</span>
+                  <span className="font-mono text-xs text-slate-700 dark:text-slate-300 font-bold">0{idx + 1}</span>
                   <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-2 mb-2">{practice.title}</h3>
-                  <p className="text-xs text-gray-600 dark:text-slate-400 leading-relaxed">{practice.desc}</p>
+                  <p className="text-sm text-gray-700 dark:text-slate-200 leading-relaxed font-normal">{practice.desc}</p>
                 </div>
               </div>
             ))}

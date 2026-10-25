@@ -140,9 +140,9 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
 
               <div>
                 <h3 className="text-2xl font-bold text-gray-950 dark:text-white mb-4">Architecture & Topology</h3>
-                <div className="p-6 rounded-2xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/50 font-mono text-sm text-gray-800 dark:text-slate-300 leading-relaxed shadow-sm">
-                  <div className="flex items-center gap-2 text-gray-500 dark:text-slate-muted mb-2 text-xs uppercase tracking-wider font-bold">
-                    <Layers className="w-4 h-4 text-emerald-600 dark:text-slate-muted" />
+                <div className="p-6 rounded-2xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/50 font-mono text-sm text-gray-900 dark:text-slate-200 leading-relaxed shadow-sm">
+                  <div className="flex items-center gap-2 text-gray-600 dark:text-slate-400 mb-2 text-xs uppercase tracking-wider font-bold">
+                    <Layers className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                     <span>System Pipeline</span>
                   </div>
                   {project.architecture}
@@ -156,7 +156,7 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
                 <h3 className="text-lg font-bold text-gray-950 dark:text-white mb-4">Key Capabilities</h3>
                 <div className="flex flex-col gap-3">
                   {project.keyHighlights.map((h) => (
-                    <div key={h} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-700 dark:text-slate-300">
+                    <div key={h} className="flex items-start gap-2.5 text-sm text-gray-800 dark:text-slate-200">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                       <span>{h}</span>
                     </div>

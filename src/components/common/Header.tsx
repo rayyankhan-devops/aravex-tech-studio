@@ -91,15 +91,15 @@ export function Header() {
                   key={link.name}
                   href={link.href}
                   className={cn(
-                    'relative inline-flex items-center gap-1.5 px-3 py-1.5 text-xs xl:text-sm font-medium transition-colors duration-200 rounded-full',
+                    'relative inline-flex items-center gap-1.5 px-3.5 py-1.5 text-sm font-medium transition-colors duration-200 rounded-full',
                     isActive
-                      ? 'text-charcoal-900 dark:text-warmWhite bg-white dark:bg-graphite/70 shadow-sm font-semibold'
-                      : 'text-gray-600 dark:text-slate-light hover:text-black dark:hover:text-white'
+                      ? 'text-charcoal-950 dark:text-warmWhite bg-white dark:bg-graphite/70 shadow-sm font-semibold'
+                      : 'text-gray-700 dark:text-slate-200 hover:text-black dark:hover:text-white'
                   )}
                 >
                   <span>{link.name}</span>
                   {link.badge && (
-                    <span className="text-[9px] font-mono px-1.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20">
+                    <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
                       {link.badge}
                     </span>
                   )}

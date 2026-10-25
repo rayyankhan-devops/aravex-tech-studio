@@ -95,9 +95,9 @@ export function ContactForm() {
 
           {/* Row 1: Name & Business Email */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div className="flex flex-col gap-2">
-              <label className="text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 font-bold">
-                Your Full Name *
+            <div className="flex flex-col gap-1.5">
+              <label className="text-sm font-semibold text-gray-900 dark:text-gray-100 flex items-center justify-between">
+                <span>Your Full Name <span className="text-rose-500 font-bold">*</span></span>
               </label>
               <input
                 type="text"
@@ -105,13 +105,13 @@ export function ContactForm() {
                 placeholder="Muhammad Ali"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-gray-900 dark:text-warmWhite placeholder:text-gray-400 dark:placeholder:text-slate-600 focus:outline-none focus:border-slate-muted transition-colors text-sm"
+                className="w-full px-4 py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all text-base sm:text-sm font-normal"
               />
             </div>
 
-            <div className="flex flex-col gap-2">
-              <label className="text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 font-bold">
-                Business Email *
+            <div className="flex flex-col gap-1.5">
+              <label className="text-sm font-semibold text-gray-900 dark:text-gray-100 flex items-center justify-between">
+                <span>Business Email <span className="text-rose-500 font-bold">*</span></span>
               </label>
               <input
                 type="email"
@@ -119,15 +119,15 @@ export function ContactForm() {
                 placeholder="name@company.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-gray-900 dark:text-warmWhite placeholder:text-gray-400 dark:placeholder:text-slate-600 focus:outline-none focus:border-slate-muted transition-colors text-sm"
+                className="w-full px-4 py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all text-base sm:text-sm font-normal"
               />
             </div>
           </div>
 
           {/* Row 2: Company & Service */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div className="flex flex-col gap-2">
-              <label className="text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 font-bold">
+            <div className="flex flex-col gap-1.5">
+              <label className="text-sm font-semibold text-gray-900 dark:text-gray-100">
                 Company / Organization
               </label>
               <input
@@ -135,18 +135,18 @@ export function ContactForm() {
                 placeholder="Enterprise or Startup Name"
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-gray-900 dark:text-warmWhite placeholder:text-gray-400 dark:placeholder:text-slate-600 focus:outline-none focus:border-slate-muted transition-colors text-sm"
+                className="w-full px-4 py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all text-base sm:text-sm font-normal"
               />
             </div>
 
-            <div className="flex flex-col gap-2">
-              <label className="text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 font-bold">
-                Service Required *
+            <div className="flex flex-col gap-1.5">
+              <label className="text-sm font-semibold text-gray-900 dark:text-gray-100 flex items-center justify-between">
+                <span>Service Required <span className="text-rose-500 font-bold">*</span></span>
               </label>
               <select
                 value={formData.service}
                 onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-gray-900 dark:text-warmWhite focus:outline-none focus:border-slate-muted transition-colors text-sm"
+                className="w-full px-4 py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all text-base sm:text-sm font-normal cursor-pointer"
               >
                 {SERVICES_DATA.map((s) => (
                   <option key={s.id} value={s.title} className="bg-white dark:bg-charcoal-900 text-gray-900 dark:text-warmWhite">
@@ -158,8 +158,8 @@ export function ContactForm() {
           </div>
 
           {/* Row 3: Budget Range */}
-          <div className="flex flex-col gap-2.5">
-            <label className="text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 font-bold">
+          <div className="flex flex-col gap-2">
+            <label className="text-sm font-semibold text-gray-900 dark:text-gray-100">
               Estimated Project Budget
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -168,10 +168,10 @@ export function ContactForm() {
                   type="button"
                   key={opt}
                   onClick={() => setFormData({ ...formData, budget: opt })}
-                  className={`px-3.5 py-2.5 rounded-xl text-xs font-mono border text-left transition-all ${
+                  className={`px-4 py-3 rounded-xl text-sm font-medium border text-left transition-all ${
                     formData.budget === opt
-                      ? 'bg-slate-800 text-white dark:bg-slate-muted/30 dark:border-slate-muted dark:text-warmWhite font-bold shadow-sm'
-                      : 'bg-gray-50 dark:bg-charcoal-850/50 border-gray-300 dark:border-graphite/30 text-gray-700 dark:text-slate-light hover:border-slate-500'
+                      ? 'bg-slate-900 text-white dark:bg-slate-700/60 dark:border-slate-400 dark:text-white font-semibold shadow-sm ring-1 ring-slate-400'
+                      : 'bg-gray-50 dark:bg-charcoal-850/70 border-gray-300 dark:border-graphite/40 text-gray-800 dark:text-slate-200 hover:border-slate-400 dark:hover:border-slate-500'
                   }`}
                 >
                   {opt}
@@ -181,9 +181,9 @@ export function ContactForm() {
           </div>
 
           {/* Row 4: Project Scope */}
-          <div className="flex flex-col gap-2">
-            <label className="text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 font-bold">
-              Project Scope & Technical Goals *
+          <div className="flex flex-col gap-1.5">
+            <label className="text-sm font-semibold text-gray-900 dark:text-gray-100 flex items-center justify-between">
+              <span>Project Scope &amp; Technical Goals <span className="text-rose-500 font-bold">*</span></span>
             </label>
             <textarea
               required
@@ -191,27 +191,29 @@ export function ContactForm() {
               placeholder="Tell us about what you want to engineer, key architectural requirements, target launch deadline, and team constraints..."
               value={formData.description}
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-gray-900 dark:text-warmWhite placeholder:text-gray-400 dark:placeholder:text-slate-600 focus:outline-none focus:border-slate-muted transition-colors text-sm resize-none"
+              className="w-full px-4 py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all text-base sm:text-sm font-normal resize-none leading-relaxed"
             />
           </div>
 
           {/* Row 5: Preferred Contact Method */}
           <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
-            <div className="flex items-center gap-3">
-              <span className="text-xs font-mono text-gray-600 dark:text-slate-muted font-bold">Preferred Contact:</span>
-              {['Email', 'WhatsApp', 'Video Call'].map((m) => (
-                <label key={m} className="flex items-center gap-1.5 text-xs text-gray-700 dark:text-slate-light cursor-pointer font-medium">
-                  <input
-                    type="radio"
-                    name="preferredContact"
-                    value={m}
-                    checked={formData.preferredContact === m}
-                    onChange={(e) => setFormData({ ...formData, preferredContact: e.target.value })}
-                    className="accent-slate-700 dark:accent-slate-muted"
-                  />
-                  <span>{m}</span>
-                </label>
-              ))}
+            <div className="flex items-center gap-4">
+              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">Preferred Contact:</span>
+              <div className="flex items-center gap-3">
+                {['Email', 'WhatsApp', 'Video Call'].map((m) => (
+                  <label key={m} className="flex items-center gap-2 text-sm text-gray-800 dark:text-slate-200 cursor-pointer font-medium hover:text-black dark:hover:text-white transition-colors">
+                    <input
+                      type="radio"
+                      name="preferredContact"
+                      value={m}
+                      checked={formData.preferredContact === m}
+                      onChange={(e) => setFormData({ ...formData, preferredContact: e.target.value })}
+                      className="w-4 h-4 accent-slate-800 dark:accent-slate-400 cursor-pointer"
+                    />
+                    <span>{m}</span>
+                  </label>
+                ))}
+              </div>
             </div>
 
             <MagneticButton

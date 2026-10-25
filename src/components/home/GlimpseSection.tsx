@@ -37,40 +37,40 @@ export function GlimpseSection() {
           <div className="flex flex-wrap items-center gap-2 bg-white dark:bg-charcoal-950 p-1.5 rounded-full border border-gray-200 dark:border-graphite/50 shadow-sm">
             <button
               onClick={() => setActiveTab('pos')}
-              className={`px-4 py-1.5 rounded-full text-xs font-mono transition-all ${
+              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all ${
                 activeTab === 'pos'
-                  ? 'bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-900 font-bold shadow-sm'
-                  : 'text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white'
+                  ? 'bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-900 shadow-sm'
+                  : 'text-gray-700 dark:text-slate-300 hover:text-black dark:hover:text-white'
               }`}
             >
               Arevex POS
             </button>
             <button
               onClick={() => setActiveTab('ai')}
-              className={`px-4 py-1.5 rounded-full text-xs font-mono transition-all ${
+              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all ${
                 activeTab === 'ai'
-                  ? 'bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-900 font-bold shadow-sm'
-                  : 'text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white'
+                  ? 'bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-900 shadow-sm'
+                  : 'text-gray-700 dark:text-slate-300 hover:text-black dark:hover:text-white'
               }`}
             >
               AI Agent Graph
             </button>
             <button
               onClick={() => setActiveTab('cloud')}
-              className={`px-4 py-1.5 rounded-full text-xs font-mono transition-all ${
+              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all ${
                 activeTab === 'cloud'
-                  ? 'bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-900 font-bold shadow-sm'
-                  : 'text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white'
+                  ? 'bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-900 shadow-sm'
+                  : 'text-gray-700 dark:text-slate-300 hover:text-black dark:hover:text-white'
               }`}
             >
               AWS DevSecOps
             </button>
             <button
               onClick={() => setActiveTab('attendance')}
-              className={`px-4 py-1.5 rounded-full text-xs font-mono transition-all ${
+              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all ${
                 activeTab === 'attendance'
-                  ? 'bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-900 font-bold shadow-sm'
-                  : 'text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white'
+                  ? 'bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-900 shadow-sm'
+                  : 'text-gray-700 dark:text-slate-300 hover:text-black dark:hover:text-white'
               }`}
             >
               Biometric Sync
@@ -273,7 +273,7 @@ export function GlimpseSection() {
               <span className="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white tracking-tight">
                 {m.value}
               </span>
-              <span className="font-mono text-[11px] text-gray-500 dark:text-slate-muted uppercase mt-2">
+              <span className="text-xs font-semibold text-gray-700 dark:text-slate-300 uppercase tracking-wider mt-2">
                 {m.label}
               </span>
             </div>

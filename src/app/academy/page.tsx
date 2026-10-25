@@ -99,16 +99,16 @@ export default function AcademyPage() {
                     {course.title}
                   </h3>
 
-                  <p className="text-xs text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
+                  <p className="text-sm text-gray-700 dark:text-slate-200 leading-relaxed mb-5 font-normal">
                     {course.shortDescription}
                   </p>
 
                   <div className="flex flex-col gap-2 pt-2 border-t border-gray-100 dark:border-graphite/30 mb-6">
-                    <div className="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-slate-muted">
+                    <div className="flex items-center gap-2 text-sm text-gray-700 dark:text-slate-300 font-medium">
                       <Clock className="w-3.5 h-3.5" />
                       <span>{course.duration}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-slate-muted">
+                    <div className="flex items-center gap-2 text-sm text-gray-700 dark:text-slate-300 font-medium">
                       <Tag className="w-3.5 h-3.5" />
                       <span>{course.enrollmentStatus}</span>
                     </div>
@@ -118,13 +118,13 @@ export default function AcademyPage() {
                 <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-graphite/40">
                   <button
                     onClick={() => setSelectedCourse(course)}
-                    className="text-xs font-mono text-gray-900 dark:text-warmWhite font-bold hover:underline focus:outline-none cursor-pointer"
+                    className="text-sm font-semibold text-gray-950 dark:text-white hover:underline focus:outline-none cursor-pointer"
                   >
                     Enroll Now
                   </button>
                   <Link
                     href={`/academy/${course.slug}`}
-                    className="inline-flex items-center gap-1 text-xs font-mono text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white font-semibold"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-gray-700 dark:text-slate-200 hover:text-black dark:hover:text-white"
                   >
                     <span>Curriculum</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />

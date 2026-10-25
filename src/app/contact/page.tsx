@@ -53,36 +53,36 @@ export default function ContactPage() {
 
                 <div className="flex flex-col gap-5 text-sm">
                   <div className="flex items-start gap-3">
-                    <Mail className="w-5 h-5 text-emerald-600 dark:text-slate-muted shrink-0 mt-0.5" />
+                    <Mail className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-mono text-xs text-gray-500 dark:text-slate-muted block uppercase font-bold">Client Inquiries</span>
-                      <a href={`mailto:${COMPANY_INFO.contact.email}`} className="text-gray-900 dark:text-white hover:underline font-semibold">
+                      <span className="text-xs uppercase font-semibold text-gray-700 dark:text-slate-300 tracking-wider block">Client Inquiries</span>
+                      <a href={`mailto:${COMPANY_INFO.contact.email}`} className="text-base text-gray-900 dark:text-white hover:underline font-semibold">
                         {COMPANY_INFO.contact.email}
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-emerald-600 dark:text-slate-muted shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-mono text-xs text-gray-500 dark:text-slate-muted block uppercase font-bold">Studio Base</span>
-                      <span className="text-gray-700 dark:text-slate-300">
+                      <span className="text-xs uppercase font-semibold text-gray-700 dark:text-slate-300 tracking-wider block">Studio Base</span>
+                      <span className="text-base text-gray-800 dark:text-slate-200">
                         {COMPANY_INFO.locations.primary} (Global Remote Engineering)
                       </span>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <Clock className="w-5 h-5 text-emerald-600 dark:text-slate-muted shrink-0 mt-0.5" />
+                    <Clock className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-mono text-xs text-gray-500 dark:text-slate-muted block uppercase font-bold">Response Commitment</span>
-                      <span className="text-gray-700 dark:text-slate-300">Within 24 business hours</span>
+                      <span className="text-xs uppercase font-semibold text-gray-700 dark:text-slate-300 tracking-wider block">Response Commitment</span>
+                      <span className="text-base text-gray-800 dark:text-slate-200">Within 24 business hours</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-gray-200 dark:border-graphite/40">
-                  <span className="font-mono text-xs text-gray-500 dark:text-slate-muted block uppercase mb-3 font-bold">Official Social Channels</span>
+                  <span className="text-xs uppercase font-semibold text-gray-700 dark:text-slate-300 tracking-wider block mb-3">Official Social Channels</span>
                   <div className="flex flex-wrap items-center gap-2.5">
                     <a
                       href={COMPANY_INFO.socials.x}

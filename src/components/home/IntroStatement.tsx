@@ -21,14 +21,14 @@ export function IntroStatement() {
           {/* Eyebrow */}
           <div className="flex items-center gap-3">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-            <span className="font-mono text-xs uppercase tracking-[0.25em] text-slate-600 dark:text-slate-muted font-bold">
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-slate-700 dark:text-slate-300 font-bold">
               02 / CORE PHILOSOPHY
             </span>
           </div>
 
           {/* Oversized Editorial Typography */}
           <div className="max-w-5xl">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-[1.2] text-gray-700 dark:text-slate-300">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-[1.2] text-gray-700 dark:text-slate-200">
               <span className="font-bold text-gray-950 dark:text-white">
                 {COMPANY_INFO.introStatement}
               </span>{' '}
@@ -51,13 +51,13 @@ export function IntroStatement() {
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="p-2 rounded-xl bg-white dark:bg-charcoal-800 text-charcoal-800 dark:text-slate-light border border-gray-200 dark:border-graphite/40">
-                      <Icon className="w-4 h-4" />
+                      <Icon className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                     </div>
-                    <span className="font-mono text-xs text-slate-500 dark:text-slate-muted font-bold">0{idx + 1}</span>
+                    <span className="font-mono text-xs text-slate-700 dark:text-slate-300 font-bold">0{idx + 1}</span>
                   </div>
                   <div>
                     <h3 className="font-bold text-sm text-gray-900 dark:text-white mb-1.5">{p.title}</h3>
-                    <p className="text-xs text-gray-600 dark:text-slate-400 leading-relaxed">{p.desc}</p>
+                    <p className="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">{p.desc}</p>
                   </div>
                 </motion.div>
               );

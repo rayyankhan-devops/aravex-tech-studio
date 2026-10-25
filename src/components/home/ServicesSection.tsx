@@ -127,14 +127,14 @@ export function ServicesSection() {
                         {service.title}
                       </h3>
 
-                      <p className="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
+                      <p className="text-sm text-gray-700 dark:text-slate-200 leading-relaxed mb-6 font-normal">
                         {service.shortDescription}
                       </p>
                     </div>
 
-                    <div className="pt-4 border-t border-gray-200 dark:border-graphite/40 flex items-center justify-between text-xs font-mono text-gray-500 dark:text-slate-muted group-hover:text-black dark:group-hover:text-white transition-colors">
-                      <span className="uppercase tracking-wider font-semibold">{service.category}</span>
-                      <span className="flex items-center gap-1 group-hover:translate-x-1 transition-transform font-bold">
+                    <div className="pt-4 border-t border-gray-200 dark:border-graphite/40 flex items-center justify-between text-xs sm:text-sm font-sans text-gray-700 dark:text-slate-300 group-hover:text-black dark:group-hover:text-white transition-colors">
+                      <span className="uppercase tracking-wider font-semibold text-xs">{service.category}</span>
+                      <span className="flex items-center gap-1 group-hover:translate-x-1 transition-transform font-semibold text-xs sm:text-sm">
                         Details <ArrowUpRight className="w-3.5 h-3.5" />
                       </span>
                     </div>

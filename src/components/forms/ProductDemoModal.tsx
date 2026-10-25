@@ -204,11 +204,11 @@ export function ProductDemoModal({
 
           {/* Mode Switcher Tabs */}
           {!success && (
-            <div className="px-6 sm:px-8 pt-4 pb-0 bg-white dark:bg-charcoal-900 border-b border-gray-200 dark:border-graphite/40 flex gap-4">
+            <div className="px-6 sm:px-8 pt-4 pb-0 bg-white dark:bg-charcoal-900 border-b border-gray-200 dark:border-graphite/40 flex gap-6">
               <button
                 type="button"
                 onClick={() => setMode('buy')}
-                className={`pb-3 font-mono text-xs sm:text-sm font-bold border-b-2 flex items-center gap-1.5 transition-colors ${
+                className={`pb-3.5 text-sm sm:text-base font-bold border-b-2 flex items-center gap-2 transition-colors ${
                   mode === 'buy'
                     ? 'border-emerald-500 text-emerald-600 dark:text-emerald-400'
                     : 'border-transparent text-gray-500 dark:text-slate-muted hover:text-black dark:hover:text-white'
@@ -220,7 +220,7 @@ export function ProductDemoModal({
               <button
                 type="button"
                 onClick={() => setMode('demo')}
-                className={`pb-3 font-mono text-xs sm:text-sm font-bold border-b-2 flex items-center gap-1.5 transition-colors ${
+                className={`pb-3.5 text-sm sm:text-base font-bold border-b-2 flex items-center gap-2 transition-colors ${
                   mode === 'demo'
                     ? 'border-emerald-500 text-emerald-600 dark:text-emerald-400'
                     : 'border-transparent text-gray-500 dark:text-slate-muted hover:text-black dark:hover:text-white'
@@ -240,7 +240,7 @@ export function ProductDemoModal({
                   <>
                     {/* License Tier Selector */}
                     <div>
-                      <label className="block font-mono text-xs uppercase tracking-wider text-gray-400 dark:text-slate-muted font-bold mb-3">
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2.5">
                         Select Software License Tier
                       </label>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -253,33 +253,33 @@ export function ProductDemoModal({
                               onClick={() => setSelectedTier(tierKey)}
                               className={`cursor-pointer p-4 rounded-2xl border transition-all flex flex-col justify-between ${
                                 isSelected
-                                  ? 'bg-emerald-500/10 border-emerald-500 dark:border-emerald-400 shadow-md ring-1 ring-emerald-500'
+                                  ? 'bg-emerald-500/10 border-emerald-500 dark:border-emerald-400 shadow-md ring-2 ring-emerald-500/40'
                                   : 'bg-gray-50 dark:bg-charcoal-950 border-gray-200 dark:border-graphite/40 hover:border-gray-400 dark:hover:border-graphite/70'
                               }`}
                             >
                               <div>
                                 <div className="flex items-center justify-between mb-2">
-                                  <span className="font-mono text-[10px] uppercase font-bold text-gray-500 dark:text-slate-400">
+                                  <span className="text-xs uppercase font-bold text-gray-600 dark:text-slate-300">
                                     {tierKey}
                                   </span>
                                   {t.popular && (
-                                    <span className="font-mono text-[9px] uppercase px-2 py-0.5 rounded-full bg-emerald-500 text-white font-bold">
+                                    <span className="text-[10px] uppercase px-2 py-0.5 rounded-full bg-emerald-500 text-white font-bold tracking-wide">
                                       Most Popular
                                     </span>
                                   )}
                                 </div>
-                                <h4 className="font-bold text-xs sm:text-sm text-gray-950 dark:text-white leading-snug mb-2">
+                                <h4 className="font-bold text-sm sm:text-base text-gray-950 dark:text-white leading-snug mb-2">
                                   {t.name}
                                 </h4>
-                                <div className="text-lg font-black text-emerald-600 dark:text-emerald-400">
+                                <div className="text-xl sm:text-2xl font-black text-emerald-600 dark:text-emerald-400">
                                   {t.pricePKR}
                                 </div>
-                                <div className="text-[11px] font-mono text-gray-500 dark:text-slate-muted">
+                                <div className="text-xs text-gray-600 dark:text-slate-300 font-medium">
                                   {t.priceUSD} • Lifetime License
                                 </div>
                               </div>
 
-                              <ul className="mt-3 pt-3 border-t border-gray-200 dark:border-graphite/30 space-y-1 text-[11px] text-gray-600 dark:text-slate-300">
+                              <ul className="mt-3 pt-3 border-t border-gray-200 dark:border-graphite/30 space-y-1.5 text-xs text-gray-700 dark:text-slate-200">
                                 {t.features.map((f, i) => (
                                   <li key={i} className="flex items-start gap-1.5">
                                     <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
@@ -295,28 +295,28 @@ export function ProductDemoModal({
 
                     {/* Deployment Preference */}
                     <div>
-                      <label className="block font-mono text-xs uppercase tracking-wider text-gray-400 dark:text-slate-muted font-bold mb-2">
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">
                         Deployment Infrastructure
                       </label>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <label
-                          className={`p-3.5 rounded-xl border flex items-center justify-between cursor-pointer transition-all ${
+                          className={`p-4 rounded-xl border flex items-center justify-between cursor-pointer transition-all ${
                             deploymentModel === 'cloud'
-                              ? 'bg-emerald-500/10 border-emerald-500 text-gray-900 dark:text-white font-semibold'
-                              : 'bg-white dark:bg-charcoal-950 border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-300'
+                              ? 'bg-emerald-500/10 border-emerald-500 text-gray-900 dark:text-white font-semibold ring-1 ring-emerald-500/30'
+                              : 'bg-white dark:bg-charcoal-950 border-gray-200 dark:border-graphite/40 text-gray-700 dark:text-slate-300'
                           }`}
                         >
-                          <div className="flex items-center gap-2.5">
+                          <div className="flex items-center gap-3">
                             <input
                               type="radio"
                               name="deployment"
                               checked={deploymentModel === 'cloud'}
                               onChange={() => setDeploymentModel('cloud')}
-                              className="text-emerald-500 focus:ring-emerald-500"
+                              className="w-4 h-4 text-emerald-500 focus:ring-emerald-500"
                             />
                             <div>
-                              <div className="text-xs font-bold">Managed Cloud Infrastructure (AWS)</div>
-                              <div className="text-[11px] text-gray-500 dark:text-slate-muted">
+                              <div className="text-sm font-bold text-gray-950 dark:text-white">Managed Cloud Infrastructure (AWS)</div>
+                              <div className="text-xs text-gray-600 dark:text-slate-300 mt-0.5">
                                 Auto backups, multi-device mobile sync, 99.98% SLA
                               </div>
                             </div>
@@ -324,23 +324,23 @@ export function ProductDemoModal({
                         </label>
 
                         <label
-                          className={`p-3.5 rounded-xl border flex items-center justify-between cursor-pointer transition-all ${
+                          className={`p-4 rounded-xl border flex items-center justify-between cursor-pointer transition-all ${
                             deploymentModel === 'onpremise'
-                              ? 'bg-emerald-500/10 border-emerald-500 text-gray-900 dark:text-white font-semibold'
-                              : 'bg-white dark:bg-charcoal-950 border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-300'
+                              ? 'bg-emerald-500/10 border-emerald-500 text-gray-900 dark:text-white font-semibold ring-1 ring-emerald-500/30'
+                              : 'bg-white dark:bg-charcoal-950 border-gray-200 dark:border-graphite/40 text-gray-700 dark:text-slate-300'
                           }`}
                         >
-                          <div className="flex items-center gap-2.5">
+                          <div className="flex items-center gap-3">
                             <input
                               type="radio"
                               name="deployment"
                               checked={deploymentModel === 'onpremise'}
                               onChange={() => setDeploymentModel('onpremise')}
-                              className="text-emerald-500 focus:ring-emerald-500"
+                              className="w-4 h-4 text-emerald-500 focus:ring-emerald-500"
                             />
                             <div>
-                              <div className="text-xs font-bold">On-Premise / Local Desktop Offline</div>
-                              <div className="text-[11px] text-gray-500 dark:text-slate-muted">
+                              <div className="text-sm font-bold text-gray-950 dark:text-white">On-Premise / Local Desktop Offline</div>
+                              <div className="text-xs text-gray-600 dark:text-slate-300 mt-0.5">
                                 Air-gapped local database, works without internet
                               </div>
                             </div>
@@ -351,10 +351,10 @@ export function ProductDemoModal({
 
                     {/* Payment Method Selector */}
                     <div>
-                      <label className="block font-mono text-xs uppercase tracking-wider text-gray-400 dark:text-slate-muted font-bold mb-2">
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">
                         Preferred Payment Method
                       </label>
-                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs font-mono">
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                         {[
                           { id: 'card', label: 'Credit / Debit Card', icon: CreditCard },
                           { id: 'bank', label: 'Corporate Bank Transfer', icon: Building2 },
@@ -368,14 +368,14 @@ export function ProductDemoModal({
                               type="button"
                               key={m.id}
                               onClick={() => setPaymentMethod(m.id as PaymentMethod)}
-                              className={`p-3 rounded-xl border flex flex-col items-center justify-center gap-1.5 text-center transition-all ${
+                              className={`p-3.5 rounded-xl border flex flex-col items-center justify-center gap-1.5 text-center transition-all ${
                                 isSel
-                                  ? 'bg-emerald-500/10 border-emerald-500 text-emerald-600 dark:text-emerald-400 font-bold'
-                                  : 'bg-gray-50 dark:bg-charcoal-950 border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-300 hover:text-black dark:hover:text-white'
+                                  ? 'bg-emerald-500/10 border-emerald-500 text-emerald-600 dark:text-emerald-400 font-bold ring-1 ring-emerald-500/30'
+                                  : 'bg-gray-50 dark:bg-charcoal-950 border-gray-200 dark:border-graphite/40 text-gray-700 dark:text-slate-300 hover:text-black dark:hover:text-white'
                               }`}
                             >
-                              <Icon className="w-4 h-4" />
-                              <span className="text-[11px]">{m.label}</span>
+                              <Icon className="w-5 h-5" />
+                              <span className="text-xs font-semibold">{m.label}</span>
                             </button>
                           );
                         })}
@@ -386,15 +386,15 @@ export function ProductDemoModal({
 
                 {/* Buyer / Client Contact Information */}
                 <div>
-                  <h3 className="font-mono text-xs uppercase tracking-wider text-gray-400 dark:text-slate-muted font-bold mb-3 flex items-center gap-1.5">
+                  <h3 className="text-base font-bold text-gray-950 dark:text-white mb-3 flex items-center gap-1.5">
                     <span>
                       {mode === 'buy' ? 'Licensee & Billing Details' : 'Contact Information for Guided Demo'}
                     </span>
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
-                        Representative Name *
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
+                        Representative Name <span className="text-rose-500 font-bold">*</span>
                       </label>
                       <input
                         type="text"
@@ -402,12 +402,12 @@ export function ProductDemoModal({
                         placeholder="e.g. Tariq Al-Mansoor"
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 text-sm focus:outline-none focus:border-slate-muted"
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
-                        Business / Store Name *
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
+                        Business / Store Name <span className="text-rose-500 font-bold">*</span>
                       </label>
                       <input
                         type="text"
@@ -415,12 +415,12 @@ export function ProductDemoModal({
                         placeholder="e.g. Al-Noor Supermarket Network"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 text-sm focus:outline-none focus:border-slate-muted"
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
-                        Business Email *
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
+                        Business Email <span className="text-rose-500 font-bold">*</span>
                       </label>
                       <input
                         type="email"
@@ -428,12 +428,12 @@ export function ProductDemoModal({
                         placeholder="tariq@alnoor.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 text-sm focus:outline-none focus:border-slate-muted"
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
-                        WhatsApp / Contact Mobile *
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
+                        WhatsApp / Contact Mobile <span className="text-rose-500 font-bold">*</span>
                       </label>
                       <input
                         type="tel"
@@ -441,12 +441,12 @@ export function ProductDemoModal({
                         placeholder="+92 300 1234567"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 text-sm focus:outline-none focus:border-slate-muted"
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
-                        City & Country *
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
+                        City &amp; Country <span className="text-rose-500 font-bold">*</span>
                       </label>
                       <input
                         type="text"
@@ -454,11 +454,11 @@ export function ProductDemoModal({
                         placeholder="Lahore, Pakistan"
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 text-sm focus:outline-none focus:border-slate-muted"
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
                         NTN / Tax ID (Optional for Invoicing)
                       </label>
                       <input
@@ -466,7 +466,7 @@ export function ProductDemoModal({
                         placeholder="e.g. 7489201-3"
                         value={formData.taxId}
                         onChange={(e) => setFormData({ ...formData, taxId: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 text-sm focus:outline-none focus:border-slate-muted"
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"
                       />
                     </div>
                   </div>
@@ -474,7 +474,7 @@ export function ProductDemoModal({
 
                 {/* Additional Hardware Notes */}
                 <div>
-                  <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
+                  <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
                     Specific Hardware / Printer Models / Custom Requirements
                   </label>
                   <textarea
@@ -482,7 +482,7 @@ export function ProductDemoModal({
                     placeholder="e.g. We have 3 Xprinter XP-N160I USB thermal printers, barcode guns, and need Urdu receipt support..."
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 text-sm focus:outline-none focus:border-slate-muted resize-none"
+                    className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-300 dark:border-graphite/70 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 text-base sm:text-sm font-normal focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all resize-none leading-relaxed"
                   />
                 </div>
 
@@ -491,10 +491,10 @@ export function ProductDemoModal({
                   <div>
                     {mode === 'buy' ? (
                       <div>
-                        <div className="text-xs text-gray-500 dark:text-slate-muted">Total Payable:</div>
-                        <div className="text-2xl font-black text-emerald-600 dark:text-emerald-400">
+                        <div className="text-xs text-gray-500 dark:text-slate-400 font-medium">Total Payable:</div>
+                        <div className="text-2xl sm:text-3xl font-black text-emerald-600 dark:text-emerald-400">
                           {currentTier.pricePKR}{' '}
-                          <span className="text-xs font-mono font-normal text-gray-500 dark:text-slate-400">
+                          <span className="text-xs font-normal text-gray-500 dark:text-slate-400">
                             ({currentTier.priceUSD})
                           </span>
                         </div>
@@ -509,7 +509,7 @@ export function ProductDemoModal({
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-950 font-bold text-sm flex items-center justify-center gap-2 hover:bg-black dark:hover:bg-warmWhite transition-all disabled:opacity-50 shadow-lg shadow-emerald-500/10 hover:scale-[1.02]"
+                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-950 font-bold text-sm sm:text-base flex items-center justify-center gap-2 hover:bg-black dark:hover:bg-warmWhite transition-all disabled:opacity-50 shadow-lg shadow-emerald-500/10 hover:scale-[1.02] cursor-pointer"
                   >
                     {loading ? (
                       <>

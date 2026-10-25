@@ -99,69 +99,75 @@ export function EnrollmentModal({ course, isOpen, onClose }: EnrollmentModalProp
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-              <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-xl bg-gray-100 dark:bg-slate-muted/20 text-gray-800 dark:text-slate-light border border-gray-200 dark:border-transparent">
+              <div className="flex items-center gap-3.5">
+                <div className="p-3 rounded-xl bg-gray-100 dark:bg-slate-muted/20 text-gray-800 dark:text-slate-light border border-gray-200 dark:border-transparent shrink-0">
                   <GraduationCap className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="font-mono text-xs uppercase tracking-wider text-gray-500 dark:text-slate-muted font-bold">Course Enrollment</p>
-                  <h3 className="text-lg font-bold leading-tight">{course.title}</h3>
+                  <p className="text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold">Course Enrollment</p>
+                  <h3 className="text-xl font-bold leading-tight text-gray-950 dark:text-white">{course.title}</h3>
                 </div>
               </div>
 
-              <div className="p-3 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-200 dark:border-graphite/30 flex justify-between items-center text-xs font-mono">
-                <span className="text-gray-600 dark:text-slate-300">Duration: {course.duration}</span>
-                <span className="text-emerald-600 dark:text-emerald-400 font-bold">{course.feePKR}</span>
+              <div className="p-4 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-200 dark:border-graphite/40 flex justify-between items-center text-sm">
+                <span className="text-gray-700 dark:text-slate-300 font-medium">Cohort Duration: <strong className="text-gray-950 dark:text-white">{course.duration}</strong></span>
+                <span className="text-emerald-600 dark:text-emerald-400 font-bold text-base">{course.feePKR}</span>
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-mono text-gray-700 dark:text-slate-300 uppercase font-bold">Full Name *</label>
+                <label className="text-sm font-semibold text-gray-900 dark:text-gray-100 flex items-center justify-between">
+                  <span>Full Name <span className="text-rose-500 font-bold">*</span></span>
+                </label>
                 <input
                   type="text"
                   required
                   placeholder="Your Name"
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-sm text-gray-900 dark:text-white focus:outline-none focus:border-slate-muted"
+                  className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/70 text-base sm:text-sm text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-mono text-gray-700 dark:text-slate-300 uppercase font-bold">Email Address *</label>
+                  <label className="text-sm font-semibold text-gray-900 dark:text-gray-100 flex items-center justify-between">
+                    <span>Email Address <span className="text-rose-500 font-bold">*</span></span>
+                  </label>
                   <input
                     type="email"
                     required
                     placeholder="you@email.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-sm text-gray-900 dark:text-white focus:outline-none focus:border-slate-muted"
+                    className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/70 text-base sm:text-sm text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"
                   />
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-mono text-gray-700 dark:text-slate-300 uppercase font-bold">WhatsApp Number *</label>
+                  <label className="text-sm font-semibold text-gray-900 dark:text-gray-100 flex items-center justify-between">
+                    <span>WhatsApp Number <span className="text-rose-500 font-bold">*</span></span>
+                  </label>
                   <input
                     type="tel"
                     required
                     placeholder="+92 300 1234567"
                     value={formData.phoneWhatsApp}
                     onChange={(e) => setFormData({ ...formData, phoneWhatsApp: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-sm text-gray-900 dark:text-white focus:outline-none focus:border-slate-muted"
+                    className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/70 text-base sm:text-sm text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all"
                   />
                 </div>
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-mono text-gray-700 dark:text-slate-300 uppercase font-bold">Programming Experience</label>
+                <label className="text-sm font-semibold text-gray-900 dark:text-gray-100">Programming Experience Level</label>
                 <select
                   value={formData.experienceLevel}
                   onChange={(e) => setFormData({ ...formData, experienceLevel: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/40 text-sm text-gray-900 dark:text-white focus:outline-none focus:border-slate-muted"
+                  className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/70 text-base sm:text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-500 dark:focus:border-slate-400 transition-all cursor-pointer"
                 >
-                  <option value="Beginner">Beginner (No prior coding experience)</option>
-                  <option value="Intermediate">Intermediate (Some programming knowledge)</option>
-                  <option value="Advanced">Advanced (Working developer / CS student)</option>
+                  <option value="Beginner" className="bg-white dark:bg-charcoal-900">Beginner (No prior coding experience)</option>
+                  <option value="Intermediate" className="bg-white dark:bg-charcoal-900">Intermediate (Some programming knowledge)</option>
+                  <option value="Advanced" className="bg-white dark:bg-charcoal-900">Advanced (Working developer / CS student)</option>
                 </select>
               </div>
 
@@ -169,11 +175,11 @@ export function EnrollmentModal({ course, isOpen, onClose }: EnrollmentModalProp
                 <button
                   type="button"
                   onClick={handleClose}
-                  className="px-4 py-2.5 rounded-full text-xs font-mono text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors"
+                  className="px-5 py-3 rounded-full text-sm font-semibold text-gray-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition-colors"
                 >
                   Cancel
                 </button>
-                <MagneticButton type="submit" disabled={loading} variant="primary" size="sm">
+                <MagneticButton type="submit" disabled={loading} variant="primary" size="md">
                   {loading ? (
                     <>
                       <Loader2 className="w-4 h-4 animate-spin" />

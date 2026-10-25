@@ -28,7 +28,7 @@ export function FinalCTA() {
           </span>
         </h2>
 
-        <p className="mt-8 text-base sm:text-xl text-gray-700 dark:text-slate-300 max-w-2xl leading-relaxed">
+        <p className="mt-8 text-base sm:text-xl text-gray-800 dark:text-slate-200 max-w-2xl leading-relaxed font-normal">
           From custom software platforms and point-of-sale systems to autonomous AI agents and cloud infrastructure — partner with a studio that delivers what’s next.
         </p>
 
@@ -40,9 +40,9 @@ export function FinalCTA() {
 
           <a
             href={`mailto:${COMPANY_INFO.contact.email}`}
-            className="inline-flex items-center gap-2 px-6 py-4 rounded-full text-base font-semibold font-mono text-gray-800 dark:text-slate-300 hover:text-black dark:hover:text-white border border-gray-300 dark:border-graphite/50 hover:border-slate-500 dark:hover:border-slate-muted/60 transition-colors shadow-sm"
+            className="inline-flex items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-gray-800 dark:text-slate-200 hover:text-black dark:hover:text-white border border-gray-300 dark:border-graphite/50 hover:border-slate-500 dark:hover:border-slate-muted/60 transition-colors shadow-sm"
           >
-            <Mail className="w-4 h-4" />
+            <Mail className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
             <span>{COMPANY_INFO.contact.email}</span>
           </a>
         </div>

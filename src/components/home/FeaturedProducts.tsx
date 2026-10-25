@@ -102,13 +102,13 @@ export function FeaturedProducts() {
                 {featured[0].title}
               </h3>
 
-              <p className="text-base text-gray-700 dark:text-slate-300 leading-relaxed max-w-xl">
+              <p className="text-base text-gray-800 dark:text-slate-200 leading-relaxed max-w-xl font-normal">
                 {featured[0].description}
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 {featured[0].features.slice(0, 4).map((f) => (
-                  <div key={f} className="flex items-start gap-2 text-xs text-gray-600 dark:text-slate-400">
+                  <div key={f} className="flex items-start gap-2 text-sm text-gray-700 dark:text-slate-200">
                     <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                     <span>{f}</span>
                   </div>
@@ -125,16 +125,16 @@ export function FeaturedProducts() {
                 </MagneticButton>
                 <button
                   onClick={() => setSelectedProductForModal({ product: featured[0], mode: 'demo' })}
-                  className="px-4 py-2.5 rounded-full border border-gray-300 dark:border-graphite/60 text-xs font-mono font-bold hover:bg-gray-100 dark:hover:bg-charcoal-850 transition-colors"
+                  className="px-4 py-2.5 rounded-full border border-gray-300 dark:border-graphite/60 text-sm font-semibold hover:bg-gray-100 dark:hover:bg-charcoal-850 transition-colors cursor-pointer"
                 >
                   Schedule Demo
                 </button>
                 <Link
                   href={`/products/${featured[0].slug}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors font-bold ml-1"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-700 dark:text-slate-200 hover:text-black dark:hover:text-white transition-colors ml-1"
                 >
                   <span>Technical Specs</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
@@ -194,14 +194,14 @@ export function FeaturedProducts() {
                   {product.title}
                 </h4>
 
-                <p className="text-xs text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
+                <p className="text-sm text-gray-700 dark:text-slate-200 leading-relaxed mb-5">
                   {product.tagline}
                 </p>
 
                 <div className="flex flex-col gap-2 pt-2 border-t border-gray-200 dark:border-graphite/30 mb-6">
                   {product.features.slice(0, 3).map((feat) => (
-                    <div key={feat} className="flex items-start gap-2 text-xs text-gray-600 dark:text-slate-400">
-                      <span className="w-1 h-1 rounded-full bg-slate-400 dark:bg-slate-muted shrink-0 mt-1.5" />
+                    <div key={feat} className="flex items-start gap-2 text-sm text-gray-700 dark:text-slate-300">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-2" />
                       <span className="line-clamp-1">{feat}</span>
                     </div>
                   ))}
@@ -212,21 +212,21 @@ export function FeaturedProducts() {
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setSelectedProductForModal({ product, mode: 'buy' })}
-                    className="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold hover:underline focus:outline-none"
+                    className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:underline focus:outline-none cursor-pointer"
                   >
                     Buy License
                   </button>
                   <span className="text-gray-300 dark:text-graphite">|</span>
                   <button
                     onClick={() => setSelectedProductForModal({ product, mode: 'demo' })}
-                    className="text-xs font-mono text-gray-700 dark:text-slate-300 font-medium hover:underline focus:outline-none"
+                    className="text-sm font-semibold text-gray-800 dark:text-slate-200 hover:underline focus:outline-none cursor-pointer"
                   >
                     Demo
                   </button>
                 </div>
                 <Link
                   href={`/products/${product.slug}`}
-                  className="inline-flex items-center gap-1 text-xs font-mono text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white font-semibold"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-gray-700 dark:text-slate-200 hover:text-black dark:hover:text-white"
                 >
                   <span>Specs</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />

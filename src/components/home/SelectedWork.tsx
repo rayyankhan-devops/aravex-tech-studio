@@ -73,7 +73,7 @@ export function SelectedWork() {
                       {project.title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-gray-600 dark:text-slate-300 leading-relaxed mb-6">
+                    <p className="text-sm sm:text-base text-gray-700 dark:text-slate-200 leading-relaxed mb-6 font-normal">
                       {project.summary}
                     </p>
 
@@ -81,7 +81,7 @@ export function SelectedWork() {
                       {project.technologies.slice(0, 5).map((tech) => (
                         <span
                           key={tech}
-                          className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white dark:bg-charcoal-850 text-gray-700 dark:text-slate-300 border border-gray-200 dark:border-graphite/40"
+                          className="px-2.5 py-1 rounded-md text-xs font-mono bg-white dark:bg-charcoal-850 text-gray-800 dark:text-slate-200 border border-gray-200 dark:border-graphite/40 font-medium"
                         >
                           {tech}
                         </span>
@@ -90,10 +90,10 @@ export function SelectedWork() {
                   </div>
 
                   <div className="pt-4 border-t border-gray-200 dark:border-graphite/30 flex items-center justify-between">
-                    <span className="text-xs font-mono text-gray-500 dark:text-slate-muted">
+                    <span className="text-xs sm:text-sm font-sans text-gray-600 dark:text-slate-300 font-medium">
                       {project.clientType.split('//')[1] || project.year}
                     </span>
-                    <span className="inline-flex items-center gap-1 text-xs font-mono font-bold text-gray-900 dark:text-warmWhite group-hover:translate-x-1 transition-transform duration-200">
+                    <span className="inline-flex items-center gap-1 text-sm font-semibold text-gray-950 dark:text-white group-hover:translate-x-1 transition-transform duration-200">
                       <span>Explore Architecture</span>
                       <ArrowUpRight className="w-4 h-4 text-emerald-500" />
                     </span>

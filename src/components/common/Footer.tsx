@@ -46,7 +46,7 @@ export function Footer() {
                 )}
               />
             </Link>
-            <p className="text-sm text-gray-600 dark:text-slate-300 max-w-sm leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-700 dark:text-slate-200 max-w-sm leading-relaxed font-normal">
               {COMPANY_INFO.subheadline}
             </p>
             <div className="flex flex-wrap items-center gap-2.5 pt-2">
@@ -109,10 +109,10 @@ export function Footer() {
 
           {/* Capabilities */}
           <div className="flex flex-col gap-3">
-            <p className="font-mono text-xs uppercase tracking-wider text-gray-400 dark:text-slate-muted font-bold">
+            <p className="text-xs uppercase tracking-wider text-gray-900 dark:text-white font-bold">
               Capabilities
             </p>
-            <ul className="flex flex-col gap-2 text-sm text-gray-700 dark:text-slate-light">
+            <ul className="flex flex-col gap-2 text-sm text-gray-700 dark:text-slate-200">
               <li>
                 <Link href="/services/web-development" className="hover:text-black dark:hover:text-white transition-colors">
                   Web Development
@@ -139,7 +139,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="inline-flex items-center gap-1 text-xs text-gray-500 dark:text-slate-muted pt-1 hover:text-black dark:hover:text-white font-bold">
+                <Link href="/services" className="inline-flex items-center gap-1 text-xs text-gray-600 dark:text-slate-300 pt-1 hover:text-black dark:hover:text-white font-bold">
                   View All 12 Services <ArrowUpRight className="w-3 h-3" />
                 </Link>
               </li>
@@ -148,10 +148,10 @@ export function Footer() {
 
           {/* Products & Academy */}
           <div className="flex flex-col gap-3">
-            <p className="font-mono text-xs uppercase tracking-wider text-gray-400 dark:text-slate-muted font-bold">
+            <p className="text-xs uppercase tracking-wider text-gray-900 dark:text-white font-bold">
               Products & Academy
             </p>
-            <ul className="flex flex-col gap-2 text-sm text-gray-700 dark:text-slate-light">
+            <ul className="flex flex-col gap-2 text-sm text-gray-700 dark:text-slate-200">
               <li>
                 <Link href="/products/point-of-sale" className="hover:text-black dark:hover:text-white transition-colors">
                   Arevex POS
@@ -187,23 +187,23 @@ export function Footer() {
 
           {/* Studio & Contact */}
           <div className="flex flex-col gap-3">
-            <p className="font-mono text-xs uppercase tracking-wider text-gray-400 dark:text-slate-muted font-bold">
+            <p className="text-xs uppercase tracking-wider text-gray-900 dark:text-white font-bold">
               Studio & Inquiries
             </p>
-            <div className="flex flex-col gap-2.5 text-sm text-gray-700 dark:text-slate-light">
+            <div className="flex flex-col gap-2.5 text-sm text-gray-700 dark:text-slate-200">
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-gray-500 dark:text-slate-muted shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                 <span>{COMPANY_INFO.locations.primary} & International Remote Delivery</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-gray-500 dark:text-slate-muted shrink-0" />
-                <a href={`mailto:${COMPANY_INFO.contact.email}`} className="hover:underline font-semibold">
+                <Mail className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                <a href={`mailto:${COMPANY_INFO.contact.email}`} className="hover:underline font-semibold text-gray-950 dark:text-white">
                   {COMPANY_INFO.contact.email}
                 </a>
               </div>
               <div className="pt-2">
-                <p className="text-xs text-gray-500 dark:text-slate-muted font-mono uppercase mb-1 font-bold">Founders</p>
-                <p className="text-xs text-gray-800 dark:text-slate-300 font-semibold">
+                <p className="text-xs text-gray-600 dark:text-slate-400 font-mono uppercase mb-1 font-bold">Founders</p>
+                <p className="text-xs sm:text-sm text-gray-900 dark:text-slate-200 font-semibold">
                   {COMPANY_INFO.founders.map((f) => f.name).join(' • ')}
                 </p>
               </div>
@@ -212,7 +212,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar: Copyright & Legal */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-gray-500 dark:text-slate-muted">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-gray-600 dark:text-slate-300">
           <div>
             © {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.
           </div>

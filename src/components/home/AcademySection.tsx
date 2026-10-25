@@ -64,7 +64,7 @@ export function AcademySection() {
         <div className="relative rounded-3xl bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/50 overflow-hidden mb-12 shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 sm:p-12">
             <div className="lg:col-span-7 flex flex-col gap-5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30 font-bold">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                 <span>Affordable Technology Education: PKR 1,000 – 2,000 / Month</span>
               </div>
@@ -73,7 +73,7 @@ export function AcademySection() {
                 Empowering the Next Generation of Engineers.
               </h3>
 
-              <p className="text-sm sm:text-base text-gray-700 dark:text-slate-300 leading-relaxed max-w-xl">
+              <p className="text-sm sm:text-base text-gray-700 dark:text-slate-200 leading-relaxed max-w-xl font-normal">
                 We believe elite technology training should be accessible to ambitious students and developers across Pakistan. Our curriculum avoids abstract lectures, prioritizing live code repositories, cloud deployments, and direct industry mentorship.
               </p>
 
@@ -82,7 +82,7 @@ export function AcademySection() {
                   <span>Explore Curriculum</span>
                   <ArrowUpRight className="w-4 h-4 ml-1" />
                 </MagneticButton>
-                <span className="text-xs font-mono text-gray-500 dark:text-slate-muted">
+                <span className="text-xs sm:text-sm text-gray-600 dark:text-slate-300">
                   * Scheduling subject to enrollment cohort confirmation
                 </span>
               </div>
@@ -130,11 +130,11 @@ export function AcademySection() {
                   {course.title}
                 </h4>
 
-                <p className="text-xs text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
+                <p className="text-sm text-gray-700 dark:text-slate-200 leading-relaxed mb-5 font-normal">
                   {course.shortDescription}
                 </p>
 
-                <div className="flex items-center gap-4 text-xs font-mono text-gray-500 dark:text-slate-muted pt-2 border-t border-gray-100 dark:border-graphite/30 mb-6">
+                <div className="flex items-center gap-4 text-xs sm:text-sm font-sans text-gray-700 dark:text-slate-300 pt-2 border-t border-gray-100 dark:border-graphite/30 mb-6 font-medium">
                   <div className="flex items-center gap-1.5">
                     <Clock className="w-3.5 h-3.5" />
                     <span>{course.duration}</span>
@@ -149,13 +149,13 @@ export function AcademySection() {
               <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-graphite/40">
                 <button
                   onClick={() => setSelectedCourseForEnrollment(course)}
-                  className="text-xs font-mono text-gray-900 dark:text-warmWhite font-bold hover:underline focus:outline-none"
+                  className="text-sm font-semibold text-gray-950 dark:text-white hover:underline focus:outline-none cursor-pointer"
                 >
                   Enroll Now
                 </button>
                 <Link
                   href={`/academy/${course.slug}`}
-                  className="inline-flex items-center gap-1 text-xs font-mono text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white font-semibold"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-gray-700 dark:text-slate-200 hover:text-black dark:hover:text-white"
                 >
                   <span>Syllabus</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />

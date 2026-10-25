@@ -37,11 +37,11 @@ export function WhySection() {
                   <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-3">
                     {practice.title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-700 dark:text-slate-200 leading-relaxed font-normal">
                     {practice.desc}
                   </p>
                 </div>
-                <div className="pt-6 mt-6 border-t border-gray-200 dark:border-graphite/30 font-mono text-[11px] text-gray-500 dark:text-slate-muted font-bold">
+                <div className="pt-6 mt-6 border-t border-gray-200 dark:border-graphite/30 font-mono text-xs text-gray-600 dark:text-slate-300 font-bold">
                   PRINCIPLE 0{idx + 1}
                 </div>
               </motion.div>

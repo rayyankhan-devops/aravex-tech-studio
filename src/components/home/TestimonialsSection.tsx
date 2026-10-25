@@ -42,13 +42,13 @@ export function TestimonialsSection() {
 
                   {/* Project Tag */}
                   <div className="mb-4">
-                    <span className="font-mono text-xs text-slate-500 dark:text-slate-muted block font-semibold">
+                    <span className="font-mono text-xs text-slate-700 dark:text-slate-300 block font-semibold">
                       {t.projectTag}
                     </span>
                   </div>
 
                   {/* Quote */}
-                  <p className="text-sm sm:text-base text-gray-700 dark:text-slate-300 leading-relaxed italic mb-6">
+                  <p className="text-base text-gray-800 dark:text-slate-200 leading-relaxed italic mb-6">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                 </div>
@@ -63,7 +63,7 @@ export function TestimonialsSection() {
                       <h4 className="font-bold text-sm text-gray-900 dark:text-white leading-tight">
                         {t.name}
                       </h4>
-                      <p className="text-xs text-gray-500 dark:text-slate-muted leading-tight mt-0.5">
+                      <p className="text-xs sm:text-sm text-gray-600 dark:text-slate-300 leading-tight mt-0.5">
                         {t.role}, {t.company}
                       </p>
                     </div>

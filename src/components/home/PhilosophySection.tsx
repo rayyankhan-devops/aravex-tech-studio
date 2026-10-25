@@ -38,13 +38,13 @@ export function PhilosophySection() {
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-black dark:group-hover:text-slate-200 transition-colors">
                   {phase.title}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-700 dark:text-slate-200 leading-relaxed font-normal">
                   {phase.description}
                 </p>
               </div>
 
               {/* Progress bar accent */}
-              <div className="mt-8 pt-4 border-t border-gray-100 dark:border-graphite/30 flex items-center justify-between text-[11px] font-mono text-gray-500 dark:text-slate-muted font-bold">
+              <div className="mt-8 pt-4 border-t border-gray-100 dark:border-graphite/30 flex items-center justify-between text-xs font-mono text-gray-600 dark:text-slate-300 font-bold">
                 <span>STAGE {phase.step} OF 06</span>
                 <span className="text-emerald-600 dark:text-emerald-400">VERIFIED</span>
               </div>

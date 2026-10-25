@@ -21,10 +21,10 @@
     --bg-surface: #14171C;
     --bg-surface-subtle: #1C2026;
     --fg-main: #F7F7F5;
-    --fg-muted: #94A3B8;
-    --fg-subtle: #64768B;
-    --border-main: rgba(255, 255, 255, 0.08);
-    --border-subtle: rgba(255, 255, 255, 0.04);
+    --fg-muted: #CBD5E1;
+    --fg-subtle: #94A3B8;
+    --border-main: rgba(255, 255, 255, 0.10);
+    --border-subtle: rgba(255, 255, 255, 0.05);
   }
 
   html {
