@@ -111,41 +111,73 @@ export default function ProductsPage() {
               />
             </div>
 
-            {/* Platform Filters */}
-            <div className="flex flex-wrap items-center gap-1.5">
-              <span className="text-xs font-semibold text-gray-700 dark:text-slate-300 mr-1 uppercase tracking-wider">Platform:</span>
-              {PLATFORMS.map((p) => (
-                <button
-                  key={p}
-                  onClick={() => setSelectedPlatform(p)}
-                  className={`px-3.5 py-1.5 rounded-full text-sm font-medium border transition-colors cursor-pointer ${
-                    selectedPlatform === p
-                      ? 'bg-charcoal-950 text-white dark:bg-warmWhite dark:text-charcoal-900 border-transparent font-semibold shadow-sm'
-                      : 'bg-white dark:bg-charcoal-850/80 text-gray-700 dark:text-slate-200 border-gray-300 dark:border-graphite/40 hover:border-slate-500'
-                  }`}
-                >
-                  {p}
-                </button>
-              ))}
+            {/* Platform Filters - Standalone Pills */}
+            <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+              <span className="text-xs font-semibold text-gray-700 dark:text-slate-300 mr-1 uppercase tracking-wider shrink-0">Platform:</span>
+              {PLATFORMS.map((p) => {
+                const count =
+                  p === 'All'
+                    ? PRODUCTS_DATA.length
+                    : PRODUCTS_DATA.filter((item) => item.platform === p).length;
+                const isActive = selectedPlatform === p;
+                return (
+                  <button
+                    key={p}
+                    onClick={() => setSelectedPlatform(p)}
+                    className={`inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap shadow-sm hover:scale-[1.02] active:scale-[0.98] ${
+                      isActive
+                        ? 'bg-charcoal-950 text-white dark:bg-white dark:text-charcoal-950 font-bold shadow-md ring-2 ring-charcoal-950/20 dark:ring-white/30'
+                        : 'bg-white dark:bg-charcoal-900 text-gray-700 dark:text-slate-300 border border-gray-200 dark:border-graphite/60 hover:border-gray-400 dark:hover:border-slate-400 hover:text-black dark:hover:text-white'
+                    }`}
+                  >
+                    <span>{p}</span>
+                    <span
+                      className={`inline-flex items-center justify-center px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold ${
+                        isActive
+                          ? 'bg-white/20 text-white dark:bg-black/15 dark:text-black'
+                          : 'bg-gray-100 dark:bg-charcoal-800 text-gray-600 dark:text-slate-400'
+                      }`}
+                    >
+                      {count}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 
-          {/* Category Filter Pills */}
-          <div className="flex flex-wrap items-center gap-1.5 pt-4">
-            <span className="text-xs font-semibold text-gray-700 dark:text-slate-300 mr-1 uppercase tracking-wider">Category:</span>
-            {CATEGORIES.map((c) => (
-              <button
-                key={c}
-                onClick={() => setSelectedCategory(c)}
-                className={`px-3.5 py-1.5 rounded-full text-sm font-medium border transition-colors cursor-pointer ${
-                  selectedCategory === c
-                    ? 'bg-slate-800 text-white dark:bg-slate-200 dark:text-charcoal-950 border-transparent font-semibold shadow-sm'
-                    : 'bg-gray-100 dark:bg-charcoal-850/50 text-gray-700 dark:text-slate-300 border-gray-200 dark:border-graphite/30 hover:border-slate-400'
-                }`}
-              >
-                {c}
-              </button>
-            ))}
+          {/* Category Filter Pills - Standalone Pills */}
+          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pt-4 pb-1">
+            <span className="text-xs font-semibold text-gray-700 dark:text-slate-300 mr-1 uppercase tracking-wider shrink-0">Category:</span>
+            {CATEGORIES.map((c) => {
+              const count =
+                c === 'All'
+                  ? PRODUCTS_DATA.length
+                  : PRODUCTS_DATA.filter((item) => item.category === c).length;
+              const isActive = selectedCategory === c;
+              return (
+                <button
+                  key={c}
+                  onClick={() => setSelectedCategory(c)}
+                  className={`inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap shadow-sm hover:scale-[1.02] active:scale-[0.98] ${
+                    isActive
+                      ? 'bg-charcoal-950 text-white dark:bg-white dark:text-charcoal-950 font-bold shadow-md ring-2 ring-charcoal-950/20 dark:ring-white/30'
+                      : 'bg-white dark:bg-charcoal-900 text-gray-700 dark:text-slate-300 border border-gray-200 dark:border-graphite/60 hover:border-gray-400 dark:hover:border-slate-400 hover:text-black dark:hover:text-white'
+                  }`}
+                >
+                  <span>{c}</span>
+                  <span
+                    className={`inline-flex items-center justify-center px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold ${
+                      isActive
+                        ? 'bg-white/20 text-white dark:bg-black/15 dark:text-black'
+                        : 'bg-gray-100 dark:bg-charcoal-800 text-gray-600 dark:text-slate-400'
+                    }`}
+                  >
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>

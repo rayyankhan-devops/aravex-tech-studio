@@ -99,21 +99,37 @@ export default function ServicesPage() {
             description="We engineer high-throughput web systems, offline POS software, autonomous AI agent pipelines, and secure cloud environments on AWS and GCP."
           />
 
-          {/* Category Filter Pills */}
-          <div className="flex flex-wrap items-center gap-2 pt-2">
-            {CATEGORIES.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setSelectedCategory(cat.id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border cursor-pointer ${
-                  selectedCategory === cat.id
-                    ? 'bg-charcoal-950 text-white dark:bg-warmWhite dark:text-charcoal-900 border-transparent font-semibold shadow-md'
-                    : 'bg-white dark:bg-charcoal-850/80 text-gray-700 dark:text-slate-200 border-gray-300 dark:border-graphite/40 hover:border-slate-500'
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
+          {/* Category Filter Pills - Premium Standalone Pill Strip */}
+          <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar pt-6 pb-2 scroll-smooth">
+            {CATEGORIES.map((cat) => {
+              const count =
+                cat.id === 'all'
+                  ? SERVICES_DATA.length
+                  : SERVICES_DATA.filter((s) => s.category === cat.id).length;
+              const isActive = selectedCategory === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setSelectedCategory(cat.id)}
+                  className={`inline-flex items-center gap-2.5 px-4 sm:px-5 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap shadow-sm hover:scale-[1.02] active:scale-[0.98] ${
+                    isActive
+                      ? 'bg-charcoal-950 text-white dark:bg-white dark:text-charcoal-950 font-bold shadow-md ring-2 ring-charcoal-950/20 dark:ring-white/30'
+                      : 'bg-white dark:bg-charcoal-900 text-gray-700 dark:text-slate-300 border border-gray-200 dark:border-graphite/60 hover:border-gray-400 dark:hover:border-slate-400 hover:text-black dark:hover:text-white'
+                  }`}
+                >
+                  <span>{cat.label}</span>
+                  <span
+                    className={`inline-flex items-center justify-center px-2 py-0.5 rounded-full text-[11px] font-mono font-bold ${
+                      isActive
+                        ? 'bg-white/20 text-white dark:bg-black/15 dark:text-black'
+                        : 'bg-gray-100 dark:bg-charcoal-800 text-gray-600 dark:text-slate-400'
+                    }`}
+                  >
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>

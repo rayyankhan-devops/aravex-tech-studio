@@ -108,29 +108,46 @@ export default function InternshipsPage() {
       {/* Category Filter & Track Directory */}
       <section className="py-20 border-b border-gray-200 dark:border-graphite/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          {/* Section Heading & Category Filter Pills */}
+          <div className="mb-12">
             <SectionHeading
               eyebrow="SELECT YOUR DISCIPLINE"
               title="13 Specialized Internship Tracks."
               description="Every single track is 100% remote. Work on authentic production codebases with guaranteed lifetime alumni support and formal recommendation letters for top performers."
-              className="mb-0"
+              className="mb-8 max-w-3xl"
             />
 
-            {/* Filter Tabs */}
-            <div className="flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/50 shadow-sm">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-3.5 py-1.5 rounded-xl text-sm font-medium transition-all cursor-pointer ${
-                    selectedCategory === cat
-                      ? 'bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-950 font-semibold shadow-sm'
-                      : 'text-gray-700 dark:text-slate-300 hover:text-black dark:hover:text-white'
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
+            {/* Filter Tabs - Premium Standalone Pill Strip */}
+            <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar py-1 scroll-smooth">
+              {categories.map((cat) => {
+                const count =
+                  cat === 'All'
+                    ? INTERNSHIP_TRACKS.length
+                    : INTERNSHIP_TRACKS.filter((t) => t.category === cat).length;
+                const isActive = selectedCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => setSelectedCategory(cat)}
+                    className={`inline-flex items-center gap-2.5 px-4 sm:px-5 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap shadow-sm hover:scale-[1.02] active:scale-[0.98] ${
+                      isActive
+                        ? 'bg-charcoal-950 text-white dark:bg-white dark:text-charcoal-950 font-bold shadow-md ring-2 ring-charcoal-950/20 dark:ring-white/30'
+                        : 'bg-white dark:bg-charcoal-900 text-gray-700 dark:text-slate-300 border border-gray-200 dark:border-graphite/60 hover:border-gray-400 dark:hover:border-slate-400 hover:text-black dark:hover:text-white'
+                    }`}
+                  >
+                    <span>{cat}</span>
+                    <span
+                      className={`inline-flex items-center justify-center px-2 py-0.5 rounded-full text-[11px] font-mono font-bold ${
+                        isActive
+                          ? 'bg-white/20 text-white dark:bg-black/15 dark:text-black'
+                          : 'bg-gray-100 dark:bg-charcoal-800 text-gray-600 dark:text-slate-400'
+                      }`}
+                    >
+                      {count}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 

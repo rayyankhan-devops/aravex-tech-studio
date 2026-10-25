@@ -39,21 +39,37 @@ export default function WorkPage() {
             description="Production software, verified cloud DevSecOps pipelines, offline-first POS systems, and autonomous AI architectures engineered by Arevex Tech Studio."
           />
 
-          {/* Filter Pills */}
-          <div className="flex flex-wrap items-center gap-2 pt-4">
-            {CATEGORIES.map((c) => (
-              <button
-                key={c}
-                onClick={() => setSelectedCategory(c)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border cursor-pointer ${
-                  selectedCategory === c
-                    ? 'bg-charcoal-950 text-white dark:bg-warmWhite dark:text-charcoal-900 border-transparent font-semibold shadow-sm'
-                    : 'bg-white dark:bg-charcoal-850/80 text-gray-700 dark:text-slate-200 border-gray-300 dark:border-graphite/40 hover:border-slate-500'
-                }`}
-              >
-                {c}
-              </button>
-            ))}
+          {/* Filter Pills - Premium Standalone Pill Strip */}
+          <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar pt-6 pb-2 scroll-smooth">
+            {CATEGORIES.map((c) => {
+              const count =
+                c === 'All'
+                  ? WORK_DATA.length
+                  : WORK_DATA.filter((w) => w.category === c).length;
+              const isActive = selectedCategory === c;
+              return (
+                <button
+                  key={c}
+                  onClick={() => setSelectedCategory(c)}
+                  className={`inline-flex items-center gap-2.5 px-4 sm:px-5 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap shadow-sm hover:scale-[1.02] active:scale-[0.98] ${
+                    isActive
+                      ? 'bg-charcoal-950 text-white dark:bg-white dark:text-charcoal-950 font-bold shadow-md ring-2 ring-charcoal-950/20 dark:ring-white/30'
+                      : 'bg-white dark:bg-charcoal-900 text-gray-700 dark:text-slate-300 border border-gray-200 dark:border-graphite/60 hover:border-gray-400 dark:hover:border-slate-400 hover:text-black dark:hover:text-white'
+                  }`}
+                >
+                  <span>{c}</span>
+                  <span
+                    className={`inline-flex items-center justify-center px-2 py-0.5 rounded-full text-[11px] font-mono font-bold ${
+                      isActive
+                        ? 'bg-white/20 text-white dark:bg-black/15 dark:text-black'
+                        : 'bg-gray-100 dark:bg-charcoal-800 text-gray-600 dark:text-slate-400'
+                    }`}
+                  >
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>

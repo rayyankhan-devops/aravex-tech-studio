@@ -146,21 +146,37 @@ export function TeamSection() {
               </p>
             </div>
 
-            {/* Department Filter Buttons */}
-            <div className="flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/50">
-              {departments.map((dept) => (
-                <button
-                  key={dept}
-                  onClick={() => setSelectedDept(dept)}
-                  className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all cursor-pointer ${
-                    selectedDept === dept
-                      ? 'bg-charcoal-900 text-white dark:bg-white dark:text-charcoal-950 font-semibold shadow-sm'
-                      : 'text-gray-600 dark:text-slate-400 hover:text-black dark:hover:text-white'
-                  }`}
-                >
-                  {dept}
-                </button>
-              ))}
+            {/* Department Filter Pills - Standalone Pills */}
+            <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+              {departments.map((dept) => {
+                const count =
+                  dept === 'All'
+                    ? specialists.length
+                    : specialists.filter((m) => m.department === dept).length;
+                const isActive = selectedDept === dept;
+                return (
+                  <button
+                    key={dept}
+                    onClick={() => setSelectedDept(dept)}
+                    className={`inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap shadow-sm hover:scale-[1.02] active:scale-[0.98] ${
+                      isActive
+                        ? 'bg-charcoal-950 text-white dark:bg-white dark:text-charcoal-950 font-bold shadow-md ring-2 ring-charcoal-950/20 dark:ring-white/30'
+                        : 'bg-white dark:bg-charcoal-900 text-gray-700 dark:text-slate-300 border border-gray-200 dark:border-graphite/60 hover:border-gray-400 dark:hover:border-slate-400 hover:text-black dark:hover:text-white'
+                    }`}
+                  >
+                    <span>{dept}</span>
+                    <span
+                      className={`inline-flex items-center justify-center px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold ${
+                        isActive
+                          ? 'bg-white/20 text-white dark:bg-black/15 dark:text-black'
+                          : 'bg-gray-100 dark:bg-charcoal-800 text-gray-600 dark:text-slate-400'
+                      }`}
+                    >
+                      {count}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 
