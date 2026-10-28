@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     title: `${service.title} — Services`,
     description: service.shortDescription,
     openGraph: {
-      title: `${service.title} | AREVEX TECH STUDIO`,
+      title: `${service.title} | ARAVEX TECH STUDIO`,
       description: service.shortDescription,
     },
   };
@@ -123,7 +123,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           {/* Architectural Service Showcase */}
           <div className="mt-12 relative h-72 sm:h-96 md:h-[480px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/50 shadow-2xl bg-charcoal-900">
             <Image
-              src={getServiceImage(service.slug)}
+              src={service.image || getServiceImage(service.slug)}
               alt={service.title}
               fill
               priority
@@ -167,7 +167,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
 
                 <div className="p-6 rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/40">
                   <span className="font-mono text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider font-bold">
-                    The Arevex Solution
+                    The Aravex Solution
                   </span>
                   <p className="text-sm text-gray-800 dark:text-emerald-200 mt-2 leading-relaxed">
                     {service.solution}

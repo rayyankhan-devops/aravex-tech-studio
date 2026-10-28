@@ -9,6 +9,7 @@ export interface ServiceItem {
   fullDescription: string;
   iconName: string;
   category: 'engineering' | 'ai' | 'cloud' | 'growth' | 'design';
+  image?: string;
   problem: string;
   solution: string;
   process: {
@@ -39,6 +40,8 @@ export interface ProductItem {
   platform: ProductPlatform;
   category: ProductCategory;
   targetAudience: string;
+  iconName?: string;
+  image?: string;
   features: string[];
   specs: {
     database?: string;
@@ -60,6 +63,8 @@ export interface CourseItem {
   overview: string;
   targetAudience: string;
   prerequisites: string;
+  iconName?: string;
+  image?: string;
   learningOutcomes: string[];
   curriculum: {
     week: string;
@@ -82,7 +87,10 @@ export interface ProjectItem {
   architecture: string;
   technologies: string[];
   keyHighlights: string[];
-  isInternalShowcase: boolean;
+  image?: string;
+  iconName?: string;
+  metrics?: string;
+  isInternalShowcase?: boolean;
   featured: boolean;
 }
 
@@ -94,6 +102,8 @@ export interface InsightArticle {
   publishDate: string;
   readTime: string;
   excerpt: string;
+  image?: string;
+  iconName?: string;
   content: {
     subheading?: string;
     paragraphs: string[];

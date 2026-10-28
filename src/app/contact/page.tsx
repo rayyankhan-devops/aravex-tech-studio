@@ -16,9 +16,9 @@ import {
 } from '@/components/common/SocialIcons';
 
 export const metadata: Metadata = {
-  title: 'Contact AREVEX TECH STUDIO — Start a Project',
+  title: 'Contact ARAVEX TECH STUDIO — Start a Project',
   description:
-    'Initiate a new project with Arevex Tech Studio. Specialized in custom software development, POS systems, AI agents, and AWS/GCP cloud engineering.',
+    'Initiate a new project with Aravex Tech Studio. Specialized in custom software development, POS systems, AI agents, and AWS/GCP cloud engineering.',
 };
 
 export default function ContactPage() {

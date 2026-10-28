@@ -163,7 +163,7 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                 <div className="p-3.5 rounded-xl bg-emerald-500/10 dark:bg-emerald-950/40 border border-emerald-500/30 text-xs sm:text-sm font-medium text-emerald-800 dark:text-emerald-300 flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
                   <span>
-                    <strong>Arevex Career Endorsement:</strong> You will receive lifetime mentorship support in this domain. Top-performing candidates receive signed recommendation letters and direct client referrals.
+                    <strong>Aravex Career Endorsement:</strong> You will receive lifetime mentorship support in this domain. Top-performing candidates receive signed recommendation letters and direct client referrals.
                   </span>
                 </div>
 
@@ -308,7 +308,7 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                 {/* Section 3: Motivation */}
                 <div>
                   <label className="block text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">
-                    Why Arevex Tech Studio? Tell us what you want to build and learn <span className="text-rose-500 font-bold">*</span>
+                    Why Aravex Tech Studio? Tell us what you want to build and learn <span className="text-rose-500 font-bold">*</span>
                   </label>
                   <textarea
                     name="motivation"
@@ -360,7 +360,7 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                 </span>
 
                 <h3 className="text-2xl sm:text-3xl font-black text-gray-950 dark:text-white mb-2">
-                  Welcome to the Arevex Pipeline!
+                  Welcome to the Aravex Pipeline!
                 </h3>
 
                 <p className="text-sm text-gray-600 dark:text-slate-300 leading-relaxed mb-6">
@@ -393,7 +393,7 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                 <div className="flex flex-col sm:flex-row gap-3 w-full">
                   <a
                     href={`https://wa.me/923000000000?text=${encodeURIComponent(
-                      `Hello Arevex Tech Studio, I have submitted my internship application for ${track.title} (Ref ID: ${refId}). My name is ${formData.name}.`
+                      `Hello Aravex Tech Studio, I have submitted my internship application for ${track.title} (Ref ID: ${refId}). My name is ${formData.name}.`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"

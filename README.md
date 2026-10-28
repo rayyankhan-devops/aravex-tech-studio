@@ -1,12 +1,12 @@
-# AREVEX TECH STUDIO — Premium Technology Agency Website
+# ARAVEX TECH STUDIO — Premium Technology Agency Website
 
-A world-class, production-ready website for **AREVEX TECH STUDIO**, architected with Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS, Framer Motion, and Next.js Image Optimization.
+A world-class, production-ready website for **ARAVEX TECH STUDIO**, architected with Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS, Framer Motion, and Next.js Image Optimization.
 
 ---
 
 ## 🏛️ Brand System & Identity
 
-AREVEX TECH STUDIO operates under an ultra-premium, dark-mode-first aesthetic:
+ARAVEX TECH STUDIO operates under an ultra-premium, dark-mode-first aesthetic:
 * **Primary Charcoal**: `#0F1114`
 * **Deep Graphite**: `#2A2F36`
 * **Muted Slate Blue**: `#64768B`
@@ -14,10 +14,10 @@ AREVEX TECH STUDIO operates under an ultra-premium, dark-mode-first aesthetic:
 
 ### Official Brand Asset Registry
 All official brand assets were integrated without distortion, redraw, or recoloring:
-* **Header Logo (Dark Mode)**: `/assets/branding/logo-horizontal-transparent.png`
-* **Header Logo (Light Mode)**: `/assets/branding/logo-transparent-light-mode.png`
-* **Full Footer Mark**: `/assets/branding/logo-horizontal-transparent.png` & `/assets/branding/logo-dark-bg.png`
-* **Animated Page Loader**: `/assets/branding/monogram-transparent.png`
+* **Header Logo (Dark Mode)**: `/assets/branding/ARAVEX_Full_Logo_Dark_Mode_Transparent.png`
+* **Header Logo (Light Mode)**: `/assets/branding/ARAVEX_Full_Logo_Light_Mode_Transparent.png`
+* **Full Footer Mark**: `/assets/branding/ARAVEX_Full_Logo_Dark_Mode_Transparent.png` & `/assets/branding/ARAVEX_Full_Logo_Dark_Mode_With_Background.png`
+* **Animated Page Loader**: `/assets/branding/ARAVEX_Monogram_Dark_Mode_Transparent.png`
 * **Favicon & Web App Icon**: `/icon.png` (Monogram variant)
 * **OpenGraph Social Banner**: `/og-image.png` (1200 × 630 custom architectural composite)
 
@@ -100,12 +100,12 @@ npm start
 
 ```env
 # Canonical Website URL
-NEXT_PUBLIC_SITE_URL=https://arevex.tech
+NEXT_PUBLIC_SITE_URL=https://aravex.tech
 
 # Contact & Lead Generation Form (Resend Integration)
 # In development or if left unconfigured, inquiries safely log to console without crashing.
 RESEND_API_KEY=
-CONTACT_RECEIVER_EMAIL=contact@arevex.tech
+CONTACT_RECEIVER_EMAIL=contact@aravex.tech
 
 # Optional Analytics
 NEXT_PUBLIC_GA_ID=
@@ -120,9 +120,9 @@ NEXT_PUBLIC_GA_ID=
 2. Import the repository in [Vercel](https://vercel.com).
 3. Framework Preset: **Next.js** (automatically detected).
 4. In **Environment Variables**, set:
-   * `NEXT_PUBLIC_SITE_URL`: Your custom domain (e.g., `https://arevex.tech`).
+   * `NEXT_PUBLIC_SITE_URL`: Your custom domain (e.g., `https://aravex.tech`).
    * `RESEND_API_KEY`: (Optional) Your Resend API key for live client inquiry emails.
-   * `CONTACT_RECEIVER_EMAIL`: `contact@arevex.tech`
+   * `CONTACT_RECEIVER_EMAIL`: `contact@aravex.tech`
 5. Click **Deploy**.
 
 ### Docker / Self-Hosted VPS (Node.js)

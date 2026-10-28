@@ -43,7 +43,7 @@ export function GlimpseSection() {
                   : 'text-gray-700 dark:text-slate-300 hover:text-black dark:hover:text-white'
               }`}
             >
-              Arevex POS
+              Aravex POS
             </button>
             <button
               onClick={() => setActiveTab('ai')}
@@ -87,7 +87,7 @@ export function GlimpseSection() {
               <span className="w-3 h-3 rounded-full bg-amber-500/80 inline-block" />
               <span className="w-3 h-3 rounded-full bg-emerald-500/80 inline-block" />
               <span className="ml-3 font-semibold text-gray-700 dark:text-slate-300">
-                arevex-studio://{activeTab}
+                aravex-studio://{activeTab}
               </span>
             </div>
             <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold">

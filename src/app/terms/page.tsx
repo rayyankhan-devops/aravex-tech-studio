@@ -4,8 +4,8 @@ import { SectionHeading } from '@/components/common/SectionHeading';
 import { COMPANY_INFO } from '@/lib/brand';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service — AREVEX TECH STUDIO',
-  description: 'Terms of Service and commercial client engagement frameworks for Arevex Tech Studio.',
+  title: 'Terms of Service — ARAVEX TECH STUDIO',
+  description: 'Terms of Service and commercial client engagement frameworks for Aravex Tech Studio.',
 };
 
 export default function TermsPage() {
@@ -16,7 +16,7 @@ export default function TermsPage() {
           <SectionHeading
             eyebrow="COMMERCIAL TERMS"
             title="Terms of Service"
-            description="Last Updated: October 2026. Standard terms governing software engineering, software product licensing, and academy training."
+            description="Last Updated: October 2026. Standard terms governing software engineering, software product licensing, and technology training."
           />
         </div>
       </section>
@@ -26,7 +26,7 @@ export default function TermsPage() {
           <div>
             <h2 className="text-xl font-bold text-white mb-3">1. Agreement to Terms</h2>
             <p>
-              By accessing the website, engaging engineering services, requesting software demos, or enrolling in academy courses operated by {COMPANY_INFO.name}, you agree to be bound by these Terms of Service.
+              By accessing the website, engaging engineering services, requesting software demos, or enrolling in training courses operated by {COMPANY_INFO.name}, you agree to be bound by these Terms of Service.
             </p>
           </div>
 
@@ -40,21 +40,21 @@ export default function TermsPage() {
           <div>
             <h2 className="text-xl font-bold text-white mb-3">3. Intellectual Property Rights</h2>
             <p>
-              Upon receipt of full contract payment, all custom code produced specifically for the client becomes the property of the client, excluding Arevex core foundational libraries and open-source packages which remain under their respective licenses.
+              Upon receipt of full contract payment, all custom code produced specifically for the client becomes the property of the client, excluding Aravex core foundational libraries and open-source packages which remain under their respective licenses.
             </p>
           </div>
 
           <div>
             <h2 className="text-xl font-bold text-white mb-3">4. Commercial Software Products</h2>
             <p>
-              Arevex software products (including Arevex POS, MIS, School MIS, and TimeTrack) are provided under commercial software licenses or SaaS subscriptions. Reverse engineering, unauthorized redistribution, or cracking of licensing keys is strictly prohibited.
+              Aravex software products (including Aravex POS, MIS, School MIS, and TimeTrack) are provided under commercial software licenses or SaaS subscriptions. Reverse engineering, unauthorized redistribution, or cracking of licensing keys is strictly prohibited.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-white mb-3">5. Technology Academy Policies</h2>
+            <h2 className="text-xl font-bold text-white mb-3">5. Technology Training Policies</h2>
             <p>
-              Academy course fees (PKR 1,000–2,000 per month) cover 4-week cohort instruction, assignment reviews, and digital course completion credentials. Course batches and schedules are confirmed upon meeting minimum cohort registration requirements.
+              Training course fees (PKR 1,000–2,000 per month) cover 4-week cohort instruction, assignment reviews, and digital course completion credentials. Course batches and schedules are confirmed upon meeting minimum cohort registration requirements.
             </p>
           </div>
 

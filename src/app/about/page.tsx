@@ -12,9 +12,9 @@ import { GithubIcon, LinkedinIcon } from '@/components/common/SocialIcons';
 import { FinalCTA } from '@/components/home/FinalCTA';
 
 export const metadata: Metadata = {
-  title: 'About AREVEX TECH STUDIO — Identity & Principles',
+  title: 'About ARAVEX TECH STUDIO — Identity & Principles',
   description:
-    'AREVEX TECH STUDIO is a multidisciplinary technology studio founded by Muhammad Rayyan, Muhammad Uzair, and Aqsa Wadood, delivering software engineering, AI, and practical education.',
+    'ARAVEX TECH STUDIO is a multidisciplinary technology studio founded by Muhammad Rayyan, Muhammad Uzair, and Aqsa Wadood, delivering software engineering, AI, and practical education.',
 };
 
 export default function AboutPage() {
@@ -24,7 +24,7 @@ export default function AboutPage() {
       <section className="pt-24 pb-16 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="ABOUT AREVEX"
+            eyebrow="ABOUT ARAVEX"
             title="We Build What's Next."
             description="We build intelligent software, reliable infrastructure, and practical education programs."
           />
@@ -40,20 +40,20 @@ export default function AboutPage() {
                 Engineering Grounded in Practical Reality.
               </h2>
               <p>
-                We believe software should be structurally sound, fast, and dependable under real-world pressure. At Arevex Tech Studio, that principle drives every decision we make.
+                We believe software should be structurally sound, fast, and dependable under real-world pressure. At Aravex Tech Studio, that principle drives every decision we make.
               </p>
               <p>
                 Whether developing offline-first point of sale systems that continue processing sales during local power disruptions, or orchestrating multi-agent LLM systems with deterministic tool validation, we build tools that solve genuine business bottlenecks.
               </p>
               <p>
-                Simultaneously, through our Technology Academy, we open direct pathways for aspiring engineers to master modern web stacks, Linux system administration, and cloud engineering at accessible rates.
+                Simultaneously, through our Technology Training programs, we open direct pathways for aspiring engineers to master modern web stacks, Linux system administration, and cloud engineering at accessible rates.
               </p>
             </div>
 
             <div className="lg:col-span-6 relative h-96 sm:h-[460px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/50 shadow-xl">
               <Image
                 src={BRAND_ASSETS.generated.aboutStudio}
-                alt="Arevex Creative Studio Atmosphere"
+                alt="Aravex Creative Studio Atmosphere"
                 fill
                 className="object-cover object-center"
               />
@@ -109,7 +109,7 @@ export default function AboutPage() {
                     </p>
                   </div>
                   <div className="pt-4 border-t border-gray-200 dark:border-graphite/30 w-full flex items-center justify-between text-xs font-mono text-gray-600 dark:text-slate-300">
-                    <span>AREVEX LEADERSHIP</span>
+                    <span>ARAVEX LEADERSHIP</span>
                     <div className="flex items-center gap-2">
                       <a
                         href={founder.github}
@@ -191,7 +191,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="pt-3 border-t border-gray-200 dark:border-graphite/30 flex items-center justify-between text-xs font-mono text-gray-500 dark:text-slate-400">
-                  <span>AREVEX SPECIALIST</span>
+                  <span>ARAVEX SPECIALIST</span>
                   <div className="flex items-center gap-2">
                     <a
                       href={member.github}

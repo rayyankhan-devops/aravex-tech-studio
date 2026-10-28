@@ -56,7 +56,7 @@ function wrapSvg(title, category, subtitle, content) {
   </g>
 
   <!-- Studio Header Tag -->
-  <text x="100" y="75" fill="#64768B" font-family="monospace" font-size="13" letter-spacing="4">AREVEX TECH STUDIO // ${safeCat}</text>
+  <text x="100" y="75" fill="#64768B" font-family="monospace" font-size="13" letter-spacing="4">ARAVEX TECH STUDIO // ${safeCat}</text>
   <text x="100" y="118" fill="#F7F7F5" font-family="sans-serif" font-size="28" font-weight="bold">${safeTitle}</text>
   <text x="100" y="148" fill="#94A3B8" font-family="sans-serif" font-size="15">${safeSub}</text>
 
@@ -127,7 +127,7 @@ const schoolContent = `
 const lmsContent = `
   <rect x="100" y="185" width="1400" height="645" rx="16" fill="#10141C" stroke="#242B38" stroke-width="1.5"/>
   <rect x="100" y="185" width="1400" height="50" rx="16" fill="#151A23"/>
-  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">AREVEX LEARNING ENGINE // STUDENT LMS PORTAL</text>
+  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">ARAVEX LEARNING ENGINE // STUDENT LMS PORTAL</text>
   
   <g transform="translate(135, 260)">
     <rect x="0" y="0" width="840" height="540" rx="12" fill="#0D0F13" stroke="#222834" stroke-width="1.5"/>
@@ -167,7 +167,7 @@ const lmsContent = `
 const attendanceContent = `
   <rect x="100" y="185" width="1400" height="645" rx="16" fill="#10141B" stroke="#232C3A" stroke-width="1.5"/>
   <rect x="100" y="185" width="1400" height="50" rx="16" fill="#151A23"/>
-  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">AREVEX BIOMETRIC // REAL-TIME HARDWARE EDGE ATTENDANCE</text>
+  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">ARAVEX BIOMETRIC // REAL-TIME HARDWARE EDGE ATTENDANCE</text>
 
   <g transform="translate(135, 260)">
     <rect x="0" y="0" width="580" height="540" rx="12" fill="#141822" stroke="#252F3E" stroke-width="1.5"/>
@@ -217,7 +217,7 @@ const attendanceContent = `
 const restaurantContent = `
   <rect x="100" y="185" width="1400" height="645" rx="16" fill="#12151B" stroke="#262D38" stroke-width="1.5"/>
   <rect x="100" y="185" width="1400" height="50" rx="16" fill="#171C23"/>
-  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">AREVEX RESTAURANT ENGINE // LIVE KITCHEN DISPLAY &amp; FLOOR PLAN</text>
+  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">ARAVEX RESTAURANT ENGINE // LIVE KITCHEN DISPLAY &amp; FLOOR PLAN</text>
 
   <g transform="translate(135, 260)">
     <rect x="0" y="0" width="580" height="540" rx="12" fill="#151A22" stroke="#252D3A" stroke-width="1.5"/>
@@ -272,7 +272,7 @@ const restaurantContent = `
 const libraryContent = `
   <rect x="100" y="185" width="1400" height="645" rx="16" fill="#12161E" stroke="#252D3C" stroke-width="1.5"/>
   <rect x="100" y="185" width="1400" height="50" rx="16" fill="#161C27"/>
-  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">AREVEX LIBRARY MIS // DIGITAL RFID CATALOG &amp; CIRCULATION</text>
+  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">ARAVEX LIBRARY MIS // DIGITAL RFID CATALOG &amp; CIRCULATION</text>
 
   <g transform="translate(135, 260)">
     <rect x="0" y="0" width="1330" height="100" rx="10" fill="#181E29" stroke="#2A3444" stroke-width="1.5"/>
@@ -307,7 +307,7 @@ const libraryContent = `
 const officeContent = `
   <rect x="100" y="185" width="1400" height="645" rx="16" fill="#11161F" stroke="#252D3C" stroke-width="1.5"/>
   <rect x="100" y="185" width="1400" height="50" rx="16" fill="#161C27"/>
-  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">AREVEX ENTERPRISE HRMIS // OFFICE WORKFLOW &amp; ASSET AUDIT</text>
+  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">ARAVEX ENTERPRISE HRMIS // OFFICE WORKFLOW &amp; ASSET AUDIT</text>
 
   <g transform="translate(135, 260)">
     <rect x="0" y="0" width="315" height="95" rx="10" fill="#181E29" stroke="#2A3444" stroke-width="1.5"/>
@@ -350,7 +350,7 @@ const officeContent = `
 const billingContent = `
   <rect x="100" y="185" width="1400" height="645" rx="16" fill="#11161F" stroke="#252D3C" stroke-width="1.5"/>
   <rect x="100" y="185" width="1400" height="50" rx="16" fill="#161C27"/>
-  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">AREVEX BILLING &amp; INVOICING // FBR DIGITAL POS INTEGRATED</text>
+  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">ARAVEX BILLING &amp; INVOICING // FBR DIGITAL POS INTEGRATED</text>
 
   <g transform="translate(135, 260)">
     <rect x="0" y="0" width="1330" height="540" rx="12" fill="#141923" stroke="#232B39" stroke-width="1"/>
@@ -405,13 +405,13 @@ const billingContent = `
 const whatsappContent = `
   <rect x="100" y="185" width="1400" height="645" rx="16" fill="#0C1412" stroke="#18362B" stroke-width="1.5"/>
   <rect x="100" y="185" width="1400" height="50" rx="16" fill="#10251E"/>
-  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">AREVEX ENTERPRISE // WHATSAPP BUSINESS CLOUD API ENGINE</text>
+  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">ARAVEX ENTERPRISE // WHATSAPP BUSINESS CLOUD API ENGINE</text>
 
   <g transform="translate(135, 260)">
     <rect x="0" y="0" width="540" height="540" rx="18" fill="#0E1715" stroke="#1D382F" stroke-width="2"/>
     <rect x="0" y="0" width="540" height="60" rx="18" fill="#075E54"/>
     <circle cx="40" cy="30" r="18" fill="#25D366"/>
-    <text x="70" y="28" fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold">Arevex Official Business Desk</text>
+    <text x="70" y="28" fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold">Aravex Official Business Desk</text>
     <text x="70" y="48" fill="#D1FAE5" font-family="sans-serif" font-size="11">Verified Meta Business Account ✓</text>
 
     <rect x="30" y="85" width="380" height="80" rx="12" fill="#1F2C34"/>
@@ -456,7 +456,7 @@ const whatsappContent = `
 const webDevContent = `
   <rect x="100" y="185" width="1400" height="645" rx="16" fill="#11151D" stroke="#252D3C" stroke-width="1.5"/>
   <rect x="100" y="185" width="1400" height="50" rx="16" fill="#161B26"/>
-  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">AREVEX WEB ENGINEERING // NEXT.JS 15 APP ROUTER &amp; EDGE WORKERS</text>
+  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">ARAVEX WEB ENGINEERING // NEXT.JS 15 APP ROUTER &amp; EDGE WORKERS</text>
 
   <g transform="translate(135, 260)">
     <!-- Code Editor Window -->
@@ -510,7 +510,7 @@ const webDevContent = `
 const mobileAppContent = `
   <rect x="100" y="185" width="1400" height="645" rx="16" fill="#10131A" stroke="#222936" stroke-width="1.5"/>
   <rect x="100" y="185" width="1400" height="50" rx="16" fill="#151922"/>
-  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">AREVEX MOBILE ENGINEERING // REACT NATIVE &amp; FLUTTER ARCHITECTURE</text>
+  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">ARAVEX MOBILE ENGINEERING // REACT NATIVE &amp; FLUTTER ARCHITECTURE</text>
 
   <g transform="translate(180, 260)">
     <!-- Smartphone Mockup 1 -->
@@ -576,7 +576,7 @@ const mobileAppContent = `
 const desktopContent = `
   <rect x="100" y="185" width="1400" height="645" rx="16" fill="#11161F" stroke="#252D3C" stroke-width="1.5"/>
   <rect x="100" y="185" width="1400" height="50" rx="16" fill="#161C27"/>
-  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">AREVEX DESKTOP ENGINEERING // ELECTRON, C++ &amp; NATIVE HARDWARE DRIVERS</text>
+  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">ARAVEX DESKTOP ENGINEERING // ELECTRON, C++ &amp; NATIVE HARDWARE DRIVERS</text>
 
   <g transform="translate(135, 260)">
     <rect x="0" y="0" width="1330" height="540" rx="12" fill="#141923" stroke="#232B39" stroke-width="1"/>
@@ -626,7 +626,7 @@ const desktopContent = `
 const aiAgentsContent = `
   <rect x="100" y="185" width="1400" height="645" rx="16" fill="#0E1219" stroke="#212836" stroke-width="1.5"/>
   <rect x="100" y="185" width="1400" height="50" rx="16" fill="#131722"/>
-  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">AREVEX AI ENGINEERING // MULTI-AGENT SWARMS &amp; DETERMINISTIC TOOL EXECUTION</text>
+  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">ARAVEX AI ENGINEERING // MULTI-AGENT SWARMS &amp; DETERMINISTIC TOOL EXECUTION</text>
 
   <g transform="translate(135, 260)">
     <rect x="0" y="0" width="1330" height="540" rx="12" fill="#141822" stroke="#252F3E" stroke-width="1.5"/>
@@ -683,7 +683,7 @@ const aiAgentsContent = `
 const cloudAwsContent = `
   <rect x="100" y="185" width="1400" height="645" rx="16" fill="#0D1117" stroke="#202734" stroke-width="1.5"/>
   <rect x="100" y="185" width="1400" height="50" rx="16" fill="#121721"/>
-  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">AREVEX CLOUD ARCHITECTURE // AWS MULTI-REGION TERRAFORM INFRASTRUCTURE</text>
+  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">ARAVEX CLOUD ARCHITECTURE // AWS MULTI-REGION TERRAFORM INFRASTRUCTURE</text>
 
   <g transform="translate(135, 260)">
     <rect x="0" y="0" width="1330" height="540" rx="12" fill="#131822" stroke="#242F40" stroke-width="1.5"/>
@@ -731,7 +731,7 @@ const cloudAwsContent = `
 const uiuxContent = `
   <rect x="100" y="185" width="1400" height="645" rx="16" fill="#11151D" stroke="#242B38" stroke-width="1.5"/>
   <rect x="100" y="185" width="1400" height="50" rx="16" fill="#151A24"/>
-  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">AREVEX DESIGN SYSTEM // ARCHITECTURAL FIGMA TOKS, AUTO-LAYOUT &amp; MICRO-INTERACTIONS</text>
+  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">ARAVEX DESIGN SYSTEM // ARCHITECTURAL FIGMA TOKS, AUTO-LAYOUT &amp; MICRO-INTERACTIONS</text>
 
   <g transform="translate(135, 260)">
     <rect x="0" y="0" width="1330" height="540" rx="12" fill="#141822" stroke="#242D3A" stroke-width="1.5"/>
@@ -800,7 +800,7 @@ function makeCourseGraphic(courseCode, title, weeks, tools, topics) {
   return `
   <rect x="100" y="185" width="1400" height="645" rx="16" fill="#10141C" stroke="#242B38" stroke-width="1.5"/>
   <rect x="100" y="185" width="1400" height="50" rx="16" fill="#151A23"/>
-  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">AREVEX ACADEMY // SYLLABUS &amp; HANDS-ON LAB SPECIFICATION</text>
+  <text x="135" y="217" fill="#F7F7F5" font-family="monospace" font-size="13" font-weight="bold">ARAVEX ACADEMY // SYLLABUS &amp; HANDS-ON LAB SPECIFICATION</text>
 
   <g transform="translate(135, 260)">
     <rect x="0" y="0" width="800" height="540" rx="12" fill="#131720" stroke="#222834" stroke-width="1.5"/>
@@ -839,7 +839,7 @@ function makeCourseGraphic(courseCode, title, weeks, tools, topics) {
     <text x="50" y="335" fill="#F7F7F5" font-family="sans-serif" font-size="14" font-weight="bold">What You Will Graduate With:</text>
     <text x="50" y="365" fill="#94A3B8" font-family="monospace" font-size="12">• Production portfolio deployed on AWS / Vercel</text>
     <text x="50" y="395" fill="#94A3B8" font-family="monospace" font-size="12">• Git commit history demonstrating code reviews</text>
-    <text x="50" y="425" fill="#94A3B8" font-family="monospace" font-size="12">• Arevex Studio Verified Industry Certificate</text>
+    <text x="50" y="425" fill="#94A3B8" font-family="monospace" font-size="12">• Aravex Studio Verified Industry Certificate</text>
     <text x="50" y="455" fill="#10B981" font-family="monospace" font-size="12">• Priority fast-track interview for Studio Internships</text>
   </g>
   `;

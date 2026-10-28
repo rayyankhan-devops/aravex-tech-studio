@@ -1,5 +1,5 @@
 /**
- * AREVEX TECH STUDIO — Official Brand Registry & Palette
+ * ARAVEX TECH STUDIO — Official Brand Registry & Palette
  * 
  * Strict Brand Guidelines:
  * Never regenerate, recolor, redraw, distort or replace the original logo or monogram.
@@ -20,39 +20,43 @@ export const BRAND_COLORS = {
 export const BRAND_ASSETS = {
   // Official Logos - configured for optimal contrast across themes
   horizontal: {
-    // For Dark Theme (dark background): Use official uploaded logo
-    forDarkTheme: '/assets/branding/arevex-tech-studio-logo-dark.png',
-    // For Light Theme (light background): Use charcoal/black transparent logo
-    forLightTheme: '/assets/branding/logo-horizontal-transparent.png',
+    // For Dark Theme (dark background): Use official transparent logo
+    forDarkTheme: '/assets/branding/ARAVEX_Full_Logo_Dark_Mode_Transparent.png',
+    // For Light Theme (light background): Use charcoal transparent logo
+    forLightTheme: '/assets/branding/ARAVEX_Full_Logo_Light_Mode_Transparent.png',
+    withBgDark: '/assets/branding/ARAVEX_Full_Logo_Dark_Mode_With_Background.png',
+    withBgLight: '/assets/branding/ARAVEX_Full_Logo_Light_Mode_With_Background.png',
     
     // Backwards-compatible aliases
-    dark: '/assets/branding/arevex-tech-studio-logo-dark.png',
-    light: '/assets/branding/logo-horizontal-transparent.png',
-    transparentDark: '/assets/branding/arevex-tech-studio-logo-dark.png',
-    transparentLight: '/assets/branding/logo-horizontal-transparent.png',
-    officialUpload: '/assets/branding/AREVEX Tech Studio Logo.png',
+    dark: '/assets/branding/ARAVEX_Full_Logo_Dark_Mode_Transparent.png',
+    light: '/assets/branding/ARAVEX_Full_Logo_Light_Mode_Transparent.png',
+    transparentDark: '/assets/branding/ARAVEX_Full_Logo_Dark_Mode_Transparent.png',
+    transparentLight: '/assets/branding/ARAVEX_Full_Logo_Light_Mode_Transparent.png',
+    officialUpload: '/assets/branding/ARAVEX_Full_Logo_Dark_Mode_With_Background.png',
   },
   vertical: {
-    dark: '/assets/branding/logo-vertical-light.png',
-    light: '/assets/branding/logo-vertical-dark.png',
-    transparent: '/assets/branding/logo-vertical-transparent.png',
+    dark: '/assets/branding/ARAVEX_Full_Logo_Dark_Mode_With_Background.png',
+    light: '/assets/branding/ARAVEX_Full_Logo_Light_Mode_With_Background.png',
+    transparent: '/assets/branding/ARAVEX_Full_Logo_Dark_Mode_Transparent.png',
   },
   monogram: {
-    // For Dark Theme: Use warm-white monogram
-    forDarkTheme: '/assets/branding/monogram-transparent-light.png',
-    // For Light Theme: Use charcoal/black monogram
-    forLightTheme: '/assets/branding/monogram-transparent.png',
+    // For Dark Theme: Use off-white monogram
+    forDarkTheme: '/assets/branding/ARAVEX_Monogram_Dark_Mode_Transparent.png',
+    // For Light Theme: Use charcoal monogram
+    forLightTheme: '/assets/branding/ARAVEX_Monogram_Light_Mode_Transparent.png',
+    withBgDark: '/assets/branding/ARAVEX_Monogram_Dark_Mode_With_Background.png',
+    withBgLight: '/assets/branding/ARAVEX_Monogram_Light_Mode_With_Background.png',
 
     // Backwards-compatible aliases
-    dark: '/assets/branding/monogram-transparent-light.png',
-    light: '/assets/branding/monogram-transparent.png',
-    transparent: '/assets/branding/monogram-transparent-light.png',
+    dark: '/assets/branding/ARAVEX_Monogram_Dark_Mode_Transparent.png',
+    light: '/assets/branding/ARAVEX_Monogram_Light_Mode_Transparent.png',
+    transparent: '/assets/branding/ARAVEX_Monogram_Dark_Mode_Transparent.png',
   },
   mark: {
-    darkBg: '/assets/branding/logo-dark-bg.png',
-    lightBg: '/assets/branding/logo-light-bg.png',
-    transparentForDark: '/assets/branding/logo-transparent-dark-mode.png',
-    transparentForLight: '/assets/branding/logo-transparent-light-mode.png',
+    darkBg: '/assets/branding/ARAVEX_Full_Logo_Dark_Mode_With_Background.png',
+    lightBg: '/assets/branding/ARAVEX_Full_Logo_Light_Mode_With_Background.png',
+    transparentForDark: '/assets/branding/ARAVEX_Full_Logo_Dark_Mode_Transparent.png',
+    transparentForLight: '/assets/branding/ARAVEX_Full_Logo_Light_Mode_Transparent.png',
   },
   // Generated artwork paths
   generated: {
@@ -62,6 +66,7 @@ export const BRAND_ASSETS = {
     serviceSoftware: '/assets/generated/service-software.png',
     productsBusiness: '/assets/generated/products-business.png',
     productsMobile: '/assets/generated/products-mobile.png',
+    trainingHero: '/assets/generated/academy-hero.png',
     academyHero: '/assets/generated/academy-hero.png',
     aboutStudio: '/assets/generated/about-studio.png',
     ogBanner: '/assets/generated/og-banner.png',
@@ -94,7 +99,7 @@ export const BRAND_ASSETS = {
     serviceSeoGeo: '/assets/generated/service-seo-geo.png',
     serviceAutomation: '/assets/generated/service-automation.png',
 
-    // Academy Courses
+    // Technology Training Courses
     courseAi: '/assets/generated/course-ai.png',
     courseWeb: '/assets/generated/course-web.png',
     courseMobile: '/assets/generated/course-mobile.png',
@@ -108,11 +113,11 @@ export const BRAND_ASSETS = {
 } as const;
 
 export const COMPANY_INFO = {
-  name: 'AREVEX TECH STUDIO',
-  shortName: 'AREVEX',
+  name: 'ARAVEX TECH STUDIO',
+  shortName: 'ARAVEX',
   tagline: "We Build What's Next.",
   subheadline:
-    'Intelligent software, meaningful digital experiences, and reliable cloud infrastructure — designed, engineered and delivered by Arevex Tech Studio.',
+    'Intelligent software, meaningful digital experiences, and reliable cloud infrastructure — designed, engineered and delivered by Aravex Tech Studio.',
   introStatement: 'Technology built around real possibilities.',
   founders: [
     {
@@ -120,7 +125,7 @@ export const COMPANY_INFO = {
       role: 'Co-Founder & Principal Systems Architect',
       focus: 'Distributed Systems, POS Hardware Engineering & Cloud Architecture',
       bio: 'Leading technical strategy and low-level hardware-synchronized architectures across retail POS, multi-branch attendance, and cloud infrastructure.',
-      github: 'https://github.com/arevex',
+      github: 'https://github.com/aravex',
       linkedin: 'https://linkedin.com',
     },
     {
@@ -128,8 +133,8 @@ export const COMPANY_INFO = {
       role: 'Co-Founder & Head of Product Engineering',
       formerCompany: 'Ex-Amazon',
       focus: 'Full-Stack Next.js Systems, Desktop Electron & Enterprise MIS',
-      bio: 'Directing full-stack web and desktop product lifecycles. Formerly a Software Development Engineer at Amazon, bringing high-scale distributed architectural discipline, zero-latency state machines, and enterprise reliability to Arevex client codebases.',
-      github: 'https://github.com/arevex',
+      bio: 'Directing full-stack web and desktop product lifecycles. Formerly a Software Development Engineer at Amazon, bringing high-scale distributed architectural discipline, zero-latency state machines, and enterprise reliability to Aravex client codebases.',
+      github: 'https://github.com/aravex',
       linkedin: 'https://linkedin.com',
     },
     {
@@ -137,7 +142,7 @@ export const COMPANY_INFO = {
       role: 'Co-Founder & Lead AI Research Architect',
       focus: 'Autonomous AI Agents, Multi-Agent Graphs & RAG Vector Systems',
       bio: 'Spearheading intelligent workflow automation, generative search engines (GEO), and production-grade LLM tool orchestration with deterministic safeguards.',
-      github: 'https://github.com/arevex',
+      github: 'https://github.com/aravex',
       linkedin: 'https://linkedin.com',
     },
   ],
@@ -146,26 +151,26 @@ export const COMPANY_INFO = {
     serviceReach: 'International Clients & Regional Enterprises',
   },
   contact: {
-    email: 'contact@arevex.tech',
-    supportEmail: 'support@arevex.tech',
+    email: 'contact@aravex.tech',
+    supportEmail: 'support@aravex.tech',
 
   },
   socials: {
-    x: 'https://x.com/arevextech',
-    twitter: 'https://x.com/arevextech',
-    facebook: 'https://facebook.com/arevextech',
-    instagram: 'https://instagram.com/arevextech',
-    tiktok: 'https://tiktok.com/@arevextech',
-    github: 'https://github.com/arevex',
-    linkedin: 'https://linkedin.com/company/arevex',
-    whatsapp: 'https://wa.me/923000000000?text=Hello%20Arevex%20Tech%20Studio%2C%20I%20would%20like%20to%20discuss%20a%20project',
+    x: 'https://x.com/aravextech',
+    twitter: 'https://x.com/aravextech',
+    facebook: 'https://facebook.com/aravextech',
+    instagram: 'https://instagram.com/aravextech',
+    tiktok: 'https://tiktok.com/@aravextech',
+    github: 'https://github.com/aravex',
+    linkedin: 'https://linkedin.com/company/aravex',
+    whatsapp: 'https://wa.me/923000000000?text=Hello%20Aravex%20Tech%20Studio%2C%20I%20would%20like%20to%20discuss%20a%20project',
   },
   metrics: [
     { label: 'System Uptime Guarantee', value: '99.98%' },
     { label: 'Edge Query Latency', value: '<45ms' },
     { label: 'Active Commercial Products', value: '10+' },
     { label: 'Core Technical Capabilities', value: '12' },
-    { label: 'Academy Cohorts', value: '9' },
+    { label: 'Training Cohorts', value: '9' },
     { label: 'Zero-Downtime Deployments', value: '100%' },
   ],
   workingPractices: [

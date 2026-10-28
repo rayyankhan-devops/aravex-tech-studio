@@ -17,7 +17,7 @@ export function AboutSection() {
           <div className="lg:col-span-5 relative h-96 sm:h-[480px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/50 shadow-xl">
             <Image
               src={BRAND_ASSETS.generated.aboutStudio}
-              alt="AREVEX Technology Studio Atmosphere"
+              alt="ARAVEX Technology Studio Atmosphere"
               fill
               className="object-cover object-center"
             />
@@ -34,7 +34,7 @@ export function AboutSection() {
             <SectionHeading
               eyebrow="ABOUT US"
               title="A Modern Technology Studio."
-              description="AREVEX TECH STUDIO connects custom software engineering, intelligent automation, cloud architecture, and practical technology training into a unified operational house."
+              description="ARAVEX TECH STUDIO connects custom software engineering, intelligent automation, cloud architecture, and practical technology training into a unified operational house."
               className="mb-2"
             />
 

@@ -18,9 +18,9 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     role: 'Director of Retail Operations',
     company: 'Al-Noor Hypermarket Group',
     location: 'Lahore, Pakistan',
-    projectTag: 'Arevex POS & Distributed Sync',
+    projectTag: 'Aravex POS & Distributed Sync',
     quote:
-      'We rolled out Arevex POS across 14 supermarket branches. The offline-first architecture was a lifesaver — our cashier counters never stutter even during internet outages. Scanning speed and thermal receipt printing are instantaneous.',
+      'We rolled out Aravex POS across 14 supermarket branches. The offline-first architecture was a lifesaver — our cashier counters never stutter even during internet outages. Scanning speed and thermal receipt printing are instantaneous.',
     rating: 5,
     highlightMetric: '14 Stores • 0s Offline Downtime',
     avatarBg: 'from-blue-600 to-indigo-700',
@@ -33,7 +33,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     location: 'London, United Kingdom',
     projectTag: 'AWS DevSecOps & Terraform IaC',
     quote:
-      'Arevex overhauled our container deployment pipeline on AWS ECS with automated Trivy vulnerability scanning. Our deployment cycles dropped from 45 minutes of manual anxiety to 3 minutes of zero-downtime blue/green execution.',
+      'Aravex overhauled our container deployment pipeline on AWS ECS with automated Trivy vulnerability scanning. Our deployment cycles dropped from 45 minutes of manual anxiety to 3 minutes of zero-downtime blue/green execution.',
     rating: 5,
     highlightMetric: '93% Faster CI/CD • 0 CVEs',
     avatarBg: 'from-emerald-600 to-teal-700',
@@ -44,9 +44,9 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     role: 'Managing Director',
     company: 'MediFlow Specialty Clinics',
     location: 'Islamabad, Pakistan',
-    projectTag: 'Arevex MediFlow EMR & Scheduling',
+    projectTag: 'Aravex MediFlow EMR & Scheduling',
     quote:
-      'The clinic appointment and electronic prescription system designed by Arevex eliminated our daily waiting room chaos. Patients receive automated WhatsApp reminders, and our doctors can pull complete visit histories in two clicks.',
+      'The clinic appointment and electronic prescription system designed by Aravex eliminated our daily waiting room chaos. Patients receive automated WhatsApp reminders, and our doctors can pull complete visit histories in two clicks.',
     rating: 5,
     highlightMetric: '70% Reduced Patient Wait Times',
     avatarBg: 'from-purple-600 to-pink-700',
@@ -59,7 +59,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     location: 'Singapore',
     projectTag: 'Autonomous AI Agents & RAG',
     quote:
-      'The multi-agent workflow engineered by Arevex handles 65% of our customer ticket resolutions without human escalation. What sets them apart is their obsession with schema validation — zero hallucinations, purely deterministic outputs.',
+      'The multi-agent workflow engineered by Aravex handles 65% of our customer ticket resolutions without human escalation. What sets them apart is their obsession with schema validation — zero hallucinations, purely deterministic outputs.',
     rating: 5,
     highlightMetric: '65% Automated Ticket Resolution',
     avatarBg: 'from-amber-600 to-orange-700',
@@ -72,7 +72,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     location: 'Karachi, Pakistan',
     projectTag: 'Inventory & MIS Suite',
     quote:
-      'Tracking stock movements across 5 regional warehouses used to mean reconciling conflicting spreadsheets at 2 AM. Arevex MIS centralized our batch tracking, vendor purchase orders, and ledger reconciliation into one live screen.',
+      'Tracking stock movements across 5 regional warehouses used to mean reconciling conflicting spreadsheets at 2 AM. Aravex MIS centralized our batch tracking, vendor purchase orders, and ledger reconciliation into one live screen.',
     rating: 5,
     highlightMetric: '5 Warehouses • 100% Audit Accuracy',
     avatarBg: 'from-cyan-600 to-blue-700',
@@ -85,7 +85,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     location: 'Dubai, UAE',
     projectTag: 'Resilient Next.js Architecture',
     quote:
-      'During our Black Friday traffic spike of 40,000 concurrent sessions, the decoupled Next.js and Redis session architecture built by Arevex held steady without a single dropped cart. Truly architectural engineering.',
+      'During our Black Friday traffic spike of 40,000 concurrent sessions, the decoupled Next.js and Redis session architecture built by Aravex held steady without a single dropped cart. Truly architectural engineering.',
     rating: 5,
     highlightMetric: '40k Concurrent Users • <50ms TTFB',
     avatarBg: 'from-rose-600 to-red-700',

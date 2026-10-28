@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: WorkPageProps): Promise<Metad
     title: `${project.title} — Case Study`,
     description: project.summary,
     openGraph: {
-      title: `${project.title} | AREVEX TECH STUDIO`,
+      title: `${project.title} | ARAVEX TECH STUDIO`,
       description: project.summary,
     },
   };

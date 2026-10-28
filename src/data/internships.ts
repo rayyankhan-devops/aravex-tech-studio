@@ -63,7 +63,7 @@ export const INTERNSHIP_TRACKS: InternshipTrack[] = [
     overview:
       'Immerse yourself in high-end brand architecture. You will create typography-driven social motion graphics, client brand books, architectural pitch decks, and commercial UI iconography that directly commands international attention.',
     responsibilities: [
-      'Design brand collateral, social carousels, and typography cards for Arevex X, LinkedIn, and Instagram',
+      'Design brand collateral, social carousels, and typography cards for Aravex X, LinkedIn, and Instagram',
       'Create high-fidelity vector iconography and illustrations for software product interfaces',
       'Collaborate on client branding sprints, presentation decks, and visual guidelines',
       'Maintain architectural dark-mode aesthetic standards across all design assets',
@@ -237,7 +237,7 @@ export const INTERNSHIP_TRACKS: InternshipTrack[] = [
     overview:
       'Learn modern B2B SaaS and high-ticket agency growth. You will research regional retail enterprises, craft cold email and WhatsApp outreach sequences, analyze website user flow drop-offs, and run data-driven conversion campaigns.',
     responsibilities: [
-      'Analyze customer drop-off bottlenecks in our software demo and academy enrollment funnels',
+      'Analyze customer drop-off bottlenecks in our software demo and training enrollment funnels',
       'Draft persuasive email newsletters, case study summaries, and value-packed pitch proposals',
       'Coordinate with founders on strategic partnership launches and promotional webinar events',
       'Track Cost per Lead (CPL) and Customer Lifetime Value (LTV) across acquisition channels',
@@ -262,11 +262,11 @@ export const INTERNSHIP_TRACKS: InternshipTrack[] = [
     openings: 2,
     mentor: 'Aqsa Wadood',
     mentorRole: 'Co-Founder & Director of Operations',
-    tagline: 'Amplify Arevex Tech Studio across X, LinkedIn, TikTok, and Instagram with punchy architectural storytelling.',
+    tagline: 'Amplify Aravex Tech Studio across X, LinkedIn, TikTok, and Instagram with punchy architectural storytelling.',
     overview:
       'Take the voice of a world-class technology studio to the international stage. You will turn complex engineering topics—like offline POS resilience, DevSecOps pipelines, and AI agent architectures—into viral, bite-sized threads and reels.',
     responsibilities: [
-      'Curate and publish daily high-signal content across X (@arevextech), LinkedIn, TikTok, and Facebook',
+      'Curate and publish daily high-signal content across X (@aravextech), LinkedIn, TikTok, and Facebook',
       'Produce short-form developer videos showcasing live terminal code snippets and software demos',
       'Engage with global engineering communities, startup founders, and tech influencers',
       'Maintain an organized monthly editorial calendar aligned with studio product launches',
@@ -293,7 +293,7 @@ export const INTERNSHIP_TRACKS: InternshipTrack[] = [
     mentorRole: 'Co-Founder & Principal Systems Architect',
     tagline: 'Deconstruct market inefficiencies, uncover high-margin software opportunities, and conceptualize future products.',
     overview:
-      'Are you constantly analyzing why existing software is clunky and how it can be built 10x better? In this track, you will conduct market tear-downs of obsolete legacy systems (traditional POS, manual clinic billing) and conceptualize modern Arevex solutions.',
+      'Are you constantly analyzing why existing software is clunky and how it can be built 10x better? In this track, you will conduct market tear-downs of obsolete legacy systems (traditional POS, manual clinic billing) and conceptualize modern Aravex solutions.',
     responsibilities: [
       'Conduct competitor analysis on existing enterprise software products across Pakistan, UAE, and UK markets',
       'Interview retail cashiers, clinic managers, and warehouse supervisors to map real operational pain points',
@@ -355,7 +355,7 @@ export const INTERNSHIP_TRACKS: InternshipTrack[] = [
     responsibilities: [
       'Manage sprint backlogs, task assignments, and milestone burn-down charts in Linear / GitHub Projects',
       'Organize client weekly status check-ins and prepare transparent progress summaries',
-      'Coordinate Academy student onboarding, course scheduling, and certification logistics',
+      'Coordinate student onboarding, training course scheduling, and certification logistics',
       'Help build scalable operational SOPs (Standard Operating Procedures) for studio expansion',
     ],
     learningOutcomes: [
@@ -378,9 +378,9 @@ export const INTERNSHIP_TRACKS: InternshipTrack[] = [
     openings: 4,
     mentor: 'Muhammad Uzair',
     mentorRole: 'Co-Founder & Head of Product Engineering',
-    tagline: 'Identify and engage high-potential retail chains, medical clinics, and global enterprises ready for Arevex software.',
+    tagline: 'Identify and engage high-potential retail chains, medical clinics, and global enterprises ready for Aravex software.',
     overview:
-      'Fuel the revenue engine of Arevex Tech Studio. You will prospect supermarkets, multi-warehouse distributors, private hospital chains, and global e-commerce founders, securing qualified discovery calls for our principal architects.',
+      'Fuel the revenue engine of Aravex Tech Studio. You will prospect supermarkets, multi-warehouse distributors, private hospital chains, and global e-commerce founders, securing qualified discovery calls for our principal architects.',
     responsibilities: [
       'Build targeted prospect lists of supermarket directors, clinic owners, and e-commerce CTOs across Pakistan, UAE, and UK',
       'Execute multi-touch outreach campaigns across WhatsApp Business, LinkedIn, and corporate phone lines',

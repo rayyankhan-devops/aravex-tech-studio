@@ -13,8 +13,8 @@ export function WhySection() {
     <section className="relative py-24 sm:py-32 bg-white dark:bg-charcoal-900 text-charcoal-900 dark:text-warmWhite overflow-hidden border-t border-gray-200 dark:border-graphite/40 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="WHY AREVEX"
-          title="Why Leading Teams Choose Arevex."
+          eyebrow="WHY ARAVEX"
+          title="Why Leading Teams Choose Aravex."
           description="Our reputation is built on engineering rigor, transparent collaboration, and systems that work under pressure."
         />
 

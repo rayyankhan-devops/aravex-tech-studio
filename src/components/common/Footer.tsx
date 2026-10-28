@@ -29,7 +29,7 @@ export function Footer() {
             <Link href="/" className="inline-block relative h-11 sm:h-12 w-52 sm:w-60">
               <Image
                 src={BRAND_ASSETS.horizontal.forDarkTheme}
-                alt="AREVEX TECH STUDIO"
+                alt="ARAVEX TECH STUDIO"
                 fill
                 className={cn(
                   'object-contain object-left transition-opacity duration-300',
@@ -38,7 +38,7 @@ export function Footer() {
               />
               <Image
                 src={BRAND_ASSETS.horizontal.forLightTheme}
-                alt="AREVEX TECH STUDIO"
+                alt="ARAVEX TECH STUDIO"
                 fill
                 className={cn(
                   'object-contain object-left transition-opacity duration-300',
@@ -146,15 +146,15 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Products & Academy */}
+          {/* Products & Training */}
           <div className="flex flex-col gap-3">
             <p className="text-xs uppercase tracking-wider text-gray-900 dark:text-white font-bold">
-              Products & Academy
+              Products & Training
             </p>
             <ul className="flex flex-col gap-2 text-sm text-gray-700 dark:text-slate-200">
               <li>
                 <Link href="/products/point-of-sale" className="hover:text-black dark:hover:text-white transition-colors">
-                  Arevex POS
+                  Aravex POS
                 </Link>
               </li>
               <li>
@@ -168,18 +168,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/academy" className="hover:text-black dark:hover:text-white transition-colors">
-                  Technology Academy
+                <Link href="/training" className="hover:text-black dark:hover:text-white transition-colors">
+                  Technology Training
                 </Link>
               </li>
               <li>
                 <Link href="/work" className="hover:text-black dark:hover:text-white transition-colors">
                   Selected Work
-                </Link>
-              </li>
-              <li>
-                <Link href="/insights" className="hover:text-black dark:hover:text-white transition-colors">
-                  Technical Insights
                 </Link>
               </li>
             </ul>
@@ -200,12 +195,6 @@ export function Footer() {
                 <a href={`mailto:${COMPANY_INFO.contact.email}`} className="hover:underline font-semibold text-gray-950 dark:text-white">
                   {COMPANY_INFO.contact.email}
                 </a>
-              </div>
-              <div className="pt-2">
-                <p className="text-xs text-gray-600 dark:text-slate-400 font-mono uppercase mb-1 font-bold">Founders</p>
-                <p className="text-xs sm:text-sm text-gray-900 dark:text-slate-200 font-semibold">
-                  {COMPANY_INFO.founders.map((f) => f.name).join(' • ')}
-                </p>
               </div>
             </div>
           </div>

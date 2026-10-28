@@ -4,8 +4,10 @@ export const PRODUCTS_DATA: ProductItem[] = [
   {
     id: 'point-of-sale',
     slug: 'point-of-sale',
-    title: 'Arevex POS',
+    title: 'Aravex POS',
     tagline: 'Ultra-fast retail billing with offline durability and hardware synchronization.',
+    iconName: 'Store',
+    image: '/assets/generated/Modern Café POS Checkout Station.png',
     description:
       'Engineered for supermarkets, retail chains, and wholesale distributors. Features sub-second barcode lookups, direct thermal receipt printing, cash drawer kickers, customer-facing display support, and offline-resilient local database caching.',
     status: 'Live',
@@ -31,8 +33,10 @@ export const PRODUCTS_DATA: ProductItem[] = [
   {
     id: 'inventory-mis',
     slug: 'inventory-mis',
-    title: 'Arevex Inventory MIS',
+    title: 'Aravex Inventory MIS',
     tagline: 'Multi-warehouse stock tracking, purchase orders, and automated ledger accounting.',
+    iconName: 'Boxes',
+    image: '/assets/generated/Modern Inventory Workstation Dashboard.png',
     description:
       'A comprehensive inventory intelligence platform providing real-time visibility into multi-branch stock levels, low-stock threshold triggers, vendor purchase cycles, batch/expiry tracking, and automated profit/loss reporting.',
     status: 'Live',
@@ -58,8 +62,10 @@ export const PRODUCTS_DATA: ProductItem[] = [
   {
     id: 'school-management',
     slug: 'school-management',
-    title: 'Arevex School MIS',
+    title: 'Aravex School MIS',
     tagline: 'Unified campus administration, student admissions, fee vouchers, and exam gradebooks.',
+    iconName: 'GraduationCap',
+    image: '/assets/generated/Modern School Administration Dashboard.png',
     description:
       'An end-to-end institutional management suite covering the entire academic lifecycle from online admissions and class scheduling to biometric student attendance, parent portal SMS notifications, and automated monthly fee challan generation.',
     status: 'Live',
@@ -85,8 +91,10 @@ export const PRODUCTS_DATA: ProductItem[] = [
   {
     id: 'learning-management',
     slug: 'learning-management',
-    title: 'Arevex LMS',
+    title: 'Aravex LMS',
     tagline: 'Interactive course delivery, video streaming, quizzes, and automated certification.',
+    iconName: 'BookOpen',
+    image: '/assets/generated/Modern Workspace for Online Learning.png',
     description:
       'A modern learning management platform designed for academies, training centers, and corporate upskilling. Includes DRM-protected video streaming, interactive coding challenges, graded quizzes, and automated certificate generation.',
     status: 'Demo',
@@ -112,8 +120,10 @@ export const PRODUCTS_DATA: ProductItem[] = [
   {
     id: 'library-management',
     slug: 'library-management',
-    title: 'Arevex Libri',
+    title: 'Aravex Libri',
     tagline: 'Dewey decimal cataloging, barcode book issue/return, and fine management.',
+    iconName: 'Library',
+    image: '/assets/generated/Modern Library Circulation Desk.png',
     description:
       'Built for school, university, and public libraries. Supports ISBN metadata auto-fill, barcode circulation checkouts, automated late-fee calculation, patron reservation queues, and digital ebook repository integration.',
     status: 'Demo',
@@ -139,8 +149,10 @@ export const PRODUCTS_DATA: ProductItem[] = [
   {
     id: 'attendance-management',
     slug: 'attendance-management',
-    title: 'Arevex TimeTrack',
+    title: 'Aravex TimeTrack',
     tagline: 'Hardware-linked attendance tracking with shift rosters and overtime calculation.',
+    iconName: 'UserCheck',
+    image: '/assets/generated/Modern Office Attendance Check-In.png',
     description:
       'Integrates directly with ZKTeco, Hikvision, and RFID biometric hardware across remote branches. Automatically synchronizes attendance logs, calculates late minutes, applies shift roster rules, and generates clean payroll-ready timesheets.',
     status: 'Live',
@@ -166,8 +178,10 @@ export const PRODUCTS_DATA: ProductItem[] = [
   {
     id: 'office-management',
     slug: 'office-management',
-    title: 'Arevex Workspace',
+    title: 'Aravex Workspace',
     tagline: 'Internal ticketing, asset tracking, vendor contracts, and petty cash logs.',
+    iconName: 'Building2',
+    image: '/assets/generated/Modern Office Dashboard Workspace.png',
     description:
       'Centralize everyday office operations in one cohesive portal. Manage IT hardware allocations, office supplies requisition, maintenance tickets, visitor passes, and petty cash disbursements with multi-level approval hierarchies.',
     status: 'In Development',
@@ -192,8 +206,10 @@ export const PRODUCTS_DATA: ProductItem[] = [
   {
     id: 'billing-invoicing',
     slug: 'billing-invoicing',
-    title: 'Arevex Invoicely',
+    title: 'Aravex Invoicely',
     tagline: 'Multi-currency invoicing, payment link generation, and automated receivable reminders.',
+    iconName: 'Receipt',
+    image: '/assets/generated/Modern Invoicing Workspace Dashboard.png',
     description:
       'A sleek, compliant invoicing and accounts receivable suite built for agencies, consultants, and B2B service firms. Generate branded PDF invoices, track open receivables, accept online payments, and automate polite payment follow-ups.',
     status: 'Live',
@@ -219,8 +235,10 @@ export const PRODUCTS_DATA: ProductItem[] = [
   {
     id: 'clinic-management',
     slug: 'clinic-management',
-    title: 'Arevex MediFlow',
+    title: 'Aravex MediFlow',
     tagline: 'Digital patient records (EMR), doctor scheduling, and electronic prescription printing.',
+    iconName: 'Stethoscope',
+    image: '/assets/generated/Modern Clinic EMR Consultation Desk.png',
     description:
       'Designed for outpatient clinics, dental centers, and specialist medical practices. Features online appointment booking, digital vitals logging, quick-template prescription printing, medicine inventory, and automated appointment reminder SMS.',
     status: 'In Development',
@@ -245,8 +263,10 @@ export const PRODUCTS_DATA: ProductItem[] = [
   {
     id: 'restaurant-management',
     slug: 'restaurant-management',
-    title: 'Arevex DineOS',
+    title: 'Aravex DineOS',
     tagline: 'Floor plan table management, kitchen order tickets (KOT), and digital menus.',
+    iconName: 'UtensilsCrossed',
+    image: '/assets/generated/Modern Restaurant POS Station.png',
     description:
       'A high-tempo restaurant management ecosystem that synchronizes dining room floor tables, waiter mobile ordering tablets, kitchen display screens (KDS), and cash billing counters with zero order miscommunication.',
     status: 'Demo',

@@ -13,13 +13,13 @@ import { BRAND_ASSETS } from '@/lib/brand';
 import { cn } from '@/lib/utils';
 
 const NAV_LINKS = [
+  { name: 'Home', href: '/' },
   { name: 'Services', href: '/services' },
   { name: 'Products', href: '/products' },
   { name: 'Internships', href: '/internships', badge: 'Hiring' },
-  { name: 'Academy', href: '/academy' },
+  { name: 'Training', href: '/training' },
   { name: 'Work', href: '/work' },
   { name: 'About', href: '/about' },
-  { name: 'Insights', href: '/insights' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -60,7 +60,7 @@ export function Header() {
               {/* Dark mode logo (rendered when theme is dark) */}
               <Image
                 src={BRAND_ASSETS.horizontal.forDarkTheme}
-                alt="AREVEX TECH STUDIO"
+                alt="ARAVEX TECH STUDIO"
                 fill
                 priority
                 className={cn(
@@ -71,7 +71,7 @@ export function Header() {
               {/* Light mode logo (rendered when theme is light) */}
               <Image
                 src={BRAND_ASSETS.horizontal.forLightTheme}
-                alt="AREVEX TECH STUDIO"
+                alt="ARAVEX TECH STUDIO"
                 fill
                 priority
                 className={cn(
@@ -92,7 +92,7 @@ export function Header() {
                     key={link.name}
                     href={link.href}
                     className={cn(
-                      'relative inline-flex items-center gap-1.5 px-3 xl:px-3.5 py-1.5 text-xs xl:text-sm font-medium transition-all duration-200 rounded-full whitespace-nowrap',
+                      'relative inline-flex items-center gap-1.5 px-2.5 xl:px-3.5 py-1.5 text-xs xl:text-sm font-medium transition-all duration-200 rounded-full whitespace-nowrap',
                       isActive
                         ? 'text-charcoal-950 dark:text-warmWhite bg-white dark:bg-charcoal-800 shadow-sm font-semibold'
                         : 'text-gray-700 dark:text-slate-200 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5'
@@ -177,7 +177,7 @@ export function Header() {
                 <ArrowUpRight className="w-4 h-4 ml-1" />
               </MagneticButton>
               <div className="flex justify-between items-center text-xs font-mono text-gray-500 dark:text-slate-muted">
-                <span>AREVEX TECH STUDIO</span>
+                <span>ARAVEX TECH STUDIO</span>
                 <span>PKR / USD</span>
               </div>
             </div>

@@ -1,12 +1,11 @@
 import { MetadataRoute } from 'next';
 import { SERVICES_DATA } from '@/data/services';
 import { PRODUCTS_DATA } from '@/data/products';
-import { COURSES_DATA } from '@/data/academy';
+import { COURSES_DATA } from '@/data/training';
 import { WORK_DATA } from '@/data/work';
-import { INSIGHTS_DATA } from '@/data/insights';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://arevex.tech';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://aravex.tech';
   const currentDate = new Date().toISOString();
 
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -14,11 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services',
     '/products',
     '/internships',
-    '/academy',
+    '/training',
     '/work',
     '/about',
     '/contact',
-    '/insights',
     '/privacy',
     '/terms',
   ].map((route) => ({
@@ -42,8 +40,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const academyRoutes: MetadataRoute.Sitemap = COURSES_DATA.map((course) => ({
-    url: `${siteUrl}/academy/${course.slug}`,
+  const trainingRoutes: MetadataRoute.Sitemap = COURSES_DATA.map((course) => ({
+    url: `${siteUrl}/training/${course.slug}`,
     lastModified: currentDate,
     changeFrequency: 'monthly',
     priority: 0.7,
@@ -56,19 +54,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  const insightRoutes: MetadataRoute.Sitemap = INSIGHTS_DATA.map((article) => ({
-    url: `${siteUrl}/insights/${article.slug}`,
-    lastModified: currentDate,
-    changeFrequency: 'monthly',
-    priority: 0.6,
-  }));
-
   return [
     ...staticRoutes,
     ...serviceRoutes,
     ...productRoutes,
-    ...academyRoutes,
+    ...trainingRoutes,
     ...workRoutes,
-    ...insightRoutes,
   ];
 }

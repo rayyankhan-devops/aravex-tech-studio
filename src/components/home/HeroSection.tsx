@@ -38,7 +38,7 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src={BRAND_ASSETS.generated.heroCinema}
-          alt="AREVEX Architectural Geometry"
+          alt="ARAVEX Architectural Geometry"
           fill
           priority
           className="object-cover object-center opacity-15 dark:opacity-35 scale-105 transition-all duration-1000"
@@ -84,7 +84,7 @@ export function HeroSection() {
           >
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             <span className="font-mono text-xs uppercase tracking-widest text-gray-800 dark:text-slate-300 font-bold">
-              AREVEX TECH STUDIO
+              ARAVEX TECH STUDIO
             </span>
           </motion.div>
 

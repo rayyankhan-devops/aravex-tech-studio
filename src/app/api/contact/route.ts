@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     }
 
     const apiKey = process.env.RESEND_API_KEY;
-    const receiver = process.env.CONTACT_RECEIVER_EMAIL || 'contact@arevex.tech';
+    const receiver = process.env.CONTACT_RECEIVER_EMAIL || 'contact@aravex.tech';
 
     // If Resend API key is configured, send actual email
     if (apiKey) {
@@ -34,11 +34,11 @@ export async function POST(req: NextRequest) {
           Authorization: `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
-          from: 'Arevex Tech Studio <onboarding@resend.dev>',
+          from: 'Aravex Tech Studio <onboarding@resend.dev>',
           to: [receiver],
           subject: `New Project Inquiry from ${name} (${company || 'Individual'})`,
           html: `
-            <h2>New Inquiry for AREVEX TECH STUDIO</h2>
+            <h2>New Inquiry for ARAVEX TECH STUDIO</h2>
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Business Email:</strong> ${email}</p>
             <p><strong>Company / Organization:</strong> ${company || 'N/A'}</p>
@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
       }
     } else {
       // In dev or unconfigured mode, safely log submission to console
-      console.log('--- AREVEX NEW LEAD SUBMISSION ---');
+      console.log('--- ARAVEX NEW LEAD SUBMISSION ---');
       console.log({ name, email, company, service, budget, description, preferredContact });
     }
 
@@ -71,7 +71,7 @@ export async function POST(req: NextRequest) {
   } catch (err: any) {
     console.error('Contact API Error:', err);
     return NextResponse.json(
-      { error: 'An unexpected error occurred while processing your inquiry. Please try again or email contact@arevex.tech directly.' },
+      { error: 'An unexpected error occurred while processing your inquiry. Please try again or email contact@aravex.tech directly.' },
       { status: 500 }
     );
   }

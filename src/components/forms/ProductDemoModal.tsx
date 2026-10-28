@@ -551,7 +551,7 @@ export function ProductDemoModal({
 
                 <p className="text-sm text-gray-600 dark:text-slate-300 leading-relaxed mb-6">
                   Thank you, <strong className="text-gray-900 dark:text-white">{formData.fullName}</strong>. Your license order for{' '}
-                  <strong className="text-gray-900 dark:text-white">{product.title}</strong> has been received by Arevex Tech Studio.
+                  <strong className="text-gray-900 dark:text-white">{product.title}</strong> has been received by Aravex Tech Studio.
                 </p>
 
                 {orderReceipt && (
@@ -584,7 +584,7 @@ export function ProductDemoModal({
                 <div className="flex flex-col sm:flex-row gap-3 w-full">
                   <a
                     href={`https://wa.me/923000000000?text=${encodeURIComponent(
-                      `Hello Arevex Tech Studio, I have placed an order for ${product.title} (Order ID: ${orderReceipt?.orderId || 'NEW'}). My business name is ${formData.company}.`
+                      `Hello Aravex Tech Studio, I have placed an order for ${product.title} (Order ID: ${orderReceipt?.orderId || 'NEW'}). My business name is ${formData.company}.`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"

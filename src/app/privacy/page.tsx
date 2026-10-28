@@ -4,8 +4,8 @@ import { SectionHeading } from '@/components/common/SectionHeading';
 import { COMPANY_INFO } from '@/lib/brand';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — AREVEX TECH STUDIO',
-  description: 'Privacy Policy, data processing disclosures, and security standards of Arevex Tech Studio.',
+  title: 'Privacy Policy — ARAVEX TECH STUDIO',
+  description: 'Privacy Policy, data processing disclosures, and security standards of Aravex Tech Studio.',
 };
 
 export default function PrivacyPage() {
@@ -16,7 +16,7 @@ export default function PrivacyPage() {
           <SectionHeading
             eyebrow="LEGAL & COMPLIANCE"
             title="Privacy Policy"
-            description="Last Updated: October 2026. How AREVEX TECH STUDIO collects, manages, and protects technical and personal data."
+            description="Last Updated: October 2026. How ARAVEX TECH STUDIO collects, manages, and protects technical and personal data."
           />
         </div>
       </section>
@@ -26,14 +26,14 @@ export default function PrivacyPage() {
           <div>
             <h2 className="text-xl font-bold text-white mb-3">1. Scope of Policy</h2>
             <p>
-              This Privacy Policy applies to the services, products, educational platforms, and digital properties operated by {COMPANY_INFO.name} (&quot;Arevex&quot;, &quot;we&quot;, &quot;us&quot;). We respect your privacy and adhere to international standards of data minimization and least-privilege access.
+              This Privacy Policy applies to the services, products, educational platforms, and digital properties operated by {COMPANY_INFO.name} (&quot;Aravex&quot;, &quot;we&quot;, &quot;us&quot;). We respect your privacy and adhere to international standards of data minimization and least-privilege access.
             </p>
           </div>
 
           <div>
             <h2 className="text-xl font-bold text-white mb-3">2. Information Collection</h2>
             <p>
-              When you submit a project inquiry, request a software product demonstration, or apply for enrollment in the Arevex Technology Academy, we collect your name, business email address, company name, telephone/WhatsApp contact details, and project specifications. We do not sell, rent, or trade your contact or business information to third-party advertisers.
+              When you submit a project inquiry, request a software product demonstration, or apply for enrollment in Aravex Technology Training programs, we collect your name, business email address, company name, telephone/WhatsApp contact details, and project specifications. We do not sell, rent, or trade your contact or business information to third-party advertisers.
             </p>
           </div>
 

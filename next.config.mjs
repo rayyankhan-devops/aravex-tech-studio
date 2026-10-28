@@ -10,6 +10,30 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/academy',
+        destination: '/training',
+        permanent: true,
+      },
+      {
+        source: '/academy/:slug*',
+        destination: '/training/:slug*',
+        permanent: true,
+      },
+      {
+        source: '/insights',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/insights/:slug*',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

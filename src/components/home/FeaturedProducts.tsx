@@ -4,7 +4,26 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Check, Monitor, Smartphone, Globe, Layers } from 'lucide-react';
+import {
+  ArrowUpRight,
+  Check,
+  Monitor,
+  Smartphone,
+  Globe,
+  Layers,
+  Store,
+  Boxes,
+  GraduationCap,
+  BookOpen,
+  Library,
+  UserCheck,
+  Building2,
+  Receipt,
+  Stethoscope,
+  UtensilsCrossed,
+  Briefcase,
+  Sparkles,
+} from 'lucide-react';
 import { SectionHeading } from '@/components/common/SectionHeading';
 import { Badge } from '@/components/common/Badge';
 import { MagneticButton } from '@/components/common/MagneticButton';
@@ -12,6 +31,22 @@ import { ProductDemoModal } from '@/components/forms/ProductDemoModal';
 import { PRODUCTS_DATA } from '@/data/products';
 import { BRAND_ASSETS } from '@/lib/brand';
 import { ProductItem } from '@/types';
+
+const PRODUCT_ICONS: Record<string, React.ElementType> = {
+  Store,
+  Boxes,
+  GraduationCap,
+  BookOpen,
+  Library,
+  UserCheck,
+  Building2,
+  Receipt,
+  Stethoscope,
+  UtensilsCrossed,
+  Smartphone,
+  Briefcase,
+  Monitor,
+};
 
 export function FeaturedProducts() {
   const [selectedProductForModal, setSelectedProductForModal] = useState<{
@@ -142,7 +177,7 @@ export function FeaturedProducts() {
             <div className="lg:col-span-5 relative h-64 sm:h-80 lg:h-96 rounded-2xl overflow-hidden border border-gray-200 dark:border-graphite/40 shadow-xl group">
               <Image
                 src={BRAND_ASSETS.generated.posTerminal}
-                alt="Arevex POS Hardware & Cashier Terminal"
+                alt="Aravex POS Hardware & Cashier Terminal"
                 fill
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
@@ -161,79 +196,88 @@ export function FeaturedProducts() {
 
         {/* Secondary Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featured.slice(1).map((product) => (
-            <div
-              key={product.id}
-              className="p-6 rounded-2xl bg-gray-50 dark:bg-charcoal-950/60 border border-gray-200 dark:border-graphite/40 hover:border-slate-500 dark:hover:border-slate-muted/50 transition-all duration-300 flex flex-col justify-between shadow-sm overflow-hidden"
-            >
-              <div>
-                {/* Visual Thumbnail */}
-                <div className="relative h-40 -mx-6 -mt-6 mb-5 overflow-hidden border-b border-gray-200 dark:border-graphite/40 group">
-                  <Image
-                    src={getProductImage(product.slug)}
-                    alt={product.title}
-                    fill
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                  <div className="absolute top-3 left-3">
-                    <Badge status={product.status} />
-                  </div>
-                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono text-white/90">
-                    <span className="flex items-center gap-1 font-semibold">
-                      {getPlatformIcon(product.platform)}
-                      <span>{product.platform}</span>
-                    </span>
-                    <span className="px-2 py-0.5 rounded bg-emerald-500/80 font-bold text-white text-[10px]">
-                      Verified Codebase
-                    </span>
-                  </div>
-                </div>
+          {featured.slice(1).map((product) => {
+            const ProductIcon = (product.iconName && PRODUCT_ICONS[product.iconName]) || Monitor;
 
-                <h4 className="text-xl font-bold text-gray-950 dark:text-white mb-2 leading-snug">
-                  {product.title}
-                </h4>
-
-                <p className="text-sm text-gray-700 dark:text-slate-200 leading-relaxed mb-5">
-                  {product.tagline}
-                </p>
-
-                <div className="flex flex-col gap-2 pt-2 border-t border-gray-200 dark:border-graphite/30 mb-6">
-                  {product.features.slice(0, 3).map((feat) => (
-                    <div key={feat} className="flex items-start gap-2 text-sm text-gray-700 dark:text-slate-300">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-2" />
-                      <span className="line-clamp-1">{feat}</span>
+            return (
+              <div
+                key={product.id}
+                className="p-6 rounded-2xl bg-gray-50 dark:bg-charcoal-950/60 border border-gray-200 dark:border-graphite/40 hover:border-slate-500 dark:hover:border-slate-muted/50 transition-all duration-300 flex flex-col justify-between shadow-sm overflow-hidden"
+              >
+                <div>
+                  {/* Visual Thumbnail */}
+                  <div className="relative h-44 -mx-6 -mt-6 mb-5 overflow-hidden border-b border-gray-200 dark:border-graphite/40 group">
+                    <Image
+                      src={product.image || getProductImage(product.slug)}
+                      alt={product.title}
+                      fill
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                    <div className="absolute top-3 left-3">
+                      <Badge status={product.status} />
                     </div>
-                  ))}
-                </div>
-              </div>
+                    <div className="absolute top-3 right-3">
+                      <span className="p-1.5 rounded-full bg-black/65 backdrop-blur-md text-emerald-400 border border-emerald-500/30 shadow flex items-center justify-center">
+                        <ProductIcon className="w-3.5 h-3.5" />
+                      </span>
+                    </div>
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono text-white/90">
+                      <span className="flex items-center gap-1 font-semibold">
+                        {getPlatformIcon(product.platform)}
+                        <span>{product.platform}</span>
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-emerald-500/80 font-bold text-white text-[10px]">
+                        Verified Codebase
+                      </span>
+                    </div>
+                  </div>
 
-              <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-graphite/40">
-                <div className="flex items-center gap-3">
-                  <button
-                    onClick={() => setSelectedProductForModal({ product, mode: 'buy' })}
-                    className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:underline focus:outline-none cursor-pointer"
-                  >
-                    Buy License
-                  </button>
-                  <span className="text-gray-300 dark:text-graphite">|</span>
-                  <button
-                    onClick={() => setSelectedProductForModal({ product, mode: 'demo' })}
-                    className="text-sm font-semibold text-gray-800 dark:text-slate-200 hover:underline focus:outline-none cursor-pointer"
-                  >
-                    Demo
-                  </button>
+                  <h4 className="text-xl font-bold text-gray-950 dark:text-white mb-2 leading-snug">
+                    {product.title}
+                  </h4>
+
+                  <p className="text-sm text-gray-700 dark:text-slate-200 leading-relaxed mb-5">
+                    {product.tagline}
+                  </p>
+
+                  <div className="flex flex-col gap-2 pt-2 border-t border-gray-200 dark:border-graphite/30 mb-6">
+                    {product.features.slice(0, 3).map((feat) => (
+                      <div key={feat} className="flex items-start gap-2 text-sm text-gray-700 dark:text-slate-300">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-2" />
+                        <span className="line-clamp-1">{feat}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <Link
-                  href={`/products/${product.slug}`}
-                  className="inline-flex items-center gap-1 text-sm font-semibold text-gray-700 dark:text-slate-200 hover:text-black dark:hover:text-white"
-                >
-                  <span>Specs</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </Link>
+
+                <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-graphite/40">
+                  <div className="flex items-center gap-3">
+                    <button
+                      onClick={() => setSelectedProductForModal({ product, mode: 'buy' })}
+                      className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:underline focus:outline-none cursor-pointer"
+                    >
+                      Buy License
+                    </button>
+                    <span className="text-gray-300 dark:text-graphite">|</span>
+                    <button
+                      onClick={() => setSelectedProductForModal({ product, mode: 'demo' })}
+                      className="text-sm font-semibold text-gray-800 dark:text-slate-200 hover:underline focus:outline-none cursor-pointer"
+                    >
+                      Demo
+                    </button>
+                  </div>
+                  <Link
+                    href={`/products/${product.slug}`}
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-gray-700 dark:text-slate-200 hover:text-black dark:hover:text-white"
+                  >
+                    <span>Specs</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

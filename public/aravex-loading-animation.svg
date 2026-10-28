@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 682" width="2048" height="682" role="img" aria-label="ARAVEX Tech Studio animated wordmark: Build Automate Launch">
+  <title>ARAVEX Tech Studio — Brand Loading Animation</title>
+  <desc>Transparent vector animation traced from the supplied official ARAVEX logo. A geometric emblem emerges with calibrated reticles before settling into the full wordmark.</desc>
+  <defs>
+    <radialGradient id="haloGradient"><stop offset="0" stop-color="#10B981" stop-opacity=".27"/><stop offset=".55" stop-color="#64768B" stop-opacity=".12"/><stop offset="1" stop-color="#64768B" stop-opacity="0"/></radialGradient>
+    <linearGradient id="sheen"><stop offset="0" stop-color="#F7F7F5" stop-opacity="0"/><stop offset=".48" stop-color="#F7F7F5" stop-opacity=".0"/><stop offset=".52" stop-color="#F7F7F5" stop-opacity=".9"/><stop offset=".56" stop-color="#F7F7F5" stop-opacity=".0"/><stop offset="1" stop-color="#F7F7F5" stop-opacity="0"/></linearGradient>
+    <clipPath id="logoClip">
+      <path fill-rule="evenodd" d="M682,349 L564,182 L562,182 L519,239 L433,348 L433,349 L478,349 L524,288 L562,241 L609,308 L613,312 L616,318 L638,349Z M1264,317 L1264,349 L1400,349 L1400,317 L1392,317 L1391,316 L1387,317 L1382,316 L1266,316Z M1264,251 L1264,283 L1265,284 L1399,284 L1400,283 L1400,251 L1395,250 L1265,250Z M1427,185 L1494,270 L1428,349 L1472,349 L1514,299 L1520,305 L1554,349 L1597,349 L1542,275 L1472,185Z M1264,185 L1264,218 L1400,218 L1400,185Z M1048,185 L1139,349 L1189,268 L1243,185 L1199,185 L1170,229 L1158,250 L1141,276 L1117,234 L1096,194 L1090,185Z M966,181 L854,349 L848,339 L806,283 L809,281 L813,281 L824,277 L833,271 L841,262 L847,251 L850,240 L850,226 L847,215 L839,202 L829,193 L819,188 L806,185 L703,185 L703,216 L802,216 L812,220 L815,223 L818,229 L817,241 L812,247 L806,250 L704,250 L703,251 L703,349 L735,349 L735,285 L736,284 L766,284 L811,341 L816,349 L898,349 L966,247 L969,250 L1034,349 L1078,349Z" />
+    </clipPath>
+  </defs>
+  <style>
+:root { color-scheme: dark; }
+svg { overflow: visible; }
+#halo, #reticle, #blueprint, #calibration, #path-trace, #sweep { opacity: 0; }
+#blueprint { transform-origin: 1024px 341px; animation: showGrid 2.5s ease-in-out infinite; }
+#reticle { transform-origin: 1024px 341px; animation: showDial 2.5s ease-in-out infinite; }
+#reticleInner { transform-origin: 1024px 341px; animation: slowTurn 2.5s linear infinite; }
+#calibration { transform-origin: 1024px 341px; animation: showCal 2.5s ease-in-out infinite; }
+#monogram { transform-box: view-box; transform-origin: 0 0; animation: markMove 2.5s cubic-bezier(.30,.02,.20,1) infinite; }
+#path-trace { transform-box: view-box; transform-origin: 0 0; animation: markTraceMove 2.5s cubic-bezier(.30,.02,.20,1) infinite; }
+#path-trace path { stroke-dasharray: 610; stroke-dashoffset:610; animation: lineDraw 2.5s cubic-bezier(.25,.1,.2,1) infinite; }
+#logo-rest { animation: restReveal 2.5s cubic-bezier(.15,.7,.2,1) infinite; }
+#studio { animation: subReveal 2.5s ease-out infinite; }
+#slogan { animation: taglineReveal 2.5s ease-out infinite; }
+#sweep { animation: sweepMove 2.5s ease-in-out infinite; }
+#halo { animation: softHalo 2.5s ease-in-out infinite; }
+@keyframes showGrid { 0%,4%,100% {opacity:0;transform:scale(.76)} 17%,34% {opacity:.17;transform:scale(1)} 60%,90% {opacity:.025;transform:scale(1.08)} 96% {opacity:0} }
+@keyframes showDial { 0%,5%,100% {opacity:0;transform:scale(.7)} 14%,40% {opacity:.72;transform:scale(1)} 59%,89% {opacity:.20;transform:scale(1.04)} 97% {opacity:0} }
+@keyframes slowTurn { 0% {transform:rotate(-75deg)} 80%,100% {transform:rotate(110deg)} }
+@keyframes showCal { 0%,9%,100% {opacity:0} 22%,42% {opacity:.9} 67%,88% {opacity:.1} 96% {opacity:0} }
+@keyframes markMove {
+ 0%,4% {transform:translate(324px,10px) scale(1.25);opacity:0}
+ 16%,36% {transform:translate(324px,10px) scale(1.25);opacity:1}
+ 54%,88% {transform:translate(0px,0px) scale(1);opacity:1}
+ 96%,100% {transform:translate(0px,0px) scale(1);opacity:0}
+}
+@keyframes markTraceMove {
+ 0%,4% {transform:translate(324px,10px) scale(1.25);opacity:0}
+ 11%,33% {transform:translate(324px,10px) scale(1.25);opacity:1}
+ 46%,100% {transform:translate(0px,0px) scale(1);opacity:0}
+}
+@keyframes lineDraw { 0%,7% {stroke-dashoffset:610} 31%,60%,100% {stroke-dashoffset:0} }
+@keyframes restReveal { 0%,38% {opacity:0;transform:translateY(9px)} 59%,88% {opacity:1;transform:translateY(0)} 96%,100% {opacity:0} }
+@keyframes subReveal { 0%,50% {opacity:0;transform:translateY(7px)} 69%,88% {opacity:1;transform:translateY(0)} 96%,100% {opacity:0} }
+@keyframes taglineReveal { 0%,57% {opacity:0;transform:translateY(6px)} 73%,89% {opacity:1;transform:translateY(0)} 96%,100% {opacity:0} }
+@keyframes softHalo { 0%,9%,100% {opacity:0;transform:scale(.72)} 28% {opacity:.30;transform:scale(1)} 48% {opacity:.10;transform:scale(1.12)} 60%,96% {opacity:0;transform:scale(1.15)} }
+@keyframes sweepMove { 0%,69%,100% {opacity:0;transform:translateX(415px)} 72% {opacity:0;transform:translateX(415px)} 81% {opacity:.45;transform:translateX(980px)} 89% {opacity:0;transform:translateX(1510px)} }
+@media (prefers-reduced-motion: reduce) {
+  #blueprint,#reticle,#calibration,#path-trace,#halo,#sweep {display:none}
+  #monogram,#logo-rest,#studio,#slogan {animation:none;opacity:1;transform:none}
+}
+</style>
+  <g id="blueprint" fill="none" stroke="#64768B" stroke-width="1.2">
+    <path d="M824 341 H1224 M1024 141 V541" opacity=".27"/>
+    <path d="M904 221 L1144 461 M1144 221 L904 461" opacity=".08"/>
+    <circle cx="1024" cy="341" r="179" stroke-dasharray="4 12" opacity=".55"/>
+  </g>
+  <g id="reticle" fill="none" stroke="#64768B" stroke-linecap="round">
+    <circle cx="1024" cy="341" r="211" stroke-width="1.8" stroke-dasharray="24 28 2 22 18 88" opacity=".48"/>
+    <g id="reticleInner">
+      <path d="M849 225 A210 210 0 0 1 1160 182" stroke-width="2.2" opacity=".78"/>
+      <path d="M1199 457 A210 210 0 0 1 888 500" stroke-width="2.2" opacity=".78"/>
+    </g>
+  </g>
+  <g id="calibration" fill="none" stroke="#64768B" stroke-width="1.9">
+    <path d="M 1024 113 v21 M 1024 548 v21 M 797 341 h21 M 1230 341 h21" />
+    <path d="M 871 188 l15 15 M 1162 479 l15 15 M 1176 188 l-15 15 M 886 479 l-15 15" opacity=".4" />
+  </g>
+  <circle id="halo" cx="1024" cy="341" r="330" fill="url(#haloGradient)" style="transform-origin:1024px 341px"/>
+  <!-- The emblem and custom lettering were vector-traced directly from the user's logo. -->
+  <g id="monogram" fill-rule="evenodd">
+    <path fill="#F7F7F5" d="M682,349 L564,182 L562,182 L519,239 L433,348 L433,349 L478,349 L524,288 L562,241 L609,308 L613,312 L616,318 L638,349Z"/>
+    <path fill="#8196B0" d="M563,280 L506,349 L524,349 L525,350 L529,349 L550,349 L583,310 L582,307Z"/>
+  </g>
+  <g id="path-trace" fill="none" stroke="#A5B6C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 432 350 L 559 181 L 682 350 M 485 350 L 559 250 L 633 350"/>
+  </g>
+  <g id="logo-rest" fill-rule="evenodd">
+    <path fill="#F7F7F5" d="M1264,317 L1264,349 L1400,349 L1400,317 L1392,317 L1391,316 L1387,317 L1382,316 L1266,316Z M1264,251 L1264,283 L1265,284 L1399,284 L1400,283 L1400,251 L1395,250 L1265,250Z M1427,185 L1494,270 L1428,349 L1472,349 L1514,299 L1520,305 L1554,349 L1597,349 L1542,275 L1472,185Z M1264,185 L1264,218 L1400,218 L1400,185Z M1048,185 L1139,349 L1189,268 L1243,185 L1199,185 L1170,229 L1158,250 L1141,276 L1117,234 L1096,194 L1090,185Z M966,181 L854,349 L848,339 L806,283 L809,281 L813,281 L824,277 L833,271 L841,262 L847,251 L850,240 L850,226 L847,215 L839,202 L829,193 L819,188 L806,185 L703,185 L703,216 L802,216 L812,220 L815,223 L818,229 L817,241 L812,247 L806,250 L704,250 L703,251 L703,349 L735,349 L735,285 L736,284 L766,284 L811,341 L816,349 L898,349 L966,247 L969,250 L1034,349 L1078,349Z"/>
+    <path fill="#8196B0" d="M1606,185 L1553,185 L1523,222 L1521,227 L1544,256Z"/>
+  </g>
+  <g id="studio" fill-rule="evenodd"><path fill="#91A5BC" d="M1376,401 L1390,402 L1397,408 L1400,415 L1399,424 L1397,428 L1389,435 L1386,436 L1374,435 L1366,428 L1364,424 L1364,413 L1367,407 L1370,404Z M1236,401 L1253,402 L1257,404 L1262,409 L1264,413 L1264,423 L1263,426 L1258,432 L1248,436 L1236,436 L1234,434 L1235,433 L1235,423 L1234,422 L1235,421 L1234,416 L1235,407 L1234,403Z M1310,396 L1309,397 L1310,398 L1310,404 L1309,405 L1309,414 L1310,415 L1309,438 L1310,441 L1315,441 L1315,396Z M1229,396 L1229,441 L1250,441 L1261,437 L1266,432 L1270,423 L1270,414 L1266,405 L1261,400 L1251,396Z M1149,396 L1149,426 L1152,434 L1157,439 L1162,441 L1174,441 L1180,438 L1185,432 L1187,426 L1187,396 L1181,396 L1181,427 L1179,431 L1172,436 L1164,436 L1157,431 L1155,426 L1155,396Z M1076,396 L1076,401 L1090,401 L1091,402 L1091,441 L1096,441 L1096,402 L1097,401 L1112,401 L1112,396Z M876,396 L876,441 L881,441 L881,422 L882,421 L891,421 L892,420 L901,420 L902,421 L907,421 L908,420 L909,421 L909,441 L914,441 L915,440 L915,410 L914,409 L915,408 L915,397 L914,396 L909,396 L909,414 L908,415 L882,415 L881,414 L881,396Z M721,396 L721,441 L754,441 L754,436 L728,436 L727,435 L727,421 L728,420 L731,421 L746,421 L747,420 L750,421 L751,420 L751,415 L728,415 L727,414 L727,402 L728,401 L754,401 L754,396Z M648,396 L647,397 L648,401 L662,401 L663,402 L663,441 L668,441 L669,440 L669,402 L670,401 L684,401 L684,396Z M1379,395 L1368,399 L1361,406 L1358,413 L1358,424 L1360,430 L1368,438 L1375,441 L1383,442 L1395,438 L1402,431 L1405,425 L1406,416 L1403,407 L1396,399 L1385,395Z M1027,395 L1021,395 L1013,398 L1009,402 L1008,405 L1009,413 L1013,417 L1017,419 L1031,422 L1035,426 L1035,431 L1029,436 L1019,436 L1016,435 L1010,430 L1007,433 L1007,435 L1012,439 L1024,442 L1025,441 L1031,441 L1035,439 L1041,431 L1041,425 L1038,420 L1033,417 L1017,413 L1014,410 L1014,405 L1018,401 L1022,400 L1030,401 L1036,405 L1039,402 L1039,400 L1036,398Z M809,396 L801,400 L794,409 L792,418 L793,425 L798,434 L803,438 L810,441 L822,441 L831,437 L834,434 L834,432 L831,429 L827,433 L820,436 L812,436 L807,434 L802,430 L799,425 L798,421 L799,412 L801,408 L806,403 L816,400 L825,402 L831,407 L834,404 L834,402 L824,396 L819,395Z"/></g>
+  <g id="slogan" fill-rule="evenodd">
+    <path fill="#F7F7F5" d="M568,523 L568,517 L569,516 L577,516 L580,519 L579,522 L576,524 L569,524Z M1050,509 L1052,510 L1054,514 L1054,516 L1055,517 L1054,519 L1047,519 L1046,518Z M1319,508 L1324,518 L1323,519 L1315,519 L1314,518Z M870,508 L875,517 L874,519 L867,519 L866,518 L866,516Z M973,506 L976,506 L978,507 L983,513 L983,517 L981,521 L977,524 L971,524 L969,523 L966,520 L966,518 L965,517 L965,513 L966,511 L970,507 L972,507Z M689,506 L696,507 L698,508 L701,512 L701,518 L700,520 L698,522 L694,524 L688,524 L687,523 L687,508Z M567,508 L569,506 L575,506 L578,508 L579,511 L576,514 L569,514 L567,512Z M1458,505 L1458,525 L1460,526 L1460,517 L1461,516 L1472,516 L1473,517 L1473,525 L1475,526 L1475,505 L1473,505 L1473,513 L1472,514 L1461,514 L1460,513 L1460,505Z M1423,507 L1420,512 L1420,519 L1421,521 L1424,524 L1428,526 L1433,526 L1439,523 L1439,521 L1437,521 L1434,524 L1428,524 L1426,523 L1422,518 L1422,512 L1425,508 L1429,506 L1433,506 L1437,509 L1439,508 L1435,505 L1427,505Z M1383,505 L1383,525 L1384,526 L1385,525 L1385,511 L1386,510 L1390,514 L1395,522 L1399,526 L1400,526 L1400,505 L1398,505 L1398,520 L1397,521 L1387,508 L1387,507 L1385,505Z M1347,505 L1346,506 L1346,519 L1347,520 L1347,522 L1352,526 L1357,526 L1358,525 L1360,525 L1362,523 L1363,519 L1364,518 L1363,517 L1363,505 L1361,506 L1362,507 L1362,518 L1361,519 L1361,521 L1357,524 L1352,524 L1349,521 L1348,519 L1348,505Z M1318,505 L1316,508 L1316,510 L1312,517 L1312,519 L1309,525 L1310,526 L1314,521 L1324,521 L1326,523 L1326,524 L1329,526 L1328,522 L1326,519 L1326,517 L1320,505Z M1280,505 L1280,525 L1283,525 L1284,526 L1293,526 L1293,524 L1283,524 L1282,523 L1282,505Z M1109,505 L1108,506 L1108,525 L1110,526 L1122,526 L1123,524 L1112,524 L1110,522 L1110,518 L1112,516 L1120,516 L1121,515 L1121,514 L1118,514 L1117,515 L1116,514 L1111,514 L1110,513 L1110,509 L1112,506 L1123,506 L1123,505Z M1091,505 L1075,505 L1075,506 L1080,506 L1082,508 L1082,526 L1084,525 L1084,507 L1085,506 L1091,506Z M1050,505 L1043,519 L1041,526 L1043,525 L1045,521 L1056,521 L1058,523 L1058,525 L1060,526 L1061,525 L1054,512 L1052,505Z M1002,505 L1002,525 L1004,526 L1004,511 L1005,510 L1009,517 L1009,519 L1012,525 L1014,524 L1016,520 L1016,518 L1020,511 L1021,512 L1021,525 L1023,526 L1023,505 L1021,505 L1020,506 L1013,521 L1011,519 L1011,517 L1005,505Z M931,505 L931,506 L937,506 L939,508 L939,524 L938,525 L940,525 L940,508 L942,506 L948,506 L948,505Z M897,505 L897,521 L898,523 L900,525 L902,525 L903,526 L908,526 L910,525 L914,520 L914,505 L912,505 L912,520 L908,524 L903,524 L900,522 L899,520 L899,505Z M869,505 L867,509 L867,511 L860,525 L862,526 L863,523 L865,521 L876,521 L878,525 L880,526 L880,524 L873,510 L872,506 L871,505Z M685,505 L685,525 L686,526 L687,525 L688,526 L694,526 L695,525 L699,524 L703,519 L703,512 L701,508 L697,505Z M655,505 L655,520 L656,521 L655,525 L656,526 L668,526 L669,524 L658,524 L657,523 L657,505Z M637,505 L635,505 L635,526 L637,525Z M599,505 L599,520 L600,521 L600,523 L605,526 L613,525 L616,521 L616,505 L614,505 L614,520 L613,522 L610,524 L605,524 L601,521 L601,505Z M566,505 L566,526 L577,526 L579,525 L582,521 L582,519 L579,515 L581,511 L580,507 L577,505Z M973,504 L972,505 L968,506 L964,510 L964,512 L963,513 L963,518 L964,519 L964,521 L967,524 L971,526 L977,526 L981,524 L983,522 L984,518 L985,517 L985,514 L984,513 L983,509 L980,506Z"/>
+    <path fill="#8196B0" d="M1210,500 L1207,500 L1206,501 L1197,519 L1197,521 L1194,526 L1193,530 L1197,530 L1198,526 L1202,519 L1202,517 L1210,502Z M790,500 L787,500 L786,501 L785,505 L781,512 L781,514 L773,530 L777,530 L778,529 L783,519 L783,517 L786,512 L786,510 L790,503Z"/>
+  </g>
+  <g clip-path="url(#logoClip)" pointer-events="none">
+    <rect id="sweep" width="115" height="235" y="150" x="0" fill="url(#sheen)"/>
+  </g>
+</svg>

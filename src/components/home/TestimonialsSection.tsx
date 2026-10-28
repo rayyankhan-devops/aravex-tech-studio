@@ -14,7 +14,7 @@ export function TestimonialsSection() {
         <SectionHeading
           eyebrow="CLIENT TESTIMONIALS"
           title="Engineered for High-Stakes Operations."
-          description="Direct feedback from retail directors, enterprise CTOs, and healthcare leaders whose operations rely on Arevex software and infrastructure."
+          description="Direct feedback from retail directors, enterprise CTOs, and healthcare leaders whose operations rely on Aravex software and infrastructure."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

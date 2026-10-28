@@ -39,7 +39,7 @@ export function TeamSection() {
         <SectionHeading
           eyebrow="LEADERSHIP"
           title="Meet the Engineering Founders."
-          description="Arevex is led by hands-on systems engineers and product architects. We architect distributed topologies, write production code, and directly oversee every client milestone."
+          description="Aravex is led by hands-on systems engineers and product architects. We architect distributed topologies, write production code, and directly oversee every client milestone."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
@@ -96,7 +96,7 @@ export function TeamSection() {
 
                   <div className="pt-6 border-t border-gray-200 dark:border-graphite/30 flex items-center justify-between">
                     <span className="font-mono text-xs font-semibold text-gray-600 dark:text-slate-400">
-                      AREVEX STUDIO LEAD
+                      ARAVEX STUDIO LEAD
                     </span>
                     <div className="flex items-center gap-3">
                       <a
@@ -230,7 +230,7 @@ export function TeamSection() {
 
                     {/* Footer Links */}
                     <div className="pt-3 border-t border-gray-200/80 dark:border-graphite/30 flex items-center justify-between text-xs font-mono text-gray-500 dark:text-slate-400">
-                      <span>AREVEX SPECIALIST</span>
+                      <span>ARAVEX SPECIALIST</span>
                       <div className="flex items-center gap-2">
                         <a
                           href={member.github}

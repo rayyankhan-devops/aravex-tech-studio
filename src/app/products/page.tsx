@@ -12,6 +12,18 @@ import {
   Layers,
   ArrowUpRight,
   Check,
+  Store,
+  Boxes,
+  GraduationCap,
+  BookOpen,
+  Library,
+  UserCheck,
+  Building2,
+  Receipt,
+  Stethoscope,
+  UtensilsCrossed,
+  Briefcase,
+  Sparkles,
 } from 'lucide-react';
 import { SectionHeading } from '@/components/common/SectionHeading';
 import { Badge } from '@/components/common/Badge';
@@ -21,6 +33,22 @@ import { PRODUCTS_DATA } from '@/data/products';
 import { ProductItem } from '@/types';
 import { BRAND_ASSETS } from '@/lib/brand';
 import { FinalCTA } from '@/components/home/FinalCTA';
+
+const PRODUCT_ICONS: Record<string, React.ElementType> = {
+  Store,
+  Boxes,
+  GraduationCap,
+  BookOpen,
+  Library,
+  UserCheck,
+  Building2,
+  Receipt,
+  Stethoscope,
+  UtensilsCrossed,
+  Smartphone,
+  Briefcase,
+  Monitor,
+};
 
 const PLATFORMS = ['All', 'Desktop', 'Web', 'Mobile', 'Cross-Platform'];
 const CATEGORIES = ['All', 'Retail', 'Enterprise', 'Education', 'Healthcare', 'Operations'];
@@ -201,7 +229,7 @@ export default function ProductsPage() {
                 </div>
 
                 <h2 className="text-3xl sm:text-4xl font-black text-gray-950 dark:text-white tracking-tight leading-tight">
-                  Arevex Retail POS &amp; Enterprise Operations Hub.
+                  Aravex Retail POS &amp; Enterprise Operations Hub.
                 </h2>
 
                 <p className="text-base text-gray-700 dark:text-slate-200 leading-relaxed max-w-xl font-normal">
@@ -253,7 +281,7 @@ export default function ProductsPage() {
               <div className="lg:col-span-5 relative h-72 sm:h-96 rounded-2xl overflow-hidden border border-gray-200 dark:border-graphite/40 shadow-xl group">
                 <Image
                   src={BRAND_ASSETS.generated.posTerminal}
-                  alt="Arevex Commercial POS & Enterprise Workstation"
+                  alt="Aravex Commercial POS & Enterprise Workstation"
                   fill
                   priority
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
@@ -261,7 +289,7 @@ export default function ProductsPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono text-white/95">
                   <span className="px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md border border-white/10 font-medium">
-                    AREVEX Enterprise Station
+                    ARAVEX Enterprise Station
                   </span>
                   <span className="px-2.5 py-1 rounded-md bg-emerald-500/80 font-bold text-white shadow-sm">
                     100% Production Ready
@@ -277,38 +305,46 @@ export default function ProductsPage() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredProducts.map((product) => (
-                <Card
-                  key={product.id}
-                  className="flex flex-col justify-between bg-white dark:bg-charcoal-850/80 border-gray-200 dark:border-graphite/40 hover:border-slate-500 dark:hover:border-slate-muted/60 shadow-sm hover:shadow-xl overflow-hidden p-6"
-                >
-                  <div>
-                    {/* Visual Preview */}
-                    <div className="relative h-44 -mx-6 -mt-6 mb-5 overflow-hidden border-b border-gray-200 dark:border-graphite/40 group">
-                      <Image
-                        src={getProductImage(product.slug)}
-                        alt={product.title}
-                        fill
-                        className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                      <div className="absolute top-3 left-3">
-                        <Badge status={product.status} />
-                      </div>
-                      <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono text-white/90">
-                        <span className="flex items-center gap-1 font-semibold">
-                          {getPlatformIcon(product.platform)}
-                          <span>{product.platform}</span>
-                        </span>
-                        <span className="px-2 py-0.5 rounded bg-emerald-500/80 font-bold text-white text-[10px]">
-                          Production Build
-                        </span>
-                      </div>
-                    </div>
+              {filteredProducts.map((product) => {
+                const ProductIcon = (product.iconName && PRODUCT_ICONS[product.iconName]) || Monitor;
 
-                    <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-2 leading-snug">
-                      {product.title}
-                    </h3>
+                return (
+                  <Card
+                    key={product.id}
+                    className="flex flex-col justify-between bg-white dark:bg-charcoal-850/80 border-gray-200 dark:border-graphite/40 hover:border-slate-500 dark:hover:border-slate-muted/60 shadow-sm hover:shadow-xl overflow-hidden p-6"
+                  >
+                    <div>
+                      {/* Visual Preview */}
+                      <div className="relative h-44 -mx-6 -mt-6 mb-5 overflow-hidden border-b border-gray-200 dark:border-graphite/40 group">
+                        <Image
+                          src={product.image || getProductImage(product.slug)}
+                          alt={product.title}
+                          fill
+                          className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                        <div className="absolute top-3 left-3">
+                          <Badge status={product.status} />
+                        </div>
+                        <div className="absolute top-3 right-3">
+                          <span className="p-1.5 rounded-full bg-black/65 backdrop-blur-md text-emerald-400 border border-emerald-500/30 shadow flex items-center justify-center">
+                            <ProductIcon className="w-3.5 h-3.5" />
+                          </span>
+                        </div>
+                        <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono text-white/90">
+                          <span className="flex items-center gap-1 font-semibold">
+                            {getPlatformIcon(product.platform)}
+                            <span>{product.platform}</span>
+                          </span>
+                          <span className="px-2 py-0.5 rounded bg-emerald-500/80 font-bold text-white text-[10px]">
+                            Production Build
+                          </span>
+                        </div>
+                      </div>
+
+                      <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-2 leading-snug">
+                        {product.title}
+                      </h3>
 
                     <p className="text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold mb-3">
                       Target: {product.category}
@@ -354,7 +390,8 @@ export default function ProductsPage() {
                     </Link>
                   </div>
                 </Card>
-              ))}
+              );
+            })}
             </div>
           )}
         </div>

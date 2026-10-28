@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 
     const applicationId = `ARVX-INT-2026-${Math.floor(1000 + Math.random() * 9000)}`;
 
-    console.log('--- AREVEX TALENT ACCELERATOR NEW APPLICATION ---');
+    console.log('--- ARAVEX TALENT ACCELERATOR NEW APPLICATION ---');
     console.log({
       applicationId,
       timestamp: new Date().toISOString(),

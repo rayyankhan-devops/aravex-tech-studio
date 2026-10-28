@@ -32,7 +32,7 @@ export function FloatingWhatsApp() {
                   <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-[#075E54] rounded-full animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-sm leading-tight">Arevex Engineering Desk</h4>
+                  <h4 className="font-bold text-sm leading-tight">Aravex Engineering Desk</h4>
                   <p className="text-[11px] text-emerald-100/90 flex items-center gap-1 mt-0.5 font-mono">
                     <Clock className="w-3 h-3" /> Usually replies in ~15 mins
                   </p>
@@ -112,7 +112,7 @@ export function FloatingWhatsApp() {
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.95 }}
           className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_8px_30px_rgb(37,211,102,0.4)] border-2 border-white dark:border-charcoal-900 transition-all"
-          aria-label="Open WhatsApp conversation with Arevex Tech Studio"
+          aria-label="Open WhatsApp conversation with Aravex Tech Studio"
         >
           {/* Breathing Radar Ripple Animation */}
           <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25 pointer-events-none" />

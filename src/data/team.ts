@@ -29,7 +29,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     specialization: 'Distributed Systems, POS Hardware Sync & Cloud Topologies',
     bio: 'Directs studio technical strategy and low-level hardware-synchronized architectures across retail POS, multi-branch attendance, and multi-region cloud backends.',
     isFounder: true,
-    github: 'https://github.com/arevex',
+    github: 'https://github.com/aravex',
     linkedin: 'https://linkedin.com',
   },
   {
@@ -43,9 +43,9 @@ export const TEAM_MEMBERS: TeamMember[] = [
     avatarBg: 'from-amber-600 to-orange-700',
     formerCompany: 'Ex-Amazon',
     specialization: 'Full-Stack Next.js Architecture, Desktop Electron & Enterprise MIS',
-    bio: 'Directs full-stack web and desktop product engineering. Formerly a Software Development Engineer at Amazon, bringing high-scale distributed systems discipline, zero-latency state machines, and enterprise reliability to Arevex client codebases.',
+    bio: 'Directs full-stack web and desktop product engineering. Formerly a Software Development Engineer at Amazon, bringing high-scale distributed systems discipline, zero-latency state machines, and enterprise reliability to Aravex client codebases.',
     isFounder: true,
-    github: 'https://github.com/arevex',
+    github: 'https://github.com/aravex',
     linkedin: 'https://linkedin.com',
   },
   {
@@ -60,7 +60,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     specialization: 'Autonomous AI Agents, Multi-Agent Graphs & RAG Vector Systems',
     bio: 'Spearheads intelligent workflow automation, generative search engine optimization (GEO), and production-grade LLM orchestration with deterministic schema validation.',
     isFounder: true,
-    github: 'https://github.com/arevex',
+    github: 'https://github.com/aravex',
     linkedin: 'https://linkedin.com',
   },
 
@@ -77,7 +77,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     formerCompany: 'Ex-Careem / Uber',
     specialization: 'Terraform IaC, Kubernetes EKS Clusters & Zero-Downtime Blue/Green Deployments',
     bio: 'Oversees high-concurrency cloud container clusters and automated security pipelines. Specialized in hardening AWS/GCP footprints with zero CVE vulnerabilities.',
-    github: 'https://github.com/arevex',
+    github: 'https://github.com/aravex',
     linkedin: 'https://linkedin.com',
   },
   {
@@ -92,7 +92,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     formerCompany: 'Ex-CloudScale UK',
     specialization: 'Enterprise Cloud Migrations, SOC2 Compliance & UK/EU Client Architectures',
     bio: 'Manages international enterprise accounts and multi-national digital transformations, ensuring seamless technical delivery across European and North American time zones.',
-    github: 'https://github.com/arevex',
+    github: 'https://github.com/aravex',
     linkedin: 'https://linkedin.com',
   },
 
@@ -108,7 +108,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     avatarBg: 'from-cyan-600 to-blue-800',
     specialization: 'Semantic Search Embeddings, LangGraph Workflows & Autonomous Customer Resolution',
     bio: 'Designs custom retrieval-augmented generation (RAG) pipelines and multi-agent customer support graphs that resolve 65%+ of tickets deterministically.',
-    github: 'https://github.com/arevex',
+    github: 'https://github.com/aravex',
     linkedin: 'https://linkedin.com',
   },
   {
@@ -122,7 +122,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     avatarBg: 'from-teal-600 to-emerald-800',
     specialization: 'WhatsApp Cloud API Automations, Zapier/n8n Pipelines & Distributed Webhooks',
     bio: 'Specialized in connecting enterprise ERPs and legacy databases to real-time WhatsApp bots, automated payment reminders, and asynchronous notification engines.',
-    github: 'https://github.com/arevex',
+    github: 'https://github.com/aravex',
     linkedin: 'https://linkedin.com',
   },
 
@@ -137,8 +137,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     flag: '🇵🇰',
     avatarBg: 'from-slate-700 to-zinc-900',
     specialization: 'Offline-First SQLite Synchronization, ESC/POS Thermal Printing & Barcode Telemetry',
-    bio: 'Architect of Arevex POS core engine. Engineered the zero-downtime offline cache that enables supermarket checkout lanes to operate seamlessly during connectivity failures.',
-    github: 'https://github.com/arevex',
+    bio: 'Architect of Aravex POS core engine. Engineered the zero-downtime offline cache that enables supermarket checkout lanes to operate seamlessly during connectivity failures.',
+    github: 'https://github.com/aravex',
     linkedin: 'https://linkedin.com',
   },
   {
@@ -153,7 +153,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     formerCompany: 'Ex-Zalando',
     specialization: 'Next.js 15 App Router, WebGL Shaders & 60fps Micro-Interactions',
     bio: 'Drives high-performance frontend engineering. Bridges complex engineering state machines with cinematic WebGL transitions and fluid Framer Motion animations.',
-    github: 'https://github.com/arevex',
+    github: 'https://github.com/aravex',
     linkedin: 'https://linkedin.com',
   },
   {
@@ -167,7 +167,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     avatarBg: 'from-indigo-600 to-blue-900',
     specialization: 'PostgreSQL Partitioning, Redis Session Clustering & High-Throughput REST/gRPC APIs',
     bio: 'Ensures database durability under Black Friday surges. Has optimized transaction pipelines handling up to 40,000 concurrent sessions with sub-50ms query execution.',
-    github: 'https://github.com/arevex',
+    github: 'https://github.com/aravex',
     linkedin: 'https://linkedin.com',
   },
   {
@@ -182,7 +182,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     formerCompany: 'Ex-Rakuten',
     specialization: 'Event-Driven Architectures, Apache Kafka & Real-Time Telemetry Sync',
     bio: 'Builds real-time pub/sub synchronization layers and multi-tenant telemetry queues connecting distributed inventory warehouses with central headquarters ledgers.',
-    github: 'https://github.com/arevex',
+    github: 'https://github.com/aravex',
     linkedin: 'https://linkedin.com',
   },
 
@@ -197,8 +197,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     flag: '🇵🇰',
     avatarBg: 'from-rose-600 to-pink-700',
     specialization: 'Figma Token Architecture, Accessibility (WCAG AAA) & Minimalist Dark Aesthetics',
-    bio: 'Guards the Arevex visual philosophy: architectural, precise, minimal, and human. Creates scalable design tokens and high-conversion SaaS dashboard wireframes.',
-    github: 'https://github.com/arevex',
+    bio: 'Guards the Aravex visual philosophy: architectural, precise, minimal, and human. Creates scalable design tokens and high-conversion SaaS dashboard wireframes.',
+    github: 'https://github.com/aravex',
     linkedin: 'https://linkedin.com',
   },
   {
@@ -212,7 +212,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     avatarBg: 'from-amber-600 to-red-700',
     specialization: 'React Native, Flutter Hardware Bridges & Biometric Authentication',
     bio: 'Specialized in native device bridges, offline synchronization, and rapid cross-platform deployment on both Apple App Store and Google Play Store.',
-    github: 'https://github.com/arevex',
+    github: 'https://github.com/aravex',
     linkedin: 'https://linkedin.com',
   },
 ];

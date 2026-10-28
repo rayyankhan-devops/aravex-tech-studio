@@ -56,7 +56,7 @@ export default function InternshipsPage() {
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-mono text-xs font-bold uppercase tracking-wider mb-6">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span>AREVEX TALENT ACCELERATOR • COHORT 2026 OPEN</span>
+                <span>ARAVEX TALENT ACCELERATOR • COHORT 2026 OPEN</span>
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-950 dark:text-white tracking-tight leading-[1.05]">
                 Forge Real Engineering &amp; Creative Muscle.
@@ -87,7 +87,7 @@ export default function InternshipsPage() {
           <div className="relative h-64 sm:h-96 md:h-[420px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/60 shadow-xl">
             <Image
               src={BRAND_ASSETS.generated.internshipStudio}
-              alt="Arevex Talent Accelerator Studio Workstations"
+              alt="Aravex Talent Accelerator Studio Workstations"
               fill
               priority
               className="object-cover object-center"
@@ -95,7 +95,7 @@ export default function InternshipsPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white text-xs font-mono">
               <span className="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 font-semibold text-emerald-300">
-                Arevex Lab • 100% Remote Only
+                Aravex Lab • 100% Remote Only
               </span>
               <span className="hidden sm:inline-block px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-emerald-400">
                 Stipend + Lifetime Support + Recommendation Letter for Top Candidates
@@ -158,13 +158,13 @@ export default function InternshipsPage() {
               <div className="lg:col-span-8 flex flex-col gap-3">
                 <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-mono font-bold uppercase tracking-wider w-fit">
                   <Award className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>AREVEX LIFETIME SUPPORT &amp; ENDORSEMENT GUARANTEE</span>
+                  <span>ARAVEX LIFETIME SUPPORT &amp; ENDORSEMENT GUARANTEE</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-black tracking-tight">
                   Lifetime Support in Every Domain + Founder Recommendation.
                 </h3>
                 <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
-                  In every single internship domain at Arevex, our commitment to you does not expire with the cohort. All interns gain guaranteed lifetime engineering mentorship, direct code reviews, and architectural guidance. In addition, the best-performing candidates receive a prestigious, verified letter of recommendation signed by Arevex founders and direct job referrals to international clients.
+                  In every single internship domain at Aravex, our commitment to you does not expire with the cohort. All interns gain guaranteed lifetime engineering mentorship, direct code reviews, and architectural guidance. In addition, the best-performing candidates receive a prestigious, verified letter of recommendation signed by Aravex founders and direct job referrals to international clients.
                 </p>
               </div>
               <div className="lg:col-span-4 grid grid-cols-1 gap-3">
@@ -254,11 +254,11 @@ export default function InternshipsPage() {
         </div>
       </section>
 
-      {/* Why Intern at Arevex Section */}
+      {/* Why Intern at Aravex Section */}
       <section className="py-20 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="THE AREVEX DIFFERENCE"
+            eyebrow="THE ARAVEX DIFFERENCE"
             title="Why This Is Unlike Any Other Tech Internship."
             description="We built the Talent Accelerator to develop skilled developers and designers ready to contribute on a global stage."
           />
@@ -318,7 +318,7 @@ export default function InternshipsPage() {
         </div>
       </section>
 
-      {/* WhatsApp & Academy Direct Bridge CTA */}
+      {/* WhatsApp & Training Direct Bridge CTA */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="p-8 sm:p-12 rounded-3xl bg-charcoal-900 text-white border border-graphite/50 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl">
@@ -330,7 +330,7 @@ export default function InternshipsPage() {
                 Connect Directly with our Mentors.
               </h2>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed mt-3">
-                Unsure which track fits your background best? Reach out directly via WhatsApp for guidance or explore our accessible Technology Academy courses.
+                Unsure which track fits your background best? Reach out directly via WhatsApp for guidance or explore our accessible Technology Training courses.
               </p>
             </div>
 
@@ -346,10 +346,10 @@ export default function InternshipsPage() {
               </a>
 
               <Link
-                href="/academy"
+                href="/training"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl bg-white text-charcoal-950 hover:bg-warmWhite font-semibold text-sm shadow-xl transition-all whitespace-nowrap shrink-0 hover:scale-[1.02] active:scale-[0.98]"
               >
-                <span className="whitespace-nowrap">View Tech Academy</span>
+                <span className="whitespace-nowrap">View Tech Training</span>
                 <ArrowUpRight className="w-4 h-4 shrink-0" />
               </Link>
             </div>

@@ -12,6 +12,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'We build high-performance web systems using Next.js, React, Node.js, and TypeScript. From enterprise portals to multi-tenant SaaS platforms, our engineering prioritizes semantic markup, server-side performance, instant page transitions, and reliable state management.',
     iconName: 'Globe',
     category: 'engineering',
+    image: '/assets/generated/Cinematic Dark Workspace with Web Design Monitor.png',
     problem:
       'Most agencies deliver slow, template-based websites that hurt user experience and search rankings.',
     solution:
@@ -53,6 +54,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'We engineer polished mobile experiences that delight users across iOS and Android. Our mobile architecture features offline-first local persistence, reactive state management, hardware integration (camera, biometrics, Bluetooth), and frictionless app store deployments.',
     iconName: 'Smartphone',
     category: 'engineering',
+    image: '/assets/generated/Cinematic Developer Workspace with Mobile UI Mockups.png',
     problem:
       'Fragmented codebases, inconsistent frame rates, and battery-draining background processes leave users frustrated and uninstalling mobile apps.',
     solution:
@@ -93,6 +95,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'When your business needs zero-latency execution, direct hardware control, or offline stability, our desktop engineering delivers. We build Electron and native desktop solutions for retail POS, manufacturing, logistics, and medical management.',
     iconName: 'Monitor',
     category: 'engineering',
+    image: '/assets/generated/Cinematic Developer Workspace with Dual Monitors.png',
     problem:
       'Web-only apps fail when internet connections drop, and cannot easily interface with thermal receipt printers, cash drawers, or barcode scanners.',
     solution:
@@ -129,6 +132,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'We engineer production-grade AI agent systems capable of searching enterprise databases, reasoning across unstructured documents, invoking internal APIs, and executing multi-step business decisions with human-in-the-loop safeguards.',
     iconName: 'BrainCircuit',
     category: 'ai',
+    image: '/assets/generated/Applied AI Workspace with RAG Workflow.png',
     problem:
       'Off-the-shelf chatbots produce hallucinations, lack internal data access, and cannot execute concrete database actions or multi-step operations.',
     solution:
@@ -165,6 +169,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'Deploy intelligent conversational assistants that resolve up to 75% of incoming customer inquiries instantly. We train custom support bots on your documentation, order systems, and knowledge bases to handle tracking, booking, troubleshooting, and qualification.',
     iconName: 'MessageSquareCode',
     category: 'ai',
+    image: '/assets/generated/AI Workflow Command Center.png',
     problem:
       'Human customer support teams are overwhelmed with repetitive FAQs, leading to slow response times, lost leads, and high staffing costs.',
     solution:
@@ -200,6 +205,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'Harness the world’s most dominant messaging app as your highest-converting sales and support channel. We implement official Meta WhatsApp Cloud API workflows that automatically confirm orders, dispatch shipping notifications, recover abandoned carts, and close inbound leads.',
     iconName: 'PhoneCall',
     category: 'ai',
+    image: '/assets/generated/Automated Messaging Workspace.png',
     problem:
       'Manual WhatsApp customer messaging is chaotic, untracked, slow, and impossible to scale as order volumes exceed a few dozen per day.',
     solution:
@@ -236,6 +242,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'We engineer fault-tolerant, auto-scaling cloud architectures that ensure your applications survive traffic surges and hardware disruptions without downtime. Everything is codified through Infrastructure-as-Code (Terraform) for reproducibility and auditability.',
     iconName: 'Cloud',
     category: 'cloud',
+    image: '/assets/generated/Cloud Architecture Workspace Blueprint.png',
     problem:
       'Unstructured cloud setups lead to catastrophic unexpected outages, runaway monthly server bills, and security vulnerabilities due to misconfigured permissions.',
     solution:
@@ -272,6 +279,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'We bridge software engineering and operations into an automated, unbreakable pipeline. We containerize applications with Docker, orchestrate deployments with Kubernetes, and embed vulnerability scanning, secret detection, and compliance testing directly into git pull requests.',
     iconName: 'ShieldCheck',
     category: 'cloud',
+    image: '/assets/generated/Cinematic CI_CD Workspace Dashboard.png',
     problem:
       'Manual server updates, broken release weekends, leaked credentials in repositories, and vulnerable third-party dependencies trigger major business downtime.',
     solution:
@@ -308,6 +316,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'Great design is not superficial decoration; it is functional clarity. We design cohesive digital interfaces that guide users effortlessly through complex enterprise workflows. Every component, typography choice, and spatial layout adheres to a rigorous design system.',
     iconName: 'Palette',
     category: 'design',
+    image: '/assets/generated/Minimalist UX Design Workstation.png',
     problem:
       'Cluttered, amateur interfaces confuse customers, elevate drop-off rates on checkout, and undermine the credibility of otherwise capable tech companies.',
     solution:
@@ -344,6 +353,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'We turn technical capabilities into compelling digital presence. Our team produces structured technical articles, architecture infographics, software feature highlights, and strategic community engagement that builds authority and generates high-ticket B2B inquiries.',
     iconName: 'Share2',
     category: 'growth',
+    image: '/assets/generated/Modern Content Planning Workspace.png',
     problem:
       'Most tech companies either post generic motivational quotes or remain silent, missing out on direct talent acquisition and corporate client inquiries.',
     solution:
@@ -380,6 +390,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'Search has evolved beyond ten blue links. Modern buyers discover solutions via AI engines like Perplexity, ChatGPT Search, and Google Gemini. We optimize your website both for traditional technical SEO ranking and for direct citation in AI-generated answers through structured semantic data.',
     iconName: 'Search',
     category: 'growth',
+    image: '/assets/generated/SEO Analytics Workspace Dashboard.png',
     problem:
       'Traditional SEO ignores AI search models. If ChatGPT or Perplexity cannot comprehend your authority, you become invisible to modern buyers.',
     solution:
@@ -416,6 +427,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'Stop paying skilled employees to copy data between spreadsheets and isolated software. We engineer automated integration pipelines that sync your POS, ecommerce sales, accounting ledger, and courier dispatches into one seamless, error-free operational engine.',
     iconName: 'Workflow',
     category: 'engineering',
+    image: '/assets/generated/Cozy Automation Workflow Workspace.png',
     problem:
       'Siloed software stacks force staff into manual copy-pasting, causing reconciliation errors, duplicate entries, delayed shipments, and massive labor waste.',
     solution:

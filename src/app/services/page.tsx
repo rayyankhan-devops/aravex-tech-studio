@@ -153,7 +153,7 @@ export default function ServicesPage() {
                         {/* Architectural Service Visual Thumbnail */}
                         <div className="relative h-44 w-full rounded-xl overflow-hidden mb-5 border border-gray-200 dark:border-graphite/40 bg-charcoal-900">
                           <Image
-                            src={getServiceImage(service.slug)}
+                            src={service.image || getServiceImage(service.slug)}
                             alt={service.title}
                             fill
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

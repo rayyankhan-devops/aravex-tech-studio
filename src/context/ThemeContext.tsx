@@ -17,7 +17,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem('arevex_theme') as Theme | null;
+    const saved = localStorage.getItem('aravex_theme') as Theme | null;
     if (saved === 'light' || saved === 'dark') {
       setThemeState(saved);
       if (saved === 'dark') {
@@ -37,7 +37,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
-    localStorage.setItem('arevex_theme', newTheme);
+    localStorage.setItem('aravex_theme', newTheme);
     if (newTheme === 'dark') {
       document.documentElement.classList.add('dark');
       document.documentElement.classList.remove('light');

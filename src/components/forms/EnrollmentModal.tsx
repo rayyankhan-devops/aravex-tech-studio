@@ -36,7 +36,7 @@ export function EnrollmentModal({ course, isOpen, onClose }: EnrollmentModalProp
           name: formData.fullName,
           email: formData.email,
           company: `Student (WhatsApp: ${formData.phoneWhatsApp})`,
-          service: `Academy Enrollment: ${course.title}`,
+          service: `Training Enrollment: ${course.title}`,
           budget: course.feePKR,
           description: `Enrollment Application for ${course.title} (${course.duration}). Experience Level: ${formData.experienceLevel}. WhatsApp Phone: ${formData.phoneWhatsApp}. Fee: ${course.feePKR}.`,
           preferredContact: 'WhatsApp',
@@ -91,7 +91,7 @@ export function EnrollmentModal({ course, isOpen, onClose }: EnrollmentModalProp
               </div>
               <h3 className="text-2xl font-bold">Enrollment Submitted</h3>
               <p className="text-sm text-gray-600 dark:text-slate-300 leading-relaxed max-w-sm">
-                Your application for <strong>{course.title}</strong> has been registered. Our academy coordinator will reach out to you via WhatsApp with batch schedules and fee payment instructions.
+                Your application for <strong>{course.title}</strong> has been registered. Our training coordinator will reach out to you via WhatsApp with batch schedules and fee payment instructions.
               </p>
               <MagneticButton onClick={handleClose} variant="primary" size="sm" className="mt-4">
                 Done

@@ -16,7 +16,7 @@ async function buildAssets() {
     </linearGradient>
   </defs>
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <text x="100" y="100" fill="#64768B" font-family="monospace" font-size="14" letter-spacing="4">AREVEX ENTERPRISE MIS // MULTI-WAREHOUSE</text>
+  <text x="100" y="100" fill="#64768B" font-family="monospace" font-size="14" letter-spacing="4">ARAVEX ENTERPRISE MIS // MULTI-WAREHOUSE</text>
   <text x="100" y="140" fill="#F7F7F5" font-family="sans-serif" font-size="32" font-weight="bold">Centralized Inventory &amp; Warehouse Distribution Intelligence</text>
   <text x="100" y="175" fill="#94A3B8" font-family="sans-serif" font-size="16">Batch &amp; Expiry Tracking • Automated Reorder Limits • Multi-Branch Reconciliation</text>
 
@@ -87,7 +87,7 @@ async function buildAssets() {
     </linearGradient>
   </defs>
   <rect width="1600" height="900" fill="url(#bgClinic)"/>
-  <text x="100" y="100" fill="#64768B" font-family="monospace" font-size="14" letter-spacing="4">AREVEX HEALTHCARE // EMR &amp; SCHEDULING</text>
+  <text x="100" y="100" fill="#64768B" font-family="monospace" font-size="14" letter-spacing="4">ARAVEX HEALTHCARE // EMR &amp; SCHEDULING</text>
   <text x="100" y="140" fill="#F7F7F5" font-family="sans-serif" font-size="32" font-weight="bold">MediFlow Clinical Management &amp; Electronic Health Records</text>
   <text x="100" y="175" fill="#94A3B8" font-family="sans-serif" font-size="16">Digital Prescriptions • WhatsApp Appointment Reminders • Patient Medical History</text>
 
@@ -153,7 +153,7 @@ async function buildAssets() {
     </linearGradient>
   </defs>
   <rect width="1600" height="900" fill="url(#bgIntern)"/>
-  <text x="100" y="100" fill="#64768B" font-family="monospace" font-size="14" letter-spacing="4">AREVEX TALENT ACCELERATOR // COHORT 2026</text>
+  <text x="100" y="100" fill="#64768B" font-family="monospace" font-size="14" letter-spacing="4">ARAVEX TALENT ACCELERATOR // COHORT 2026</text>
   <text x="100" y="140" fill="#F7F7F5" font-family="sans-serif" font-size="32" font-weight="bold">Hands-on Engineering &amp; Creative Internship Tracks</text>
   <text x="100" y="175" fill="#94A3B8" font-family="sans-serif" font-size="16">Work on Real Production Codebases • 1-on-1 Mentorship • Performance Stipend</text>
 

@@ -12,6 +12,7 @@ export interface ProjectItem {
   technologies: string[];
   keyHighlights: string[];
   image: string;
+  iconName?: string;
   featured: boolean;
   metrics: string;
 }
@@ -24,13 +25,14 @@ export const WORK_DATA: ProjectItem[] = [
     clientType: 'Enterprise Cloud Partnership // CloudScale Logistics UK',
     category: 'Cloud & DevOps Engineering',
     year: '2026',
-    image: '/assets/generated/cicd-pipeline.png',
+    iconName: 'ShieldCheck',
+    image: '/assets/generated/Moody DevOps Workspace with CI_CD Dashboard.png',
     summary:
       'End-to-end automated DevSecOps continuous deployment pipeline on AWS ECS with zero-downtime blue/green execution, cryptographic image signing, and automated Trivy vulnerability gates.',
     challenge:
       'CloudScale Logistics UK suffered from high-friction 45-minute manual release cycles where security checks were either skipped or created severe deployment bottlenecks across regional fulfillment depots.',
     solution:
-      'Arevex Tech Studio engineered an automated Infrastructure as Code (IaC) pipeline in Terraform. Every commit triggers automated container SAST scanning, dependency vulnerability audit, and zero-downtime ECS task cutover with rollback telemetry.',
+      'Aravex Tech Studio engineered an automated Infrastructure as Code (IaC) pipeline in Terraform. Every commit triggers automated container SAST scanning, dependency vulnerability audit, and zero-downtime ECS task cutover with rollback telemetry.',
     architecture:
       'Git Push -> GitHub Actions CI -> Trivy Vulnerability Gate -> AWS ECR Signed Image -> ECS Fargate Blue/Green -> CloudWatch Alarm Auto-Rollback.',
     technologies: ['AWS ECS', 'Terraform', 'Docker', 'GitHub Actions', 'Trivy', 'SonarQube', 'Datadog'],
@@ -46,11 +48,12 @@ export const WORK_DATA: ProjectItem[] = [
   {
     id: 'point-of-sale-retail-cluster',
     slug: 'retail-point-of-sale-cluster',
-    title: 'Arevex Offline-First Retail POS & Barcode Billing Engine',
+    title: 'Aravex Offline-First Retail POS & Barcode Billing Engine',
     clientType: 'Retail Supermarket Modernization // Al-Noor Hypermarket Group',
     category: 'Custom Systems & Embedded Hardware',
     year: '2026',
-    image: '/assets/generated/pos-terminal.png',
+    iconName: 'Store',
+    image: '/assets/generated/Modern Café POS Checkout Station.png',
     summary:
       'High-speed point-of-sale engine powering 14 supermarket branches with sub-second barcode lookups, direct thermal ESC/POS receipt generation, and zero-latency offline buffering.',
     challenge:
@@ -76,7 +79,8 @@ export const WORK_DATA: ProjectItem[] = [
     clientType: 'E-Commerce Infrastructure // GoCart Commerce Dubai',
     category: 'Full-Stack Engineering & Scalability',
     year: '2026',
-    image: '/assets/generated/project-gocart.png',
+    iconName: 'ShoppingCart',
+    image: '/assets/generated/Premium E-Commerce Desk Setup.png',
     summary:
       'Decoupled Next.js 15 and Redis session architecture built to withstand extreme flash sale traffic surges of over 40,000 concurrent sessions without a single dropped cart.',
     challenge:
@@ -102,7 +106,8 @@ export const WORK_DATA: ProjectItem[] = [
     clientType: 'AI Engineering Partnership // OmniVentures Global Singapore',
     category: 'AI & Data Engineering',
     year: '2026',
-    image: '/assets/generated/service-ai.png',
+    iconName: 'BrainCircuit',
+    image: '/assets/generated/Applied AI Workspace with RAG Workflow.png',
     summary:
       'Enterprise multi-agent autonomous system that resolves 65% of customer support tickets without human intervention while performing deterministic policy validation and sentiment clustering.',
     challenge:
@@ -128,7 +133,8 @@ export const WORK_DATA: ProjectItem[] = [
     clientType: 'Supply Chain Operations // Vendus Distribution Network',
     category: 'Enterprise Software & Logistics',
     year: '2025',
-    image: '/assets/generated/inventory-warehouse.png',
+    iconName: 'Boxes',
+    image: '/assets/generated/Cinematic Warehouse Inventory Workspace.png',
     summary:
       'Enterprise inventory management and accounting ledger synchronizing 5 regional distribution warehouses, RFID dispatch scanning, batch expiry tracking, and purchase order cycles.',
     challenge:
@@ -154,7 +160,8 @@ export const WORK_DATA: ProjectItem[] = [
     clientType: 'Healthcare Technology // MediFlow Specialty Clinics Islamabad',
     category: 'Healthcare Software & Web',
     year: '2025',
-    image: '/assets/generated/clinic-emr.png',
+    iconName: 'Activity',
+    image: '/assets/generated/Modern Clinic EMR Consultation Desk.png',
     summary:
       'Digital outpatient clinic administration platform integrating doctor scheduling, electronic prescription generation, vital signs tracking, and automated WhatsApp patient appointment reminders.',
     challenge:

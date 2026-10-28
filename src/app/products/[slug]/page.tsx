@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     title: `${product.title} — Software Products`,
     description: product.description,
     openGraph: {
-      title: `${product.title} | AREVEX TECH STUDIO`,
+      title: `${product.title} | ARAVEX TECH STUDIO`,
       description: product.description,
     },
   };
@@ -128,7 +128,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           {/* Architectural Hardware & Interface Showcase */}
           <div className="mt-12 relative h-72 sm:h-96 md:h-[480px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/50 shadow-2xl">
             <Image
-              src={getProductImage(product.slug)}
+              src={product.image || getProductImage(product.slug)}
               alt={product.title}
               fill
               priority

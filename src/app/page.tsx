@@ -9,7 +9,7 @@ import { SelectedWork } from '@/components/home/SelectedWork';
 import { TestimonialsSection } from '@/components/home/TestimonialsSection';
 import { TeamSection } from '@/components/home/TeamSection';
 import { WhySection } from '@/components/home/WhySection';
-import { AcademySection } from '@/components/home/AcademySection';
+import { TrainingSection } from '@/components/home/TrainingSection';
 import { FinalCTA } from '@/components/home/FinalCTA';
 
 export default function HomePage() {
@@ -25,7 +25,7 @@ export default function HomePage() {
       <TestimonialsSection />
       <TeamSection />
       <WhySection />
-      <AcademySection />
+      <TrainingSection />
       <FinalCTA />
     </main>
   );
