@@ -39,10 +39,10 @@ export function TeamSection() {
         <SectionHeading
           eyebrow="LEADERSHIP"
           title="Meet the Engineering Founders."
-          description="Aravex is led by hands-on systems engineers and product architects. We architect distributed topologies, write production code, and directly oversee every client milestone."
+          description="Hands-on systems architects and product leads who directly design, code, and deliver every client milestone."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {founders.map((founder, idx) => {
             const Icon = domainIcons[idx] || Users;
             const hasFormer = 'formerCompany' in founder && founder.formerCompany;
@@ -54,51 +54,51 @@ export function TeamSection() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.15, duration: 0.5 }}
               >
-                <Card className="h-full flex flex-col justify-between bg-[#F7F7F5] dark:bg-charcoal-950 border-gray-200 dark:border-graphite/50 p-8 shadow-sm hover:shadow-xl transition-all">
+                <Card className="h-full flex flex-col justify-between bg-[#F7F7F5] dark:bg-charcoal-950 border-gray-200 dark:border-graphite/50 p-7 sm:p-8 shadow-sm hover:shadow-xl transition-all">
                   <div>
                     {/* Founder Icon & Badge */}
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="w-14 h-14 rounded-2xl bg-white dark:bg-charcoal-850 border border-gray-200 dark:border-graphite/50 flex items-center justify-center text-charcoal-800 dark:text-slate-light shadow-sm">
-                        <Icon className="w-7 h-7" />
+                    <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
+                      <div className="w-13 h-13 rounded-2xl bg-white dark:bg-charcoal-850 border border-gray-200 dark:border-graphite/50 flex items-center justify-center text-charcoal-800 dark:text-slate-light shadow-sm">
+                        <Icon className="w-6 h-6" />
                       </div>
-                      <div className="flex items-center gap-2">
+                      <div className="flex flex-wrap items-center gap-2">
                         {hasFormer && (
-                          <span className="font-mono text-xs uppercase px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-800 dark:text-amber-300 font-bold border border-amber-500/30 flex items-center gap-1.5 shadow-sm">
+                          <span className="font-mono text-[11px] uppercase px-3 py-1 rounded-full bg-amber-500/15 text-amber-800 dark:text-amber-300 font-bold border border-amber-500/30 flex items-center gap-1.5 shadow-sm whitespace-nowrap">
                             <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
                             <span>{founder.formerCompany}</span>
                           </span>
                         )}
-                        <span className="font-mono text-xs uppercase px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20">
+                        <span className="font-mono text-[11px] uppercase px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20 whitespace-nowrap">
                           Co-Founder
                         </span>
                       </div>
                     </div>
 
-                    <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-1">
+                    <h3 className="text-2xl font-bold text-gray-950 dark:text-white mb-1">
                       {founder.name}
                     </h3>
 
-                    <p className="text-sm font-semibold text-emerald-700 dark:text-emerald-400 mb-4">
+                    <p className="text-xs sm:text-sm font-semibold text-emerald-600 dark:text-emerald-400 mb-4">
                       {founder.role}
                     </p>
 
-                    <div className="p-3 rounded-xl bg-white/70 dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/30 text-xs sm:text-sm font-sans text-gray-800 dark:text-slate-200 mb-6">
-                      <span className="text-[11px] uppercase text-gray-500 dark:text-slate-400 block font-semibold mb-0.5">
-                        Specialized Focus
+                    <div className="p-3 rounded-xl bg-white/70 dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/30 text-xs font-mono text-gray-800 dark:text-slate-200 mb-4">
+                      <span className="text-[10px] uppercase text-gray-500 dark:text-slate-400 block font-semibold mb-0.5">
+                        Core Focus
                       </span>
                       <span>{founder.focus}</span>
                     </div>
 
-                    <p className="text-sm sm:text-base text-gray-700 dark:text-slate-200 leading-relaxed mb-6 font-normal">
+                    <p className="text-sm text-gray-700 dark:text-slate-300 leading-relaxed mb-6 font-normal">
                       {founder.bio}
                     </p>
                   </div>
 
-                  <div className="pt-6 border-t border-gray-200 dark:border-graphite/30 flex items-center justify-between">
-                    <span className="font-mono text-xs font-semibold text-gray-600 dark:text-slate-400">
-                      ARAVEX STUDIO LEAD
+                  <div className="pt-5 border-t border-gray-200 dark:border-graphite/30 flex items-center justify-between">
+                    <span className="font-mono text-xs font-semibold text-gray-500 dark:text-slate-400">
+                      STUDIO CO-FOUNDER
                     </span>
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2.5">
                       <a
                         href={founder.github}
                         target="_blank"

@@ -1,3 +1,5 @@
+export type InternshipType = 'paid' | 'unpaid';
+
 export interface InternshipTrack {
   id: string;
   slug: string;
@@ -16,7 +18,53 @@ export interface InternshipTrack {
   toolsAndStack: string[];
   prerequisites: string[];
   stipendStructure: string;
+  // Paid Track Specs (3 Months, Rs. 5,000 / month)
+  paidDuration?: string;
+  paidMonthlyFee?: string;
+  paidTotalFee?: string;
+  paidPerks?: string[];
+  // Unpaid Track Specs (Merit-based, Free)
+  unpaidDuration?: string;
+  unpaidFee?: string;
+  unpaidPerks?: string[];
 }
+
+export const PAID_INTERNSHIP_SPECS = {
+  id: 'paid' as const,
+  label: 'Paid Internship',
+  badge: 'Learning & Mentorship Track',
+  tagline: 'Opportunity to learn, master premium courses, receive 1-on-1 mentorship, and earn verified certification.',
+  duration: '3 Months',
+  monthlyFee: 'Rs. 5,000 / Month',
+  totalFee: 'Rs. 15,000 (3 Months)',
+  openingsBadge: 'Guaranteed Onboarding Upon Payment Verification',
+  perks: [
+    'Opportunity to learn and build real-world software systems',
+    'Full access to premium engineering video masterclasses & curricula',
+    'Direct 1-on-1 mentorship & weekly code reviews from senior engineers',
+    'Official verified industry internship certificate upon completion',
+    'Hands-on portfolio case study ready for client interviews',
+    'Lifetime alumni community access and engineering guidance',
+  ],
+};
+
+export const UNPAID_INTERNSHIP_SPECS = {
+  id: 'unpaid' as const,
+  label: 'Unpaid Internship',
+  badge: 'Merit-Based Practice Track',
+  tagline: 'Contribute to real production codebases, live client architectures, and open-source studio software.',
+  duration: '3 Months',
+  monthlyFee: 'Free (Merit-Based Admission)',
+  totalFee: '100% Free',
+  openingsBadge: 'Merit & Portfolio Evaluated',
+  perks: [
+    'Production codebase contributions on active client systems',
+    'Real-world agile sprints, Git branches, and pull request reviews',
+    'Signed Letter of Recommendation from studio leadership for top performers',
+    'Direct referral opportunities to our international tech clients',
+    'Real experience with enterprise CI/CD, testing, and deployment pipelines',
+  ],
+};
 
 export const INTERNSHIP_TRACKS: InternshipTrack[] = [
   {
@@ -25,7 +73,7 @@ export const INTERNSHIP_TRACKS: InternshipTrack[] = [
     title: 'AI & Business Process Automation',
     category: 'Engineering',
     department: 'Automation & Agent Systems Group',
-    duration: '3 - 6 Months',
+    duration: '3 Months',
     mode: '100% Remote',
     openings: 3,
     mentor: 'Muhammad Rayyan',
@@ -83,11 +131,11 @@ export const INTERNSHIP_TRACKS: InternshipTrack[] = [
     title: 'Frontend Web Development (Next.js & Motion)',
     category: 'Engineering',
     department: 'Frontend Engineering Group',
-    duration: '3 - 6 Months',
+    duration: '3 Months',
     mode: '100% Remote',
     openings: 4,
     mentor: 'Muhammad Uzair',
-    mentorRole: 'Co-Founder & Head of Product Engineering',
+    mentorRole: 'Co-Founder & Amazon Technical Head',
     tagline: 'Build ultra-fast Next.js 15 web applications with spring-physics motion, Tailwind, and edge caching.',
     overview:
       'Step beyond generic tutorial sites. Work directly on production codebases featuring Next.js 15 App Router, React 19 Server Actions, Framer Motion transitions, and responsive Tailwind layouts optimized for perfect Lighthouse scores.',
@@ -112,7 +160,7 @@ export const INTERNSHIP_TRACKS: InternshipTrack[] = [
     title: 'Mobile App Development (React Native & Flutter)',
     category: 'Engineering',
     department: 'Mobile Engineering Group',
-    duration: '3 - 6 Months',
+    duration: '3 Months',
     mode: '100% Remote',
     openings: 3,
     mentor: 'Muhammad Rayyan',
@@ -141,7 +189,7 @@ export const INTERNSHIP_TRACKS: InternshipTrack[] = [
     title: 'Full Stack Systems Development',
     category: 'Engineering',
     department: 'Core Infrastructure Group',
-    duration: '6 Months',
+    duration: '3 Months',
     mode: '100% Remote',
     openings: 3,
     mentor: 'Muhammad Rayyan',
@@ -174,7 +222,7 @@ export const INTERNSHIP_TRACKS: InternshipTrack[] = [
     mode: '100% Remote',
     openings: 2,
     mentor: 'Muhammad Uzair',
-    mentorRole: 'Co-Founder & Head of Product Engineering',
+    mentorRole: 'Co-Founder & Amazon Technical Head',
     tagline: 'Construct real-time 3D simulation environments, physics mechanics, and interactive game prototypes.',
     overview:
       'Join our interactive engineering experiments. You will create gamified educational modules, architectural 3D walkthroughs, and responsive 2D/3D physics mechanics for international clients and studio showcases.',
@@ -262,22 +310,22 @@ export const INTERNSHIP_TRACKS: InternshipTrack[] = [
     openings: 2,
     mentor: 'Aqsa Wadood',
     mentorRole: 'Co-Founder & Director of Operations',
-    tagline: 'Amplify Aravex Tech Studio across X, LinkedIn, TikTok, and Instagram with punchy architectural storytelling.',
+    tagline: 'Amplify Aravex Tech Studio across LinkedIn, Instagram, and Facebook with punchy architectural storytelling.',
     overview:
-      'Take the voice of a world-class technology studio to the international stage. You will turn complex engineering topics—like offline POS resilience, DevSecOps pipelines, and AI agent architectures—into viral, bite-sized threads and reels.',
+      'Take the voice of a world-class technology studio to the international stage. You will turn complex engineering topics—like offline POS resilience, DevSecOps pipelines, and AI agent architectures—into viral, bite-sized carousels, videos, and articles.',
     responsibilities: [
-      'Curate and publish daily high-signal content across X (@aravextech), LinkedIn, TikTok, and Facebook',
+      'Curate and publish daily high-signal content across LinkedIn, Instagram, and Facebook',
       'Produce short-form developer videos showcasing live terminal code snippets and software demos',
       'Engage with global engineering communities, startup founders, and tech influencers',
       'Maintain an organized monthly editorial calendar aligned with studio product launches',
     ],
     learningOutcomes: [
       'Personal branding and corporate brand elevation in the global developer ecosystem',
-      'Algorithm optimization for X (Twitter) threads, LinkedIn articles, and TikTok reels',
+      'Algorithm optimization for LinkedIn technical articles, Instagram reels, and developer carousels',
       'Brand community building and direct-message conversion strategies',
     ],
-    toolsAndStack: ['X Pro (TweetDeck)', 'CapCut / Premiere', 'Figma', 'Buffer / Hootsuite', 'LinkedIn Creator Tools'],
-    prerequisites: ['Active personal presence on X or LinkedIn', 'Deep appreciation for tech culture and developer humor'],
+    toolsAndStack: ['Canva / Figma', 'CapCut / Premiere', 'Buffer / Meta Business Suite', 'LinkedIn Creator Tools'],
+    prerequisites: ['Active personal presence on LinkedIn or Instagram', 'Deep appreciation for tech culture and developer humor'],
     stipendStructure: 'Monthly stipend + bonus incentives tied to audience growth and engagement',
   },
   {
@@ -315,7 +363,7 @@ export const INTERNSHIP_TRACKS: InternshipTrack[] = [
     title: 'Problem Solver & Systems Analyst',
     category: 'Strategy & Operations',
     department: 'Solution Architecture Group',
-    duration: '3 - 6 Months',
+    duration: '3 Months',
     mode: '100% Remote',
     openings: 2,
     mentor: 'Muhammad Rayyan',
@@ -344,7 +392,7 @@ export const INTERNSHIP_TRACKS: InternshipTrack[] = [
     title: 'Engineering Management & Studio Operations',
     category: 'Strategy & Operations',
     department: 'Executive Operations Office',
-    duration: '3 - 6 Months',
+    duration: '3 Months',
     mode: '100% Remote',
     openings: 2,
     mentor: 'Aqsa Wadood',
@@ -377,7 +425,7 @@ export const INTERNSHIP_TRACKS: InternshipTrack[] = [
     mode: '100% Remote',
     openings: 4,
     mentor: 'Muhammad Uzair',
-    mentorRole: 'Co-Founder & Head of Product Engineering',
+    mentorRole: 'Co-Founder & Amazon Technical Head',
     tagline: 'Identify and engage high-potential retail chains, medical clinics, and global enterprises ready for Aravex software.',
     overview:
       'Fuel the revenue engine of Aravex Tech Studio. You will prospect supermarkets, multi-warehouse distributors, private hospital chains, and global e-commerce founders, securing qualified discovery calls for our principal architects.',

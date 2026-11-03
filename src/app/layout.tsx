@@ -72,7 +72,6 @@ export const metadata: Metadata = {
     description:
       'Intelligent software, meaningful digital experiences, and reliable cloud infrastructure.',
     images: ['/og-image.png'],
-    creator: '@aravextech',
   },
   robots: {
     index: true,

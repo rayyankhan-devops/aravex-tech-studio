@@ -9,7 +9,7 @@ export const COURSES_DATA: CourseItem[] = [
     duration: '4 Weeks (1 Month)',
     feePKR: 'PKR 2,000',
     iconName: 'BrainCircuit',
-    image: '/assets/generated/Modern Office with AI Assistant Laptop.png',
+    image: '/assets/generated/course-ai.png',
     shortDescription:
       'Master prompt engineering, LLM API integration, vector databases, and building autonomous multi-step AI agents with LangChain.',
     overview:
@@ -39,7 +39,7 @@ export const COURSES_DATA: CourseItem[] = [
     duration: '4 Weeks (1 Month)',
     feePKR: 'PKR 1,500',
     iconName: 'Globe',
-    image: '/assets/generated/Cinematic Dark Workspace with Web Design Monitor.png',
+    image: '/assets/generated/course-web.png',
     shortDescription:
       'Build and deploy modern, responsive web applications using Next.js App Router, React, TypeScript, and Tailwind CSS.',
     overview:
@@ -69,7 +69,7 @@ export const COURSES_DATA: CourseItem[] = [
     duration: '4 Weeks (1 Month)',
     feePKR: 'PKR 1,800',
     iconName: 'Smartphone',
-    image: '/assets/generated/Modern Smartphone Dashboard Showcase.png',
+    image: '/assets/generated/course-mobile.png',
     shortDescription:
       'Develop beautiful, fast mobile applications for both iOS and Android from a single Dart codebase using Flutter.',
     overview:
@@ -99,7 +99,7 @@ export const COURSES_DATA: CourseItem[] = [
     duration: '4 Weeks (1 Month)',
     feePKR: 'PKR 2,000',
     iconName: 'Terminal',
-    image: '/assets/generated/Moody DevOps Workspace with CI_CD Dashboard.png',
+    image: '/assets/generated/course-devops.png',
     shortDescription:
       'Containerize applications with Docker, orchestrate workflows with GitHub Actions, and deploy zero-downtime releases.',
     overview:
@@ -128,7 +128,7 @@ export const COURSES_DATA: CourseItem[] = [
     duration: '4 Weeks (1 Month)',
     feePKR: 'PKR 2,000',
     iconName: 'Cloud',
-    image: '/assets/generated/Cloud Architecture Workspace Study.png',
+    image: '/assets/generated/course-cloud.png',
     shortDescription:
       'Architect scalable, highly-available cloud infrastructure on Amazon Web Services and Google Cloud Platform.',
     overview:
@@ -157,7 +157,7 @@ export const COURSES_DATA: CourseItem[] = [
     duration: '4 Weeks (1 Month)',
     feePKR: 'PKR 1,000',
     iconName: 'HardDrive',
-    image: '/assets/generated/Linux Command Center Workspace.png',
+    image: '/assets/generated/course-linux.png',
     shortDescription:
       'Master the Linux command line, user security, process management, Bash scripting, and server maintenance.',
     overview:
@@ -186,7 +186,7 @@ export const COURSES_DATA: CourseItem[] = [
     duration: '4 Weeks (1 Month)',
     feePKR: 'PKR 1,200',
     iconName: 'Network',
-    image: '/assets/generated/Networking Lab Desk Setup.png',
+    image: '/assets/generated/course-networking.png',
     shortDescription:
       'Understand how the internet truly works: TCP/IP, DNS, HTTP/HTTPS, SSL/TLS, routing, firewalls, and Wireshark packet analysis.',
     overview:
@@ -215,7 +215,7 @@ export const COURSES_DATA: CourseItem[] = [
     duration: '4 Weeks (1 Month)',
     feePKR: 'PKR 1,000',
     iconName: 'GitBranch',
-    image: '/assets/generated/Branching and Pull Requests Workspace.png',
+    image: '/assets/generated/course-git.png',
     shortDescription:
       'Master professional version control, branching strategies, merge conflict resolution, rebasing, and GitHub workflows.',
     overview:
@@ -244,7 +244,7 @@ export const COURSES_DATA: CourseItem[] = [
     duration: '4 Weeks (1 Month)',
     feePKR: 'PKR 1,500',
     iconName: 'Kanban',
-    image: '/assets/generated/Sprint Planning Workspace Dashboard.png',
+    image: '/assets/generated/course-management.png',
     shortDescription:
       'Learn Scrum, Kanban, sprint planning, backlog grooming, client stakeholder management, and shipping on schedule.',
     overview:

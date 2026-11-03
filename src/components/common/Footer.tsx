@@ -9,10 +9,8 @@ import { BRAND_ASSETS, COMPANY_INFO } from '@/lib/brand';
 import {
   GithubIcon,
   LinkedinIcon,
-  TwitterXIcon,
   FacebookIcon,
   InstagramIcon,
-  TikTokIcon,
 } from '@/components/common/SocialIcons';
 import { cn } from '@/lib/utils';
 
@@ -51,15 +49,6 @@ export function Footer() {
             </p>
             <div className="flex flex-wrap items-center gap-2.5 pt-2">
               <a
-                href={COMPANY_INFO.socials.x}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="X (formerly Twitter)"
-                className="p-2.5 rounded-full bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors shadow-sm hover:scale-105"
-              >
-                <TwitterXIcon className="w-4 h-4" />
-              </a>
-              <a
                 href={COMPANY_INFO.socials.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -76,15 +65,6 @@ export function Footer() {
                 className="p-2.5 rounded-full bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors shadow-sm hover:scale-105"
               >
                 <InstagramIcon className="w-4 h-4" />
-              </a>
-              <a
-                href={COMPANY_INFO.socials.tiktok}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="TikTok"
-                className="p-2.5 rounded-full bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40 text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors shadow-sm hover:scale-105"
-              >
-                <TikTokIcon className="w-4 h-4" />
               </a>
               <a
                 href={COMPANY_INFO.socials.github}
@@ -146,35 +126,35 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Products & Training */}
+          {/* Programs & Studio */}
           <div className="flex flex-col gap-3">
             <p className="text-xs uppercase tracking-wider text-gray-900 dark:text-white font-bold">
-              Products & Training
+              Programs & Studio
             </p>
             <ul className="flex flex-col gap-2 text-sm text-gray-700 dark:text-slate-200">
-              <li>
-                <Link href="/products/point-of-sale" className="hover:text-black dark:hover:text-white transition-colors">
-                  Aravex POS
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/inventory-mis" className="hover:text-black dark:hover:text-white transition-colors">
-                  Inventory & MIS
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/school-management" className="hover:text-black dark:hover:text-white transition-colors">
-                  School Management
-                </Link>
-              </li>
               <li>
                 <Link href="/training" className="hover:text-black dark:hover:text-white transition-colors">
                   Technology Training
                 </Link>
               </li>
               <li>
-                <Link href="/work" className="hover:text-black dark:hover:text-white transition-colors">
-                  Selected Work
+                <Link href="/internships" className="hover:text-black dark:hover:text-white transition-colors">
+                  Talent Accelerator
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-black dark:hover:text-white transition-colors">
+                  Engineering Capabilities
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-black dark:hover:text-white transition-colors">
+                  Studio Leadership & Story
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-black dark:hover:text-white transition-colors">
+                  Start an Engagement
                 </Link>
               </li>
             </ul>

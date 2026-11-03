@@ -70,3 +70,46 @@ html:not(.dark) ::-webkit-scrollbar-thumb {
   background: #64768B;
   color: #FFFFFF;
 }
+
+/* Continuous Hardware-Accelerated Marquee Animations */
+@keyframes marqueeHorizontal {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marqueeVertical {
+  0% {
+    transform: translate3d(0, 0%, 0);
+  }
+  100% {
+    transform: translate3d(0, -33.333333%, 0);
+  }
+}
+
+.animate-marquee-horizontal {
+  animation: marqueeHorizontal 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-vertical {
+  animation: marqueeVertical 24s linear infinite;
+  will-change: transform;
+}
+
+/* Pause and resume smoothly from the exact frame where it stopped */
+.studio-marquee-container:hover .animate-marquee-horizontal,
+.principles-stream-container:hover .animate-marquee-vertical {
+  animation-play-state: paused !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-horizontal,
+  .animate-marquee-vertical {
+    animation: none;
+  }
+}
+

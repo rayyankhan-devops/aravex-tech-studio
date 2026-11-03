@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     }
 
     const apiKey = process.env.RESEND_API_KEY;
-    const receiver = process.env.CONTACT_RECEIVER_EMAIL || 'contact@aravex.tech';
+    const receiver = process.env.CONTACT_RECEIVER_EMAIL || 'info@aravextechstudio.com';
 
     // If Resend API key is configured, send actual email
     if (apiKey) {
@@ -71,7 +71,7 @@ export async function POST(req: NextRequest) {
   } catch (err: any) {
     console.error('Contact API Error:', err);
     return NextResponse.json(
-      { error: 'An unexpected error occurred while processing your inquiry. Please try again or email contact@aravex.tech directly.' },
+      { error: 'An unexpected error occurred while processing your inquiry. Please try again or email info@aravextechstudio.com directly.' },
       { status: 500 }
     );
   }

@@ -148,31 +148,40 @@ export default function ServicesPage() {
                   transition={{ duration: 0.3, delay: (index % 3) * 0.05 }}
                 >
                   <Link href={`/services/${service.slug}`} className="block h-full group">
-                    <Card className="h-full flex flex-col justify-between bg-white dark:bg-charcoal-850/80 border-gray-200 dark:border-graphite/40 group-hover:border-slate-500 dark:group-hover:border-slate-muted/60 transition-all duration-300 shadow-sm hover:shadow-xl overflow-hidden">
+                    <Card className="h-full flex flex-col justify-between bg-white dark:bg-charcoal-850/90 border-gray-200 dark:border-graphite/40 group-hover:border-emerald-500/40 dark:group-hover:border-emerald-500/30 transition-all duration-300 shadow-sm hover:shadow-2xl hover:shadow-emerald-950/10 dark:hover:shadow-[0_12px_36px_-10px_rgba(16,185,129,0.12)] overflow-hidden">
                       <div>
                         {/* Architectural Service Visual Thumbnail */}
-                        <div className="relative h-44 w-full rounded-xl overflow-hidden mb-5 border border-gray-200 dark:border-graphite/40 bg-charcoal-900">
+                        <div className="relative h-48 sm:h-52 w-full rounded-xl overflow-hidden mb-5 border border-gray-200/80 dark:border-graphite/50 bg-charcoal-900">
                           <Image
                             src={service.image || getServiceImage(service.slug)}
                             alt={service.title}
                             fill
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                            className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                          <div className="absolute top-3 left-3 w-9 h-9 rounded-lg bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center text-white">
-                            <IconComponent className="w-5 h-5" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent pointer-events-none" />
+                          
+                          {/* Top-Left Glowing Category Icon */}
+                          <div className="absolute top-3 left-3 w-9 h-9 rounded-lg bg-black/65 backdrop-blur-md border border-white/20 flex items-center justify-center text-emerald-400 group-hover:text-white group-hover:bg-emerald-600/90 group-hover:border-emerald-400 transition-all duration-300 shadow-md">
+                            <IconComponent className="w-4.5 h-4.5" />
                           </div>
-                          <div className="absolute bottom-2.5 right-3 font-mono text-[10px] text-white/90 bg-black/60 backdrop-blur-sm px-2.5 py-0.5 rounded border border-white/10 uppercase tracking-widest font-bold">
-                            0{SERVICES_DATA.findIndex((s) => s.id === service.id) + 1}
+
+                          {/* Top-Right Category Pill */}
+                          <div className="absolute top-3 right-3 font-mono text-[10px] text-emerald-300 bg-black/65 backdrop-blur-md px-2.5 py-1 rounded-md border border-emerald-500/25 uppercase tracking-wider font-semibold">
+                            {service.category}
+                          </div>
+
+                          {/* Bottom-Right Index Number */}
+                          <div className="absolute bottom-3 right-3 font-mono text-[11px] text-white/90 bg-black/70 backdrop-blur-sm px-2.5 py-0.5 rounded-md border border-white/15 uppercase tracking-widest font-bold">
+                            {String(SERVICES_DATA.findIndex((s) => s.id === service.id) + 1).padStart(2, '0')} / {String(SERVICES_DATA.length).padStart(2, '0')}
                           </div>
                         </div>
 
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-black dark:group-hover:text-slate-200 transition-colors mb-2.5">
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors mb-2.5">
                           {service.title}
                         </h3>
 
-                        <p className="text-sm text-gray-700 dark:text-slate-200 leading-relaxed mb-6 font-normal">
+                        <p className="text-sm text-gray-700 dark:text-slate-300 leading-relaxed mb-6 font-normal">
                           {service.shortDescription}
                         </p>
 
@@ -180,7 +189,7 @@ export default function ServicesPage() {
                           {service.technologies.slice(0, 3).map((tech) => (
                             <span
                               key={tech}
-                              className="px-2.5 py-1 rounded text-xs font-mono bg-gray-100 dark:bg-charcoal-800 text-gray-800 dark:text-slate-300 border border-gray-200 dark:border-transparent font-medium"
+                              className="px-2.5 py-1 rounded-md text-xs font-mono bg-gray-100 dark:bg-charcoal-800 text-gray-800 dark:text-slate-300 border border-gray-200 dark:border-graphite/40 font-medium"
                             >
                               {tech}
                             </span>
@@ -189,8 +198,8 @@ export default function ServicesPage() {
                       </div>
 
                       <div className="pt-4 border-t border-gray-200 dark:border-graphite/40 flex items-center justify-between text-xs sm:text-sm font-sans text-gray-700 dark:text-slate-300 group-hover:text-black dark:group-hover:text-white transition-colors">
-                        <span className="uppercase tracking-wider font-semibold text-xs">{service.category}</span>
-                        <span className="flex items-center gap-1 group-hover:translate-x-1 transition-transform font-semibold text-xs sm:text-sm">
+                        <span className="uppercase tracking-wider font-semibold text-xs text-gray-500 dark:text-slate-400">{service.category}</span>
+                        <span className="flex items-center gap-1 font-semibold text-xs sm:text-sm text-emerald-600 dark:text-emerald-400 group-hover:translate-x-1 transition-transform">
                           Explore Scope <ArrowUpRight className="w-3.5 h-3.5" />
                         </span>
                       </div>

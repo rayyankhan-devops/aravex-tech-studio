@@ -1,15 +1,11 @@
 import React from 'react';
 import { HeroSection } from '@/components/home/HeroSection';
 import { IntroStatement } from '@/components/home/IntroStatement';
-import { GlimpseSection } from '@/components/home/GlimpseSection';
 import { ServicesSection } from '@/components/home/ServicesSection';
 import { FeaturedProducts } from '@/components/home/FeaturedProducts';
-import { PhilosophySection } from '@/components/home/PhilosophySection';
 import { SelectedWork } from '@/components/home/SelectedWork';
 import { TestimonialsSection } from '@/components/home/TestimonialsSection';
-import { TeamSection } from '@/components/home/TeamSection';
 import { WhySection } from '@/components/home/WhySection';
-import { TrainingSection } from '@/components/home/TrainingSection';
 import { FinalCTA } from '@/components/home/FinalCTA';
 
 export default function HomePage() {
@@ -17,15 +13,13 @@ export default function HomePage() {
     <main className="flex flex-col min-h-screen">
       <HeroSection />
       <IntroStatement />
-      <GlimpseSection />
       <ServicesSection />
-      <FeaturedProducts />
-      <PhilosophySection />
-      <SelectedWork />
+      {/* FeaturedProducts section temporarily hidden per user request */}
+      {/* SelectedWork section temporarily hidden per user request */}
       <TestimonialsSection />
-      <TeamSection />
+      {/* TeamSection (Founders & Leadership) removed from home page per user request (dedicated /about page exists) */}
       <WhySection />
-      <TrainingSection />
+      {/* TrainingSection removed per user request (dedicated /training page exists) */}
       <FinalCTA />
     </main>
   );

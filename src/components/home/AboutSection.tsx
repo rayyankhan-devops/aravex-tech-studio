@@ -14,18 +14,27 @@ export function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Visual Studio Atmosphere */}
-          <div className="lg:col-span-5 relative h-96 sm:h-[480px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/50 shadow-xl">
+          <div className="lg:col-span-5 relative h-96 sm:h-[480px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/50 shadow-xl group">
             <Image
               src={BRAND_ASSETS.generated.aboutStudio}
               alt="ARAVEX Technology Studio Atmosphere"
               fill
-              className="object-cover object-center"
+              className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
             
-            <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/90 dark:bg-charcoal-900/90 backdrop-blur-md border border-gray-200 dark:border-graphite/40 text-xs font-mono shadow-md">
-              <span className="text-gray-500 dark:text-slate-muted uppercase font-semibold">Studio Philosophy</span>
-              <p className="text-gray-900 dark:text-warmWhite font-bold mt-1">Minimal. Architectural. Technological.</p>
+            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 flex items-center gap-2">
+              <span className="px-3 py-1 rounded-full bg-black/65 backdrop-blur-md border border-white/20 text-[11px] font-mono font-bold text-emerald-400 shadow-md">
+                ARAVEX TECH STUDIO
+              </span>
+            </div>
+
+            <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-black/70 backdrop-blur-md border border-white/15 text-xs font-mono shadow-md text-white">
+              <div className="flex items-center justify-between text-[11px] text-emerald-300 font-bold mb-1">
+                <span>INNOVATION LAB</span>
+                <span>99.98% UPTIME</span>
+              </div>
+              <p className="text-warmWhite font-bold text-sm">Minimal. Architectural. Technological.</p>
             </div>
           </div>
 
@@ -34,44 +43,94 @@ export function AboutSection() {
             <SectionHeading
               eyebrow="ABOUT US"
               title="A Modern Technology Studio."
-              description="ARAVEX TECH STUDIO connects custom software engineering, intelligent automation, cloud architecture, and practical technology training into a unified operational house."
-              className="mb-2"
+              description="Custom software engineering, AI automation, and cloud infrastructure engineered for resilience."
+              className="mb-1"
             />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
-              <p>
-                We partner with high-growth organizations and regional enterprises to design, develop, and deploy software systems built to withstand high transactional stress, hardware edge constraints, and continuous scale.
-              </p>
-              <p>
-                From point-of-sale platforms operating reliably in offline environments to autonomous AI agents that eliminate operational bottlenecks, every solution reflects our commitment to architectural purity and long-term maintainability.
-              </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-gray-700 dark:text-slate-300">
+              <div className="p-3.5 rounded-xl bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40 shadow-sm">
+                <span className="font-bold text-gray-950 dark:text-white block mb-1">Production-Grade Software</span>
+                <p className="text-gray-600 dark:text-slate-300 leading-relaxed text-xs">
+                  Offline-first POS platforms, distributed MIS systems, and scalable cloud infrastructure built to survive network cuts and peak sales.
+                </p>
+              </div>
+              <div className="p-3.5 rounded-xl bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40 shadow-sm">
+                <span className="font-bold text-gray-950 dark:text-white block mb-1">Practical AI &amp; Education</span>
+                <p className="text-gray-600 dark:text-slate-300 leading-relaxed text-xs">
+                  Autonomous multi-agent workflows, tool-calling LLM integrations, and affordable 1-month cohorts for aspiring software engineers.
+                </p>
+              </div>
             </div>
 
-            {/* Authentic Founders Preservation */}
-            <div className="p-6 rounded-2xl bg-white dark:bg-charcoal-900/70 border border-gray-200 dark:border-graphite/40 mt-2 shadow-sm">
-              <div className="flex items-center gap-2 mb-4">
-                <Users className="w-4 h-4 text-emerald-600 dark:text-slate-muted" />
-                <span className="font-mono text-xs uppercase tracking-wider text-gray-600 dark:text-slate-muted font-bold">
-                  Founding Team
+            {/* Authentic Founders */}
+            <div className="p-5 rounded-2xl bg-white dark:bg-charcoal-900/70 border border-gray-200 dark:border-graphite/40 mt-1 shadow-sm">
+              <div className="flex items-center justify-between mb-3.5">
+                <div className="flex items-center gap-2">
+                  <Users className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                  <span className="font-mono text-xs uppercase tracking-wider text-gray-700 dark:text-slate-300 font-bold">
+                    Technical Leadership
+                  </span>
+                </div>
+                <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold">
+                  Direct Founder Access
                 </span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {COMPANY_INFO.founders.map((founder) => (
-                  <div
-                    key={founder.name}
-                    className="p-3.5 rounded-xl bg-[#F7F7F5] dark:bg-charcoal-850 border border-gray-200 dark:border-graphite/30 flex flex-col justify-between"
-                  >
-                    <span className="font-bold text-sm text-gray-950 dark:text-white">{founder.name}</span>
-                    <span className="font-mono text-[11px] text-gray-500 dark:text-slate-muted mt-1 font-semibold flex items-center justify-between">
-                      <span>Co-Founder</span>
-                      {'formerCompany' in founder && founder.formerCompany && (
-                        <span className="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-bold border border-amber-500/20">
-                          {founder.formerCompany}
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {COMPANY_INFO.founders.map((founder) => {
+                  const initials =
+                    founder.name === 'Muhammad Rayyan' ? 'MR' : founder.name === 'Muhammad Uzair' ? 'MU' : 'AW';
+                  const gradient =
+                    founder.name === 'Muhammad Rayyan'
+                      ? 'from-emerald-500 to-teal-700'
+                      : founder.name === 'Muhammad Uzair'
+                      ? 'from-amber-500 to-orange-600'
+                      : 'from-violet-500 to-indigo-700';
+                  const topBorder =
+                    founder.name === 'Muhammad Rayyan'
+                      ? 'border-t-emerald-500'
+                      : founder.name === 'Muhammad Uzair'
+                      ? 'border-t-amber-500'
+                      : 'border-t-violet-500';
+                  const hasFormer = 'formerCompany' in founder && founder.formerCompany;
+
+                  return (
+                    <div
+                      key={founder.name}
+                      className={`p-3.5 rounded-xl bg-[#F7F7F5] dark:bg-charcoal-850 border border-gray-200 dark:border-graphite/40 border-t-2 ${topBorder} flex flex-col justify-between gap-2.5 shadow-2xs hover:shadow-md transition-all group`}
+                    >
+                      <div className="flex items-start justify-between gap-2">
+                        <div
+                          className={`w-9 h-9 rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center text-white font-black text-xs shadow-sm ring-1 ring-white/20`}
+                        >
+                          {initials}
+                        </div>
+                        {hasFormer ? (
+                          <span className="font-mono text-[9px] px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-800 dark:text-amber-300 font-black border border-amber-500/30 whitespace-nowrap">
+                            Ex-Amazon
+                          </span>
+                        ) : (
+                          <span className="font-mono text-[9px] uppercase px-2 py-0.5 rounded-full bg-gray-200/80 dark:bg-charcoal-800 text-gray-700 dark:text-slate-300 font-bold whitespace-nowrap">
+                            Co-Founder
+                          </span>
+                        )}
+                      </div>
+
+                      <div>
+                        <span className="font-bold text-sm text-gray-950 dark:text-white block leading-snug group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                          {founder.name}
                         </span>
-                      )}
-                    </span>
-                  </div>
-                ))}
+                        <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold block mt-0.5 line-clamp-1">
+                          {founder.role.replace('Co-Founder & ', '')}
+                        </span>
+                      </div>
+
+                      <div className="pt-1.5 border-t border-gray-200/70 dark:border-graphite/30 text-[10px] font-mono text-gray-600 dark:text-slate-300 line-clamp-1">
+                        {founder.focus.split(',')[0]}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
