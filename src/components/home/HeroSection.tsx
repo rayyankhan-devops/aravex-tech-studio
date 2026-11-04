@@ -33,7 +33,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-[78svh] lg:min-h-[75svh] flex flex-col justify-between pt-24 sm:pt-28 pb-6 sm:pb-8 overflow-hidden bg-[#F8F9FA] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
+    <section className="relative min-h-[75svh] lg:min-h-[72svh] flex flex-col justify-between pt-18 sm:pt-22 pb-5 sm:pb-6 overflow-hidden bg-[#F8F9FA] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
       {/* Dynamic Ambient Background Artwork */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
@@ -69,7 +69,7 @@ export function HeroSection() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
               </span>
-              <span className="font-mono text-[11px] sm:text-xs uppercase tracking-widest text-gray-800 dark:text-slate-200 font-bold">
+              <span className="font-sans text-[11px] sm:text-xs uppercase tracking-wider text-gray-800 dark:text-slate-200 font-bold">
                 ARAVEX TECH STUDIO • SYSTEMS ARCHITECTURE & AI
               </span>
             </motion.div>

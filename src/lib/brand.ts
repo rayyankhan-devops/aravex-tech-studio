@@ -141,7 +141,7 @@ export const COMPANY_INFO = {
       role: 'Co-Founder & Head of Product Engineering',
       formerCompany: 'Amazon Technical Head',
       focus: 'Full-Stack Next.js, Desktop Apps & Enterprise MIS',
-      bio: 'Directs full-stack product lifecycles across web and desktop. Former Amazon Technical Head bringing high-scale systems rigor to ARAVEX client codebases.',
+      bio: 'Directs full-stack product lifecycles across web and desktop. Amazon Technical Head bringing high-scale systems rigor to ARAVEX client codebases.',
       github: 'https://github.com/Aravex-Tech-Studio',
       linkedin: 'https://www.linkedin.com/company/aravex-tech-studio/',
     },

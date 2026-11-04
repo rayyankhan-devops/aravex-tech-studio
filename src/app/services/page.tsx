@@ -91,7 +91,7 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
       {/* Services Header */}
-      <section className="pt-24 pb-16 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
+      <section className="pt-16 sm:pt-20 pb-8 sm:pb-10 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="CAPABILITIES & SERVICES"
@@ -100,7 +100,7 @@ export default function ServicesPage() {
           />
 
           {/* Category Filter Pills - Premium Standalone Pill Strip */}
-          <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar pt-6 pb-2 scroll-smooth">
+          <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar pt-4 pb-1 scroll-smooth">
             {CATEGORIES.map((cat) => {
               const count =
                 cat.id === 'all'
@@ -135,7 +135,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
+      <section className="py-8 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredServices.map((service, index) => {
@@ -167,12 +167,12 @@ export default function ServicesPage() {
                           </div>
 
                           {/* Top-Right Category Pill */}
-                          <div className="absolute top-3 right-3 font-mono text-[10px] text-emerald-300 bg-black/65 backdrop-blur-md px-2.5 py-1 rounded-md border border-emerald-500/25 uppercase tracking-wider font-semibold">
+                          <div className="absolute top-3 right-3 font-sans text-[10px] text-emerald-300 bg-black/65 backdrop-blur-md px-2.5 py-1 rounded-md border border-emerald-500/25 uppercase tracking-wider font-bold">
                             {service.category}
                           </div>
 
                           {/* Bottom-Right Index Number */}
-                          <div className="absolute bottom-3 right-3 font-mono text-[11px] text-white/90 bg-black/70 backdrop-blur-sm px-2.5 py-0.5 rounded-md border border-white/15 uppercase tracking-widest font-bold">
+                          <div className="absolute bottom-3 right-3 font-sans text-[11px] text-white/90 bg-black/70 backdrop-blur-sm px-2.5 py-0.5 rounded-md border border-white/15 uppercase tracking-wider font-bold">
                             {String(SERVICES_DATA.findIndex((s) => s.id === service.id) + 1).padStart(2, '0')} / {String(SERVICES_DATA.length).padStart(2, '0')}
                           </div>
                         </div>

@@ -46,8 +46,8 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
   return (
     <main className="min-h-screen bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
       {/* Breadcrumb Navigation */}
-      <div className="pt-24 pb-6 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-slate-muted">
+      <div className="pt-16 sm:pt-18 pb-2.5 sm:pb-3 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-xs font-sans text-gray-500 dark:text-slate-muted">
           <Link href="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
           <ChevronRight className="w-3.5 h-3.5" />
           <Link href="/work" className="hover:text-black dark:hover:text-white transition-colors">Work</Link>
@@ -57,34 +57,34 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
       </div>
 
       {/* Hero Header */}
-      <section className="py-16 sm:py-24 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
+      <section className="pt-4 pb-8 sm:pt-6 sm:pb-10 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <div className="flex flex-wrap items-center gap-3 mb-6">
-              <span className="px-3 py-1 rounded-full text-xs font-mono bg-gray-100 dark:bg-charcoal-800 text-gray-800 dark:text-slate-300 border border-gray-200 dark:border-graphite/40 font-semibold">
+            <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
+              <span className="px-3 py-1 rounded-full text-xs font-sans bg-gray-100 dark:bg-charcoal-800 text-gray-800 dark:text-slate-300 border border-gray-200 dark:border-graphite/40 font-semibold">
                 {project.clientType}
               </span>
-              <span className="font-mono text-xs text-gray-500 dark:text-slate-muted font-bold">
+              <span className="font-sans text-xs text-gray-500 dark:text-slate-muted font-bold">
                 {project.category} • {project.year}
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-gray-950 dark:text-white mb-6">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-gray-950 dark:text-white mb-3 sm:mb-4">
               {project.title}
             </h1>
 
-            <p className="text-xl sm:text-2xl text-gray-700 dark:text-slate-300 font-light leading-relaxed mb-8">
+            <p className="text-sm sm:text-lg text-gray-700 dark:text-slate-300 font-normal leading-relaxed mb-5 sm:mb-6">
               {project.summary}
             </p>
 
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               <MagneticButton href="/contact" size="md" variant="primary">
                 <span>Start a Similar Project</span>
                 <ArrowUpRight className="w-4 h-4 ml-1" />
               </MagneticButton>
               <Link
                 href="/work"
-                className="inline-flex items-center gap-2 text-sm font-mono text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors font-bold"
+                className="inline-flex items-center gap-2 text-xs sm:text-sm font-sans text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors font-bold"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span>All Projects</span>
@@ -93,7 +93,7 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
           </div>
 
           {/* Architectural System Screenshot / Pipeline Diagram */}
-          <div className="mt-12 relative h-72 sm:h-96 md:h-[480px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/50 shadow-2xl">
+          <div className="mt-6 sm:mt-8 relative h-56 sm:h-80 md:h-[380px] lg:h-[420px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/50 shadow-2xl">
             <Image
               src={project.image}
               alt={project.title}
@@ -102,11 +102,11 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
               className="object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white text-xs font-mono">
-              <span className="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20">
+            <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-white text-xs font-sans">
+              <span className="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 font-medium">
                 {project.clientType}
               </span>
-              <span className="px-3 py-1.5 rounded-full bg-emerald-500/80 font-bold text-white">
+              <span className="px-3 py-1.5 rounded-full bg-emerald-500/90 font-bold text-white self-start sm:self-auto">
                 {project.metrics}
               </span>
             </div>
@@ -115,33 +115,33 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
       </section>
 
       {/* Case Study Details */}
-      <section className="py-20 border-b border-gray-200 dark:border-graphite/40">
+      <section className="py-8 sm:py-12 border-b border-gray-200 dark:border-graphite/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             {/* Left Column: Challenge, Solution, Architecture */}
-            <div className="lg:col-span-8 flex flex-col gap-10">
-              <div className="p-8 rounded-2xl bg-rose-50/70 dark:bg-charcoal-900/60 border border-rose-200 dark:border-graphite/40 shadow-sm">
-                <span className="font-mono text-xs text-rose-600 dark:text-rose-400 uppercase tracking-wider font-bold">
+            <div className="lg:col-span-8 flex flex-col gap-6 sm:gap-8">
+              <div className="p-5 sm:p-6 rounded-2xl bg-rose-50/70 dark:bg-charcoal-900/60 border border-rose-200 dark:border-graphite/40 shadow-xs">
+                <span className="font-sans text-xs text-rose-600 dark:text-rose-400 uppercase tracking-wider font-bold">
                   The Technical Challenge
                 </span>
-                <p className="text-base text-gray-800 dark:text-slate-200 mt-3 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-800 dark:text-slate-200 mt-2 leading-relaxed font-normal">
                   {project.challenge}
                 </p>
               </div>
 
-              <div className="p-8 rounded-2xl bg-emerald-50/70 dark:bg-charcoal-900/60 border border-emerald-200 dark:border-graphite/40 shadow-sm">
-                <span className="font-mono text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider font-bold">
+              <div className="p-5 sm:p-6 rounded-2xl bg-emerald-50/70 dark:bg-charcoal-900/60 border border-emerald-200 dark:border-graphite/40 shadow-xs">
+                <span className="font-sans text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider font-bold">
                   The Engineered Solution
                 </span>
-                <p className="text-base text-gray-800 dark:text-slate-200 mt-3 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-800 dark:text-slate-200 mt-2 leading-relaxed font-normal">
                   {project.solution}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-gray-950 dark:text-white mb-4">Architecture & Topology</h3>
-                <div className="p-6 rounded-2xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/50 font-mono text-sm text-gray-900 dark:text-slate-200 leading-relaxed shadow-sm">
-                  <div className="flex items-center gap-2 text-gray-600 dark:text-slate-400 mb-2 text-xs uppercase tracking-wider font-bold">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-950 dark:text-white mb-3">Architecture &amp; Topology</h3>
+                <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/50 font-mono text-xs sm:text-sm text-gray-900 dark:text-slate-200 leading-relaxed shadow-xs">
+                  <div className="flex items-center gap-2 text-gray-600 dark:text-slate-400 mb-2 text-xs uppercase tracking-wider font-bold font-sans">
                     <Layers className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                     <span>System Pipeline</span>
                   </div>
@@ -153,10 +153,10 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
             {/* Right Column: Highlights & Stack */}
             <div className="lg:col-span-4 flex flex-col gap-6">
               <Card>
-                <h3 className="text-lg font-bold text-gray-950 dark:text-white mb-4">Key Capabilities</h3>
-                <div className="flex flex-col gap-3">
+                <h3 className="text-lg font-bold text-gray-950 dark:text-white mb-3">Key Capabilities</h3>
+                <div className="flex flex-col gap-2.5">
                   {project.keyHighlights.map((h) => (
-                    <div key={h} className="flex items-start gap-2.5 text-sm text-gray-800 dark:text-slate-200">
+                    <div key={h} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-800 dark:text-slate-200">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                       <span>{h}</span>
                     </div>
@@ -165,12 +165,12 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
               </Card>
 
               <Card>
-                <h3 className="text-lg font-bold text-gray-950 dark:text-white mb-4">Technologies Employed</h3>
+                <h3 className="text-lg font-bold text-gray-950 dark:text-white mb-3">Technologies Employed</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((t) => (
                     <span
                       key={t}
-                      className="px-3 py-1.5 rounded-lg text-xs font-mono bg-gray-100 dark:bg-charcoal-800 text-gray-800 dark:text-slate-200 border border-gray-200 dark:border-graphite/40 font-medium"
+                      className="px-2.5 py-1 rounded-lg text-xs font-sans bg-gray-100 dark:bg-charcoal-800 text-gray-800 dark:text-slate-200 border border-gray-200 dark:border-graphite/40 font-medium"
                     >
                       {t}
                     </span>

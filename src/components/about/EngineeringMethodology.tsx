@@ -306,14 +306,14 @@ export function EngineeringMethodology() {
   const IconComponent = activeStage.icon;
 
   return (
-    <section className="py-24 sm:py-32 border-b border-gray-200 dark:border-graphite/40 bg-[#F7F7F5] dark:bg-charcoal-950 transition-colors duration-300 relative overflow-hidden">
+    <section className="py-10 sm:py-14 border-b border-gray-200 dark:border-graphite/40 bg-[#F7F7F5] dark:bg-charcoal-950 transition-colors duration-300 relative overflow-hidden">
       {/* Background Blueprint Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Theodore-Style Section Eyebrow with Multi-Color Bar Glyphs */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-4 sm:mb-6">
           <div className="flex items-center gap-2.5">
             <div className="flex items-center gap-1 shrink-0" aria-hidden="true">
               <span className="w-1.5 h-3.5 rounded-[2px] bg-[#D45361]" />
@@ -322,7 +322,7 @@ export function EngineeringMethodology() {
               <span className="w-1 h-3.5 rounded-[2px] bg-[#5CB554]" />
               <span className="w-1 h-3.5 rounded-[2px] bg-[#4D66EC]" />
             </div>
-            <span className="font-mono text-xs uppercase tracking-[0.2em] text-gray-600 dark:text-slate-300 font-bold">
+            <span className="font-sans text-xs uppercase tracking-wider text-slate-800 dark:text-slate-200 font-bold">
               ENGINEERING METHODOLOGY • 5-STAGE LIFECYCLE
             </span>
           </div>
@@ -334,11 +334,11 @@ export function EngineeringMethodology() {
         </div>
 
         {/* Section Heading Block */}
-        <div className="max-w-3xl mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-950 dark:text-white tracking-tight uppercase leading-[1.08]">
+        <div className="max-w-3xl mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-gray-950 dark:text-white tracking-tight uppercase leading-[1.08]">
             How We Work — From Blueprint to Production.
           </h2>
-          <p className="text-base sm:text-lg text-gray-700 dark:text-slate-300 mt-4 leading-relaxed font-normal">
+          <p className="text-sm sm:text-base text-gray-700 dark:text-slate-300 mt-2.5 leading-relaxed font-normal">
             A deterministic, sequential delivery lifecycle engineered for zero technical debt, predictable sprint velocity, and complete intellectual property handover.
           </p>
         </div>
@@ -392,7 +392,7 @@ export function EngineeringMethodology() {
                     {/* Step Number & Label */}
                     <div className="mt-2.5 text-center">
                       <span
-                        className={`block font-mono text-[10px] sm:text-[11px] font-bold uppercase tracking-wider transition-colors ${
+                        className={`block font-sans text-[10px] sm:text-[11px] font-bold uppercase tracking-wider transition-colors ${
                           isSelected
                             ? s.accentColor.text
                             : 'text-gray-400 dark:text-slate-500 group-hover:text-gray-700 dark:group-hover:text-slate-300'
@@ -441,7 +441,7 @@ export function EngineeringMethodology() {
                     {/* Top Status & Cadence Row */}
                     <div className="flex flex-wrap items-center gap-2.5 mb-4">
                       <span
-                        className={`font-mono text-[11px] uppercase tracking-wider px-3 py-1 rounded-full font-bold border ${activeStage.accentColor.badge}`}
+                        className={`font-sans text-[11px] uppercase tracking-wider px-3 py-1 rounded-full font-bold border ${activeStage.accentColor.badge}`}
                       >
                         STAGE {activeStage.step} • {activeStage.tag}
                       </span>
@@ -454,10 +454,10 @@ export function EngineeringMethodology() {
                     <h3 className="text-2xl sm:text-3xl font-black text-gray-950 dark:text-white mb-2 leading-tight">
                       {activeStage.fullTitle}
                     </h3>
-                    <p className="font-mono text-xs sm:text-sm text-emerald-600 dark:text-emerald-400 font-bold mb-4 uppercase tracking-wide">
+                    <p className="font-sans text-xs sm:text-sm text-emerald-600 dark:text-emerald-400 font-bold mb-4 uppercase tracking-wide">
                       {activeStage.headline}
                     </p>
-
+                    
                     {/* Deep Narrative */}
                     <p className="text-sm sm:text-base text-gray-700 dark:text-slate-300 leading-relaxed font-normal mb-6">
                       {activeStage.description}
@@ -469,7 +469,7 @@ export function EngineeringMethodology() {
                         <Lock className="w-4 h-4" />
                       </div>
                       <div>
-                        <span className="block font-mono text-[10px] uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold mb-0.5">
+                        <span className="block font-sans text-[10px] uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold mb-0.5">
                           STUDIO ENFORCEMENT PROTOCOL
                         </span>
                         <p className="text-xs sm:text-sm font-semibold text-gray-900 dark:text-slate-200 leading-snug">
@@ -486,7 +486,7 @@ export function EngineeringMethodology() {
                         <IconComponent className="w-4 h-4" />
                       </div>
                       <div>
-                        <span className="block font-mono text-[10px] uppercase text-gray-400 dark:text-slate-500 font-bold">
+                        <span className="block font-sans text-[10px] uppercase tracking-wider text-gray-400 dark:text-slate-500 font-bold">
                           DIRECT ACCOUNTABILITY
                         </span>
                         <span className="text-xs sm:text-sm font-bold text-gray-950 dark:text-white">
@@ -499,13 +499,13 @@ export function EngineeringMethodology() {
                       <button
                         onClick={() => setActiveStageIdx(activeStageIdx + 1)}
                         type="button"
-                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full font-mono text-xs font-bold bg-charcoal-950 text-white dark:bg-white dark:text-charcoal-950 hover:bg-emerald-600 dark:hover:bg-emerald-400 dark:hover:text-black transition-all cursor-pointer shadow-xs"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full font-sans text-xs font-bold bg-charcoal-950 text-white dark:bg-white dark:text-charcoal-950 hover:bg-emerald-600 dark:hover:bg-emerald-400 dark:hover:text-black transition-all cursor-pointer shadow-xs"
                       >
                         <span>Next: Stage {STAGES[activeStageIdx + 1].step}</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                       </button>
                     ) : (
-                      <div className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full font-mono text-xs font-bold bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30">
+                      <div className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full font-sans text-xs font-bold bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30">
                         <CheckCircle2 className="w-3.5 h-3.5" />
                         <span>Final Stage • Handover Complete</span>
                       </div>
@@ -519,10 +519,10 @@ export function EngineeringMethodology() {
                   {/* Verified Deliverables Card */}
                   <div className="p-5 sm:p-6 rounded-2xl bg-[#F7F7F5] dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/60 shadow-xs">
                     <div className="flex items-center justify-between pb-3 mb-3 border-b border-gray-200/80 dark:border-graphite/40">
-                      <span className="font-mono text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400 font-bold">
+                      <span className="font-sans text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400 font-bold">
                         VERIFIED DELIVERABLES
                       </span>
-                      <span className="font-mono text-[10px] text-emerald-600 dark:text-emerald-400 font-bold">
+                      <span className="font-sans text-[10px] uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold">
                         4 / 4 SIGN-OFFS
                       </span>
                     </div>
@@ -551,7 +551,7 @@ export function EngineeringMethodology() {
                           {activeStage.codeSnippet.filename}
                         </span>
                       </div>
-                      <span className="font-mono text-[10px] text-emerald-400 font-bold uppercase">
+                      <span className="font-sans text-[10px] text-emerald-400 font-bold uppercase tracking-wider">
                         ARTIFACT
                       </span>
                     </div>
@@ -602,7 +602,7 @@ export function EngineeringMethodology() {
         {/* 3. AT-A-GLANCE 5-STAGE SEQUENTIAL PIPELINE CARDS (Skimmable Matrix) */}
         <div className="mb-20">
           <div className="flex items-center justify-between mb-6">
-            <span className="font-mono text-xs uppercase tracking-wider text-gray-500 dark:text-slate-400 font-bold">
+            <span className="font-sans text-xs uppercase tracking-wider text-gray-600 dark:text-slate-300 font-bold">
               END-TO-END PIPELINE MATRIX • CLICK ANY STAGE TO INSPECT
             </span>
             <span className="font-mono text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold">
@@ -669,12 +669,12 @@ export function EngineeringMethodology() {
         </div>
 
         {/* 4. HARDENED CLIENT GUARANTEES (THE COMMITMENTS VAULT) */}
-        <div className="p-8 sm:p-10 lg:p-12 rounded-3xl bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/60 shadow-xl relative overflow-hidden">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 pb-6 border-b border-gray-200/80 dark:border-graphite/50">
+        <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/60 shadow-xl relative overflow-hidden">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6 mb-6 pb-4 sm:mb-8 sm:pb-5 border-b border-gray-200/80 dark:border-graphite/50">
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                <span className="font-mono text-xs uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-bold">
+                <span className="font-sans text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold">
                   CLIENT GUARANTEES &amp; SLA COMMITMENTS
                 </span>
               </div>

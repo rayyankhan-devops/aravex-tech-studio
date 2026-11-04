@@ -32,7 +32,7 @@ export function TeamSection() {
       : specialists.filter((m) => m.department === selectedDept);
 
   return (
-    <section className="relative py-24 sm:py-32 bg-white dark:bg-charcoal-900 text-charcoal-900 dark:text-warmWhite border-t border-b border-gray-200 dark:border-graphite/40 transition-colors duration-300 overflow-hidden">
+    <section className="relative py-10 sm:py-14 bg-white dark:bg-charcoal-900 text-charcoal-900 dark:text-warmWhite border-t border-b border-gray-200 dark:border-graphite/40 transition-colors duration-300 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section 1: Studio Founders & Architects */}
@@ -42,7 +42,7 @@ export function TeamSection() {
           description="Hands-on systems architects and product leads who directly design, code, and deliver every client milestone."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 sm:mb-12">
           {founders.map((founder, idx) => {
             const Icon = domainIcons[idx] || Users;
             const hasFormer = 'formerCompany' in founder && founder.formerCompany;
@@ -63,12 +63,12 @@ export function TeamSection() {
                       </div>
                       <div className="flex flex-wrap items-center gap-2">
                         {hasFormer && (
-                          <span className="font-mono text-[11px] uppercase px-3 py-1 rounded-full bg-amber-500/15 text-amber-800 dark:text-amber-300 font-bold border border-amber-500/30 flex items-center gap-1.5 shadow-sm whitespace-nowrap">
+                          <span className="font-sans text-[11px] uppercase tracking-wider px-3 py-1 rounded-full bg-amber-500/15 text-amber-800 dark:text-amber-300 font-bold border border-amber-500/30 flex items-center gap-1.5 shadow-sm whitespace-nowrap">
                             <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
                             <span>{founder.formerCompany}</span>
                           </span>
                         )}
-                        <span className="font-mono text-[11px] uppercase px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20 whitespace-nowrap">
+                        <span className="font-sans text-[11px] uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20 whitespace-nowrap">
                           Co-Founder
                         </span>
                       </div>
@@ -126,8 +126,8 @@ export function TeamSection() {
         </div>
 
         {/* Section 2: Global Domain Leads & Specialized Engineers */}
-        <div className="pt-8 border-t border-gray-200 dark:border-graphite/40">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+        <div className="pt-6 sm:pt-8 border-t border-gray-200 dark:border-graphite/40">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4 sm:gap-6">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-charcoal-800 text-slate-700 dark:text-slate-300 font-mono text-xs font-semibold mb-3 border border-gray-200 dark:border-graphite/40">
                 <Globe2 className="w-3.5 h-3.5 text-emerald-500" />

@@ -59,7 +59,7 @@ const FOUNDER_META: Record<
     tagColor: 'bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/25',
     skills: ['Full-Stack Next.js', 'Desktop Software', 'Enterprise MIS', 'High-Scale Systems'],
     keyWins: [
-      'Former Amazon Technical Head bringing industrial rigor to client software',
+      'Amazon Technical Head bringing industrial rigor to client software',
       'Directs full product lifecycle across web, mobile, and desktop runtimes',
     ],
   },
@@ -82,7 +82,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
       {/* Header */}
-      <section className="pt-24 pb-16 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
+      <section className="pt-16 sm:pt-20 pb-8 sm:pb-10 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="ABOUT ARAVEX"
@@ -93,25 +93,25 @@ export default function AboutPage() {
       </section>
 
       {/* Narrative & Visual */}
-      <section className="py-20 border-b border-gray-200 dark:border-graphite/40">
+      <section className="py-8 sm:py-12 border-b border-gray-200 dark:border-graphite/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
             {/* Left: Structured, ultra-readable narrative */}
-            <div className="lg:col-span-6 flex flex-col gap-6">
+            <div className="lg:col-span-6 flex flex-col gap-5 sm:gap-6">
               <div>
-                <span className="font-mono text-xs uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-bold block mb-2">
+                <span className="font-sans text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold block mb-2">
                   OUR MISSION &amp; CRAFTSMANSHIP
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-black text-gray-950 dark:text-white leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-950 dark:text-white leading-tight">
                   Software Engineered for Real-World Impact.
                 </h2>
-                <p className="text-base text-gray-600 dark:text-slate-300 mt-3 leading-relaxed font-normal">
+                <p className="text-sm sm:text-base text-gray-600 dark:text-slate-300 mt-2.5 leading-relaxed font-normal">
                   We don&apos;t build tech for buzzwords. We engineer fast, dependable digital systems and accessible education programs that solve genuine business bottlenecks.
                 </p>
               </div>
 
               {/* 3 Clear, Digestible Pillars */}
-              <div className="space-y-3.5">
+              <div className="space-y-3">
                 {/* Pillar 1 */}
                 <div className="p-4 rounded-2xl bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/50 shadow-sm flex items-start gap-3.5">
                   <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
@@ -212,21 +212,21 @@ export default function AboutPage() {
       </section>
 
       {/* Authentic Founders Section */}
-      <section className="py-20 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/40">
+      <section className="py-8 sm:py-12 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-mono text-xs uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-bold block mb-2">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+            <span className="font-sans text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold block mb-2">
               TECHNICAL LEADERSHIP
             </span>
-            <h2 className="text-3xl sm:text-4xl font-black text-gray-950 dark:text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-950 dark:text-white">
               Meet the Studio Founders
             </h2>
-            <p className="text-sm sm:text-base text-gray-600 dark:text-slate-300 mt-3 font-normal leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-600 dark:text-slate-300 mt-2.5 font-normal leading-relaxed">
               Direct technical architects, former Big Tech engineering leads, and autonomous AI researchers crafting battle-tested systems.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {COMPANY_INFO.founders.map((founder) => {
               const meta = FOUNDER_META[founder.name] || {
                 initials: founder.name.split(' ').map((n) => n[0]).join(''),
@@ -264,12 +264,12 @@ export default function AboutPage() {
                       {/* Prominent Badges */}
                       <div className="flex flex-col items-end gap-1.5">
                         {hasFormer && (
-                          <span className="font-mono text-[11px] uppercase px-3 py-1 rounded-full bg-amber-500/15 text-amber-800 dark:text-amber-300 font-black border border-amber-500/30 flex items-center gap-1.5 shadow-sm whitespace-nowrap">
+                          <span className="font-sans text-[11px] uppercase tracking-wider px-3 py-1 rounded-full bg-amber-500/15 text-amber-800 dark:text-amber-300 font-bold border border-amber-500/30 flex items-center gap-1.5 shadow-sm whitespace-nowrap">
                             <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
-                            <span>Ex-Amazon Tech Head</span>
+                            <span>Amazon Technical Head</span>
                           </span>
                         )}
-                        <span className="font-mono text-[11px] uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-gray-100 dark:bg-charcoal-800 text-gray-700 dark:text-slate-300 font-bold border border-gray-200 dark:border-graphite/40 whitespace-nowrap">
+                        <span className="font-sans text-[11px] uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-gray-100 dark:bg-charcoal-800 text-gray-700 dark:text-slate-300 font-bold border border-gray-200 dark:border-graphite/40 whitespace-nowrap">
                           Co-Founder
                         </span>
                       </div>
@@ -279,7 +279,7 @@ export default function AboutPage() {
                     <h3 className="text-2xl font-black text-gray-950 dark:text-white mb-1 tracking-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                       {founder.name}
                     </h3>
-                    <span className="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 block mb-4 uppercase tracking-wider">
+                    <span className="text-xs font-sans font-bold text-emerald-600 dark:text-emerald-400 block mb-4 uppercase tracking-wider">
                       {founder.role}
                     </span>
 
@@ -290,14 +290,14 @@ export default function AboutPage() {
 
                     {/* EASY TO CATCH: Core Technical Superpowers */}
                     <div className="mb-5">
-                      <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-gray-500 dark:text-slate-400 block mb-2">
+                      <span className="text-[10px] uppercase font-sans font-bold tracking-wider text-gray-500 dark:text-slate-400 block mb-2">
                         Core Technical Superpowers
                       </span>
                       <div className="flex flex-wrap gap-1.5">
                         {meta.skills.map((skill) => (
                           <span
                             key={skill}
-                            className={`font-mono text-[11px] font-bold px-2.5 py-1 rounded-lg border ${meta.tagColor} shadow-2xs whitespace-nowrap`}
+                            className={`font-sans text-[11px] font-semibold px-2.5 py-1 rounded-lg border ${meta.tagColor} shadow-2xs whitespace-nowrap`}
                           >
                             {skill}
                           </span>

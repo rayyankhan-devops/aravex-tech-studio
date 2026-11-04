@@ -164,10 +164,10 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
             <div className="flex items-start justify-between gap-4 mb-4">
               <div>
                 <div className="flex items-center gap-2 mb-1.5">
-                  <span className="font-mono text-[10px] uppercase px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 font-bold border border-emerald-500/25">
+                  <span className="font-sans text-xs uppercase px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 font-bold border border-emerald-500/25">
                     {track.category}
                   </span>
-                  <span className="font-mono text-xs text-gray-500 dark:text-slate-400">
+                  <span className="font-sans text-xs text-gray-500 dark:text-slate-400">
                     Cohort 2026 • 100% Remote
                   </span>
                 </div>
@@ -502,7 +502,7 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                         <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
                         <span>Mentorship lead: <strong className="text-gray-900 dark:text-white">{track.mentor}</strong></span>
                       </div>
-                      <span className="font-mono text-emerald-600 dark:text-emerald-400 font-bold">100% Remote</span>
+                      <span className="font-sans text-emerald-600 dark:text-emerald-400 font-bold">100% Remote</span>
                     </div>
 
                     <div className="pt-4 flex items-center justify-between">
@@ -544,7 +544,7 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
 
-                <span className="font-mono text-[11px] uppercase px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20 mb-2">
+                <span className="font-sans text-xs uppercase px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20 mb-2">
                   Application Logged Successfully
                 </span>
 
@@ -556,7 +556,7 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                   Thank you, <strong className="text-gray-900 dark:text-white">{formData.name}</strong>. Your candidate file for the <strong className="text-gray-900 dark:text-white">{track.title}</strong> track has been securely recorded.
                 </p>
 
-                <div className="w-full p-4 rounded-2xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/40 text-xs font-mono text-left mb-5 space-y-2">
+                <div className="w-full p-4 rounded-2xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/40 text-xs font-sans text-left mb-5 space-y-2">
                   <div className="flex justify-between border-b border-gray-200 dark:border-graphite/20 pb-2">
                     <span className="text-gray-400 dark:text-slate-400">Application ID:</span>
                     <span className="font-bold text-gray-900 dark:text-white">{refId}</span>
@@ -582,7 +582,7 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 py-2.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs font-mono flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer"
+                    className="flex-1 py-2.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs font-sans flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer"
                   >
                     <WhatsAppIcon className="w-4 h-4" />
                     <span>Confirm via WhatsApp</span>
@@ -591,7 +591,7 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
                   <button
                     type="button"
                     onClick={resetAndClose}
-                    className="flex-1 py-2.5 px-4 rounded-xl bg-gray-100 dark:bg-charcoal-800 text-gray-800 dark:text-white font-bold text-xs font-mono hover:bg-gray-200 dark:hover:bg-charcoal-700 transition-colors cursor-pointer"
+                    className="flex-1 py-2.5 px-4 rounded-xl bg-gray-100 dark:bg-charcoal-800 text-gray-800 dark:text-white font-bold text-xs font-sans hover:bg-gray-200 dark:hover:bg-charcoal-700 transition-colors cursor-pointer"
                   >
                     Done &amp; Close
                   </button>

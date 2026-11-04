@@ -69,9 +69,9 @@ export function TrainingSection() {
   };
 
   return (
-    <section id="training" className="relative py-24 sm:py-32 bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite overflow-hidden border-t border-gray-200 dark:border-graphite/40 transition-colors duration-300">
+    <section id="training" className="relative py-10 sm:py-14 bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite overflow-hidden border-t border-gray-200 dark:border-graphite/40 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4 sm:gap-6">
           <SectionHeading
             eyebrow="TECHNOLOGY TRAINING"
             title="Practical Engineering Training."
@@ -80,7 +80,7 @@ export function TrainingSection() {
           />
           <Link
             href="/training"
-            className="inline-flex items-center gap-2 text-sm font-mono text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors duration-200 shrink-0 pb-2 font-bold"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm font-sans text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors duration-200 shrink-0 pb-1 font-bold"
           >
             <span>View All 9 Technical Courses</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -88,8 +88,8 @@ export function TrainingSection() {
         </div>
 
         {/* Training Atmosphere Banner */}
-        <div className="relative rounded-3xl bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/50 overflow-hidden mb-12 shadow-xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 sm:p-12">
+        <div className="relative rounded-3xl bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/50 overflow-hidden mb-6 sm:mb-8 shadow-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center p-6 sm:p-8">
             <div className="lg:col-span-7 flex flex-col gap-5">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
@@ -148,9 +148,9 @@ export function TrainingSection() {
                       className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-                    
+
                     {/* Category Tag */}
-                    <div className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-md text-[10px] font-mono bg-black/60 backdrop-blur-md text-white border border-white/20 font-bold uppercase tracking-wider">
+                    <div className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-md text-[10px] font-sans bg-black/60 backdrop-blur-md text-white border border-white/20 font-bold uppercase tracking-wider">
                       {course.category}
                     </div>
 
@@ -162,12 +162,12 @@ export function TrainingSection() {
                     </div>
 
                     {/* Pricing Tag */}
-                    <div className="absolute bottom-2.5 right-2.5 px-2.5 py-1 rounded-md text-xs font-mono font-black text-emerald-300 bg-black/75 backdrop-blur-md border border-emerald-500/40 shadow-sm">
+                    <div className="absolute bottom-2.5 right-2.5 px-2.5 py-1 rounded-md text-xs font-sans font-bold text-emerald-300 bg-black/75 backdrop-blur-md border border-emerald-500/40 shadow-sm">
                       {course.feePKR}
                     </div>
 
                     {/* Duration Tag */}
-                    <div className="absolute bottom-2.5 left-2.5 flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-mono font-medium text-slate-200 bg-black/60 backdrop-blur-md border border-white/10">
+                    <div className="absolute bottom-2.5 left-2.5 flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-sans font-medium text-slate-200 bg-black/60 backdrop-blur-md border border-white/10">
                       <Clock className="w-3 h-3 text-emerald-400" />
                       <span>4 Weeks</span>
                     </div>
@@ -217,8 +217,8 @@ export function TrainingSection() {
                   </button>
                 </div>
               </div>
-          );
-        })}
+            );
+          })}
         </div>
       </div>
 

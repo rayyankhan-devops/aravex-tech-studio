@@ -131,10 +131,10 @@ export function UnpaidInternshipModal({ track, isOpen, onClose }: UnpaidInternsh
           </button>
 
           <div className="flex flex-wrap items-center gap-2 mb-2">
-            <span className="font-mono text-[11px] uppercase tracking-wider px-3 py-1 rounded-full bg-charcoal-950 text-white dark:bg-white dark:text-charcoal-950 font-bold shadow-sm">
+            <span className="font-sans text-xs uppercase tracking-wider px-3 py-1 rounded-full bg-charcoal-950 text-white dark:bg-white dark:text-charcoal-950 font-bold shadow-sm">
               UNPAID INTERNSHIP • MERIT TRACK
             </span>
-            <span className="font-mono text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+            <span className="font-sans text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
               100% Free • Remote
             </span>
           </div>
@@ -171,7 +171,7 @@ export function UnpaidInternshipModal({ track, isOpen, onClose }: UnpaidInternsh
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
+                  <label className="block text-xs font-sans uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
                     Full Name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -185,7 +185,7 @@ export function UnpaidInternshipModal({ track, isOpen, onClose }: UnpaidInternsh
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
+                  <label className="block text-xs font-sans uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
                     Email Address <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -201,7 +201,7 @@ export function UnpaidInternshipModal({ track, isOpen, onClose }: UnpaidInternsh
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
+                  <label className="block text-xs font-sans uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
                     WhatsApp Number <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -215,7 +215,7 @@ export function UnpaidInternshipModal({ track, isOpen, onClose }: UnpaidInternsh
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
+                  <label className="block text-xs font-sans uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
                     City &amp; Country
                   </label>
                   <input
@@ -230,7 +230,7 @@ export function UnpaidInternshipModal({ track, isOpen, onClose }: UnpaidInternsh
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
+                  <label className="block text-xs font-sans uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
                     GitHub / Portfolio / Project URL <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -247,7 +247,7 @@ export function UnpaidInternshipModal({ track, isOpen, onClose }: UnpaidInternsh
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
+                  <label className="block text-xs font-sans uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
                     Education / Degree (Optional)
                   </label>
                   <input
@@ -261,7 +261,7 @@ export function UnpaidInternshipModal({ track, isOpen, onClose }: UnpaidInternsh
               </div>
 
               <div>
-                <label className="block text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
+                <label className="block text-xs font-sans uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
                   Brief Overview of Past Projects / Experience
                 </label>
                 <textarea
@@ -309,7 +309,7 @@ export function UnpaidInternshipModal({ track, isOpen, onClose }: UnpaidInternsh
               </div>
 
               <div>
-                <span className="font-mono text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold block mb-1">
+                <span className="font-sans text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold block mb-1">
                   Application Submitted
                 </span>
                 <h3 className="text-2xl font-black text-gray-950 dark:text-white">
@@ -320,7 +320,7 @@ export function UnpaidInternshipModal({ track, isOpen, onClose }: UnpaidInternsh
                 </p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/40 max-w-sm mx-auto text-left space-y-1.5 text-xs font-mono">
+              <div className="p-4 rounded-2xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/40 max-w-sm mx-auto text-left space-y-1.5 text-xs font-sans">
                 <div className="flex justify-between">
                   <span className="text-gray-500 dark:text-slate-400">Application Ref:</span>
                   <span className="font-bold text-emerald-600 dark:text-emerald-400">{applicationId}</span>

@@ -2,8 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { ContactForm } from '@/components/forms/ContactForm';
 import { ContactStudioChannels } from '@/components/contact/ContactStudioChannels';
-import { ShieldCheck, CheckCircle2, Clock, Users, ArrowUpRight, HelpCircle } from 'lucide-react';
-import { COMPANY_INFO } from '@/lib/brand';
+import { ShieldCheck, CheckCircle2, Clock, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Contact ARAVEX TECH STUDIO — Start a Project',
@@ -37,11 +36,11 @@ export default function ContactPage() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:36px_36px] pointer-events-none" />
 
       {/* Hero Section */}
-      <section className="pt-28 pb-16 border-b border-gray-200 dark:border-graphite/40 bg-white/80 dark:bg-charcoal-900/60 backdrop-blur-md relative z-10">
+      <section className="pt-16 sm:pt-20 pb-8 sm:pb-10 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Eyebrow & Live Status Row */}
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
             <div className="flex items-center gap-2.5">
               <div className="flex items-center gap-1 shrink-0" aria-hidden="true">
                 <span className="w-1.5 h-3.5 rounded-[2px] bg-[#D45361]" />
@@ -50,12 +49,12 @@ export default function ContactPage() {
                 <span className="w-1 h-3.5 rounded-[2px] bg-[#5CB554]" />
                 <span className="w-1 h-3.5 rounded-[2px] bg-[#4D66EC]" />
               </div>
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-gray-600 dark:text-slate-300 font-bold">
+              <span className="font-sans text-xs uppercase tracking-wider text-slate-800 dark:text-slate-200 font-bold">
                 COMMISSIONS &amp; ARCHITECTURAL INQUIRIES
               </span>
             </div>
 
-            <div className="flex items-center gap-2 font-mono text-[11px] text-emerald-600 dark:text-emerald-400 bg-[#F7F7F5] dark:bg-charcoal-850 px-3 py-1 rounded-full border border-gray-200 dark:border-graphite/60 shadow-xs">
+            <div className="flex items-center gap-2 font-sans text-xs text-emerald-600 dark:text-emerald-400 bg-gray-50 dark:bg-charcoal-800 px-3 py-1 rounded-full border border-gray-200 dark:border-graphite/60 shadow-xs">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <span className="font-bold">STATUS: ACCEPTING SELECTIVE CLIENT COMMISSIONS</span>
             </div>
@@ -69,46 +68,46 @@ export default function ContactPage() {
                 Directly with Systems Architects.
               </span>
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-gray-700 dark:text-slate-300 max-w-3xl leading-relaxed font-normal">
+            <p className="mt-3 text-sm sm:text-base md:text-lg text-gray-700 dark:text-slate-300 max-w-3xl leading-relaxed font-normal">
               Share your technical brief, software scope, or cloud roadmap. You will collaborate directly with our founding engineers to architect, build, and deploy production-hardened systems.
             </p>
           </div>
 
-          {/* 4 Architectural Quick Metrics */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-10 pt-8 border-t border-gray-200/80 dark:border-graphite/40 font-mono text-xs">
-            <div className="flex flex-col">
-              <span className="text-gray-400 dark:text-slate-500 text-[10px] uppercase font-bold">Initial Review</span>
-              <span className="font-bold text-gray-950 dark:text-white text-sm sm:text-base mt-0.5">&lt; 4 Hours</span>
+          {/* Clean Trust Indicators Strip */}
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 mt-6 pt-4 border-t border-gray-200 dark:border-graphite/40 text-xs sm:text-sm font-medium text-gray-700 dark:text-slate-300">
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+              <span>Direct Founder Collaboration</span>
             </div>
-            <div className="flex flex-col">
-              <span className="text-gray-400 dark:text-slate-500 text-[10px] uppercase font-bold">Accountability</span>
-              <span className="font-bold text-emerald-600 dark:text-emerald-400 text-sm sm:text-base mt-0.5">100% Lead Engineers</span>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+              <span>Fast Initial Review (&lt; 4h)</span>
             </div>
-            <div className="flex flex-col">
-              <span className="text-gray-400 dark:text-slate-500 text-[10px] uppercase font-bold">Codebase Ownership</span>
-              <span className="font-bold text-gray-950 dark:text-white text-sm sm:text-base mt-0.5">100% Client Transferred</span>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+              <span>100% Code &amp; IP Ownership</span>
             </div>
-            <div className="flex flex-col">
-              <span className="text-gray-400 dark:text-slate-500 text-[10px] uppercase font-bold">Confidentiality</span>
-              <span className="font-bold text-gray-950 dark:text-white text-sm sm:text-base mt-0.5">Mutual NDA Ready</span>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+              <span>Mutual NDA on Request</span>
             </div>
           </div>
 
         </div>
       </section>
 
-      {/* Main 2-Column Command Console */}
-      <section className="py-16 sm:py-24 relative z-10">
+      {/* Main 2-Column Section */}
+      <section className="py-8 sm:py-12 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
-            {/* Left 7 Cols: Trendy Interactive Project Form */}
+            {/* Left 7 Cols: Clean & Clear Project Form */}
             <div className="lg:col-span-7">
               <ContactForm />
             </div>
 
-            {/* Right 5 Cols: Direct Channels, WhatsApp Fast-Track & Founders Desk */}
-            <div className="lg:col-span-5 lg:sticky lg:top-28">
+            {/* Right 5 Cols: Direct WhatsApp & Studio Channels */}
+            <div className="lg:col-span-5 lg:sticky lg:top-24">
               <ContactStudioChannels />
             </div>
 
@@ -116,32 +115,32 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Frequently Answered Client Questions */}
-      <section className="py-16 sm:py-20 border-t border-gray-200 dark:border-graphite/40 bg-white/60 dark:bg-charcoal-900/40 relative z-10">
+      {/* Frequently Clarified Questions */}
+      <section className="py-8 sm:py-12 border-t border-gray-200 dark:border-graphite/40 bg-white/60 dark:bg-charcoal-900/40 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 sm:mb-8">
             <div>
-              <span className="font-mono text-xs uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-bold block mb-1">
+              <span className="font-sans text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold block mb-1">
                 PRE-ENGAGEMENT CLARITY
               </span>
               <h2 className="text-2xl sm:text-3xl font-black text-gray-950 dark:text-white uppercase tracking-tight">
                 Frequently Clarified Questions
               </h2>
             </div>
-            <p className="text-xs sm:text-sm text-gray-500 dark:text-slate-400 font-mono">
-              Transparent terms before writing a single line of code
+            <p className="text-xs sm:text-sm text-gray-500 dark:text-slate-400">
+              Clear terms before writing a single line of code
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
             {CONTACT_FAQS.map((faq, i) => (
               <div
                 key={i}
-                className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-charcoal-900 border border-gray-200/90 dark:border-graphite/60 shadow-xs hover:border-emerald-500/40 transition-colors"
+                className="p-6 rounded-2xl bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/60 shadow-xs hover:border-emerald-500/40 transition-colors"
               >
-                <div className="flex items-start gap-3 mb-2.5">
-                  <div className="w-6 h-6 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/20 mt-0.5">
-                    <span className="font-mono text-xs font-bold">{i + 1}</span>
+                <div className="flex items-start gap-3 mb-2">
+                  <div className="w-6 h-6 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/20 mt-0.5 text-xs font-bold font-sans">
+                    {i + 1}
                   </div>
                   <h3 className="text-base font-bold text-gray-950 dark:text-white leading-snug">
                     {faq.q}

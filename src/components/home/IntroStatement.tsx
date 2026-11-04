@@ -75,27 +75,27 @@ export function IntroStatement() {
   return (
     <section
       id="intro-statement"
-      className="relative py-20 sm:py-28 bg-white dark:bg-charcoal-900 text-charcoal-900 dark:text-warmWhite overflow-hidden border-b border-gray-200 dark:border-graphite/40 transition-colors duration-300"
+      className="relative py-10 sm:py-14 bg-white dark:bg-charcoal-900 text-charcoal-900 dark:text-warmWhite overflow-hidden border-b border-gray-200 dark:border-graphite/40 transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-6 sm:gap-8 mb-10">
+        <div className="flex flex-col gap-4 sm:gap-6 mb-6 sm:mb-8">
           
           {/* Top Control & Status Row */}
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="flex items-center gap-2.5">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
               </span>
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-slate-700 dark:text-slate-300 font-bold">
-                STUDIO PILLARS • CONTINUOUS HORIZONTAL DISCOVERY
+              <span className="font-sans text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold">
+                STUDIO PILLARS • CONTINUOUS DISCOVERY
               </span>
             </div>
 
             {/* Dynamic Pause / Play Visual Cue */}
             <button
               onClick={() => setIsManualPaused((prev) => !prev)}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-mono font-semibold bg-gray-100 dark:bg-charcoal-800 border border-gray-200 dark:border-graphite/50 text-gray-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-sans font-semibold bg-gray-100 dark:bg-charcoal-800 border border-gray-200 dark:border-graphite/50 text-gray-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer"
               aria-label={isManualPaused ? 'Resume auto-scrolling' : 'Pause auto-scrolling'}
             >
               {isManualPaused ? (
@@ -192,7 +192,7 @@ export function IntroStatement() {
                     <h3 className="font-black text-base sm:text-lg text-gray-950 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors leading-tight">
                       {p.title}
                     </h3>
-                    <p className="font-mono text-[11px] text-emerald-700 dark:text-emerald-400/90 font-bold uppercase tracking-wider mt-0.5">
+                    <p className="font-sans text-[11px] text-emerald-700 dark:text-emerald-400 font-bold uppercase tracking-wider mt-0.5">
                       {p.tagline}
                     </p>
                   </div>

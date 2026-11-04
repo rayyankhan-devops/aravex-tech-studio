@@ -19,7 +19,7 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        'flex flex-col mb-12 md:mb-16',
+        'flex flex-col mb-6 sm:mb-8',
         align === 'center' ? 'items-center text-center' : 'items-start text-left',
         className
       )}
@@ -27,7 +27,7 @@ export function SectionHeading({
       {eyebrow && (
         <div className="flex items-center gap-2 mb-3">
           <span className="w-2 h-2 rounded-full bg-emerald-500" />
-          <span className="font-mono text-xs uppercase tracking-[0.18em] text-slate-700 dark:text-slate-300 font-bold">
+          <span className="font-sans text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold">
             {eyebrow}
           </span>
         </div>

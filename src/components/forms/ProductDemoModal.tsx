@@ -178,10 +178,10 @@ export function ProductDemoModal({
           <div className="p-6 sm:p-8 bg-gray-50/80 dark:bg-charcoal-950/80 border-b border-gray-200 dark:border-graphite/40 flex items-start justify-between">
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <span className="font-mono text-xs uppercase px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20">
+                <span className="font-sans text-xs uppercase px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20">
                   {product.category} SOFTWARE
                 </span>
-                <span className="font-mono text-xs text-gray-500 dark:text-slate-muted">
+                <span className="font-sans text-xs text-gray-500 dark:text-slate-muted">
                   {product.platform} • 100% Tested
                 </span>
               </div>
@@ -500,7 +500,7 @@ export function ProductDemoModal({
                         </div>
                       </div>
                     ) : (
-                      <div className="text-xs font-mono text-gray-500 dark:text-slate-muted">
+                      <div className="text-xs font-sans text-gray-500 dark:text-slate-muted">
                         Live 1-on-1 Interactive Walkthrough
                       </div>
                     )}
@@ -541,7 +541,7 @@ export function ProductDemoModal({
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
 
-                <span className="font-mono text-xs uppercase px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20 mb-3">
+                <span className="font-sans text-xs uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20 mb-3">
                   {mode === 'buy' ? 'Commercial Order Provisional Confirmation' : 'Demo Request Confirmed'}
                 </span>
 
@@ -555,7 +555,7 @@ export function ProductDemoModal({
                 </p>
 
                 {orderReceipt && (
-                  <div className="w-full p-4 rounded-2xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/40 text-xs font-mono text-left mb-6 space-y-2">
+                  <div className="w-full p-4 rounded-2xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/40 text-xs font-sans text-left mb-6 space-y-2">
                     <div className="flex justify-between border-b border-gray-200 dark:border-graphite/20 pb-2">
                       <span className="text-gray-400 dark:text-slate-muted">Provisional Order:</span>
                       <span className="font-bold text-gray-900 dark:text-white">{orderReceipt.orderId}</span>
@@ -588,7 +588,7 @@ export function ProductDemoModal({
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs font-mono flex items-center justify-center gap-2 shadow-md transition-all"
+                    className="flex-1 py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs font-sans flex items-center justify-center gap-2 shadow-md transition-all"
                   >
                     <WhatsAppIcon className="w-4 h-4" />
                     <span>Confirm Order on WhatsApp</span>
@@ -596,7 +596,7 @@ export function ProductDemoModal({
 
                   <button
                     onClick={handleClose}
-                    className="flex-1 py-3 px-4 rounded-xl bg-gray-100 dark:bg-charcoal-800 text-gray-800 dark:text-white font-bold text-xs font-mono hover:bg-gray-200 dark:hover:bg-charcoal-700 transition-colors"
+                    className="flex-1 py-3 px-4 rounded-xl bg-gray-100 dark:bg-charcoal-800 text-gray-800 dark:text-white font-bold text-xs font-sans hover:bg-gray-200 dark:hover:bg-charcoal-700 transition-colors"
                   >
                     Close &amp; Return
                   </button>

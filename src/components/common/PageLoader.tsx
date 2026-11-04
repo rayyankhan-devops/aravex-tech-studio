@@ -92,17 +92,17 @@ export function PageLoader() {
           />
 
           {/* Layer 3: Architectural Reticle Viewport Corners */}
-          <div className="absolute top-6 left-6 font-mono text-[10px] text-slate-500 tracking-[0.25em] uppercase flex items-center gap-2">
+          <div className="absolute top-6 left-6 font-sans text-[10px] text-slate-500 tracking-wider uppercase font-semibold flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
             <span>ARAVEX // HUD_V2.0</span>
           </div>
-          <div className="absolute top-6 right-6 font-mono text-[10px] text-slate-500 tracking-[0.2em] uppercase">
+          <div className="absolute top-6 right-6 font-sans text-[10px] text-slate-500 tracking-wider uppercase font-semibold">
             LATENCY &lt; 15MS
           </div>
-          <div className="absolute bottom-6 left-6 font-mono text-[10px] text-slate-600 tracking-[0.2em] uppercase hidden sm:block">
+          <div className="absolute bottom-6 left-6 font-sans text-[10px] text-slate-600 tracking-wider uppercase font-semibold hidden sm:block">
             100% DISTRIBUTED ARCHITECTURE
           </div>
-          <div className="absolute bottom-6 right-6 font-mono text-[10px] text-slate-600 tracking-[0.2em] uppercase hidden sm:block">
+          <div className="absolute bottom-6 right-6 font-sans text-[10px] text-slate-600 tracking-wider uppercase font-semibold hidden sm:block">
             BUILD / AUTOMATE / LAUNCH
           </div>
 
@@ -145,7 +145,7 @@ export function PageLoader() {
 
               {/* Animated Terminal Status Sub-Label */}
               <div className="flex items-center gap-2 pt-0.5">
-                <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-slate-400 text-center">
+                <span className="font-sans text-[10px] tracking-wider uppercase font-semibold text-slate-400 text-center">
                   {statusText}
                 </span>
                 <span className="w-1 h-3 bg-emerald-500 animate-pulse inline-block" />

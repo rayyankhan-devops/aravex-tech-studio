@@ -67,7 +67,7 @@ export default function WorkPage() {
   return (
     <main className="min-h-screen bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
       {/* Header */}
-      <section className="pt-24 pb-16 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
+      <section className="pt-16 sm:pt-20 pb-8 sm:pb-10 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="CASE STUDIES"
@@ -76,7 +76,7 @@ export default function WorkPage() {
           />
 
           {/* Filter Pills - Premium Standalone Pill Strip */}
-          <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar pt-6 pb-2 scroll-smooth">
+          <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar pt-4 pb-1 scroll-smooth">
             {CATEGORIES.map((c) => {
               const count =
                 c === 'All'
@@ -114,7 +114,7 @@ export default function WorkPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20">
+      <section className="py-8 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {filteredProjects.map((project, idx) => {

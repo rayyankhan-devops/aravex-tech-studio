@@ -57,12 +57,12 @@ export function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="relative py-16 sm:py-20 bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite overflow-hidden border-b border-gray-200 dark:border-graphite/40 transition-colors duration-300"
+      className="relative py-10 sm:py-14 bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite overflow-hidden border-b border-gray-200 dark:border-graphite/40 transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Theodore-Inspired Minimalist Eyebrow */}
-        <div className="flex items-center gap-2.5 mb-6">
+        <div className="flex items-center gap-2.5 mb-4 sm:mb-5">
           <div className="flex items-center gap-1 shrink-0" aria-hidden="true">
             <span className="w-1.5 h-3 rounded-[2px] bg-[#D45361]" />
             <span className="w-1 h-3 rounded-[2px] bg-[#EA7047]" />
@@ -70,13 +70,13 @@ export function TestimonialsSection() {
             <span className="w-1 h-3 rounded-[2px] bg-[#5CB554]" />
             <span className="w-1 h-3 rounded-[2px] bg-[#4D66EC]" />
           </div>
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-gray-600 dark:text-slate-300 font-bold">
+          <span className="font-sans text-xs uppercase tracking-wider text-slate-800 dark:text-slate-200 font-bold">
             CLIENT TESTIMONIALS
           </span>
         </div>
 
         {/* Section Heading & Navigation Controls */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 lg:mb-10 gap-5">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-5 sm:mb-6 gap-4">
           <div className="max-w-2xl">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-gray-950 dark:text-white uppercase leading-[1.1] mb-2.5">
               Trusted by Engineering Leads &amp; Operations Directors.
@@ -114,7 +114,7 @@ export function TestimonialsSection() {
 
         {/* Theodore 2-Column Split: Single Active Testimonial (Left) + Graphic Showcase (Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
-          
+
           {/* Left Side: Single Active Testimonial Card */}
           <div className="lg:col-span-7 relative">
             <AnimatePresence custom={direction} mode="wait">
@@ -138,7 +138,7 @@ export function TestimonialsSection() {
                 {/* Client Credentials & Impact Badge */}
                 <div className="pt-4 border-t border-gray-100 dark:border-graphite/40 flex flex-wrap items-center justify-between gap-3">
                   <div>
-                    <h3 className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-gray-950 dark:text-white">
+                    <h3 className="font-sans text-xs sm:text-sm font-bold text-gray-950 dark:text-white">
                       {activeTestimonial.name}
                     </h3>
                     <p className="text-xs text-gray-600 dark:text-slate-300 mt-0.5">
@@ -147,7 +147,7 @@ export function TestimonialsSection() {
                         {activeTestimonial.company}
                       </strong>
                     </p>
-                    <div className="flex items-center gap-1.5 text-[11px] text-gray-500 dark:text-slate-400 font-mono mt-0.5">
+                    <div className="flex items-center gap-1.5 text-[11px] text-gray-500 dark:text-slate-400 font-sans mt-0.5">
                       <MapPin className="w-2.5 h-2.5 text-emerald-500" />
                       <span>{activeTestimonial.location}</span>
                     </div>
@@ -169,11 +169,10 @@ export function TestimonialsSection() {
                         setActiveIndex(idx);
                       }}
                       aria-label={`Go to testimonial ${idx + 1}`}
-                      className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
-                        activeIndex === idx
+                      className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${activeIndex === idx
                           ? 'w-6 bg-emerald-500'
                           : 'w-1.5 bg-gray-300 dark:bg-charcoal-700 hover:bg-gray-400 dark:hover:bg-charcoal-600'
-                      }`}
+                        }`}
                     />
                   ))}
                 </div>
@@ -281,7 +280,7 @@ export function TestimonialsSection() {
             <span className="text-xl sm:text-2xl font-black text-gray-950 dark:text-white block">
               4.98
             </span>
-            <span className="text-[11px] text-gray-600 dark:text-slate-400 font-mono uppercase tracking-wider mt-0.5 block">
+            <span className="text-[11px] text-gray-600 dark:text-slate-400 font-sans uppercase tracking-wider font-semibold mt-0.5 block">
               Client Satisfaction
             </span>
           </div>
@@ -290,7 +289,7 @@ export function TestimonialsSection() {
             <span className="text-xl sm:text-2xl font-black text-emerald-600 dark:text-emerald-400 block">
               100%
             </span>
-            <span className="text-[11px] text-gray-600 dark:text-slate-400 font-mono uppercase tracking-wider mt-0.5 block">
+            <span className="text-[11px] text-gray-600 dark:text-slate-400 font-sans uppercase tracking-wider font-semibold mt-0.5 block">
               On-Time Delivery
             </span>
           </div>
@@ -299,7 +298,7 @@ export function TestimonialsSection() {
             <span className="text-xl sm:text-2xl font-black text-gray-950 dark:text-white block">
               14+
             </span>
-            <span className="text-[11px] text-gray-600 dark:text-slate-400 font-mono uppercase tracking-wider mt-0.5 block">
+            <span className="text-[11px] text-gray-600 dark:text-slate-400 font-sans uppercase tracking-wider font-semibold mt-0.5 block">
               Deployments
             </span>
           </div>
@@ -308,7 +307,7 @@ export function TestimonialsSection() {
             <span className="text-xl sm:text-2xl font-black text-teal-600 dark:text-teal-400 block">
               0s
             </span>
-            <span className="text-[11px] text-gray-600 dark:text-slate-400 font-mono uppercase tracking-wider mt-0.5 block">
+            <span className="text-[11px] text-gray-600 dark:text-slate-400 font-sans uppercase tracking-wider font-semibold mt-0.5 block">
               Offline Downtime
             </span>
           </div>

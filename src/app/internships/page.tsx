@@ -67,41 +67,41 @@ export default function InternshipsPage() {
   return (
     <main className="min-h-screen bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 sm:pb-24 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60 overflow-hidden">
+      <section className="relative pt-16 sm:pt-20 pb-8 sm:pb-10 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 sm:gap-8 mb-6 sm:mb-8">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-mono text-xs font-bold uppercase tracking-wider mb-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-sans text-xs font-bold uppercase tracking-wider mb-3 sm:mb-4">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span>ARAVEX TALENT ACCELERATOR • COHORT 2026 OPEN</span>
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-950 dark:text-white tracking-tight leading-[1.05]">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-950 dark:text-white tracking-tight leading-[1.05]">
                 Forge Real Engineering &amp; Creative Muscle.
               </h1>
-              <p className="text-base sm:text-lg text-gray-700 dark:text-slate-300 font-normal leading-relaxed mt-4">
+              <p className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-slate-300 font-normal leading-relaxed mt-3">
                 Structured hands-on tracks for developers and designers. Choose between our fast-track <strong>Paid Internship</strong> with 1-on-1 mentorship and certification, or our competitive <strong>Unpaid Merit Track</strong>.
               </p>
             </div>
 
             {/* Quick Stats Pill */}
-            <div className="flex flex-wrap lg:flex-col gap-4 p-5 rounded-2xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/50 text-xs font-mono">
+            <div className="flex flex-wrap lg:flex-col gap-3 p-4 sm:p-5 rounded-2xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/50 text-xs font-sans">
               <div>
                 <span className="text-gray-400 dark:text-slate-muted block text-[10px] uppercase">Active Tracks</span>
-                <span className="text-xl font-bold text-gray-900 dark:text-white">13 Disciplines</span>
+                <span className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">13 Disciplines</span>
               </div>
               <div>
                 <span className="text-gray-400 dark:text-slate-muted block text-[10px] uppercase">Format</span>
-                <span className="text-base font-bold text-emerald-600 dark:text-emerald-400">100% Remote Global</span>
+                <span className="text-sm sm:text-base font-bold text-emerald-600 dark:text-emerald-400">100% Remote Global</span>
               </div>
               <div>
                 <span className="text-gray-400 dark:text-slate-muted block text-[10px] uppercase">Dual Pathways</span>
-                <span className="text-base font-bold text-gray-900 dark:text-white">Paid &amp; Unpaid Tracks</span>
+                <span className="text-sm sm:text-base font-bold text-gray-900 dark:text-white">Paid &amp; Unpaid Tracks</span>
               </div>
             </div>
           </div>
 
           {/* Bespoke 3D Studio Visual Banner */}
-          <div className="relative h-64 sm:h-96 md:h-[440px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/60 shadow-2xl bg-charcoal-900">
+          <div className="relative h-56 sm:h-80 md:h-[380px] rounded-3xl overflow-hidden border border-gray-200 dark:border-graphite/60 shadow-2xl bg-charcoal-900">
             <Image
               src="/assets/generated/internship-studio.png"
               alt="Aravex Talent Accelerator High-Tech Internship Lab"
@@ -111,11 +111,11 @@ export default function InternshipsPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
             <div className="absolute top-4 left-4 sm:top-6 sm:left-6 flex items-center gap-2">
-              <span className="px-3 py-1.5 rounded-full bg-black/65 backdrop-blur-md border border-white/20 text-xs font-mono font-bold text-emerald-400 shadow-md">
+              <span className="px-3 py-1.5 rounded-full bg-black/65 backdrop-blur-md border border-white/20 text-xs font-sans font-bold uppercase tracking-wider text-emerald-400 shadow-md">
                 ARAVEX LAB • 100% REMOTE
               </span>
             </div>
-            <div className="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-white text-xs font-mono">
+            <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 text-white text-xs font-sans">
               <span className="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 font-semibold text-emerald-300">
                 Production-Grade Engineering &amp; Creative Workstations
               </span>
@@ -128,15 +128,15 @@ export default function InternshipsPage() {
       </section>
 
       {/* DUAL PATHWAY SELECTOR & PROGRAM DIRECTORY */}
-      <section className="py-20 border-b border-gray-200 dark:border-graphite/40">
+      <section className="py-8 sm:py-12 border-b border-gray-200 dark:border-graphite/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Main 2 Categories Segmented Control */}
-          <div className="mb-10 text-center">
-            <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-bold block mb-2">
+          <div className="mb-6 sm:mb-8 text-center">
+            <span className="text-xs font-sans uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold block mb-2">
               SELECT INTERNSHIP PATHWAY
             </span>
-            <h2 className="text-3xl sm:text-4xl font-black text-gray-950 dark:text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-950 dark:text-white mb-4">
               Choose Your Internship Model
             </h2>
 
@@ -153,7 +153,7 @@ export default function InternshipsPage() {
               >
                 <GraduationCap className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
                 <span className="whitespace-nowrap">Paid Internship</span>
-                <span className={`text-[10px] sm:text-[11px] font-mono px-2 sm:px-2.5 py-0.5 rounded-full font-black whitespace-nowrap shrink-0 ${
+                <span className={`text-[10px] sm:text-[11px] font-sans px-2 sm:px-2.5 py-0.5 rounded-full font-bold whitespace-nowrap shrink-0 ${
                   activeType === 'paid' ? 'bg-black/30 text-white' : 'bg-emerald-500/20 text-emerald-700 dark:text-emerald-300'
                 }`}>
                   Rs. 5,000 / mo
@@ -171,7 +171,7 @@ export default function InternshipsPage() {
               >
                 <Briefcase className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
                 <span className="whitespace-nowrap">Unpaid Internship</span>
-                <span className="text-[10px] sm:text-[11px] font-mono px-2 sm:px-2.5 py-0.5 rounded-full font-black bg-gray-200 dark:bg-charcoal-800 text-gray-900 dark:text-white whitespace-nowrap shrink-0">
+                <span className="text-[10px] sm:text-[11px] font-sans px-2 sm:px-2.5 py-0.5 rounded-full font-bold bg-gray-200 dark:bg-charcoal-800 text-gray-900 dark:text-white whitespace-nowrap shrink-0">
                   100% Free
                 </span>
               </button>
@@ -192,15 +192,15 @@ export default function InternshipsPage() {
                 <div className="absolute top-0 right-0 -mr-16 -mt-16 w-72 h-72 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none" />
                 <div className="relative z-10">
                   <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-mono font-bold uppercase tracking-wider">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-sans font-bold uppercase tracking-wider">
                       <GraduationCap className="w-4 h-4 text-emerald-400" />
                       <span>PAID ACCELERATED LEARNING &amp; MENTORSHIP PROGRAM</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="font-mono text-xs px-3 py-1.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 font-bold">
+                      <span className="font-sans text-xs px-3 py-1.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 font-bold">
                         Duration: 3 Months
                       </span>
-                      <span className="font-mono text-xs px-3.5 py-1.5 rounded-full bg-emerald-500 text-charcoal-950 font-black shadow-md">
+                      <span className="font-sans text-xs px-3.5 py-1.5 rounded-full bg-emerald-500 text-charcoal-950 font-bold shadow-md">
                         Tuition: Rs. 5,000 / Month
                       </span>
                     </div>
@@ -260,15 +260,15 @@ export default function InternshipsPage() {
                 <div className="absolute top-0 right-0 -mr-16 -mt-16 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
                 <div className="relative z-10">
                   <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white border border-white/20 text-xs font-mono font-bold uppercase tracking-wider">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white border border-white/20 text-xs font-sans font-bold uppercase tracking-wider">
                       <Briefcase className="w-4 h-4 text-emerald-400" />
                       <span>MERIT-BASED PRODUCTION PRACTICE TRACK</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="font-mono text-xs px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold">
+                      <span className="font-sans text-xs px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold">
                         Duration: 3 Months
                       </span>
-                      <span className="font-mono text-xs px-3 py-1 rounded-full bg-white/15 text-white border border-white/25 font-bold">
+                      <span className="font-sans text-xs px-3 py-1 rounded-full bg-white/15 text-white border border-white/25 font-bold">
                         Admission: 100% Free
                       </span>
                     </div>
@@ -323,7 +323,7 @@ export default function InternshipsPage() {
           <div className="mb-10">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
               <div>
-                <span className="text-xs font-mono uppercase text-gray-500 dark:text-slate-400 font-bold">
+                <span className="text-xs font-sans uppercase tracking-wider text-gray-500 dark:text-slate-400 font-bold">
                   Browse by Specialization ({filteredTracks.length} Available in {activeType === 'paid' ? 'Paid' : 'Unpaid'} Mode)
                 </span>
               </div>
@@ -348,7 +348,7 @@ export default function InternshipsPage() {
                   >
                     <span>{cat}</span>
                     <span
-                      className={`inline-flex items-center justify-center px-2 py-0.5 rounded-full text-[11px] font-mono font-bold ${
+                      className={`inline-flex items-center justify-center px-2 py-0.5 rounded-full text-[11px] font-sans font-bold ${
                         isActive
                           ? 'bg-white/20 text-white dark:bg-black/15 dark:text-black'
                           : 'bg-gray-100 dark:bg-charcoal-800 text-gray-600 dark:text-slate-400'
@@ -385,7 +385,7 @@ export default function InternshipsPage() {
       </section>
 
       {/* Why Intern at Aravex Section */}
-      <section className="py-20 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/40">
+      <section className="py-8 sm:py-12 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="THE ARAVEX DIFFERENCE"
@@ -393,7 +393,7 @@ export default function InternshipsPage() {
             description="Whether enrolled in our fast-track Paid Mentorship or our Unpaid Merit Track, our focus is making you truly production-ready."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-8 rounded-3xl bg-[#F7F7F5] dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/40 flex flex-col justify-between shadow-sm">
               <div>
                 <div className="w-12 h-12 rounded-2xl bg-white dark:bg-charcoal-850 border border-gray-200 dark:border-graphite/40 flex items-center justify-center text-emerald-500 mb-6 shadow-sm">
@@ -406,7 +406,7 @@ export default function InternshipsPage() {
                   Commit code to real repositories powering live POS registers, autonomous AI graphs, and client cloud systems.
                 </p>
               </div>
-              <div className="pt-6 mt-6 border-t border-gray-200 dark:border-graphite/30 text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold">
+              <div className="pt-6 mt-6 border-t border-gray-200 dark:border-graphite/30 text-xs font-sans text-emerald-600 dark:text-emerald-400 font-bold">
                 100% Verifiable GitHub Contributions
               </div>
             </div>
@@ -423,7 +423,7 @@ export default function InternshipsPage() {
                   Direct line-by-line PR reviews, architecture sessions, and unrestricted access to premium masterclass video libraries.
                 </p>
               </div>
-              <div className="pt-6 mt-6 border-t border-gray-200 dark:border-graphite/30 text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold">
+              <div className="pt-6 mt-6 border-t border-gray-200 dark:border-graphite/30 text-xs font-sans text-emerald-600 dark:text-emerald-400 font-bold">
                 Weekly 1-on-1 Feedback &amp; Code Reviews
               </div>
             </div>
@@ -440,7 +440,7 @@ export default function InternshipsPage() {
                   Verified certification on completion, signed letters of recommendation, and priority introductions to global tech employers.
                 </p>
               </div>
-              <div className="pt-6 mt-6 border-t border-gray-200 dark:border-graphite/30 text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold">
+              <div className="pt-6 mt-6 border-t border-gray-200 dark:border-graphite/30 text-xs font-sans text-emerald-600 dark:text-emerald-400 font-bold">
                 Lifetime Alumni Support + Founder Endorsement
               </div>
             </div>
@@ -449,11 +449,11 @@ export default function InternshipsPage() {
       </section>
 
       {/* WhatsApp Talent Desk CTA */}
-      <section className="py-20">
+      <section className="py-8 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="p-8 sm:p-12 rounded-3xl bg-charcoal-900 text-white border border-graphite/50 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl">
+          <div className="p-6 sm:p-10 rounded-3xl bg-charcoal-900 text-white border border-graphite/50 flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 shadow-2xl">
             <div className="max-w-2xl">
-              <span className="font-mono text-xs uppercase px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 font-bold border border-emerald-500/20 mb-4 inline-block">
+              <span className="font-sans text-xs uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 font-bold border border-emerald-500/20 mb-4 inline-block">
                 HAVE QUESTIONS ABOUT PAID OR UNPAID TRACKS?
               </span>
               <h2 className="text-3xl sm:text-4xl font-black text-white leading-tight">

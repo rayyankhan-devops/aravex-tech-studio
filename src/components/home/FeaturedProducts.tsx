@@ -100,9 +100,9 @@ export function FeaturedProducts() {
   };
 
   return (
-    <section id="products" className="relative py-24 sm:py-32 bg-white dark:bg-charcoal-900 text-charcoal-900 dark:text-warmWhite overflow-hidden border-t border-b border-gray-200 dark:border-graphite/40 transition-colors duration-300">
+    <section id="products" className="relative py-10 sm:py-14 bg-white dark:bg-charcoal-900 text-charcoal-900 dark:text-warmWhite overflow-hidden border-t border-b border-gray-200 dark:border-graphite/40 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4 sm:gap-6">
           <SectionHeading
             eyebrow="PROPRIETARY SOFTWARE"
             title="Commercial Software Products."
@@ -111,7 +111,7 @@ export function FeaturedProducts() {
           />
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 text-sm font-mono text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors duration-200 shrink-0 pb-2 font-bold"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm font-sans text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors duration-200 shrink-0 pb-1 font-bold"
           >
             <span>View Full Product Catalog</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -119,16 +119,16 @@ export function FeaturedProducts() {
         </div>
 
         {/* Featured Showcase Hero Card */}
-        <div className="relative rounded-3xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/50 overflow-hidden mb-12 shadow-xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 sm:p-12">
+        <div className="relative rounded-3xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/50 overflow-hidden mb-6 sm:mb-8 shadow-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center p-6 sm:p-8">
             <div className="lg:col-span-7 flex flex-col gap-6">
               <div className="flex flex-wrap items-center gap-3">
                 <Badge status={featured[0].status} />
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-white dark:bg-charcoal-850 text-gray-800 dark:text-slate-300 border border-gray-200 dark:border-graphite/40 shadow-sm">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-sans font-medium bg-white dark:bg-charcoal-850 text-gray-800 dark:text-slate-300 border border-gray-200 dark:border-graphite/40 shadow-sm">
                   {getPlatformIcon(featured[0].platform)}
                   <span>{featured[0].platform}</span>
                 </span>
-                <span className="font-mono text-xs text-gray-500 dark:text-slate-muted uppercase tracking-wider font-semibold">
+                <span className="font-sans text-xs text-gray-500 dark:text-slate-muted uppercase tracking-wider font-bold">
                   {featured[0].category} Category
                 </span>
               </div>

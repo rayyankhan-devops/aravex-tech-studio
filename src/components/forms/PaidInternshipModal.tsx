@@ -223,10 +223,10 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
           </button>
 
           <div className="flex flex-wrap items-center gap-2 mb-2">
-            <span className="font-mono text-[11px] uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-600 text-white font-bold shadow-sm">
+            <span className="font-sans text-xs uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-600 text-white font-bold shadow-sm">
               PAID INTERNSHIP • 3 MONTHS COHORT
             </span>
-            <span className="font-mono text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-800 dark:text-emerald-300 border border-emerald-500/30">
+            <span className="font-sans text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-800 dark:text-emerald-300 border border-emerald-500/30">
               Rs. 5,000 / Month
             </span>
           </div>
@@ -293,7 +293,7 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
             <form onSubmit={handleProceedToPayment} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
+                  <label className="block text-xs font-sans uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
                     Full Name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -307,7 +307,7 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
+                  <label className="block text-xs font-sans uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
                     Email Address <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -323,7 +323,7 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
+                  <label className="block text-xs font-sans uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
                     WhatsApp Number <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -340,7 +340,7 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
+                  <label className="block text-xs font-sans uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
                     GitHub / Portfolio / LinkedIn <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -359,7 +359,7 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
+                  <label className="block text-xs font-sans uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
                     City &amp; Country
                   </label>
                   <input
@@ -372,7 +372,7 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
+                  <label className="block text-xs font-sans uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
                     Education / Degree (Optional)
                   </label>
                   <input
@@ -388,11 +388,11 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
               {/* Bottom Summary Bar */}
               <div className="p-4 rounded-2xl bg-emerald-500/10 dark:bg-emerald-950/30 border border-emerald-500/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-4">
                 <div>
-                  <span className="text-xs uppercase font-mono text-emerald-800 dark:text-emerald-300 font-bold block">
+                  <span className="text-xs uppercase font-sans text-emerald-800 dark:text-emerald-300 font-bold block">
                     Monthly Fee
                   </span>
                   <span className="text-xl font-black text-gray-950 dark:text-white">
-                    Rs. 5,000 <span className="text-xs font-normal text-gray-600 dark:text-slate-300">/ Month (2 Months Program)</span>
+                    Rs. 5,000 <span className="text-xs font-normal text-gray-600 dark:text-slate-300">/ Month (3 Months Program)</span>
                   </span>
                 </div>
 
@@ -420,7 +420,7 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
 
               {/* Account Selection */}
               <div>
-                <label className="block text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-2 font-bold">
+                <label className="block text-xs font-sans uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-2 font-bold">
                   Choose Bank / Wallet Account:
                 </label>
                 <div className="grid grid-cols-3 gap-2">
@@ -462,7 +462,7 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
                     <button
                       type="button"
                       onClick={() => handleCopy(selectedAccount.accountNumber, 'acc')}
-                      className="px-2 py-1 rounded bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-graphite/40 text-[11px] font-mono font-bold text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 flex items-center gap-1 cursor-pointer"
+                      className="px-2 py-1 rounded bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-graphite/40 text-[11px] font-sans font-bold text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 flex items-center gap-1 cursor-pointer"
                       title="Copy Account Number"
                     >
                       {copiedField === 'acc' ? <Check className="w-3 h-3 text-emerald-500" /> : <Copy className="w-3 h-3" />}
@@ -479,7 +479,7 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
                       <button
                         type="button"
                         onClick={() => handleCopy(selectedAccount.iban!, 'iban')}
-                        className="px-2 py-1 rounded bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-graphite/40 text-[11px] font-mono font-bold text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 flex items-center gap-1 cursor-pointer"
+                        className="px-2 py-1 rounded bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-graphite/40 text-[11px] font-sans font-bold text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 flex items-center gap-1 cursor-pointer"
                         title="Copy IBAN"
                       >
                         {copiedField === 'iban' ? <Check className="w-3 h-3 text-emerald-500" /> : <Copy className="w-3 h-3" />}
@@ -497,7 +497,7 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
                       <button
                         type="button"
                         onClick={() => handleCopy(selectedAccount.raastId!, 'raast')}
-                        className="px-2 py-1 rounded bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-graphite/40 text-[11px] font-mono font-bold text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 flex items-center gap-1 cursor-pointer"
+                        className="px-2 py-1 rounded bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-graphite/40 text-[11px] font-sans font-bold text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 flex items-center gap-1 cursor-pointer"
                         title="Copy Raast ID"
                       >
                         {copiedField === 'raast' ? <Check className="w-3 h-3 text-emerald-500" /> : <Copy className="w-3 h-3" />}
@@ -514,7 +514,7 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
 
               {/* Transaction ID Input */}
               <div>
-                <label className="block text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
+                <label className="block text-xs font-sans uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
                   Transaction Reference ID <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -523,13 +523,13 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
                   placeholder="e.g. 8492049182 or TRX-4928"
                   value={transactionId}
                   onChange={(e) => setTransactionId(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/40 text-sm font-mono text-gray-900 dark:text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/40 text-sm font-sans text-gray-900 dark:text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
                 />
               </div>
 
               {/* Upload Screenshot Box */}
               <div>
-                <label className="block text-xs font-mono uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
+                <label className="block text-xs font-sans uppercase tracking-wider text-gray-700 dark:text-slate-300 mb-1 font-bold">
                   Upload Payment Screenshot / Receipt <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -640,7 +640,7 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
               </div>
 
               <div>
-                <span className="font-mono text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold block mb-1">
+                <span className="font-sans text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold block mb-1">
                   Payment Proof Recorded
                 </span>
                 <h3 className="text-2xl font-black text-gray-950 dark:text-white">
@@ -651,7 +651,7 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
                 </p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/40 max-w-sm mx-auto text-left space-y-1.5 text-xs font-mono">
+              <div className="p-4 rounded-2xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/40 max-w-sm mx-auto text-left space-y-1.5 text-xs font-sans">
                 <div className="flex justify-between">
                   <span className="text-gray-500 dark:text-slate-400">Application Ref:</span>
                   <span className="font-bold text-emerald-600 dark:text-emerald-400">{applicationId}</span>

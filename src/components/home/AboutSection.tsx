@@ -67,7 +67,7 @@ export function AboutSection() {
               <div className="flex items-center justify-between mb-3.5">
                 <div className="flex items-center gap-2">
                   <Users className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                  <span className="font-mono text-xs uppercase tracking-wider text-gray-700 dark:text-slate-300 font-bold">
+                  <span className="font-sans text-xs uppercase tracking-wider text-gray-800 dark:text-slate-200 font-bold">
                     Technical Leadership
                   </span>
                 </div>
@@ -106,11 +106,11 @@ export function AboutSection() {
                           {initials}
                         </div>
                         {hasFormer ? (
-                          <span className="font-mono text-[9px] px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-800 dark:text-amber-300 font-black border border-amber-500/30 whitespace-nowrap">
-                            Ex-Amazon
+                          <span className="font-sans text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-800 dark:text-amber-300 font-bold border border-amber-500/30 whitespace-nowrap">
+                            Amazon Technical Head
                           </span>
                         ) : (
-                          <span className="font-mono text-[9px] uppercase px-2 py-0.5 rounded-full bg-gray-200/80 dark:bg-charcoal-800 text-gray-700 dark:text-slate-300 font-bold whitespace-nowrap">
+                          <span className="font-sans text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-gray-200/80 dark:bg-charcoal-800 text-gray-700 dark:text-slate-300 font-bold whitespace-nowrap">
                             Co-Founder
                           </span>
                         )}
@@ -120,7 +120,7 @@ export function AboutSection() {
                         <span className="font-bold text-sm text-gray-950 dark:text-white block leading-snug group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                           {founder.name}
                         </span>
-                        <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold block mt-0.5 line-clamp-1">
+                        <span className="text-[11px] font-sans text-emerald-600 dark:text-emerald-400 font-semibold block mt-0.5 line-clamp-1">
                           {founder.role.replace('Co-Founder & ', '')}
                         </span>
                       </div>

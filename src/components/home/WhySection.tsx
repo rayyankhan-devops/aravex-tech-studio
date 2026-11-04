@@ -100,7 +100,7 @@ export function WhySection() {
   return (
     <section
       id="why-aravex"
-      className="relative py-14 sm:py-18 bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite overflow-hidden border-t border-gray-200 dark:border-graphite/40 transition-colors duration-300"
+      className="relative py-10 sm:py-14 bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite overflow-hidden border-t border-gray-200 dark:border-graphite/40 transition-colors duration-300"
     >
       {/* Background Architectural Blueprint Grid Lines */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:36px_36px] pointer-events-none" />
@@ -117,7 +117,7 @@ export function WhySection() {
               <span className="w-1 h-3 rounded-[2px] bg-[#5CB554]" />
               <span className="w-1 h-3 rounded-[2px] bg-[#4D66EC]" />
             </div>
-            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-gray-600 dark:text-slate-300 font-bold">
+            <span className="font-sans text-xs uppercase tracking-wider text-slate-800 dark:text-slate-200 font-bold">
               WHY ARAVEX • ARCHITECTURE CONSOLE
             </span>
           </div>
@@ -206,7 +206,7 @@ export function WhySection() {
                         </div>
 
                         <div className="min-w-0">
-                          <span className="block font-mono text-[9px] uppercase font-bold text-emerald-600 dark:text-emerald-400 mb-0.5 tracking-wider">
+                          <span className="block font-sans text-[10px] uppercase font-bold text-emerald-600 dark:text-emerald-400 mb-0.5 tracking-wider">
                             {p.tag}
                           </span>
                           <h3 className="text-xs sm:text-sm font-bold text-gray-950 dark:text-white leading-tight mb-0.5">
@@ -244,7 +244,7 @@ export function WhySection() {
               <div className="relative z-10 flex items-center justify-between pb-3 border-b border-graphite/60">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="font-mono text-[11px] uppercase tracking-wider text-emerald-400 font-bold">
+                  <span className="font-sans text-[11px] uppercase tracking-wider text-emerald-400 font-bold">
                     SYSTEM HUD // LIVE TELEMETRY
                   </span>
                 </div>

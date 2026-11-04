@@ -148,7 +148,7 @@ export function Header() {
             className="fixed inset-0 z-40 bg-white dark:bg-charcoal-950 flex flex-col justify-between pt-24 pb-8 px-6 sm:hidden"
           >
             <div className="flex flex-col gap-4">
-              <p className="font-mono text-xs tracking-widest uppercase text-gray-400 dark:text-slate-muted">Navigation</p>
+              <p className="font-sans text-xs tracking-wider uppercase font-bold text-gray-400 dark:text-slate-muted">Navigation</p>
               <div className="flex flex-col gap-2">
                 {NAV_LINKS.map((link) => {
                   const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));

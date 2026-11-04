@@ -29,11 +29,11 @@ export function InternshipCard({ track, internshipType, onApply }: InternshipCar
       <div>
         {/* Top Header: Category & Pricing Pill */}
         <div className="flex items-center justify-between gap-2 mb-3">
-          <span className="font-mono text-[10px] uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-gray-100 dark:bg-charcoal-800 text-gray-700 dark:text-slate-300 font-bold border border-gray-200/80 dark:border-graphite/40">
+          <span className="font-sans text-xs uppercase tracking-wider font-bold px-2.5 py-0.5 rounded-md bg-gray-100 dark:bg-charcoal-800 text-gray-700 dark:text-slate-300 font-bold border border-gray-200/80 dark:border-graphite/40">
             {track.category}
           </span>
           <span
-            className={`font-mono text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${
+            className={`font-sans text-xs font-bold px-2.5 py-0.5 rounded-full border ${
               isPaid
                 ? 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/30'
                 : 'bg-gray-100 dark:bg-charcoal-800 text-gray-700 dark:text-slate-300 border-gray-200 dark:border-graphite/40'
@@ -62,7 +62,7 @@ export function InternshipCard({ track, internshipType, onApply }: InternshipCar
           }`}
         >
           <div>
-            <div className="text-[10px] uppercase font-mono font-bold tracking-wider text-emerald-700 dark:text-emerald-400">
+            <div className="text-[10px] uppercase font-sans font-bold tracking-wider text-emerald-700 dark:text-emerald-400">
               {isPaid ? 'Cohort Tuition' : 'Merit Track'}
             </div>
             <div className="flex items-baseline gap-1 mt-0.5">
@@ -70,7 +70,7 @@ export function InternshipCard({ track, internshipType, onApply }: InternshipCar
                 {isPaid ? 'Rs. 5,000' : '100% Free'}
               </span>
               {isPaid && (
-                <span className="text-xs font-mono font-bold text-emerald-700 dark:text-emerald-400">
+                <span className="text-xs font-sans font-bold text-emerald-700 dark:text-emerald-400">
                   / month
                 </span>
               )}
@@ -78,7 +78,7 @@ export function InternshipCard({ track, internshipType, onApply }: InternshipCar
           </div>
           <div className="text-right">
             <span
-              className={`inline-block px-2.5 py-1 rounded-md text-[10px] font-mono font-bold uppercase tracking-wider ${
+              className={`inline-block px-2.5 py-1 rounded-md text-[10px] font-sans font-bold uppercase tracking-wider ${
                 isPaid
                   ? 'bg-emerald-600 text-white shadow-sm'
                   : 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30'
@@ -86,7 +86,7 @@ export function InternshipCard({ track, internshipType, onApply }: InternshipCar
             >
               {isPaid ? '3 Months' : 'Competitive'}
             </span>
-            <div className="text-[10px] font-mono text-gray-500 dark:text-slate-400 mt-1">
+            <div className="text-xs font-sans text-gray-500 dark:text-slate-400 mt-1">
               {isPaid ? 'Mentorship + Cert' : 'Portfolio Review'}
             </div>
           </div>
@@ -150,7 +150,7 @@ export function InternshipCard({ track, internshipType, onApply }: InternshipCar
               className="overflow-hidden border-t border-gray-100 dark:border-graphite/40 pt-3 mb-3 space-y-3"
             >
               <div>
-                <span className="text-[11px] font-mono font-bold uppercase text-gray-900 dark:text-white block mb-1">
+                <span className="text-[11px] font-sans font-bold uppercase text-gray-900 dark:text-white block mb-1">
                   Key Responsibilities
                 </span>
                 <ul className="space-y-1">
@@ -183,7 +183,7 @@ export function InternshipCard({ track, internshipType, onApply }: InternshipCar
       <div className="pt-3 border-t border-gray-100 dark:border-graphite/40 flex items-center justify-between gap-2">
         {/* Duration / Expand Toggle */}
         <div className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-1 text-xs font-mono text-gray-500 dark:text-slate-400 font-semibold">
+          <span className="inline-flex items-center gap-1 text-xs font-sans text-gray-500 dark:text-slate-400 font-semibold">
             <Clock className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
             <span>3 Mos</span>
           </span>

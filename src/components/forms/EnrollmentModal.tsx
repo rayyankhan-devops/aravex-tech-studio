@@ -238,7 +238,7 @@ export function EnrollmentModal({ course, isOpen, onClose }: EnrollmentModalProp
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold">
+                    <span className="text-[11px] font-sans uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold">
                       Step 1 of 2 • Candidate Details
                     </span>
                   </div>
@@ -355,12 +355,12 @@ export function EnrollmentModal({ course, isOpen, onClose }: EnrollmentModalProp
                     setErrorMsg(null);
                     setStep('details');
                   }}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-gray-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-sans font-bold text-gray-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   <span>Back to Details</span>
                 </button>
-                <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                <span className="text-[11px] font-sans uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
                   Step 2 of 2 • Payment Dropbox
                 </span>
               </div>
@@ -409,7 +409,7 @@ export function EnrollmentModal({ course, isOpen, onClose }: EnrollmentModalProp
                 </div>
 
                 {/* Active Account Details with 1-Click Copy */}
-                <div className="flex flex-col gap-2 text-xs font-mono">
+                <div className="flex flex-col gap-2 text-xs font-sans">
                   {/* Account Title */}
                   <div className="flex items-center justify-between p-2 rounded-lg bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40">
                     <span className="text-gray-500 dark:text-slate-400 font-sans">Account Title:</span>
@@ -494,7 +494,7 @@ export function EnrollmentModal({ course, isOpen, onClose }: EnrollmentModalProp
               <div className="flex flex-col gap-2">
                 <label className="text-sm font-semibold text-gray-900 dark:text-gray-100 flex items-center justify-between">
                   <span>Upload Payment Screenshot <span className="text-rose-500 font-bold">*</span></span>
-                  <span className="text-xs font-mono text-gray-500 dark:text-slate-400 font-normal">PNG, JPG, WEBP (Max 10MB)</span>
+                  <span className="text-xs font-sans text-gray-500 dark:text-slate-400 font-normal">PNG, JPG, WEBP (Max 10MB)</span>
                 </label>
 
                 <input
@@ -546,7 +546,7 @@ export function EnrollmentModal({ course, isOpen, onClose }: EnrollmentModalProp
                             {screenshotFile ? screenshotFile.name : 'payment-receipt.png'}
                           </p>
                         </div>
-                        <p className="text-[11px] font-mono text-gray-500 dark:text-slate-400 mt-0.5">
+                        <p className="text-[11px] font-sans text-gray-500 dark:text-slate-400 mt-0.5">
                           {screenshotFile ? `${(screenshotFile.size / 1024).toFixed(1)} KB` : 'Attached'} • Ready to upload
                         </p>
                         <button
@@ -575,14 +575,14 @@ export function EnrollmentModal({ course, isOpen, onClose }: EnrollmentModalProp
               <div className="flex flex-col gap-1.5">
                 <label className="text-xs font-semibold text-gray-700 dark:text-slate-300 flex items-center justify-between">
                   <span>Transaction ID / Ref (Optional)</span>
-                  <span className="text-[10px] font-mono text-gray-400">e.g. TRX-9823412 or Sender Name</span>
+                  <span className="text-[10px] font-sans text-gray-400">e.g. TRX-9823412 or Sender Name</span>
                 </label>
                 <input
                   type="text"
                   placeholder="Enter TID if available on your banking slip"
                   value={transactionId}
                   onChange={(e) => setTransactionId(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/70 text-xs text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all font-mono"
+                  className="w-full px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-charcoal-850 border border-gray-300 dark:border-graphite/70 text-xs text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all font-sans"
                 />
               </div>
 
@@ -625,7 +625,7 @@ export function EnrollmentModal({ course, isOpen, onClose }: EnrollmentModalProp
               </div>
 
               <div className="space-y-1">
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                <span className="text-xs font-sans font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
                   Data Stored in Google Sheet
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-950 dark:text-white pt-2">
@@ -634,7 +634,7 @@ export function EnrollmentModal({ course, isOpen, onClose }: EnrollmentModalProp
               </div>
 
               {/* Reference ID Pill */}
-              <div className="p-3 px-5 rounded-2xl bg-gray-50 dark:bg-charcoal-850 border border-gray-200 dark:border-graphite/50 flex items-center gap-3 text-xs font-mono">
+              <div className="p-3 px-5 rounded-2xl bg-gray-50 dark:bg-charcoal-850 border border-gray-200 dark:border-graphite/50 flex items-center gap-3 text-xs font-sans">
                 <span className="text-gray-500 dark:text-slate-400">Registration ID:</span>
                 <strong className="text-emerald-600 dark:text-emerald-400 font-bold text-sm">{registrationId}</strong>
                 <button

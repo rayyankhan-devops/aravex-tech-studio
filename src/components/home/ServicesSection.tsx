@@ -158,12 +158,12 @@ export function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative py-24 sm:py-32 bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite overflow-hidden border-b border-gray-200 dark:border-graphite/40 transition-colors duration-300"
+      className="relative py-10 sm:py-14 bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite overflow-hidden border-b border-gray-200 dark:border-graphite/40 transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Theodore-Inspired Minimalist Eyebrow with Multi-Color Bar Glyphs */}
-        <div className="flex items-center gap-2.5 mb-8">
+        <div className="flex items-center gap-2.5 mb-5 sm:mb-6">
           <div className="flex items-center gap-1 shrink-0" aria-hidden="true">
             <span className="w-1.5 h-3.5 rounded-[2px] bg-[#D45361]" />
             <span className="w-1 h-3.5 rounded-[2px] bg-[#EA7047]" />
@@ -171,35 +171,35 @@ export function ServicesSection() {
             <span className="w-1 h-3.5 rounded-[2px] bg-[#5CB554]" />
             <span className="w-1 h-3.5 rounded-[2px] bg-[#4D66EC]" />
           </div>
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-gray-600 dark:text-slate-300 font-bold">
+          <span className="font-sans text-xs uppercase tracking-wider text-slate-800 dark:text-slate-200 font-bold">
             CORE CAPABILITIES
           </span>
         </div>
 
         {/* Theodore 2-Column Split Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* Left Column: Fixed / Sticky Editorial Statement */}
-          <div className="lg:col-span-5 lg:sticky lg:top-28 flex flex-col justify-between gap-6">
+          <div className="lg:col-span-5 lg:sticky lg:top-28 flex flex-col justify-between gap-5 sm:gap-6">
             <div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-gray-950 dark:text-white uppercase leading-[1.08] mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight text-gray-950 dark:text-white uppercase leading-[1.08] mb-3 sm:mb-4">
                 Engineered for High Concurrency, Scale &amp; Autonomous AI.
               </h2>
-              <p className="text-base sm:text-lg text-gray-700 dark:text-slate-300 leading-relaxed font-normal mb-8">
+              <p className="text-sm sm:text-base text-gray-700 dark:text-slate-300 leading-relaxed font-normal mb-4 sm:mb-6">
                 We transform complex business requirements into hardened digital systems. Our multidisciplinary practice specializes in custom software architectures, distributed cloud backends, and deterministic AI agent workflows.
               </p>
             </div>
 
-            <div className="pt-6 border-t border-gray-200 dark:border-graphite/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="pt-4 border-t border-gray-200 dark:border-graphite/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-charcoal-950 text-white dark:bg-white dark:text-charcoal-950 font-mono text-xs uppercase font-bold hover:bg-emerald-600 dark:hover:bg-emerald-400 dark:hover:text-black transition-all shadow-md hover:scale-[1.02] active:scale-[0.98]"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-charcoal-950 text-white dark:bg-white dark:text-charcoal-950 font-sans text-xs uppercase tracking-wider font-bold hover:bg-emerald-600 dark:hover:bg-emerald-400 dark:hover:text-black transition-all shadow-md hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span>Explore All 12 Capabilities</span>
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
 
-              <span className="font-mono text-xs text-gray-500 dark:text-slate-400">
+              <span className="font-sans text-xs font-semibold text-gray-500 dark:text-slate-400">
                 06 Core Disciplines
               </span>
             </div>
@@ -226,7 +226,7 @@ export function ServicesSection() {
                   <button
                     type="button"
                     onClick={() => handleToggle(idx)}
-                    className="w-full text-left py-6 px-4 sm:px-6 flex items-center justify-between gap-4 cursor-pointer focus:outline-none touch-manipulation select-none"
+                    className="w-full text-left py-4 sm:py-5 px-4 sm:px-6 flex items-center justify-between gap-4 cursor-pointer focus:outline-none touch-manipulation select-none"
                     aria-expanded={isActive}
                   >
                     <div className="flex items-center gap-4 sm:gap-6 min-w-0">
@@ -240,7 +240,7 @@ export function ServicesSection() {
                         {cap.num}
                       </span>
                       <div className="min-w-0">
-                        <span className="block font-mono text-[10px] uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold mb-1">
+                        <span className="block font-sans text-[11px] uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold mb-1">
                           {cap.category}
                         </span>
                         <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap">

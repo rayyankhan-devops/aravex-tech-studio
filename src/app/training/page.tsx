@@ -73,7 +73,7 @@ export default function TrainingPage() {
   return (
     <main className="min-h-screen bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
       {/* Header */}
-      <section className="pt-24 pb-16 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
+      <section className="pt-16 sm:pt-20 pb-8 sm:pb-10 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="ARAVEX TECHNOLOGY TRAINING"
@@ -81,14 +81,14 @@ export default function TrainingPage() {
             description="Hands-on 1-month technical cohorts covering AI agents, full-stack web, cloud, and Linux administration."
           />
 
-          <div className="p-4 rounded-2xl bg-gray-50 dark:bg-charcoal-850/80 border border-gray-200 dark:border-graphite/40 flex flex-wrap items-center justify-between gap-4 mt-6 shadow-sm">
+          <div className="p-4 rounded-2xl bg-gray-50 dark:bg-charcoal-850/80 border border-gray-200 dark:border-graphite/40 flex flex-wrap items-center justify-between gap-4 mt-4 shadow-sm">
             <div className="flex items-center gap-3">
               <GraduationCap className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
-              <span className="text-xs sm:text-sm font-mono text-gray-800 dark:text-slate-300">
+              <span className="text-xs sm:text-sm font-sans text-gray-800 dark:text-slate-300">
                 Accessible Cohort Fees: <strong className="text-emerald-600 dark:text-emerald-400">PKR 1,000 – 2,000 per month</strong>
               </span>
             </div>
-            <span className="text-xs font-mono text-gray-500 dark:text-slate-muted">
+            <span className="text-xs font-sans text-gray-500 dark:text-slate-muted">
               * Cohort batch timing confirmed upon minimum registration threshold
             </span>
           </div>
@@ -96,7 +96,7 @@ export default function TrainingPage() {
       </section>
 
       {/* Courses Catalog Grid */}
-      <section className="py-20">
+      <section className="py-8 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {COURSES_DATA.map((course) => {
@@ -120,7 +120,7 @@ export default function TrainingPage() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
                       
                       {/* Category Tag */}
-                      <div className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-md text-[10px] font-mono bg-black/60 backdrop-blur-md text-white border border-white/20 font-bold uppercase tracking-wider">
+                      <div className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-md text-[10px] font-sans bg-black/60 backdrop-blur-md text-white border border-white/20 font-bold uppercase tracking-wider">
                         {course.category}
                       </div>
 
@@ -132,12 +132,12 @@ export default function TrainingPage() {
                       </div>
 
                       {/* Pricing Tag */}
-                      <div className="absolute bottom-2.5 right-2.5 px-2.5 py-1 rounded-md text-xs font-mono font-black text-emerald-300 bg-black/75 backdrop-blur-md border border-emerald-500/40 shadow-sm">
+                      <div className="absolute bottom-2.5 right-2.5 px-2.5 py-1 rounded-md text-xs font-sans font-bold text-emerald-300 bg-black/75 backdrop-blur-md border border-emerald-500/40 shadow-sm">
                         {course.feePKR}
                       </div>
 
                       {/* Duration Tag */}
-                      <div className="absolute bottom-2.5 left-2.5 flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-mono font-medium text-slate-200 bg-black/60 backdrop-blur-md border border-white/10">
+                      <div className="absolute bottom-2.5 left-2.5 flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-sans font-medium text-slate-200 bg-black/60 backdrop-blur-md border border-white/10">
                         <Clock className="w-3 h-3 text-emerald-400" />
                         <span>4 Weeks</span>
                       </div>
@@ -161,7 +161,7 @@ export default function TrainingPage() {
                           <span className="line-clamp-1">{item}</span>
                         </div>
                       ))}
-                      <div className="flex items-center justify-between pt-1 border-t border-gray-200/60 dark:border-graphite/40 text-[10px] font-mono text-gray-500 dark:text-slate-400">
+                      <div className="flex items-center justify-between pt-1 border-t border-gray-200/60 dark:border-graphite/40 text-[10px] font-sans text-gray-500 dark:text-slate-400">
                         <span>Batch: <strong className="text-emerald-600 dark:text-emerald-400">{course.enrollmentStatus}</strong></span>
                         <span>Certificate Included</span>
                       </div>

@@ -43,7 +43,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     avatarBg: 'from-amber-600 to-orange-700',
     formerCompany: 'Amazon Technical Head',
     specialization: 'Full-Stack Next.js, Desktop Apps & Enterprise MIS',
-    bio: 'Directs full-stack product lifecycles across web and desktop. Former Amazon Technical Head bringing high-scale systems rigor to ARAVEX.',
+    bio: 'Directs full-stack product lifecycles across web and desktop. Amazon Technical Head bringing high-scale systems rigor to ARAVEX.',
     isFounder: true,
     github: 'https://github.com/Aravex-Tech-Studio',
     linkedin: 'https://www.linkedin.com/company/aravex-tech-studio/',
