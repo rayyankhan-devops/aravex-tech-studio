@@ -599,76 +599,7 @@ export function EngineeringMethodology() {
           </AnimatePresence>
         </div>
 
-        {/* 3. AT-A-GLANCE 5-STAGE SEQUENTIAL PIPELINE CARDS (Skimmable Matrix) */}
-        <div className="mb-20">
-          <div className="flex items-center justify-between mb-6">
-            <span className="font-sans text-xs uppercase tracking-wider text-gray-600 dark:text-slate-300 font-bold">
-              END-TO-END PIPELINE MATRIX • CLICK ANY STAGE TO INSPECT
-            </span>
-            <span className="font-mono text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold">
-              SEQUENTIAL &bull; DEPENDENCY-CHECKED
-            </span>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            {STAGES.map((s, idx) => {
-              const isCurrent = activeStageIdx === idx;
-              const StageIcon = s.icon;
-
-              return (
-                <div
-                  key={`matrix-${s.id}`}
-                  onClick={() => setActiveStageIdx(idx)}
-                  className={`group relative p-5 rounded-2xl cursor-pointer transition-all duration-300 border flex flex-col justify-between ${
-                    isCurrent
-                      ? 'bg-white dark:bg-charcoal-900 border-emerald-500 shadow-md ring-2 ring-emerald-500/20'
-                      : 'bg-white/60 dark:bg-charcoal-900/50 border-gray-200 dark:border-graphite/50 hover:border-gray-300 dark:hover:border-graphite hover:bg-white dark:hover:bg-charcoal-900'
-                  }`}
-                >
-                  <div>
-                    {/* Top Step Number + Icon */}
-                    <div className="flex items-center justify-between mb-3">
-                      <span
-                        className={`font-mono text-xs font-black px-2 py-0.5 rounded ${
-                          isCurrent
-                            ? 'bg-emerald-500 text-white'
-                            : 'bg-gray-100 dark:bg-charcoal-800 text-gray-600 dark:text-slate-400'
-                        }`}
-                      >
-                        {s.step}
-                      </span>
-                      <StageIcon
-                        className={`w-4 h-4 transition-colors ${
-                          isCurrent
-                            ? 'text-emerald-600 dark:text-emerald-400'
-                            : 'text-gray-400 dark:text-slate-500 group-hover:text-emerald-500'
-                        }`}
-                      />
-                    </div>
-
-                    <h4 className="text-sm font-bold text-gray-950 dark:text-white leading-snug mb-1">
-                      {s.shortTitle}
-                    </h4>
-                    <p className="text-[11px] text-gray-600 dark:text-slate-400 line-clamp-2 leading-relaxed font-normal mb-3">
-                      {s.headline}
-                    </p>
-                  </div>
-
-                  <div className="pt-2 border-t border-gray-100 dark:border-graphite/30 flex items-center justify-between text-[10px] font-mono">
-                    <span className="text-gray-400 dark:text-slate-500">
-                      {s.cadence.split('•')[1] || s.cadence}
-                    </span>
-                    <span className="text-emerald-600 dark:text-emerald-400 font-bold group-hover:translate-x-0.5 transition-transform">
-                      {isCurrent ? 'ACTIVE' : 'INSPECT →'}
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* 4. HARDENED CLIENT GUARANTEES (THE COMMITMENTS VAULT) */}
+        {/* HARDENED CLIENT GUARANTEES (THE COMMITMENTS VAULT) */}
         <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/60 shadow-xl relative overflow-hidden">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6 mb-6 pb-4 sm:mb-8 sm:pb-5 border-b border-gray-200/80 dark:border-graphite/50">
             <div>

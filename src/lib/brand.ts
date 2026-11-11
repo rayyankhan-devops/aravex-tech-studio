@@ -161,13 +161,16 @@ export const COMPANY_INFO = {
   contact: {
     email: 'info@aravextechstudio.com',
     supportEmail: 'info@aravextechstudio.com',
+    phone: '03249906944',
+    calendly: 'https://calendly.com/aravextechstudio/30min',
   },
   socials: {
     facebook: 'https://www.facebook.com/profile.php?id=61596224602120',
     instagram: 'https://www.instagram.com/aravextechstudio',
     github: 'https://github.com/Aravex-Tech-Studio',
     linkedin: 'https://www.linkedin.com/company/aravex-tech-studio/',
-    whatsapp: 'https://wa.me/923000000000?text=Hello%20Aravex%20Tech%20Studio%2C%20I%20would%20like%20to%20discuss%20a%20project',
+    whatsapp: 'https://wa.me/+923249906944?text=Hey%20Aravex%20Team!%20%F0%9F%91%8B%20I%20came%20across%20your%20page%20and%20wanted%20to%20get%20more%20details%20about...',
+    calendly: 'https://calendly.com/aravextechstudio/30min',
   },
   metrics: [
     { label: 'System Uptime Guarantee', value: '99.98%' },

@@ -673,7 +673,7 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
               {/* Fast-Track WhatsApp Verification */}
               <div className="pt-2">
                 <a
-                  href={`https://wa.me/923000000000?text=Hello%20Aravex%20Admissions%2C%20I%20have%20submitted%20my%20Paid%20Internship%20application%20for%20${encodeURIComponent(track.title)}.%20Ref%3A%20${applicationId}%2C%20Transaction%20ID%3A%20${transactionId}`}
+                  href={`https://wa.me/+923249906944?text=Hello%20Aravex%20Admissions%2C%20I%20have%20submitted%20my%20Paid%20Internship%20application%20for%20${encodeURIComponent(track.title)}.%20Ref%3A%20${applicationId}%2C%20Transaction%20ID%3A%20${transactionId}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs sm:text-sm shadow-md transition-all hover:scale-[1.02]"

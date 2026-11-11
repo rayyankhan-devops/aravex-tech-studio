@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowUpRight, Mail, MapPin } from 'lucide-react';
+import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react';
 import { useTheme } from '@/context/ThemeContext';
 import { BRAND_ASSETS, COMPANY_INFO } from '@/lib/brand';
 import {
@@ -174,6 +174,12 @@ export function Footer() {
                 <Mail className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
                 <a href={`mailto:${COMPANY_INFO.contact.email}`} className="hover:underline font-semibold text-gray-950 dark:text-white">
                   {COMPANY_INFO.contact.email}
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                <a href="tel:03249906944" className="hover:underline font-semibold text-gray-950 dark:text-white">
+                  03249906944
                 </a>
               </div>
             </div>

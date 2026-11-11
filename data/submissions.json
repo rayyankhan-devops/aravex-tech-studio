@@ -1,5 +1,60 @@
 [
   {
+    "type": "contact",
+    "data": {
+      "inquiryId": "ARVX-INQ-418732",
+      "name": "Aravex Live Verification",
+      "email": "test.lead@aravex.tech",
+      "phone": "+92 324 9906944",
+      "company": "Aravex Architecture Labs",
+      "service": "Autonomous AI & RAG",
+      "budget": "$3,000 – $8,000 (Production)",
+      "preferredContact": "WhatsApp / Phone",
+      "description": "Automated end-to-end verification inquiry ensuring Google Sheet row append and email forwarding to info@aravextechstudio.com.",
+      "forwardTo": "info@aravextechstudio.com",
+      "replyTo": "test.lead@aravex.tech",
+      "timestamp": "2026-11-11T15:36:58.732Z",
+      "status": "New Lead"
+    },
+    "recordedAt": "2026-11-11T15:36:58.762Z"
+  },
+  {
+    "type": "contact",
+    "data": {
+      "inquiryId": "ARVX-INQ-467629",
+      "name": "Elsa",
+      "email": "cutilicious1947@gmail.com",
+      "company": "MA soft tech",
+      "service": "Commercial POS & ERP",
+      "budget": "Flexible / Discovery",
+      "preferredContact": "Email",
+      "description": "xdcfvgbhnjmkedrftgyhujikoldfgvbhjnkl,",
+      "forwardTo": "info@aravextechstudio.com",
+      "replyTo": "cutilicious1947@gmail.com",
+      "timestamp": "2026-11-04T10:51:07.629Z",
+      "status": "New Lead"
+    },
+    "recordedAt": "2026-11-04T10:51:07.640Z"
+  },
+  {
+    "type": "contact",
+    "data": {
+      "inquiryId": "ARVX-INQ-976687",
+      "name": "Elsa",
+      "email": "cutilicious1947@gmail.com",
+      "company": "Cute Softie",
+      "service": "Web & Distributed SaaS",
+      "budget": "$1,000 – $3,000 (MVP)",
+      "preferredContact": "Email",
+      "description": "xdcfghjkldfg mrftgyhjklcvgbhnjmkrftgyhjk",
+      "forwardTo": "info@aravextechstudio.com",
+      "replyTo": "cutilicious1947@gmail.com",
+      "timestamp": "2026-11-04T10:42:56.688Z",
+      "status": "New Lead"
+    },
+    "recordedAt": "2026-11-04T10:42:56.699Z"
+  },
+  {
     "type": "training",
     "data": {
       "enrollmentId": "ARVX-TRN-2026-9639",

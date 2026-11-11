@@ -577,7 +577,7 @@ export function InternshipModal({ isOpen, onClose, track }: InternshipModalProps
 
                 <div className="flex flex-col sm:flex-row gap-3 w-full">
                   <a
-                    href={`https://wa.me/923000000000?text=${encodeURIComponent(
+                    href={`https://wa.me/+923249906944?text=${encodeURIComponent(
                       `Hello Aravex Tech Studio, I have submitted my internship application for ${track.title} (Ref ID: ${refId}). My name is ${formData.name}.`
                     )}`}
                     target="_blank"

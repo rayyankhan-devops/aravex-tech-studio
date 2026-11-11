@@ -115,14 +115,30 @@ NEXT_PUBLIC_GA_ID=
 
 ## 🚢 Deployment Instructions
 
-### Vercel (Recommended)
+### Netlify (Configured & Ready)
+1. Push the codebase to a GitHub / GitLab repository.
+2. Log in to [Netlify](https://app.netlify.com) and click **"Add new site" > "Import an existing project"**.
+3. Select your repository.
+4. Netlify will automatically detect `netlify.toml` with:
+   * **Build command**: `npm run build`
+   * **Publish directory**: `.next`
+   * **Plugin**: `@netlify/plugin-nextjs` (v5 App Router & Serverless Functions runtime)
+5. Under **Site configuration > Environment variables**, add:
+   * `NEXT_PUBLIC_SITE_URL`: `https://aravex.tech`
+   * `CONTACT_RECEIVER_EMAIL`: `info@aravextechstudio.com`
+   * `GOOGLE_SHEET_WEBHOOK_URL`: `https://script.google.com/macros/s/AKfycbxihyVhEepuX1o6y05duxQP4403BmyS0Kdtn51gSc3jNRI0RelBd6AqV21Yopc0TAgtSg/exec`
+   * `RESEND_API_KEY`: *(Optional) Your Resend API key for direct transactional emails*
+6. Click **Deploy Site**.
+
+### Vercel
 1. Push the codebase to a GitHub / GitLab repository.
 2. Import the repository in [Vercel](https://vercel.com).
 3. Framework Preset: **Next.js** (automatically detected).
 4. In **Environment Variables**, set:
-   * `NEXT_PUBLIC_SITE_URL`: Your custom domain (e.g., `https://aravex.tech`).
-   * `RESEND_API_KEY`: (Optional) Your Resend API key for live client inquiry emails.
-   * `CONTACT_RECEIVER_EMAIL`: `contact@aravex.tech`
+   * `NEXT_PUBLIC_SITE_URL`: `https://aravex.tech`
+   * `CONTACT_RECEIVER_EMAIL`: `info@aravextechstudio.com`
+   * `GOOGLE_SHEET_WEBHOOK_URL`: `https://script.google.com/macros/s/AKfycbxihyVhEepuX1o6y05duxQP4403BmyS0Kdtn51gSc3jNRI0RelBd6AqV21Yopc0TAgtSg/exec`
+   * `RESEND_API_KEY`: *(Optional)*
 5. Click **Deploy**.
 
 ### Docker / Self-Hosted VPS (Node.js)

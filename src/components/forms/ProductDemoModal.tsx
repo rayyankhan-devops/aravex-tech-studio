@@ -583,7 +583,7 @@ export function ProductDemoModal({
 
                 <div className="flex flex-col sm:flex-row gap-3 w-full">
                   <a
-                    href={`https://wa.me/923000000000?text=${encodeURIComponent(
+                    href={`https://wa.me/+923249906944?text=${encodeURIComponent(
                       `Hello Aravex Tech Studio, I have placed an order for ${product.title} (Order ID: ${orderReceipt?.orderId || 'NEW'}). My business name is ${formData.company}.`
                     )}`}
                     target="_blank"

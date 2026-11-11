@@ -45,6 +45,22 @@ export interface InternshipApplicationData {
   screenshotName?: string;
 }
 
+export interface ContactInquiryData {
+  inquiryId: string;
+  timestamp?: string;
+  name: string;
+  email: string;
+  phone?: string;
+  company?: string;
+  service: string;
+  budget?: string;
+  preferredContact?: string;
+  description: string;
+  forwardTo?: string;
+  replyTo?: string;
+  status?: string;
+}
+
 /**
  * Appends a Training Enrollment entry into the 'Training Enrollments' sheet
  * within the single ARAVEX Google Spreadsheet.
@@ -63,16 +79,37 @@ export async function appendTrainingEnrollment(data: TrainingEnrollmentData) {
 }
 
 /**
- * Appends an Internship Application entry into the 'Internship Applications' sheet
- * within the SAME ARAVEX Google Spreadsheet.
+ * Appends an Internship Application entry into its dedicated sheet
+ * ('Paid Internships' or 'Unpaid Internships') within the single ARAVEX Google Spreadsheet.
  */
 export async function appendInternshipApplication(data: InternshipApplicationData) {
+  const isPaid = data.internshipType === 'Paid' || (data.fee && data.fee.indexOf('Rs.') > -1);
   const payload = {
-    type: 'internship' as const,
+    type: isPaid ? ('internship_paid' as const) : ('internship_unpaid' as const),
     data: {
       ...data,
+      internshipType: isPaid ? 'Paid' : 'Unpaid',
       timestamp: data.timestamp || new Date().toISOString(),
-      status: data.status || 'Under Review',
+      status: data.status || (isPaid ? 'Pending Payment Verification' : 'Under Portfolio Review'),
+    },
+  };
+
+  return await sendToGoogleSheetWebhook(payload);
+}
+
+/**
+ * Appends a Project / Client Inquiry entry into the 'Contact Inquiries' sheet
+ * and triggers immediate forwarding to info@aravextechstudio.com with reply-to.
+ */
+export async function appendContactInquiry(data: ContactInquiryData) {
+  const payload = {
+    type: 'contact' as const,
+    data: {
+      ...data,
+      forwardTo: data.forwardTo || 'info@aravextechstudio.com',
+      replyTo: data.email,
+      timestamp: data.timestamp || new Date().toISOString(),
+      status: data.status || 'New Lead',
     },
   };
 
@@ -83,7 +120,10 @@ export async function appendInternshipApplication(data: InternshipApplicationDat
  * Core dispatch to Google Apps Script Webhook.
  * If webhook is not configured or network fails, gracefully falls back to local logging & JSON persistence.
  */
-async function sendToGoogleSheetWebhook(payload: { type: 'training' | 'internship'; data: any }) {
+async function sendToGoogleSheetWebhook(payload: {
+  type: 'training' | 'internship' | 'internship_paid' | 'internship_unpaid' | 'contact';
+  data: any;
+}) {
   const webhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL;
 
   if (webhookUrl && webhookUrl.trim() !== '') {

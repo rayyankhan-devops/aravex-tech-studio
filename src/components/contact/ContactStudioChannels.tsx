@@ -5,12 +5,10 @@ import {
   Mail,
   Clock,
   ArrowUpRight,
-  ShieldCheck,
   Check,
   Copy,
-  Users,
-  Lock,
   Globe2,
+  Video,
 } from 'lucide-react';
 import { COMPANY_INFO } from '@/lib/brand';
 import {
@@ -64,6 +62,40 @@ export function ContactStudioChannels() {
 
         <p className="text-xs text-emerald-100/90 leading-relaxed">
           Need an immediate answer, quick pricing, or architecture consult? Message our principal architects directly. Replies typically in &lt; 30 minutes.
+        </p>
+      </a>
+
+      {/* 2. DIRECT GOOGLE MEET (30 MIN DISCOVERY SESSION) */}
+      <a
+        href={COMPANY_INFO.contact.calendly || 'https://calendly.com/aravextechstudio/30min'}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group p-6 rounded-3xl bg-gradient-to-br from-[#0c2340] to-[#081726] text-white shadow-lg border border-blue-500/30 transition-all hover:scale-[1.01] flex flex-col justify-between"
+      >
+        <div className="flex items-start justify-between gap-4 mb-4">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center shadow-md shrink-0">
+              <Video className="w-6 h-6" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2 mb-0.5">
+                <span className="font-sans text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-blue-400/20 text-blue-200 border border-blue-400/30">
+                  SCHEDULE CALL • 30 MIN
+                </span>
+              </div>
+              <h4 className="text-base sm:text-lg font-bold text-white">
+                Google Meet Video Call
+              </h4>
+            </div>
+          </div>
+
+          <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-blue-200 group-hover:bg-blue-500 group-hover:text-white transition-colors shrink-0">
+            <ArrowUpRight className="w-4 h-4" />
+          </div>
+        </div>
+
+        <p className="text-xs text-blue-100/90 leading-relaxed">
+          Book a direct 30-minute Google Meet consultation on Calendly with our founding architects to review technical feasibility, architectural design, and delivery milestones.
         </p>
       </a>
 
@@ -141,47 +173,7 @@ export function ContactStudioChannels() {
 
       </div>
 
-      {/* 3. SPEAK DIRECTLY WITH FOUNDERS */}
-      <div className="p-6 rounded-3xl bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/60 shadow-md">
-        <div className="flex items-center gap-2 mb-2">
-          <Users className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-          <h4 className="text-sm font-bold text-gray-950 dark:text-white">
-            Direct Lead Engineers — Zero Salespeople
-          </h4>
-        </div>
-        <p className="text-xs text-gray-600 dark:text-slate-300 leading-relaxed mb-4">
-          You talk directly with founding partners who write and deploy the code:
-        </p>
-
-        <div className="space-y-2 pt-2 border-t border-gray-100 dark:border-graphite/40 text-xs">
-          <div className="flex items-center justify-between">
-            <span className="font-bold text-gray-900 dark:text-white">Muhammad Rayyan</span>
-            <span className="text-[11px] text-gray-500 dark:text-slate-400">Principal Architect</span>
-          </div>
-          <div className="flex items-center justify-between">
-            <span className="font-bold text-gray-900 dark:text-white">Muhammad Uzair</span>
-            <span className="text-[11px] text-amber-600 dark:text-amber-400 font-semibold">Amazon Technical Head</span>
-          </div>
-          <div className="flex items-center justify-between">
-            <span className="font-bold text-gray-900 dark:text-white">Aqsa Wadood</span>
-            <span className="text-[11px] text-purple-600 dark:text-purple-400 font-semibold">AI &amp; RAG Lead</span>
-          </div>
-        </div>
-
-        <div className="mt-4 pt-3 border-t border-gray-100 dark:border-graphite/40 flex items-center gap-4 text-[11px] text-gray-500 dark:text-slate-400">
-          <span className="flex items-center gap-1">
-            <Lock className="w-3.5 h-3.5 text-emerald-500" />
-            <span>Mutual NDA on Request</span>
-          </span>
-          <span>&bull;</span>
-          <span className="flex items-center gap-1">
-            <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
-            <span>100% Code Ownership</span>
-          </span>
-        </div>
-      </div>
-
-      {/* 4. OFFICIAL SOCIAL LINKS */}
+      {/* 3. OFFICIAL SOCIAL LINKS */}
       <div className="p-4 rounded-2xl bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/60 flex items-center justify-between">
         <span className="text-xs font-sans uppercase tracking-wider font-bold text-gray-500 dark:text-slate-400">
           Follow Our Work
