@@ -398,7 +398,7 @@ function handleContactSubmission(ss, data) {
         to: data.email,
         replyTo: targetEmail,
         subject: 'Project Inquiry Received — ARAVEX Tech Studio [' + inquiryId + ']',
-        body: 'Hello ' + data.name + ',\n\nThank you for submitting your project brief to ARAVEX Tech Studio. Your inquiry has been routed directly to our lead engineering group.\n\nWe typically review architectural requirements and respond within 4 to 24 business hours via ' + (data.preferredContact || 'Email') + '.\n\nBest regards,\nARAVEX Tech Studio Leadership\n' + targetEmail + '\nhttps://aravex.tech',
+        body: 'Hello ' + data.name + ',\n\nThank you for submitting your project brief to ARAVEX Tech Studio. Your inquiry has been routed directly to our lead engineering group.\n\nWe typically review architectural requirements and respond within 4 to 24 business hours via ' + (data.preferredContact || 'Email') + '.\n\nBest regards,\nARAVEX Tech Studio Leadership\n' + targetEmail + '\nhttps://aravextechstudio.com',
         htmlBody:
           '<div style="font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; max-width: 580px; color: #111; line-height: 1.6;">' +
           '<div style="background: #0f1114; padding: 18px 24px; border-radius: 12px 12px 0 0; border-bottom: 2px solid #10b981;">' +
@@ -414,7 +414,7 @@ function handleContactSubmission(ss, data) {
           '</div>' +
           '<p style="color: #64748b; font-size: 12px; margin-top: 24px; border-top: 1px solid #e2e8f0; padding-top: 16px;">' +
           'ARAVEX Tech Studio • Systems Architecture & Production Engineering<br/>' +
-          '<a href="https://aravex.tech" style="color: #10b981;">https://aravex.tech</a> • ' + targetEmail +
+          '<a href="https://aravextechstudio.com" style="color: #10b981;">https://aravextechstudio.com</a> • ' + targetEmail +
           '</p>' +
           '</div>' +
           '</div>'

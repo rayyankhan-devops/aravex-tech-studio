@@ -100,12 +100,12 @@ npm start
 
 ```env
 # Canonical Website URL
-NEXT_PUBLIC_SITE_URL=https://aravex.tech
+NEXT_PUBLIC_SITE_URL=https://aravextechstudio.com
 
 # Contact & Lead Generation Form (Resend Integration)
 # In development or if left unconfigured, inquiries safely log to console without crashing.
 RESEND_API_KEY=
-CONTACT_RECEIVER_EMAIL=contact@aravex.tech
+CONTACT_RECEIVER_EMAIL=info@aravextechstudio.com
 
 # Optional Analytics
 NEXT_PUBLIC_GA_ID=
@@ -124,7 +124,7 @@ NEXT_PUBLIC_GA_ID=
    * **Publish directory**: `.next`
    * **Plugin**: `@netlify/plugin-nextjs` (v5 App Router & Serverless Functions runtime)
 5. Under **Site configuration > Environment variables**, add:
-   * `NEXT_PUBLIC_SITE_URL`: `https://aravex.tech`
+   * `NEXT_PUBLIC_SITE_URL`: `https://aravextechstudio.com`
    * `CONTACT_RECEIVER_EMAIL`: `info@aravextechstudio.com`
    * `GOOGLE_SHEET_WEBHOOK_URL`: `https://script.google.com/macros/s/AKfycbxihyVhEepuX1o6y05duxQP4403BmyS0Kdtn51gSc3jNRI0RelBd6AqV21Yopc0TAgtSg/exec`
    * `RESEND_API_KEY`: *(Optional) Your Resend API key for direct transactional emails*
@@ -135,7 +135,7 @@ NEXT_PUBLIC_GA_ID=
 2. Import the repository in [Vercel](https://vercel.com).
 3. Framework Preset: **Next.js** (automatically detected).
 4. In **Environment Variables**, set:
-   * `NEXT_PUBLIC_SITE_URL`: `https://aravex.tech`
+   * `NEXT_PUBLIC_SITE_URL`: `https://aravextechstudio.com`
    * `CONTACT_RECEIVER_EMAIL`: `info@aravextechstudio.com`
    * `GOOGLE_SHEET_WEBHOOK_URL`: `https://script.google.com/macros/s/AKfycbxihyVhEepuX1o6y05duxQP4403BmyS0Kdtn51gSc3jNRI0RelBd6AqV21Yopc0TAgtSg/exec`
    * `RESEND_API_KEY`: *(Optional)*

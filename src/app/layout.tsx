@@ -21,7 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://aravex.tech';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://aravextechstudio.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

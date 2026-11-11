@@ -124,7 +124,7 @@ export async function POST(req: NextRequest) {
                   </div>
                   <p style="color: #64748b; font-size: 12px; margin-top: 24px; border-top: 1px solid #e2e8f0; padding-top: 16px;">
                     ARAVEX Tech Studio • Systems Architecture & Production Engineering<br/>
-                    <a href="https://aravex.tech" style="color: #10b981;">https://aravex.tech</a> • ${receiver}
+                    <a href="https://aravextechstudio.com" style="color: #10b981;">https://aravextechstudio.com</a> • ${receiver}
                   </p>
                 </div>
               </div>
