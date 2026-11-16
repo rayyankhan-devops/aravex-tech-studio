@@ -74,14 +74,14 @@ export function HeroSection() {
               </span>
             </motion.div>
 
-            {/* Main Headline - Expansive, Crisp, Shorter Vertical Footprint */}
+            {/* Main Headline */}
             <motion.h1
               variants={itemVariants}
               className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-black tracking-tight leading-[1.08] text-gray-950 dark:text-white"
             >
               Engineering Digital Systems{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-400 dark:from-emerald-400 dark:via-teal-300 dark:to-cyan-400">
-                for High Concurrency.
+                That Scale.
               </span>
             </motion.h1>
 
@@ -90,7 +90,7 @@ export function HeroSection() {
               variants={itemVariants}
               className="text-base sm:text-lg text-gray-700 dark:text-slate-300 font-normal max-w-xl leading-relaxed"
             >
-              We design and ship custom enterprise software, autonomous AI agent pipelines, and hardened cloud infrastructure with Amazon technical leadership and zero-compromise reliability.
+              We design and ship custom business software, autonomous AI systems, and cloud architecture built for speed and reliability.
             </motion.p>
 
             {/* Action Row */}

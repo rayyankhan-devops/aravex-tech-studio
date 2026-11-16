@@ -450,6 +450,12 @@ export function PaidInternshipModal({ track, isOpen, onClose }: PaidInternshipMo
 
               {/* Selected Account Card with Easy 1-Click Copy */}
               <div className="p-4 rounded-2xl bg-gray-50 dark:bg-charcoal-950 border border-gray-200 dark:border-graphite/50 text-xs sm:text-sm space-y-2.5">
+                {selectedAccount.bankName && (
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-500 dark:text-slate-400">Bank / Provider:</span>
+                    <span className="font-bold text-gray-950 dark:text-white">{selectedAccount.bankName}</span>
+                  </div>
+                )}
                 <div className="flex items-center justify-between">
                   <span className="text-gray-500 dark:text-slate-400">Account Title:</span>
                   <span className="font-bold text-gray-950 dark:text-white">{selectedAccount.title}</span>

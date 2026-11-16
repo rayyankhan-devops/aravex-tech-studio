@@ -59,6 +59,13 @@ export interface ContactInquiryData {
   forwardTo?: string;
   replyTo?: string;
   status?: string;
+  orderId?: string;
+  licenseKey?: string;
+  transactionId?: string;
+  screenshotUrl?: string;
+  screenshotBase64?: string;
+  screenshotName?: string;
+  paymentAccount?: string;
 }
 
 /**

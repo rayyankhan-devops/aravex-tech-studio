@@ -318,6 +318,27 @@ function handleContactSubmission(ss, data) {
   }
 
   var inquiryId = data.inquiryId || ('ARVX-INQ-' + Math.floor(1000 + Math.random() * 9000));
+
+  // Handle Payment Receipt Screenshot Upload to Google Drive if provided
+  var screenshotUrl = data.screenshotUrl || '';
+  if (data.screenshotBase64) {
+    try {
+      screenshotUrl = saveImageToDrive(
+        data.screenshotBase64,
+        data.screenshotName || (inquiryId + '-receipt.png'),
+        'ARAVEX Payment Receipts'
+      );
+    } catch (driveErr) {
+      Logger.log('Drive upload error: ' + driveErr.toString());
+      screenshotUrl = data.screenshotUrl || 'Upload Error: ' + driveErr.toString();
+    }
+  }
+
+  var fullDescription = data.description || '';
+  if (screenshotUrl && screenshotUrl !== 'Not provided' && fullDescription.indexOf('Receipt Link:') === -1) {
+    fullDescription += '\n\nGoogle Drive Receipt: ' + screenshotUrl;
+  }
+
   var row = [
     data.timestamp || new Date().toLocaleString(),
     inquiryId,
@@ -327,7 +348,7 @@ function handleContactSubmission(ss, data) {
     data.service || 'General Inquiry',
     data.budget || 'Not specified',
     data.preferredContact || 'Email',
-    data.description || '',
+    fullDescription,
     data.status || 'New Lead'
   ];
 

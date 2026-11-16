@@ -1,8 +1,8 @@
 /**
- * ARAVEX TECH STUDIO — Official Payment Accounts for Training Enrollments
+ * ARAVEX TECH STUDIO — Official Payment Accounts
  * 
- * Candidates can transfer cohort fees directly via Bank Alfalah, Meezan Bank, Raast,
- * or EasyPaisa/JazzCash mobile wallets and upload their payment screenshot.
+ * Candidates and clients can transfer project or cohort fees directly via 
+ * Meezan Bank, Askari Bank Limited, or Easypaisa mobile wallet.
  */
 
 export interface PaymentAccount {
@@ -20,29 +20,30 @@ export interface PaymentAccount {
 export const PAYMENT_ACCOUNTS: PaymentAccount[] = [
   {
     id: 'bank-meezan',
-    name: 'Meezan Bank / Raast',
+    name: 'Meezan Digital Centre',
     type: 'bank',
-    title: 'ARAVEX TECH STUDIO',
-    bankName: 'Meezan Bank Ltd',
-    accountNumber: '0101-0105263748',
-    iban: 'PK55MEZN0001010105263748',
-    raastId: '03130000000',
-    instructions: 'Instant transfer via Raast (0% fee) or 1Link IBFT from any Pakistani banking app.',
+    title: 'MUHAMMAD RAYAN',
+    bankName: 'MEEZAN DIGITAL CENTRE',
+    accountNumber: '00300116267985',
+    iban: 'PK76MEZN0000300116267985',
+    instructions: 'Transfer via 1Link IBFT, Raast, or Meezan App to Meezan Digital Centre.',
+  },
+  {
+    id: 'bank-askari',
+    name: 'Askari Bank Limited',
+    type: 'bank',
+    title: 'MUHAMMAD RAYYAN',
+    bankName: 'Askari Bank Limited',
+    accountNumber: '08980200009092',
+    iban: 'PK73ASCM0008980200009092',
+    instructions: 'Transfer via 1Link IBFT, Raast, or Askari Banking App.',
   },
   {
     id: 'easypaisa',
-    name: 'EasyPaisa Wallet',
+    name: 'Easypaisa',
     type: 'wallet',
-    title: 'Muhammad Rayyan (ARAVEX)',
-    accountNumber: '0313-0000000',
-    instructions: 'Send money via EasyPaisa App > EasyPaisa Transfer or CNIC/Mobile.',
-  },
-  {
-    id: 'jazzcash',
-    name: 'JazzCash Wallet',
-    type: 'wallet',
-    title: 'Muhammad Rayyan (ARAVEX)',
-    accountNumber: '0300-0000000',
-    instructions: 'Send money via JazzCash App or *786# mobile banking.',
+    title: 'MUHAMMAD RAYYAN',
+    accountNumber: '03355013206',
+    instructions: 'Send money via Easypaisa App or mobile account to 03355013206.',
   },
 ];

@@ -183,10 +183,10 @@ export function ServicesSection() {
           <div className="lg:col-span-5 lg:sticky lg:top-28 flex flex-col justify-between gap-5 sm:gap-6">
             <div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight text-gray-950 dark:text-white uppercase leading-[1.08] mb-3 sm:mb-4">
-                Engineered for High Concurrency, Scale &amp; Autonomous AI.
+                Software Engineering &amp; AI Practice.
               </h2>
               <p className="text-sm sm:text-base text-gray-700 dark:text-slate-300 leading-relaxed font-normal mb-4 sm:mb-6">
-                We transform complex business requirements into hardened digital systems. Our multidisciplinary practice specializes in custom software architectures, distributed cloud backends, and deterministic AI agent workflows.
+                We engineer custom software, autonomous AI systems, and cloud architecture built to perform under real-world load.
               </p>
             </div>
 

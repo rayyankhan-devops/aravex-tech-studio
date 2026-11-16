@@ -410,6 +410,13 @@ export function EnrollmentModal({ course, isOpen, onClose }: EnrollmentModalProp
 
                 {/* Active Account Details with 1-Click Copy */}
                 <div className="flex flex-col gap-2 text-xs font-sans">
+                  {activeAccount.bankName && (
+                    <div className="flex items-center justify-between p-2 rounded-lg bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40">
+                      <span className="text-gray-500 dark:text-slate-400 font-sans">Bank / Provider:</span>
+                      <span className="font-bold text-gray-950 dark:text-white">{activeAccount.bankName}</span>
+                    </div>
+                  )}
+
                   {/* Account Title */}
                   <div className="flex items-center justify-between p-2 rounded-lg bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-graphite/40">
                     <span className="text-gray-500 dark:text-slate-400 font-sans">Account Title:</span>
@@ -524,7 +531,7 @@ export function EnrollmentModal({ course, isOpen, onClose }: EnrollmentModalProp
                       Click to browse or drag &amp; drop payment screenshot here
                     </p>
                     <p className="text-xs text-gray-500 dark:text-slate-400 text-center mt-1">
-                      Drop transaction receipt, Easypaisa/JazzCash confirmation, or banking slip
+                      Drop transaction receipt, Easypaisa confirmation, or banking slip
                     </p>
                   </div>
                 ) : (

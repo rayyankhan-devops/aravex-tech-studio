@@ -50,6 +50,9 @@ export interface ProductItem {
     deployment?: string;
   };
   featured: boolean;
+  hardwareHighlights?: string[];
+  workflowSteps?: string[];
+  systemArchitecture?: string;
 }
 
 export interface CourseItem {

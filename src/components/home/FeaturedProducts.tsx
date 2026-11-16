@@ -23,6 +23,7 @@ import {
   UtensilsCrossed,
   Briefcase,
   Sparkles,
+  Zap,
 } from 'lucide-react';
 import { SectionHeading } from '@/components/common/SectionHeading';
 import { Badge } from '@/components/common/Badge';
@@ -100,20 +101,37 @@ export function FeaturedProducts() {
   };
 
   return (
-    <section id="products" className="relative py-10 sm:py-14 bg-white dark:bg-charcoal-900 text-charcoal-900 dark:text-warmWhite overflow-hidden border-t border-b border-gray-200 dark:border-graphite/40 transition-colors duration-300">
+    <section id="products" className="relative py-12 sm:py-16 bg-white dark:bg-charcoal-900 text-charcoal-900 dark:text-warmWhite overflow-hidden border-t border-b border-gray-200 dark:border-graphite/40 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4 sm:gap-6">
-          <SectionHeading
-            eyebrow="PROPRIETARY SOFTWARE"
-            title="Commercial Software Products."
-            description="Purpose-built operational platforms designed for transaction speed, hardware synchronization, and multi-branch management."
-            className="mb-0"
-          />
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 gap-4 sm:gap-6">
+          <div>
+            <div className="flex items-center gap-2.5 mb-2.5">
+              <div className="flex items-center gap-1 shrink-0" aria-hidden="true">
+                <span className="w-1.5 h-3.5 rounded-[2px] bg-[#D45361]" />
+                <span className="w-1 h-3.5 rounded-[2px] bg-[#EA7047]" />
+                <span className="w-1 h-3.5 rounded-[2px] bg-[#ECEB54]" />
+                <span className="w-1 h-3.5 rounded-[2px] bg-[#5CB554]" />
+                <span className="w-1 h-3.5 rounded-[2px] bg-[#4D66EC]" />
+              </div>
+              <span className="font-sans text-xs uppercase tracking-wider text-slate-800 dark:text-slate-200 font-bold">
+                PROPRIETARY COMMERCIAL SOFTWARE
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-gray-950 dark:text-white leading-[1.1]">
+              Commercial Software Products.{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-400 dark:from-emerald-400 dark:via-teal-300 dark:to-cyan-400">
+                Ready to Deploy.
+              </span>
+            </h2>
+            <p className="mt-2.5 text-sm sm:text-base text-gray-700 dark:text-slate-300 max-w-2xl leading-relaxed font-normal">
+              Ready-to-deploy business software for retail checkout, multi-warehouse inventory, and school operations.
+            </p>
+          </div>
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-sans text-gray-600 dark:text-slate-muted hover:text-black dark:hover:text-white transition-colors duration-200 shrink-0 pb-1 font-bold"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm font-sans text-emerald-600 dark:text-emerald-400 hover:underline transition-colors duration-200 shrink-0 pb-1 font-bold"
           >
-            <span>View Full Product Catalog</span>
+            <span>View Full Product Catalog ({PRODUCTS_DATA.length} Systems)</span>
             <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>
@@ -151,22 +169,23 @@ export function FeaturedProducts() {
               </div>
 
               <div className="flex flex-wrap items-center gap-3 pt-4">
-                <MagneticButton
+                <button
                   onClick={() => setSelectedProductForModal({ product: featured[0], mode: 'buy' })}
-                  variant="primary"
-                  size="md"
+                  className="h-10 px-5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm inline-flex items-center justify-center gap-2 shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer border border-transparent whitespace-nowrap shrink-0"
                 >
-                  <span>Buy Commercial License</span>
-                </MagneticButton>
+                  <Zap className="w-4 h-4 shrink-0" />
+                  <span className="whitespace-nowrap">Buy License</span>
+                </button>
                 <button
                   onClick={() => setSelectedProductForModal({ product: featured[0], mode: 'demo' })}
-                  className="px-4 py-2.5 rounded-full border border-gray-300 dark:border-graphite/60 text-sm font-semibold hover:bg-gray-100 dark:hover:bg-charcoal-850 transition-colors cursor-pointer"
+                  className="h-10 px-5 rounded-full bg-white dark:bg-charcoal-800 border border-gray-300 dark:border-graphite/60 text-xs sm:text-sm font-bold text-gray-800 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-charcoal-700 inline-flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer whitespace-nowrap shrink-0"
                 >
-                  Schedule Demo
+                  <Monitor className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                  <span className="whitespace-nowrap">Live Demo</span>
                 </button>
                 <Link
                   href={`/products/${featured[0].slug}`}
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-700 dark:text-slate-200 hover:text-black dark:hover:text-white transition-colors ml-1"
+                  className="h-10 inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-gray-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors ml-1"
                 >
                   <span>Technical Specs</span>
                   <ArrowUpRight className="w-4 h-4" />
@@ -237,39 +256,40 @@ export function FeaturedProducts() {
                     {product.title}
                   </h4>
 
-                  <p className="text-sm text-gray-700 dark:text-slate-200 leading-relaxed mb-5">
+                  <p className="text-xs sm:text-sm text-gray-700 dark:text-slate-300 leading-relaxed mb-4">
                     {product.tagline}
                   </p>
 
-                  <div className="flex flex-col gap-2 pt-2 border-t border-gray-200 dark:border-graphite/30 mb-6">
-                    {product.features.slice(0, 3).map((feat) => (
-                      <div key={feat} className="flex items-start gap-2 text-sm text-gray-700 dark:text-slate-300">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-2" />
+                  <div className="flex flex-col gap-1.5 pt-2 border-t border-gray-200 dark:border-graphite/30 mb-5">
+                    {product.features.slice(0, 2).map((feat) => (
+                      <div key={feat} className="flex items-start gap-2 text-xs text-gray-700 dark:text-slate-300">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5" />
                         <span className="line-clamp-1">{feat}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-graphite/40">
-                  <div className="flex items-center gap-3">
+                <div className="pt-4 border-t border-gray-200 dark:border-graphite/40 flex items-center justify-between gap-2">
+                  <div className="inline-flex items-center gap-1.5 shrink-0">
                     <button
                       onClick={() => setSelectedProductForModal({ product, mode: 'buy' })}
-                      className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:underline focus:outline-none cursor-pointer"
+                      className="h-8 px-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs inline-flex items-center justify-center gap-1.5 whitespace-nowrap shrink-0 transition-all cursor-pointer shadow-xs border border-transparent hover:scale-[1.02] active:scale-[0.98]"
                     >
-                      Buy License
+                      <Zap className="w-3.5 h-3.5 shrink-0" />
+                      <span className="whitespace-nowrap">Buy License</span>
                     </button>
-                    <span className="text-gray-300 dark:text-graphite">|</span>
                     <button
                       onClick={() => setSelectedProductForModal({ product, mode: 'demo' })}
-                      className="text-sm font-semibold text-gray-800 dark:text-slate-200 hover:underline focus:outline-none cursor-pointer"
+                      className="h-8 px-3 rounded-full bg-white dark:bg-charcoal-800 border border-gray-300 dark:border-graphite/60 text-xs font-bold text-gray-800 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-charcoal-700 inline-flex items-center justify-center gap-1.5 whitespace-nowrap shrink-0 transition-all cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
                     >
-                      Demo
+                      <Monitor className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                      <span className="whitespace-nowrap">Live Demo</span>
                     </button>
                   </div>
                   <Link
                     href={`/products/${product.slug}`}
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-gray-700 dark:text-slate-200 hover:text-black dark:hover:text-white"
+                    className="h-8 inline-flex items-center gap-1 text-xs font-semibold text-gray-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors shrink-0 whitespace-nowrap"
                   >
                     <span>Specs</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />

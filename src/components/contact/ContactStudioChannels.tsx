@@ -153,21 +153,24 @@ export function ContactStudioChannels() {
           </div>
         </div>
 
-        {/* Global Remote */}
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 border border-blue-500/20">
+        {/* Local Office Address */}
+        <div className="flex items-start gap-3">
+          <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 border border-blue-500/20 mt-0.5">
             <Globe2 className="w-5 h-5" />
           </div>
           <div>
             <span className="text-[10px] font-sans uppercase tracking-wider text-gray-500 dark:text-slate-400 font-bold block">
-              LOCATION
+              REGISTERED LOCAL OFFICE
             </span>
             <span className="text-sm font-bold text-gray-950 dark:text-white block">
-              100% Remote-First • Global Clients
+              Peshawar City, Khyber Pakhtunkhwa
             </span>
-            <span className="text-xs text-gray-500 dark:text-slate-400">
-              Serving founders across PK, US, UK, and UAE
+            <span className="text-xs text-gray-600 dark:text-slate-300 block">
+              District: Peshawar &bull; Tehsil: Peshawar City &bull; Postal Code: 25210, Pakistan
             </span>
+            <a href="tel:+923249906944" className="text-xs text-emerald-600 dark:text-emerald-400 font-mono font-semibold hover:underline mt-0.5 inline-block">
+              Tel: +923249906944
+            </a>
           </div>
         </div>
 

@@ -21,7 +21,7 @@ export function Footer() {
   return (
     <footer className="relative bg-[#F0F0EB] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite border-t border-gray-200 dark:border-graphite/40 overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-gray-200 dark:border-graphite/40">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-8 pb-12 border-b border-gray-200 dark:border-graphite/40">
           {/* Brand Column */}
           <div className="lg:col-span-2 flex flex-col gap-5">
             <Link href="/" className="inline-block relative h-11 sm:h-12 w-52 sm:w-60">
@@ -85,6 +85,45 @@ export function Footer() {
                 <LinkedinIcon className="w-4 h-4" />
               </a>
             </div>
+          </div>
+
+          {/* Software Products */}
+          <div className="flex flex-col gap-3">
+            <p className="text-xs uppercase tracking-wider text-gray-900 dark:text-white font-bold">
+              Software Products
+            </p>
+            <ul className="flex flex-col gap-2 text-sm text-gray-700 dark:text-slate-200">
+              <li>
+                <Link href="/products/point-of-sale" className="hover:text-black dark:hover:text-white transition-colors">
+                  Aravex Retail POS
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/inventory-mis" className="hover:text-black dark:hover:text-white transition-colors">
+                  Inventory MIS
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/school-management" className="hover:text-black dark:hover:text-white transition-colors">
+                  School MIS Suite
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/attendance-management" className="hover:text-black dark:hover:text-white transition-colors">
+                  Aravex TimeTrack
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/learning-management" className="hover:text-black dark:hover:text-white transition-colors">
+                  Aravex LMS
+                </Link>
+              </li>
+              <li>
+                <Link href="/products" className="inline-flex items-center gap-1 text-xs text-emerald-600 dark:text-emerald-400 pt-1 hover:underline font-bold">
+                  All Products <ArrowUpRight className="w-3 h-3" />
+                </Link>
+              </li>
+            </ul>
           </div>
 
           {/* Capabilities */}
@@ -168,18 +207,20 @@ export function Footer() {
             <div className="flex flex-col gap-2.5 text-sm text-gray-700 dark:text-slate-200">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
-                <span>100% Remote • Global Delivery</span>
+                <span className="leading-snug text-xs sm:text-sm">
+                  Peshawar City, Khyber Pakhtunkhwa 25210, Pakistan
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                <a href="tel:+923249906944" className="hover:underline font-semibold text-gray-950 dark:text-white">
+                  +923249906944
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
                 <a href={`mailto:${COMPANY_INFO.contact.email}`} className="hover:underline font-semibold text-gray-950 dark:text-white">
                   {COMPANY_INFO.contact.email}
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                <a href="tel:03249906944" className="hover:underline font-semibold text-gray-950 dark:text-white">
-                  03249906944
                 </a>
               </div>
             </div>
@@ -191,14 +232,19 @@ export function Footer() {
           <div>
             © {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
             <Link href="/privacy" className="hover:text-black dark:hover:text-white transition-colors font-medium">
               Privacy Policy
             </Link>
             <Link href="/terms" className="hover:text-black dark:hover:text-white transition-colors font-medium">
               Terms of Service
             </Link>
-
+            <Link href="/refund" className="hover:text-black dark:hover:text-white transition-colors font-medium">
+              Return &amp; Refund Policy
+            </Link>
+            <Link href="/shipping" className="hover:text-black dark:hover:text-white transition-colors font-medium">
+              Shipping &amp; Service Policy
+            </Link>
           </div>
         </div>
       </div>

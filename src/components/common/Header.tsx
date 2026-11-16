@@ -12,10 +12,10 @@ import { MagneticButton } from './MagneticButton';
 import { BRAND_ASSETS } from '@/lib/brand';
 import { cn } from '@/lib/utils';
 
-// Products and Work removed from navigation links per request
 const NAV_LINKS = [
   { name: 'Home', href: '/' },
   { name: 'Services', href: '/services' },
+  { name: 'Products', href: '/products' },
   { name: 'Internships', href: '/internships', badge: 'Hiring' },
   { name: 'Training', href: '/training' },
   { name: 'About', href: '/about' },
@@ -94,7 +94,7 @@ export function Header() {
                     key={link.name}
                     href={link.href}
                     className={cn(
-                      'relative inline-flex items-center gap-1.5 px-3 py-1.5 text-xs xl:text-sm font-semibold transition-all duration-200 rounded-full whitespace-nowrap',
+                      'relative inline-flex items-center gap-1 xl:gap-1.5 px-2.5 xl:px-3 py-1.5 text-xs xl:text-sm font-semibold transition-all duration-200 rounded-full whitespace-nowrap',
                       isActive
                         ? 'text-emerald-700 dark:text-emerald-300 bg-emerald-500/15 dark:bg-emerald-500/20 border border-emerald-500/30 shadow-sm font-bold'
                         : 'text-gray-700 dark:text-slate-200 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5'

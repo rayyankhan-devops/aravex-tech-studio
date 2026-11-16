@@ -39,8 +39,8 @@ export function FinalCTA() {
           </span>
         </h2>
 
-        <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-700 dark:text-slate-300 max-w-2xl leading-relaxed font-normal">
-          From custom web platforms and offline POS systems to autonomous AI agents and zero-downtime cloud infrastructure — partner directly with lead systems architects who deliver.
+        <p className="mt-3 text-sm sm:text-base text-gray-700 dark:text-slate-300 max-w-xl leading-relaxed font-normal">
+          From custom web apps and offline POS systems to AI agents and cloud architecture — work directly with engineers who deliver.
         </p>
 
         {/* 3 High-Impact Action CTAs */}
@@ -73,15 +73,15 @@ export function FinalCTA() {
         </div>
 
         {/* Under-CTA Trust Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-8 pt-5 border-t border-gray-200/80 dark:border-graphite/40 font-sans text-xs text-gray-500 dark:text-slate-400 font-medium">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-6 pt-4 border-t border-gray-200/80 dark:border-graphite/40 font-sans text-xs text-gray-500 dark:text-slate-400 font-medium">
           <span className="flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            <span>Direct Lead Engineers • Zero Account Reps</span>
+            <span>Direct Engineers</span>
           </span>
           <span>&bull;</span>
           <span>100% Code &amp; IP Ownership</span>
           <span>&bull;</span>
-          <span>Mutual NDA Ready</span>
+          <span>Mutual NDA</span>
         </div>
 
       </div>

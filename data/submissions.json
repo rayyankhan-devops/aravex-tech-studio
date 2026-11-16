@@ -2,6 +2,51 @@
   {
     "type": "contact",
     "data": {
+      "inquiryId": "ARVX-INQ-539121",
+      "name": "Elsa",
+      "email": "cutilicious1947@gmail.com",
+      "phone": "+92 307 9345678",
+      "company": "aravex (Peshawar)",
+      "service": "One-Time Commercial License: Aravex Invoicely (PKR 30,000)",
+      "budget": "PKR 30,000 ($105)",
+      "preferredContact": "WhatsApp (+92 307 9345678)",
+      "description": "Action: BUY. Product: Aravex Invoicely. Deployment: onpremise. Payment Method: whatsapp. Phone: +92 307 9345678. City/Hardware: Peshawar. Provisional Order ID: ARV-ORD-2026-9378. Total: PKR 30,000.",
+      "forwardTo": "info@aravextechstudio.com",
+      "replyTo": "cutilicious1947@gmail.com",
+      "transactionId": "",
+      "screenshotUrl": "",
+      "screenshotBase64": "",
+      "screenshotName": "",
+      "orderId": "",
+      "licenseKey": "",
+      "paymentAccount": "",
+      "status": "New Lead",
+      "timestamp": "2026-11-16T16:45:39.122Z"
+    },
+    "recordedAt": "2026-11-16T16:45:39.163Z"
+  },
+  {
+    "type": "contact",
+    "data": {
+      "inquiryId": "ARVX-INQ-850948",
+      "name": "Elsa",
+      "email": "cutilicious1947@gmail.com",
+      "phone": "+92 30000000",
+      "company": "aravex (Peshawar)",
+      "service": "One-Time Commercial License: Aravex POS (PKR 30,000)",
+      "budget": "PKR 30,000 ($105)",
+      "preferredContact": "WhatsApp (+92 30000000)",
+      "description": "Action: BUY. Product: Aravex POS. Deployment: onpremise. Payment Method: wallet. Phone: +92 30000000. City/Hardware: Peshawar. Provisional Order ID: ARV-ORD-2026-7464. Total: PKR 30,000.",
+      "forwardTo": "info@aravextechstudio.com",
+      "replyTo": "cutilicious1947@gmail.com",
+      "timestamp": "2026-11-15T20:34:10.948Z",
+      "status": "New Lead"
+    },
+    "recordedAt": "2026-11-15T20:34:10.988Z"
+  },
+  {
+    "type": "contact",
+    "data": {
       "inquiryId": "ARVX-INQ-418732",
       "name": "Aravex Live Verification",
       "email": "test.lead@aravex.tech",

@@ -78,11 +78,11 @@ export function TestimonialsSection() {
         {/* Section Heading & Navigation Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-5 sm:mb-6 gap-4">
           <div className="max-w-2xl">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-gray-950 dark:text-white uppercase leading-[1.1] mb-2.5">
-              Trusted by Engineering Leads &amp; Operations Directors.
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-gray-950 dark:text-white uppercase leading-[1.1] mb-2">
+              Client Feedback.
             </h2>
             <p className="text-sm sm:text-base text-gray-600 dark:text-slate-300 leading-relaxed font-normal">
-              Direct verification from retail hypermarkets, healthcare networks, and logistics enterprises running production workloads on ARAVEX systems.
+              Direct reviews from founders, retail chains, and businesses running our systems.
             </p>
           </div>
 
@@ -217,17 +217,8 @@ export function TestimonialsSection() {
                     </div>
                   </div>
 
-                  {/* Client Portrait & Monogram Block */}
+                  {/* Client Info Block */}
                   <div className="flex flex-col items-center text-center mb-4">
-                    <div
-                      className={`w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-tr ${activeTestimonial.avatarBg} text-white font-bold text-lg sm:text-xl flex items-center justify-center shadow-md ring-2 ring-emerald-500/20 mb-3`}
-                    >
-                      {activeTestimonial.name
-                        .split(' ')
-                        .map((n) => n[0])
-                        .join('')}
-                    </div>
-
                     <h4 className="text-base sm:text-lg font-bold text-gray-950 dark:text-white leading-tight">
                       {activeTestimonial.name}
                     </h4>

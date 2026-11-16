@@ -155,13 +155,24 @@ export const COMPANY_INFO = {
     },
   ],
   locations: {
-    primary: '100% Remote, Global',
+    primary: 'Peshawar City, Khyber Pakhtunkhwa, Pakistan',
+    officeAddress: {
+      tehsil: 'Peshawar City',
+      city: 'Peshawar',
+      district: 'Peshawar',
+      state: 'Khyber Pakhtunkhwa',
+      country: 'Pakistan',
+      postalCode: '25210',
+      formatted: 'Peshawar City, District Peshawar, Khyber Pakhtunkhwa 25210, Pakistan',
+    },
     serviceReach: 'International Clients & Regional Enterprises',
   },
   contact: {
     email: 'info@aravextechstudio.com',
     supportEmail: 'info@aravextechstudio.com',
-    phone: '03249906944',
+    phone: '+923249906944',
+    phoneFormatted: '+92 324 9906944',
+    rawPhone: '03249906944',
     calendly: 'https://calendly.com/aravextechstudio/30min',
   },
   socials: {

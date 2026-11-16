@@ -1,10 +1,27 @@
 import { NextRequest, NextResponse } from 'next/server';
+import fs from 'fs';
+import path from 'path';
 import { appendContactInquiry } from '@/lib/googleSheets';
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { name, email, phone, company, service, budget, description, preferredContact } = body;
+    const {
+      name,
+      email,
+      phone,
+      company,
+      service,
+      budget,
+      description,
+      preferredContact,
+      transactionId,
+      screenshotBase64,
+      screenshotName,
+      orderId,
+      licenseKey,
+      paymentAccount,
+    } = body;
 
     // Strict validation
     if (!name || !email || !description) {
@@ -23,9 +40,38 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const inquiryId = `ARVX-INQ-${Date.now().toString().slice(-6)}`;
+    const inquiryId = orderId || `ARVX-INQ-${Date.now().toString().slice(-6)}`;
     const apiKey = process.env.RESEND_API_KEY;
     const receiver = process.env.CONTACT_RECEIVER_EMAIL || 'info@aravextechstudio.com';
+
+    let localScreenshotUrl = '';
+
+    // If payment screenshot base64 is provided (e.g. for commercial license purchase), save locally
+    if (screenshotBase64 && typeof screenshotBase64 === 'string') {
+      try {
+        const uploadDir = path.join(process.cwd(), 'public', 'uploads', 'receipts');
+        if (!fs.existsSync(uploadDir)) {
+          fs.mkdirSync(uploadDir, { recursive: true });
+        }
+
+        const safeExtMatch = screenshotName ? screenshotName.match(/\.(png|jpg|jpeg|webp|pdf)$/i) : null;
+        const extension = safeExtMatch ? safeExtMatch[0].toLowerCase() : '.png';
+        const fileName = `${inquiryId}-${Date.now()}${extension}`;
+        const filePath = path.join(uploadDir, fileName);
+
+        const base64Data = screenshotBase64.replace(/^data:([A-Za-z-+/]+);base64,/, '');
+        fs.writeFileSync(filePath, Buffer.from(base64Data, 'base64'));
+
+        const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || '';
+        localScreenshotUrl = `${siteUrl}/uploads/receipts/${fileName}`;
+      } catch (fileErr) {
+        console.error('[Contact API] Error saving local receipt screenshot:', fileErr);
+      }
+    }
+
+    const finalDescription = localScreenshotUrl
+      ? `${description}\n\n[PAYMENT VERIFICATION]\nTransaction ID: ${transactionId || 'N/A'}\nReceipt Link: ${localScreenshotUrl}`
+      : description;
 
     // 1. Google Sheets & Serverless Email Forwarding via Universal Webhook
     let sheetResult = null;
@@ -39,9 +85,17 @@ export async function POST(req: NextRequest) {
         service: service || 'General Technical Practice',
         budget: budget || 'Flexible',
         preferredContact: preferredContact || 'Email',
-        description,
+        description: finalDescription,
         forwardTo: receiver,
         replyTo: email,
+        transactionId: transactionId || '',
+        screenshotUrl: localScreenshotUrl || '',
+        screenshotBase64: screenshotBase64 || '',
+        screenshotName: screenshotName || '',
+        orderId: orderId || '',
+        licenseKey: licenseKey || '',
+        paymentAccount: paymentAccount || '',
+        status: transactionId ? 'Pending Payment Verification' : 'New Lead',
       });
     } catch (sheetErr) {
       console.error('[Contact API] Google Sheet / MailApp sync failed:', sheetErr);
