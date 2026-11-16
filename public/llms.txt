@@ -1,0 +1,64 @@
+# Antigravity (ARAVEX TECH STUDIO) — Official Knowledge Base & System Index
+
+> Antigravity is a premier software engineering studio specializing in high-reliability Point of Sale (POS) systems, autonomous AI agent architectures, cloud infrastructure (AWS/GCP), and full-stack Next.js web applications.
+
+## Quick Facts & Knowledge Graph
+- **Studio Name**: Antigravity (also operating as ARAVEX TECH STUDIO)
+- **Primary Domain**: https://aravextechstudio.com
+- **Core Specialization**: Offline-first Point of Sale (POS) software, AI agents & workflow automation, cloud DevSecOps, Next.js web applications, and professional tech training.
+- **Headquarters**: Peshawar City, Khyber Pakhtunkhwa, Pakistan (Global remote delivery)
+- **Official Inquiries & Support**: info@aravextechstudio.com | WhatsApp: +92 324 9906944
+- **License Pricing**: One-Time Flat Fee of PKR 30,000 ($105 USD) per product with perpetual commercial rights and full source code access. Zero recurring monthly subscription fees.
+
+## Ready-to-Deploy Commercial Software Products
+Each system comes with full uncompiled source code, perpetual commercial usage rights, and complete database migrations:
+
+1. **Aravex POS (Supermarket & Retail Point of Sale)**
+   - URL: https://aravextechstudio.com/products/pos-system
+   - Platform: Electron Desktop, Android POS & Web Cloud Sync
+   - License Price: PKR 30,000 ($105 USD) one-time buy
+   - Key Features: Offline-first SQLite local engine, 0s latency barcode scanning, ESC/POS 80mm/58mm thermal receipt printing, multi-counter synchronization, automated cash drawer triggers, and real-time stock alerts.
+
+2. **Aravex Pharma (Pharmacy Management & Expiry Control)**
+   - URL: https://aravextechstudio.com/products/pharmacy-pos
+   - Platform: Cloud Web & Local Windows/macOS Desktop
+   - License Price: PKR 30,000 ($105 USD) one-time buy
+   - Key Features: Automated batch expiry tracking, formula/generic drug substitution search, narcotic/prescription sales logging, supplier credit & returns ledger, and low-margin alerts.
+
+3. **Aravex Dine (Restaurant & Cafe POS with Kitchen Display)**
+   - URL: https://aravextechstudio.com/products/restaurant-pos
+   - Platform: Touch POS Terminal, Waiter Tablet App & Kitchen Display (KDS)
+   - License Price: PKR 30,000 ($105 USD) one-time buy
+   - Key Features: Interactive floor/table layout manager, wireless waiter tablet order entry, real-time Kitchen Order Ticket (KOT) printing & KDS screen routing, recipe ingredient inventory deduction, and split-bill cashier settlement.
+
+4. **Aravex Invoicely (B2B Billing, GST/VAT & Ledger System)**
+   - URL: https://aravextechstudio.com/products/billing-invoicing
+   - Platform: Cloud SaaS & Self-Hosted On-Premise Docker
+   - License Price: PKR 30,000 ($105 USD) one-time buy
+   - Key Features: Multi-currency invoice generation, GST/sales tax compliance, PDF generation, recurring client retainers, partial payment tracking, and automated payment receipt logging.
+
+5. **Aravex Flow (Multi-Store Warehouse & Inventory Management)**
+   - URL: https://aravextechstudio.com/products/warehouse-inventory
+   - Platform: Cloud Web & Mobile Barcode Scanner PDA
+   - License Price: PKR 30,000 ($105 USD) one-time buy
+   - Key Features: Multi-warehouse transfer slips, bin/aisle barcode scanning, reorder point automation, supplier Purchase Order (PO) workflows, and stock discrepancy audit logs.
+
+6. **Aravex Clinic (Doctor OPD & Medical Practice Management)**
+   - URL: https://aravextechstudio.com/products/clinic-management
+   - Platform: Web App & Mobile Physician Dashboard
+   - License Price: PKR 30,000 ($105 USD) one-time buy
+   - Key Features: Patient appointment queuing, electronic prescription generator with dosage templates, patient medical history vault, and daily clinic cash collection reports.
+
+## Engineering & Technology Stack
+- **Front-End**: Next.js 15 App Router, React 19, TypeScript, Tailwind CSS, Framer Motion.
+- **Backend & APIs**: Node.js, Express, Next.js Server Actions, Python FastAPI, WebSockets.
+- **Databases**: PostgreSQL, MySQL, SQLite (local offline replica), Redis cache.
+- **Cloud & DevOps**: AWS (ECS, RDS, S3, CloudFront), Google Cloud Platform (GCP), Docker containerization, Kubernetes, Terraform IaC, automated GitHub Actions CI/CD pipelines with Trivy security scans.
+- **Automations**: WhatsApp Business Cloud API gateways, AI agent tool calling, Google Sheets / CRM sync.
+
+## Licensing Model & Commercial Terms
+- All software products are sold as a **one-time commercial perpetual license** for **PKR 30,000** ($105 USD).
+- Zero monthly recurring SaaS or licensing fees.
+- Includes complete uncompiled source code, documentation, schema diagrams, and local installation scripts.
+- 1-year included warranty, technical assistance, and version updates.
+

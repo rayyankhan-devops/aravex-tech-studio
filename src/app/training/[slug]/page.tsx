@@ -50,8 +50,31 @@ export default function TrainingCourseDetailPage({ params }: TrainingDetailPageP
     }
   };
 
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: course.title,
+    description: course.shortDescription || course.overview,
+    provider: {
+      '@type': 'Organization',
+      name: 'Antigravity',
+      url: 'https://aravextechstudio.com',
+    },
+    educationalCredentialAwarded: 'Industry Certificate of Completion',
+    timeRequired: course.duration,
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'Blended / Online & Hands-On Lab',
+      courseWorkload: course.duration,
+    },
+  };
+
   return (
     <main className="min-h-screen bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
       {/* Breadcrumb Navigation */}
       <div className="pt-16 sm:pt-18 pb-2.5 sm:pb-3 border-b border-gray-200 dark:border-graphite/40 bg-white dark:bg-charcoal-900/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-xs font-sans text-gray-500 dark:text-slate-muted">

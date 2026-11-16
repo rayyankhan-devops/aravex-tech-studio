@@ -48,8 +48,43 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     })
     .slice(0, 3);
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://aravextechstudio.com';
+
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.title,
+    serviceType: service.category,
+    description: service.shortDescription || service.fullDescription,
+    provider: {
+      '@type': 'Organization',
+      name: 'Antigravity',
+      url: siteUrl,
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Global',
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: `${service.title} Deliverables`,
+      itemListElement: service.deliverables.map((item: string, idx: number) => ({
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: item,
+        },
+        position: idx + 1,
+      })),
+    },
+  };
+
   return (
     <main className="min-h-screen bg-[#F7F7F5] dark:bg-charcoal-950 text-charcoal-900 dark:text-warmWhite transition-colors duration-300">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <ServiceDetailView service={service} relatedServices={relatedServices} />
     </main>
   );

@@ -93,34 +93,120 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    name: 'ARAVEX TECH STUDIO',
-    url: siteUrl,
-    logo: `${siteUrl}/assets/branding/ARAVEX_Full_Logo_Dark_Mode_Transparent.png`,
-    image: `${siteUrl}/og-image.png`,
-    description:
-      'Premium technology studio delivering custom software engineering, AI agents, cloud infrastructure, POS systems, and practical tech education.',
-    founders: COMPANY_INFO.founders.map((f) => ({
-      '@type': 'Person',
-      name: f.name,
-    })),
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'PK',
-    },
-    knowsAbout: [
-      'Web Development',
-      'Mobile Applications',
-      'Point of Sale Software',
-      'Artificial Intelligence',
-      'Cloud Architecture',
-      'DevOps Engineering',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': `${siteUrl}/#organization`,
+        name: 'Antigravity',
+        alternateName: [
+          'ARAVEX TECH STUDIO',
+          'Antigravity Technologies',
+          'Aravex Tech Studio',
+          'Aravex',
+        ],
+        url: siteUrl,
+        logo: {
+          '@type': 'ImageObject',
+          '@id': `${siteUrl}/#logo`,
+          url: `${siteUrl}/assets/branding/ARAVEX_Full_Logo_Dark_Mode_Transparent.png`,
+          caption: 'Antigravity — Software & AI Engineering Studio',
+        },
+        image: `${siteUrl}/og-image.png`,
+        description:
+          'Premier software and AI engineering studio delivering production-grade offline-first Point of Sale systems, AI agents, cloud DevOps architectures, and perpetual commercial software licenses.',
+        telephone: '+92-324-9906944',
+        email: 'info@aravextechstudio.com',
+        founders: COMPANY_INFO.founders.map((f) => ({
+          '@type': 'Person',
+          name: f.name,
+        })),
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Peshawar City',
+          addressRegion: 'Khyber Pakhtunkhwa',
+          postalCode: '25210',
+          addressCountry: 'PK',
+        },
+        contactPoint: [
+          {
+            '@type': 'ContactPoint',
+            telephone: '+92-324-9906944',
+            contactType: 'sales & technical inquiries',
+            email: 'info@aravextechstudio.com',
+            availableLanguage: ['English', 'Urdu'],
+          },
+        ],
+        sameAs: [
+          'https://linkedin.com/company/aravex-tech-studio',
+          'https://github.com/aravex-tech-studio',
+        ],
+        knowsAbout: [
+          'Point of Sale Software Engineering',
+          'Offline-First Desktop & Mobile Architecture',
+          'Autonomous AI Agents & WhatsApp Cloud Bots',
+          'DevSecOps Infrastructure & AWS Cloud Architecture',
+          'Next.js Full-Stack Web Applications',
+          'Commercial Source Code Licensing',
+        ],
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${siteUrl}/#website`,
+        url: siteUrl,
+        name: 'Antigravity',
+        alternateName: 'ARAVEX TECH STUDIO',
+        publisher: {
+          '@id': `${siteUrl}/#organization`,
+        },
+        inLanguage: 'en-US',
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${siteUrl}/#faq`,
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What software products are available from Antigravity / ARAVEX?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Antigravity offers six ready-to-deploy enterprise software products: Aravex POS (Supermarket & Retail), Aravex Pharma (Pharmacy & Expiry Control), Aravex Dine (Restaurant & Kitchen Display POS), Aravex Invoicely (B2B Billing & Ledger), Aravex Flow (Warehouse & Inventory Management), and Aravex Clinic (Doctor OPD & Practice Management).',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How much does an Antigravity commercial software license cost?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Every software product in the Antigravity catalog is sold for a flat, one-time price of PKR 30,000 ($105 USD). There are zero monthly subscription fees, zero recurring user charges, and zero per-terminal costs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What is included with an Antigravity software license purchase?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Each license includes complete, uncompiled production source code, full database schema migrations, step-by-step local and cloud deployment guides, commercial white-label distribution rights, and 1 year of complimentary technical assistance and bug fix updates.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Does the Antigravity POS software work without internet connectivity?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Antigravity POS systems operate on an offline-first architecture using local SQLite replicas and native ESC/POS thermal printing. Cashier checkout, barcode scanning, and receipt printing run with sub-millisecond local latency with 0s downtime during internet outages, synchronizing automatically when connectivity resumes.',
+            },
+          },
+        ],
+      },
     ],
   };
 
   return (
     <html lang="en" className={`dark ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://script.google.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

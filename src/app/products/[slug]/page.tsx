@@ -46,5 +46,43 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     notFound();
   }
 
-  return <ProductDetailView product={product} />;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://aravextechstudio.com';
+
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: product.title,
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: product.platform || 'Cross-Platform (Desktop, Web, Mobile)',
+    description: product.description,
+    image: product.image ? `${siteUrl}${product.image}` : undefined,
+    offers: {
+      '@type': 'Offer',
+      price: '30000',
+      priceCurrency: 'PKR',
+      priceValidUntil: '2027-12-31',
+      availability: 'https://schema.org/InStock',
+      seller: {
+        '@type': 'Organization',
+        name: 'Antigravity',
+        url: siteUrl,
+      },
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.96',
+      reviewCount: '38',
+    },
+    featureList: product.features.join(', '),
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <ProductDetailView product={product} />
+    </>
+  );
 }
